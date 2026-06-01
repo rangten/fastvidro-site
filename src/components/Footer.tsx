@@ -38,7 +38,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-ink-foreground/80">
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> {SITE.phone}</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> {SITE.email}</li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> {SITE.address}</li>
+            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" /> <span>{SITE.address}</span></li>
           </ul>
           <a
             href={waLink()}
