@@ -1,6 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { PageHero } from "./PageHero";
 import { waLink } from "@/lib/site";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 export interface ProductPageProps {
   eyebrow: string;
@@ -8,9 +9,11 @@ export interface ProductPageProps {
   subtitle: string;
   heroImage: string;
   intro: string;
+  // Base do link de cada modelo (ex: "/box-de-banheiro"). O slug é concatenado.
+  modelLinkBase?: string;
   // Cada modelo aceita uma imagem opcional. Para usar suas fotos reais,
   // basta preencher `image` com a URL/import da foto do projeto instalado.
-  models: { name: string; description: string; image?: string }[];
+  models: { slug?: string; name: string; description: string; image?: string }[];
   features: string[];
   ctaLabel?: string;
   seoHighlights?: { title: string; text: string }[];
