@@ -14,6 +14,7 @@ import { Route as ProjetosRouteImport } from './routes/projetos'
 import { Route as PortasDeVidroRouteImport } from './routes/portas-de-vidro'
 import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
 import { Route as EspelhosRouteImport } from './routes/espelhos'
+import { Route as BoxMaisSeguroRouteImport } from './routes/box-mais-seguro'
 import { Route as BoxDeBanheiroRouteImport } from './routes/box-de-banheiro'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
@@ -45,6 +46,11 @@ const EspelhosLedRoute = EspelhosLedRouteImport.update({
 const EspelhosRoute = EspelhosRouteImport.update({
   id: '/espelhos',
   path: '/espelhos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxMaisSeguroRoute = BoxMaisSeguroRouteImport.update({
+  id: '/box-mais-seguro',
+  path: '/box-mais-seguro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroRoute = BoxDeBanheiroRouteImport.update({
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
   '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
   '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
@@ -116,6 +124,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
   '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
@@ -132,6 +141,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/box-de-banheiro'
+    | '/box-mais-seguro'
     | '/espelhos'
     | '/espelhos-led'
     | '/portas-de-vidro'
@@ -146,6 +156,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/box-de-banheiro'
+    | '/box-mais-seguro'
     | '/espelhos'
     | '/espelhos-led'
     | '/portas-de-vidro'
@@ -160,6 +171,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/box-de-banheiro'
+    | '/box-mais-seguro'
     | '/espelhos'
     | '/espelhos-led'
     | '/portas-de-vidro'
@@ -175,6 +187,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
   BoxDeBanheiroRoute: typeof BoxDeBanheiroRouteWithChildren
+  BoxMaisSeguroRoute: typeof BoxMaisSeguroRoute
   EspelhosRoute: typeof EspelhosRouteWithChildren
   EspelhosLedRoute: typeof EspelhosLedRoute
   PortasDeVidroRoute: typeof PortasDeVidroRouteWithChildren
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       path: '/espelhos'
       fullPath: '/espelhos'
       preLoaderRoute: typeof EspelhosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-mais-seguro': {
+      id: '/box-mais-seguro'
+      path: '/box-mais-seguro'
+      fullPath: '/box-mais-seguro'
+      preLoaderRoute: typeof BoxMaisSeguroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
   BoxDeBanheiroRoute: BoxDeBanheiroRouteWithChildren,
+  BoxMaisSeguroRoute: BoxMaisSeguroRoute,
   EspelhosRoute: EspelhosRouteWithChildren,
   EspelhosLedRoute: EspelhosLedRoute,
   PortasDeVidroRoute: PortasDeVidroRouteWithChildren,
@@ -332,3 +353,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
