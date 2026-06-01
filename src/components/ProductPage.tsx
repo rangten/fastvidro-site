@@ -1,0 +1,97 @@
+import { PageHero } from "./PageHero";
+import { waLink } from "@/lib/site";
+import { Check } from "lucide-react";
+
+export interface ProductPageProps {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  heroImage: string;
+  intro: string;
+  models: { name: string; description: string }[];
+  features: string[];
+  ctaLabel?: string;
+}
+
+export function ProductPage({
+  eyebrow,
+  title,
+  subtitle,
+  heroImage,
+  intro,
+  models,
+  features,
+  ctaLabel = "Pedir orçamento",
+}: ProductPageProps) {
+  return (
+    <>
+      <PageHero eyebrow={eyebrow} title={title} subtitle={subtitle} image={heroImage} />
+
+      <section className="mx-auto max-w-7xl px-4 py-20 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
+          <div>
+            <h2 className="text-4xl font-black">Sobre {eyebrow.toLowerCase()}</h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">{intro}</p>
+            <ul className="mt-8 space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start gap-3">
+                  <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary">
+                    <Check className="h-3.5 w-3.5 text-primary-foreground" />
+                  </span>
+                  <span className="text-sm">{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-yellow rounded-2xl rotate-2" />
+            <img
+              src={heroImage}
+              alt={title}
+              className="relative rounded-xl shadow-ink w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-ink text-ink-foreground py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
+            <div>
+              <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                Modelos
+              </span>
+              <h2 className="mt-3 text-4xl font-black">Escolha o seu</h2>
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {models.map((m) => (
+              <div
+                key={m.name}
+                className="group rounded-xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-primary hover:bg-white/[0.06]"
+              >
+                <div className="flex items-baseline justify-between">
+                  <h3 className="text-2xl font-black text-primary">{m.name}</h3>
+                  <span className="text-xs text-ink-foreground/40">→</span>
+                </div>
+                <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <a
+              href={waLink(`Olá! Quero um orçamento de ${title}.`)}
+              target="_blank"
+              rel="noopener"
+              className="inline-block rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
+            >
+              {ctaLabel}
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
