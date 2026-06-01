@@ -38,14 +38,6 @@ const slides: Slide[] = [
     secondary: { label: "Ver projetos", to: "/projetos" },
   },
   {
-    eyebrow: "Box Flex Premium",
-    title: (
-      <>
-        Espaço Reduzido? <span className="text-primary">Box Flex</span> Premium.
-      </>
-    ),
-    subtitle:
-      "Ganhe até 90% de abertura no vão do seu banheiro com sofisticação.",
     desktopImage: flexDesktop.url,
     mobileImage: flexMobile.url,
     primary: {
@@ -55,14 +47,6 @@ const slides: Slide[] = [
     },
   },
   {
-    eyebrow: "Box +Seguro",
-    title: (
-      <>
-        Box <span className="text-primary">+Seguro</span>: Proteção para sua família.
-      </>
-    ),
-    subtitle:
-      "Película de segurança de alta resistência inclusa para evitar estilhaços.",
     desktopImage: boxDesktop.url,
     mobileImage: boxMobile.url,
     primary: {
