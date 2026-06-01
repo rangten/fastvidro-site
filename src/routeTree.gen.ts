@@ -17,6 +17,10 @@ import { Route as EspelhosRouteImport } from './routes/espelhos'
 import { Route as BoxDeBanheiroRouteImport } from './routes/box-de-banheiro'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
+import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
+import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
+import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -58,37 +62,69 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
+  id: '/$modelo',
+  path: '/$modelo',
+  getParentRoute: () => ProjetosRoute,
+} as any)
+const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
+  id: '/$modelo',
+  path: '/$modelo',
+  getParentRoute: () => PortasDeVidroRoute,
+} as any)
+const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
+  id: '/$modelo',
+  path: '/$modelo',
+  getParentRoute: () => EspelhosRoute,
+} as any)
+const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
+  id: '/$modelo',
+  path: '/$modelo',
+  getParentRoute: () => BoxDeBanheiroRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRoute
-  '/espelhos': typeof EspelhosRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRoute
-  '/projetos': typeof ProjetosRoute
+  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
+  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/projetos/$modelo': typeof ProjetosModeloRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRoute
-  '/espelhos': typeof EspelhosRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRoute
-  '/projetos': typeof ProjetosRoute
+  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
+  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/projetos/$modelo': typeof ProjetosModeloRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRoute
-  '/espelhos': typeof EspelhosRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
+  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRoute
-  '/projetos': typeof ProjetosRoute
+  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
+  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/projetos/$modelo': typeof ProjetosModeloRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +137,10 @@ export interface FileRouteTypes {
     | '/portas-de-vidro'
     | '/projetos'
     | '/sitemap.xml'
+    | '/box-de-banheiro/$modelo'
+    | '/espelhos/$modelo'
+    | '/portas-de-vidro/$modelo'
+    | '/projetos/$modelo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +151,10 @@ export interface FileRouteTypes {
     | '/portas-de-vidro'
     | '/projetos'
     | '/sitemap.xml'
+    | '/box-de-banheiro/$modelo'
+    | '/espelhos/$modelo'
+    | '/portas-de-vidro/$modelo'
+    | '/projetos/$modelo'
   id:
     | '__root__'
     | '/'
@@ -121,16 +165,20 @@ export interface FileRouteTypes {
     | '/portas-de-vidro'
     | '/projetos'
     | '/sitemap.xml'
+    | '/box-de-banheiro/$modelo'
+    | '/espelhos/$modelo'
+    | '/portas-de-vidro/$modelo'
+    | '/projetos/$modelo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
-  BoxDeBanheiroRoute: typeof BoxDeBanheiroRoute
-  EspelhosRoute: typeof EspelhosRoute
+  BoxDeBanheiroRoute: typeof BoxDeBanheiroRouteWithChildren
+  EspelhosRoute: typeof EspelhosRouteWithChildren
   EspelhosLedRoute: typeof EspelhosLedRoute
-  PortasDeVidroRoute: typeof PortasDeVidroRoute
-  ProjetosRoute: typeof ProjetosRoute
+  PortasDeVidroRoute: typeof PortasDeVidroRouteWithChildren
+  ProjetosRoute: typeof ProjetosRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -192,17 +240,93 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projetos/$modelo': {
+      id: '/projetos/$modelo'
+      path: '/$modelo'
+      fullPath: '/projetos/$modelo'
+      preLoaderRoute: typeof ProjetosModeloRouteImport
+      parentRoute: typeof ProjetosRoute
+    }
+    '/portas-de-vidro/$modelo': {
+      id: '/portas-de-vidro/$modelo'
+      path: '/$modelo'
+      fullPath: '/portas-de-vidro/$modelo'
+      preLoaderRoute: typeof PortasDeVidroModeloRouteImport
+      parentRoute: typeof PortasDeVidroRoute
+    }
+    '/espelhos/$modelo': {
+      id: '/espelhos/$modelo'
+      path: '/$modelo'
+      fullPath: '/espelhos/$modelo'
+      preLoaderRoute: typeof EspelhosModeloRouteImport
+      parentRoute: typeof EspelhosRoute
+    }
+    '/box-de-banheiro/$modelo': {
+      id: '/box-de-banheiro/$modelo'
+      path: '/$modelo'
+      fullPath: '/box-de-banheiro/$modelo'
+      preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
+      parentRoute: typeof BoxDeBanheiroRoute
+    }
   }
 }
+
+interface BoxDeBanheiroRouteChildren {
+  BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
+}
+
+const BoxDeBanheiroRouteChildren: BoxDeBanheiroRouteChildren = {
+  BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
+}
+
+const BoxDeBanheiroRouteWithChildren = BoxDeBanheiroRoute._addFileChildren(
+  BoxDeBanheiroRouteChildren,
+)
+
+interface EspelhosRouteChildren {
+  EspelhosModeloRoute: typeof EspelhosModeloRoute
+}
+
+const EspelhosRouteChildren: EspelhosRouteChildren = {
+  EspelhosModeloRoute: EspelhosModeloRoute,
+}
+
+const EspelhosRouteWithChildren = EspelhosRoute._addFileChildren(
+  EspelhosRouteChildren,
+)
+
+interface PortasDeVidroRouteChildren {
+  PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
+}
+
+const PortasDeVidroRouteChildren: PortasDeVidroRouteChildren = {
+  PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
+}
+
+const PortasDeVidroRouteWithChildren = PortasDeVidroRoute._addFileChildren(
+  PortasDeVidroRouteChildren,
+)
+
+interface ProjetosRouteChildren {
+  ProjetosModeloRoute: typeof ProjetosModeloRoute
+}
+
+const ProjetosRouteChildren: ProjetosRouteChildren = {
+  ProjetosModeloRoute: ProjetosModeloRoute,
+}
+
+const ProjetosRouteWithChildren = ProjetosRoute._addFileChildren(
+  ProjetosRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
-  BoxDeBanheiroRoute: BoxDeBanheiroRoute,
-  EspelhosRoute: EspelhosRoute,
+  BoxDeBanheiroRoute: BoxDeBanheiroRouteWithChildren,
+  EspelhosRoute: EspelhosRouteWithChildren,
   EspelhosLedRoute: EspelhosLedRoute,
-  PortasDeVidroRoute: PortasDeVidroRoute,
-  ProjetosRoute: ProjetosRoute,
+  PortasDeVidroRoute: PortasDeVidroRouteWithChildren,
+  ProjetosRoute: ProjetosRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
