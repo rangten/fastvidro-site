@@ -5,6 +5,7 @@ import portasImg from "@/assets/product-portas.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import projetosImg from "@/assets/product-projetos.jpg";
+import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
 import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { waLink } from "@/lib/site";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Fast Vidro — Agilidade e Segurança em Vidros" },
-      { name: "description", content: "Box de banheiro, portas de vidro, espelhos e espelhos LED. Projetos sob medida em São Paulo com tecnologia anti-estilhaço." },
+      { name: "description", content: "Box de banheiro, portas de vidro, espelhos e projetos sob medida em São Paulo com tecnologia anti-estilhaço." },
       { property: "og:title", content: "Fast Vidro — Agilidade e Segurança em Vidros" },
       { property: "og:description", content: "Box, portas, espelhos e projetos personalizados em vidro. Orçamento rápido pelo WhatsApp." },
     ],
@@ -22,11 +23,11 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { to: "/box-de-banheiro", title: "Box de Banheiro", img: boxImg, desc: "Modelos Flex, Piso Teto, Nobre, Elegance, Duo Safe e mais." },
-  { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas." },
-  { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê." },
-  { to: "/espelhos-led", title: "Espelhos LED", img: ledImg, desc: "Iluminação retroiluminada com sensor touch para banheiros." },
-  { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente." },
+  { to: "/box-de-banheiro", title: "Box de Banheiro", img: boxImg, desc: "Modelos Flex, Piso Teto, Nobre, Elegance, Duo Safe e mais.", logo: false },
+  { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas.", logo: false },
+  { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê.", logo: false },
+  { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente.", logo: false },
+  { to: "/box-de-banheiro", title: "Box + Seguro", img: maisSeguroAsset.url, desc: "Película anti-estilhaço inclusa para máxima proteção da família.", logo: true },
 ] as const;
 
 const diffs = [
@@ -97,26 +98,37 @@ function Home() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p, i) => (
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          {products.map((p) => (
             <Link
-              key={p.to}
+              key={p.title}
               to={p.to}
-              className={`group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary transition ${i === 0 ? "lg:row-span-2" : ""}`}
+              className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary transition"
             >
-              <div className={`relative overflow-hidden ${i === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
-                <img
-                  src={p.img}
-                  alt={p.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <h3 className="text-2xl lg:text-3xl font-black text-ink-foreground">{p.title}</h3>
-                  <p className="mt-1.5 text-sm text-ink-foreground/80">{p.desc}</p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-                    Ver mais <ArrowRight className="h-3.5 w-3.5" />
+              <div className="relative overflow-hidden aspect-[4/5]">
+                {p.logo ? (
+                  <div className="absolute inset-0 flex items-center justify-center bg-white p-6">
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      loading="lazy"
+                      className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="text-xl font-black text-ink-foreground leading-tight">{p.title}</h3>
+                  <p className="mt-1.5 text-xs text-ink-foreground/80 line-clamp-2">{p.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-primary">
+                    Ver mais <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>
               </div>

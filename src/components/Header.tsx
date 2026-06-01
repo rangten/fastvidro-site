@@ -2,16 +2,23 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.png.asset.json";
+import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
 import { waLink } from "@/lib/site";
 
-const nav = [
+type NavItem = {
+  to: string;
+  label: string;
+  image?: { src: string; alt: string };
+};
+
+const nav: NavItem[] = [
   { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
   { to: "/espelhos", label: "Espelhos" },
-  { to: "/espelhos-led", label: "Espelhos LED" },
   { to: "/projetos", label: "Projetos" },
+  { to: "/box-de-banheiro", label: "Box + Seguro", image: { src: maisSeguroAsset.url, alt: "Box + Seguro" } },
   { to: "/blog", label: "Blog" },
-] as const;
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -30,12 +37,20 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-7">
           {nav.map((n) => (
             <Link
-              key={n.to}
+              key={`${n.to}-${n.label}`}
               to={n.to}
-              className="text-sm font-semibold uppercase tracking-wide text-ink-foreground/80 transition hover:text-primary"
+              className="flex items-center text-sm font-semibold uppercase tracking-wide text-ink-foreground/80 transition hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
-              {n.label}
+              {n.image ? (
+                <img
+                  src={n.image.src}
+                  alt={n.image.alt}
+                  className="h-8 w-auto object-contain"
+                />
+              ) : (
+                n.label
+              )}
             </Link>
           ))}
         </nav>
@@ -64,12 +79,15 @@ export function Header() {
           <nav className="flex flex-col px-4 py-3">
             {nav.map((n) => (
               <Link
-                key={n.to}
+                key={`${n.to}-${n.label}`}
                 to={n.to}
                 onClick={() => setOpen(false)}
-                className="py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 border-b border-white/5 last:border-0"
+                className="flex items-center gap-3 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 border-b border-white/5 last:border-0"
               >
-                {n.label}
+                {n.image && (
+                  <img src={n.image.src} alt={n.image.alt} className="h-7 w-auto object-contain" />
+                )}
+                <span>{n.label}</span>
               </Link>
             ))}
             <a
