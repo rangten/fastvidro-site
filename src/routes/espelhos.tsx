@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
 import img from "@/assets/product-espelhos.jpg";
+import { CATEGORIES } from "@/lib/catalog";
+
+const category = CATEGORIES["espelhos"];
 
 export const Route = createFileRoute("/espelhos")({
   head: () => ({
@@ -16,7 +19,6 @@ export const Route = createFileRoute("/espelhos")({
     <SiteLayout>
       <ProductPage
         whatsappMessage="Olá! Gostaria de um orçamento para Espelhos Lapidados/Bisotê com a Fast Vidro."
-
         eyebrow="Espelhos"
         title="Espelhos que ampliam e decoram"
         subtitle="Decorativos, para banheiro ou parede inteira — com lapidação precisa e instalação segura."
@@ -28,13 +30,8 @@ export const Route = createFileRoute("/espelhos")({
           "Furação para arandelas e suportes",
           "Fixação invisível com fita de alta aderência ou parafusos ocultos",
         ]}
-        models={[
-          { name: "Decorativo", description: "Sob medida, formas livres e geométricas." },
-          { name: "Banheiro", description: "Resistência à umidade e fácil limpeza." },
-          { name: "Parede Inteira", description: "Amplia visualmente o ambiente." },
-          { name: "Lapidação Reta", description: "Bordas polidas com acabamento limpo." },
-          { name: "Bisotê", description: "Borda inclinada e brilhante, charme clássico." },
-        ]}
+        modelLinkBase="/espelhos"
+        models={category.models}
       />
     </SiteLayout>
   ),

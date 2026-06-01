@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
 import img from "@/assets/product-portas.jpg";
+import { CATEGORIES } from "@/lib/catalog";
+
+const category = CATEGORIES["portas-de-vidro"];
 
 export const Route = createFileRoute("/portas-de-vidro")({
   head: () => ({
@@ -16,7 +19,6 @@ export const Route = createFileRoute("/portas-de-vidro")({
     <SiteLayout>
       <ProductPage
         whatsappMessage="Olá! Preciso de um orçamento para Portas de Vidro com a Fast Vidro."
-
         eyebrow="Portas de Vidro"
         title="Portas de vidro que integram e iluminam"
         subtitle="Soluções para residências, escritórios e comércio com vidros incolor, jateado, fumê ou bronze."
@@ -28,15 +30,8 @@ export const Route = createFileRoute("/portas-de-vidro")({
           "Ferragens importadas com garantia",
           "Modelos de correr, abrir ou pivotantes",
         ]}
-        models={[
-          { name: "Vision", description: "Linhas finas, ideal para escritórios modernos." },
-          { name: "Nobre", description: "Acabamento premium para alto padrão." },
-          { name: "Certo", description: "Solução robusta para grandes vãos." },
-          { name: "Flex", description: "Adaptável a múltiplas configurações." },
-          { name: "De Abrir", description: "Porta tradicional pivotante com molas." },
-          { name: "De Correr", description: "Aproveitamento total do espaço." },
-          { name: "Versatik", description: "Sistema deslizante silencioso e suave." },
-        ]}
+        modelLinkBase="/portas-de-vidro"
+        models={category.models}
         ctaLabel="Solicitar visita técnica"
         seoHighlights={[
           { title: "Porta de Vidro Versatik para otimização de espaço", text: "O sistema Versatik é deslizante, silencioso e libera 100% da passagem — perfeito para integrar ambientes pequenos em apartamentos de São Paulo sem perder área útil." },
