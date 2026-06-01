@@ -100,7 +100,7 @@ export function ProductPage({
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-2xl font-black text-primary">{m.name}</h3>
+                    <h3 className="font-sans text-xl font-semibold text-primary tracking-wide">{m.name}</h3>
                     <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
                     {href && (
                       <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary">
