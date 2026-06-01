@@ -12,9 +12,10 @@ import boxDesktop from "@/assets/hero-box-desktop.png.asset.json";
 import boxMobile from "@/assets/hero-box-mobile.png.asset.json";
 
 type Slide = {
-  eyebrow: string;
-  title: React.ReactNode;
-  subtitle: string;
+  eyebrow?: string;
+  title?: React.ReactNode;
+  subtitle?: string;
+  showText?: boolean;
   desktopImage: string;
   mobileImage: string;
   primary: { label: string; href: string; icon?: React.ReactNode };
