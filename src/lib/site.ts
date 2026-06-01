@@ -4,7 +4,7 @@ export const SITE = {
   phone: "(11) 99999-9999",
   whatsapp: "5511999999999",
   email: "contato@fastvidro.com.br",
-  address: "São Paulo — SP",
+  address: "Atendemos toda a Capital de São Paulo, Grande SP e Regiões Metropolitanas (Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé, Alphaville e região).",
   instagram: "https://instagram.com/fastvidro",
   tiktok: "https://tiktok.com/@fastvidro",
   google: "https://g.page/fastvidro",

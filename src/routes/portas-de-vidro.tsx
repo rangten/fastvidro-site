@@ -36,6 +36,11 @@ export const Route = createFileRoute("/portas-de-vidro")({
           { name: "Versatik", description: "Sistema deslizante silencioso e suave." },
         ]}
         ctaLabel="Solicitar visita técnica"
+        seoHighlights={[
+          { title: "Porta de Vidro Versatik para otimização de espaço", text: "O sistema Versatik é deslizante, silencioso e libera 100% da passagem — perfeito para integrar ambientes pequenos em apartamentos de São Paulo sem perder área útil." },
+          { title: "Portas de correr Vision", text: "As portas de correr Vision combinam perfil ultrafino com vidro temperado de alta segurança, ideais para escritórios, lofts e salas de reunião com visual minimalista." },
+          { title: "Instalação em toda a Capital e Grande SP", text: "Fabricação sob medida com ferragens importadas e instalação por equipe própria em Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé e Alphaville." },
+        ]}
       />
     </SiteLayout>
   ),

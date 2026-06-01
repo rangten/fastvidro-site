@@ -11,6 +11,7 @@ export interface ProductPageProps {
   models: { name: string; description: string }[];
   features: string[];
   ctaLabel?: string;
+  seoHighlights?: { title: string; text: string }[];
 }
 
 export function ProductPage({
@@ -22,6 +23,7 @@ export function ProductPage({
   models,
   features,
   ctaLabel = "Pedir orçamento",
+  seoHighlights,
 }: ProductPageProps) {
   return (
     <>
@@ -92,6 +94,27 @@ export function ProductPage({
           </div>
         </div>
       </section>
+
+      {seoHighlights && seoHighlights.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 lg:px-8 py-20">
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+            <div>
+              <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-foreground/60">
+                Destaques
+              </span>
+              <h2 className="mt-3 text-4xl font-black">Soluções mais procuradas em São Paulo</h2>
+            </div>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {seoHighlights.map((h) => (
+              <div key={h.title} className="rounded-xl border border-border bg-card p-7 hover:border-primary transition">
+                <h3 className="text-lg font-black leading-tight">{h.title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{h.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }

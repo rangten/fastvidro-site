@@ -17,9 +17,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-ink text-ink-foreground border-b-2 border-primary/30">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Fast Vidro" className="h-12 w-auto" />
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8 lg:py-5">
+        <Link to="/" className="flex items-center gap-2 py-1" onClick={() => setOpen(false)}>
+          <img src={logoAsset.url} alt="Fast Vidro" className="h-16 sm:h-20 lg:h-24 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">
