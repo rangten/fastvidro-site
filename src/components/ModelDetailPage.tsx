@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { waLink } from "@/lib/site";
 import type { Category, Model } from "@/lib/catalog";
@@ -22,13 +21,12 @@ export function ModelDetailPage({
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
-          <Link
-            to="/$categoria"
-            params={{ categoria: category.slug }}
+          <a
+            href={`/${category.slug}`}
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary hover:underline"
           >
             <ArrowLeft className="h-3.5 w-3.5" /> Voltar para {category.eyebrow}
-          </Link>
+          </a>
           <span className="mt-6 block speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
             {category.eyebrow}
           </span>
