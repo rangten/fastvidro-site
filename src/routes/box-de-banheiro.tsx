@@ -38,6 +38,11 @@ export const Route = createFileRoute("/box-de-banheiro")({
           { name: "Duo Safe", description: "Película de segurança anti-estilhaço integrada." },
         ]}
         ctaLabel="Solicitar visita técnica"
+        seoHighlights={[
+          { title: "Box de Banheiro com Instalação Rápida em SP", text: "Atendemos toda a capital de São Paulo com medição, fabricação e instalação em prazo reduzido. Equipe própria, sem terceirização e sem sujeira na obra." },
+          { title: "Box Flex para banheiro pequeno", text: "O modelo Box Flex é a solução ideal para banheiros pequenos: perfil discreto, abertura suave e aproveitamento máximo do espaço, mesmo em boxes de canto." },
+          { title: "Box Elegance com roldanas aparentes", text: "O Box Elegance traz roldanas aparentes em aço inox, design sofisticado e deslizamento silencioso — referência para reformas de alto padrão em SP." },
+        ]}
       />
     </SiteLayout>
   ),
