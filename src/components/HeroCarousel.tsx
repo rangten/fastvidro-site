@@ -12,9 +12,10 @@ import boxDesktop from "@/assets/hero-box-desktop.png.asset.json";
 import boxMobile from "@/assets/hero-box-mobile.png.asset.json";
 
 type Slide = {
-  eyebrow: string;
-  title: React.ReactNode;
-  subtitle: string;
+  eyebrow?: string;
+  title?: React.ReactNode;
+  subtitle?: string;
+  showText?: boolean;
   desktopImage: string;
   mobileImage: string;
   primary: { label: string; href: string; icon?: React.ReactNode };
@@ -37,14 +38,6 @@ const slides: Slide[] = [
     secondary: { label: "Ver projetos", to: "/projetos" },
   },
   {
-    eyebrow: "Box Flex Premium",
-    title: (
-      <>
-        Espaço Reduzido? <span className="text-primary">Box Flex</span> Premium.
-      </>
-    ),
-    subtitle:
-      "Ganhe até 90% de abertura no vão do seu banheiro com sofisticação.",
     desktopImage: flexDesktop.url,
     mobileImage: flexMobile.url,
     primary: {
@@ -54,14 +47,6 @@ const slides: Slide[] = [
     },
   },
   {
-    eyebrow: "Box +Seguro",
-    title: (
-      <>
-        Box <span className="text-primary">+Seguro</span>: Proteção para sua família.
-      </>
-    ),
-    subtitle:
-      "Película de segurança de alta resistência inclusa para evitar estilhaços.",
     desktopImage: boxDesktop.url,
     mobileImage: boxMobile.url,
     primary: {
@@ -99,29 +84,40 @@ export function HeroCarousel() {
           {slides.map((s, i) => (
             <div key={i} className="relative flex-[0_0_100%] min-w-0">
               <div className="relative min-h-[560px] sm:min-h-[620px] lg:min-h-[700px]">
-                {/* Mobile image */}
                 <picture>
                   <source media="(min-width: 768px)" srcSet={s.desktopImage} />
                   <img
                     src={s.mobileImage}
                     alt=""
                     aria-hidden="true"
-                    className="absolute inset-0 h-full w-full object-cover opacity-40"
+                    className="absolute inset-0 h-full w-full object-cover"
                     loading={i === 0 ? "eager" : "lazy"}
                   />
                 </picture>
-                <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30" />
-                <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-24 lg:py-36">
-                  <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
-                    {s.eyebrow}
-                  </span>
-                  <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] max-w-4xl">
-                    {s.title}
-                  </h1>
-                  <p className="mt-6 max-w-xl text-base sm:text-lg text-ink-foreground/80">
-                    {s.subtitle}
-                  </p>
-                  <div className="mt-9 flex flex-wrap gap-3">
+                {s.showText && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30" />
+                )}
+                <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-24 lg:py-36 h-full flex flex-col justify-end lg:justify-center">
+                  {s.showText && (
+                    <>
+                      {s.eyebrow && (
+                        <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                          {s.eyebrow}
+                        </span>
+                      )}
+                      {s.title && (
+                        <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] max-w-4xl">
+                          {s.title}
+                        </h1>
+                      )}
+                      {s.subtitle && (
+                        <p className="mt-6 max-w-xl text-base sm:text-lg text-ink-foreground/80">
+                          {s.subtitle}
+                        </p>
+                      )}
+                    </>
+                  )}
+                  <div className={`${s.showText ? "mt-9" : ""} flex flex-wrap gap-3`}>
                     <a
                       href={s.primary.href}
                       target="_blank"
