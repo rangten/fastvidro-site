@@ -8,11 +8,16 @@ export interface ProductPageProps {
   subtitle: string;
   heroImage: string;
   intro: string;
-  models: { name: string; description: string }[];
+  // Cada modelo aceita uma imagem opcional. Para usar suas fotos reais,
+  // basta preencher `image` com a URL/import da foto do projeto instalado.
+  models: { name: string; description: string; image?: string }[];
   features: string[];
   ctaLabel?: string;
   seoHighlights?: { title: string; text: string }[];
+  // Mensagem pré-preenchida do WhatsApp específica desta página.
+  whatsappMessage?: string;
 }
+
 
 export function ProductPage({
   eyebrow,
@@ -24,7 +29,10 @@ export function ProductPage({
   features,
   ctaLabel = "Pedir orçamento",
   seoHighlights,
+  whatsappMessage,
 }: ProductPageProps) {
+  const waMsg = whatsappMessage ?? `Olá! Quero um orçamento de ${title}.`;
+
   return (
     <>
       <PageHero eyebrow={eyebrow} title={title} subtitle={subtitle} image={heroImage} />
@@ -71,20 +79,34 @@ export function ProductPage({
             {models.map((m) => (
               <div
                 key={m.name}
-                className="group rounded-xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-primary hover:bg-white/[0.06]"
+                className="group overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition hover:border-primary hover:bg-white/[0.06]"
               >
-                <div className="flex items-baseline justify-between">
-                  <h3 className="text-2xl font-black text-primary">{m.name}</h3>
-                  <span className="text-xs text-ink-foreground/40">→</span>
+                {/* Substitua `m.image` pela URL da sua foto real do modelo instalado. */}
+                {m.image && (
+                  <div className="aspect-[4/3] overflow-hidden bg-black">
+                    <img
+                      src={m.image}
+                      alt={`Modelo ${m.name}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-baseline justify-between">
+                    <h3 className="text-2xl font-black text-primary">{m.name}</h3>
+                    <span className="text-xs text-ink-foreground/40">→</span>
+                  </div>
+                  <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
                 </div>
-                <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
               </div>
             ))}
+
           </div>
 
           <div className="mt-14 text-center">
             <a
-              href={waLink(`Olá! Quero um orçamento de ${title}.`)}
+              href={waLink(waMsg)}
               target="_blank"
               rel="noopener"
               className="inline-block rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"

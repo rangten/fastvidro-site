@@ -15,6 +15,8 @@ export const Route = createFileRoute("/portas-de-vidro")({
   component: () => (
     <SiteLayout>
       <ProductPage
+        whatsappMessage="Olá! Preciso de um orçamento para Portas de Vidro com a Fast Vidro."
+
         eyebrow="Portas de Vidro"
         title="Portas de vidro que integram e iluminam"
         subtitle="Soluções para residências, escritórios e comércio com vidros incolor, jateado, fumê ou bronze."
