@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ProjetosRouteImport } from './routes/projetos'
+import { Route as PortasDeVidroRouteImport } from './routes/portas-de-vidro'
+import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
+import { Route as EspelhosRouteImport } from './routes/espelhos'
+import { Route as BoxDeBanheiroRouteImport } from './routes/box-de-banheiro'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosRoute = ProjetosRouteImport.update({
+  id: '/projetos',
+  path: '/projetos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroRoute = PortasDeVidroRouteImport.update({
+  id: '/portas-de-vidro',
+  path: '/portas-de-vidro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosLedRoute = EspelhosLedRouteImport.update({
+  id: '/espelhos-led',
+  path: '/espelhos-led',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosRoute = EspelhosRouteImport.update({
+  id: '/espelhos',
+  path: '/espelhos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroRoute = BoxDeBanheiroRouteImport.update({
+  id: '/box-de-banheiro',
+  path: '/box-de-banheiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRoute
+  '/espelhos': typeof EspelhosRoute
+  '/espelhos-led': typeof EspelhosLedRoute
+  '/portas-de-vidro': typeof PortasDeVidroRoute
+  '/projetos': typeof ProjetosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRoute
+  '/espelhos': typeof EspelhosRoute
+  '/espelhos-led': typeof EspelhosLedRoute
+  '/portas-de-vidro': typeof PortasDeVidroRoute
+  '/projetos': typeof ProjetosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroRoute
+  '/espelhos': typeof EspelhosRoute
+  '/espelhos-led': typeof EspelhosLedRoute
+  '/portas-de-vidro': typeof PortasDeVidroRoute
+  '/projetos': typeof ProjetosRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/box-de-banheiro'
+    | '/espelhos'
+    | '/espelhos-led'
+    | '/portas-de-vidro'
+    | '/projetos'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/blog'
+    | '/box-de-banheiro'
+    | '/espelhos'
+    | '/espelhos-led'
+    | '/portas-de-vidro'
+    | '/projetos'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/box-de-banheiro'
+    | '/espelhos'
+    | '/espelhos-led'
+    | '/portas-de-vidro'
+    | '/projetos'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
+  BoxDeBanheiroRoute: typeof BoxDeBanheiroRoute
+  EspelhosRoute: typeof EspelhosRoute
+  EspelhosLedRoute: typeof EspelhosLedRoute
+  PortasDeVidroRoute: typeof PortasDeVidroRoute
+  ProjetosRoute: typeof ProjetosRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos': {
+      id: '/projetos'
+      path: '/projetos'
+      fullPath: '/projetos'
+      preLoaderRoute: typeof ProjetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro': {
+      id: '/portas-de-vidro'
+      path: '/portas-de-vidro'
+      fullPath: '/portas-de-vidro'
+      preLoaderRoute: typeof PortasDeVidroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos-led': {
+      id: '/espelhos-led'
+      path: '/espelhos-led'
+      fullPath: '/espelhos-led'
+      preLoaderRoute: typeof EspelhosLedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos': {
+      id: '/espelhos'
+      path: '/espelhos'
+      fullPath: '/espelhos'
+      preLoaderRoute: typeof EspelhosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro': {
+      id: '/box-de-banheiro'
+      path: '/box-de-banheiro'
+      fullPath: '/box-de-banheiro'
+      preLoaderRoute: typeof BoxDeBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
+  BoxDeBanheiroRoute: BoxDeBanheiroRoute,
+  EspelhosRoute: EspelhosRoute,
+  EspelhosLedRoute: EspelhosLedRoute,
+  PortasDeVidroRoute: PortasDeVidroRoute,
+  ProjetosRoute: ProjetosRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

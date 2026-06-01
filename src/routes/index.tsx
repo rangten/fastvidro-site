@@ -1,29 +1,237 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Shield, Zap, Award, Hammer, Star, ArrowRight, MessageCircle } from "lucide-react";
+import heroImg from "@/assets/hero-box.jpg";
+import boxImg from "@/assets/product-box.jpg";
+import portasImg from "@/assets/product-portas.jpg";
+import espelhosImg from "@/assets/product-espelhos.jpg";
+import ledImg from "@/assets/product-led.jpg";
+import projetosImg from "@/assets/product-projetos.jpg";
+import { SiteLayout } from "@/components/SiteLayout";
+import { waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Fast Vidro — Agilidade e Segurança em Vidros" },
+      { name: "description", content: "Box de banheiro, portas de vidro, espelhos e espelhos LED. Projetos sob medida em São Paulo com tecnologia anti-estilhaço." },
+      { property: "og:title", content: "Fast Vidro — Agilidade e Segurança em Vidros" },
+      { property: "og:description", content: "Box, portas, espelhos e projetos personalizados em vidro. Orçamento rápido pelo WhatsApp." },
     ],
   }),
-  component: Index,
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const products = [
+  { to: "/box-de-banheiro", title: "Box de Banheiro", img: boxImg, desc: "Modelos Flex, Piso Teto, Nobre, Elegance, Duo Safe e mais." },
+  { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas." },
+  { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê." },
+  { to: "/espelhos-led", title: "Espelhos LED", img: ledImg, desc: "Iluminação retroiluminada com sensor touch para banheiros." },
+  { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente." },
+] as const;
+
+const diffs = [
+  { icon: Shield, title: "Segurança", desc: "Tecnologia anti-estilhaço em todos os vidros temperados." },
+  { icon: Zap, title: "Agilidade", desc: "Visita técnica, instalação e entrega no menor prazo do mercado." },
+  { icon: Award, title: "Qualidade", desc: "Vidros certificados e acabamento premium em cada peça." },
+  { icon: Hammer, title: "Tradição", desc: "Anos de experiência transformando ambientes com vidro." },
+];
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{ backgroundImage: `url(${heroImg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30" />
+        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-24 lg:py-36">
+          <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            Fast Vidro
+          </span>
+          <h1 className="mt-4 text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] max-w-4xl">
+            Agilidade e <span className="text-primary">segurança</span> em vidros.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg text-ink-foreground/80">
+            Box de banheiro, portas, espelhos e projetos sob medida com tecnologia anti-estilhaço
+            e instalação rápida.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
+            >
+              <MessageCircle className="h-4 w-4" /> Pedir orçamento
+            </a>
+            <Link
+              to="/projetos"
+              className="inline-flex items-center gap-2 rounded-md border-2 border-ink-foreground/30 px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:border-primary hover:text-primary transition"
+            >
+              Ver projetos <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl border-t border-white/10 pt-8">
+            <div>
+              <div className="text-4xl font-black text-primary">500+</div>
+              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Projetos entregues</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-primary">5.0</div>
+              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Avaliação Google</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-primary">24h</div>
+              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Resposta</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-primary text-primary-foreground py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-[0.3em]">Destaque</span>
+            <h2 className="mt-3 text-5xl lg:text-6xl font-black leading-[0.95]">
+              BOX <span className="italic">+Seguro</span>
+            </h2>
+            <p className="mt-5 text-base max-w-lg">
+              Tecnologia anti-estilhaço exclusiva: mesmo em caso de impacto, o vidro permanece
+              integrado à película de segurança, evitando acidentes em casa.
+            </p>
+            <a
+              href={waLink("Olá! Quero saber mais sobre o Box +Seguro.")}
+              target="_blank"
+              rel="noopener"
+              className="mt-7 inline-block rounded-md bg-ink px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:bg-ink/80 transition"
+            >
+              Quero o Box +Seguro
+            </a>
+          </div>
+          <div className="relative">
+            <img src={boxImg} alt="Box de banheiro Fast Vidro" className="rounded-xl shadow-ink w-full" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 lg:px-8 py-20">
+        <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+          <div>
+            <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-foreground/60">
+              Catálogo
+            </span>
+            <h2 className="mt-3 text-5xl font-black">Nossos produtos</h2>
+          </div>
+          <p className="max-w-md text-sm text-muted-foreground">
+            Cada peça é projetada, fabricada e instalada por nossa equipe especializada.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((p, i) => (
+            <Link
+              key={p.to}
+              to={p.to}
+              className={`group relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary transition ${i === 0 ? "lg:row-span-2" : ""}`}
+            >
+              <div className={`relative overflow-hidden ${i === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <h3 className="text-2xl lg:text-3xl font-black text-ink-foreground">{p.title}</h3>
+                  <p className="mt-1.5 text-sm text-ink-foreground/80">{p.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
+                    Ver mais <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-muted py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-foreground/60">
+              Por que Fast Vidro
+            </span>
+            <h2 className="mt-3 text-5xl font-black">Quatro pilares. Zero atrito.</h2>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {diffs.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="rounded-xl bg-background p-7 border border-border hover:border-primary transition">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary">
+                  <Icon className="h-6 w-6 text-primary-foreground" />
+                </div>
+                <h3 className="mt-5 text-xl font-black">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 lg:px-8 py-20">
+        <div className="text-center max-w-2xl mx-auto">
+          <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-foreground/60">
+            Clientes
+          </span>
+          <h2 className="mt-3 text-5xl font-black">O que dizem sobre a gente</h2>
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {[
+            { name: "Mariana S.", text: "Box instalado em 3 dias, acabamento impecável. Equipe muito atenciosa." },
+            { name: "Carlos R.", text: "Porta de vidro do escritório ficou perfeita. Preço justo e prazo cumprido." },
+            { name: "Luana M.", text: "Espelho LED do banheiro virou destaque da reforma. Recomendo!" },
+          ].map((t) => (
+            <div key={t.name} className="rounded-xl border border-border bg-card p-7">
+              <div className="flex gap-0.5 text-primary">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-4 text-sm leading-relaxed">"{t.text}"</p>
+              <p className="mt-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">— {t.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-ink text-ink-foreground py-20">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Sobre a Fast Vidro
+            </span>
+            <h2 className="mt-3 text-5xl font-black">Velocidade que não compromete o cuidado.</h2>
+            <p className="mt-5 text-base text-ink-foreground/80">
+              Nascemos para encurtar prazos sem abrir mão da qualidade. Cada projeto da Fast Vidro
+              passa por medição precisa, fabricação em vidro temperado certificado e instalação
+              feita por equipe própria.
+            </p>
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener"
+              className="mt-7 inline-block rounded-md bg-primary px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
+            >
+              Fale com um especialista
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <img src={projetosImg} alt="Projeto" className="rounded-xl h-full object-cover" loading="lazy" />
+            <img src={ledImg} alt="LED" className="rounded-xl h-full object-cover mt-8" loading="lazy" />
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
   );
 }
