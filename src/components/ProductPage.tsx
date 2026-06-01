@@ -29,6 +29,7 @@ export function ProductPage({
   heroImage,
   intro,
   models,
+  modelLinkBase,
   features,
   ctaLabel = "Pedir orçamento",
   seoHighlights,
@@ -79,32 +80,50 @@ export function ProductPage({
             </div>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {models.map((m) => (
-              <div
-                key={m.name}
-                className="group overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition hover:border-primary hover:bg-white/[0.06]"
-              >
-                {/* Substitua `m.image` pela URL da sua foto real do modelo instalado. */}
-                {m.image && (
+            {models.map((m) => {
+              const href = modelLinkBase && m.slug ? `${modelLinkBase}/${m.slug}` : undefined;
+              const cardBody = (
+                <>
+                  {/* Foto de destaque do modelo (substitua `m.image` pelas suas fotos reais). */}
                   <div className="aspect-[4/3] overflow-hidden bg-black">
-                    <img
-                      src={m.image}
-                      alt={`Modelo ${m.name}`}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
+                    {m.image ? (
+                      <img
+                        src={m.image}
+                        alt={`Modelo ${m.name}`}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="h-full w-full grid place-items-center text-ink-foreground/30 text-xs uppercase tracking-wider">
+                        Foto em breve
+                      </div>
+                    )}
                   </div>
-                )}
-                <div className="p-6">
-                  <div className="flex items-baseline justify-between">
+                  <div className="p-6">
                     <h3 className="text-2xl font-black text-primary">{m.name}</h3>
-                    <span className="text-xs text-ink-foreground/40">→</span>
+                    <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
+                    {href && (
+                      <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary">
+                        Ver modelo <ArrowRight className="h-3 w-3" />
+                      </span>
+                    )}
                   </div>
-                  <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
-                </div>
-              </div>
-            ))}
+                </>
+              );
 
+              const cardClass =
+                "group block overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition hover:border-primary hover:bg-white/[0.06]";
+
+              return href ? (
+                <a key={m.name} href={href} className={cardClass}>
+                  {cardBody}
+                </a>
+              ) : (
+                <div key={m.name} className={cardClass}>
+                  {cardBody}
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-14 text-center">
