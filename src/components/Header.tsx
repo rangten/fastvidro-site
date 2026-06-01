@@ -14,9 +14,9 @@ type NavItem = {
 const nav: NavItem[] = [
   { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
+  { to: "/box-mais-seguro", label: "Box + Seguro", image: { src: maisSeguroAsset.url, alt: "Box + Seguro" } },
   { to: "/espelhos", label: "Espelhos" },
   { to: "/projetos", label: "Projetos" },
-  { to: "/box-de-banheiro", label: "Box + Seguro", image: { src: maisSeguroAsset.url, alt: "Box + Seguro" } },
   { to: "/blog", label: "Blog" },
 ];
 
