@@ -15,6 +15,8 @@ export const Route = createFileRoute("/box-de-banheiro")({
   component: () => (
     <SiteLayout>
       <ProductPage
+        whatsappMessage="Olá! Gostaria de um orçamento para Box de Banheiro com a equipe da Fast Vidro."
+
         eyebrow="Box de Banheiro"
         title="Box de banheiro sob medida"
         subtitle="Vidro temperado com tecnologia anti-estilhaço, ferragens premium e instalação rápida."

@@ -15,6 +15,8 @@ export const Route = createFileRoute("/espelhos-led")({
   component: () => (
     <SiteLayout>
       <ProductPage
+        whatsappMessage="Olá! Vi os Espelhos com LED no site e quero um orçamento sob medida."
+
         eyebrow="Espelhos LED"
         title="Espelhos LED com tecnologia e design"
         subtitle="Iluminação frontal ou retroiluminada, sensor touch e baixo consumo de energia."

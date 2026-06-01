@@ -15,6 +15,8 @@ export const Route = createFileRoute("/espelhos")({
   component: () => (
     <SiteLayout>
       <ProductPage
+        whatsappMessage="Olá! Gostaria de um orçamento para Espelhos Lapidados/Bisotê com a Fast Vidro."
+
         eyebrow="Espelhos"
         title="Espelhos que ampliam e decoram"
         subtitle="Decorativos, para banheiro ou parede inteira — com lapidação precisa e instalação segura."
