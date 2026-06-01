@@ -46,7 +46,7 @@ export function Header() {
                 <img
                   src={n.image.src}
                   alt={n.image.alt}
-                  className="h-8 w-auto object-contain"
+                  className="h-16 lg:h-20 w-auto object-contain bg-white rounded-lg px-3 py-1.5 shadow-md ring-1 ring-black/5"
                 />
               ) : (
                 n.label
@@ -85,7 +85,11 @@ export function Header() {
                 className="flex items-center gap-3 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 border-b border-white/5 last:border-0"
               >
                 {n.image && (
-                  <img src={n.image.src} alt={n.image.alt} className="h-7 w-auto object-contain" />
+                  <img
+                    src={n.image.src}
+                    alt={n.image.alt}
+                    className="h-14 w-auto object-contain bg-white rounded-lg px-2.5 py-1 shadow-md"
+                  />
                 )}
                 <span>{n.label}</span>
               </Link>
