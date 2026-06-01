@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Shield, Zap, Award, Hammer, Star, ArrowRight, MessageCircle } from "lucide-react";
-import heroImg from "@/assets/hero-box.jpg";
+import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
 import boxImg from "@/assets/product-box.jpg";
 import portasImg from "@/assets/product-portas.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import projetosImg from "@/assets/product-projetos.jpg";
 import { SiteLayout } from "@/components/SiteLayout";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
@@ -39,53 +39,21 @@ const diffs = [
 function Home() {
   return (
     <SiteLayout>
-      <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${heroImg})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30" />
-        <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-24 lg:py-36">
-          <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
-            Fast Vidro
-          </span>
-          <h1 className="mt-4 text-5xl sm:text-7xl lg:text-8xl font-black leading-[0.9] max-w-4xl">
-            Agilidade e <span className="text-primary">segurança</span> em vidros.
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-ink-foreground/80">
-            Box de banheiro, portas, espelhos e projetos sob medida com tecnologia anti-estilhaço
-            e instalação rápida.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <a
-              href={waLink()}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
-            >
-              <MessageCircle className="h-4 w-4" /> Pedir orçamento
-            </a>
-            <Link
-              to="/projetos"
-              className="inline-flex items-center gap-2 rounded-md border-2 border-ink-foreground/30 px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:border-primary hover:text-primary transition"
-            >
-              Ver projetos <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+      <HeroCarousel />
 
-          <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl border-t border-white/10 pt-8">
-            <div>
-              <div className="text-4xl font-black text-primary">500+</div>
-              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Projetos entregues</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-primary">5.0</div>
-              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Avaliação Google</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-primary">24h</div>
-              <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Resposta</div>
-            </div>
+      <section className="bg-ink text-ink-foreground border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 py-10 grid grid-cols-3 gap-6">
+          <div>
+            <div className="text-3xl lg:text-4xl font-black text-primary">500+</div>
+            <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Projetos entregues</div>
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-black text-primary">5.0</div>
+            <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Avaliação Google</div>
+          </div>
+          <div>
+            <div className="text-3xl lg:text-4xl font-black text-primary">24h</div>
+            <div className="text-xs uppercase tracking-wider text-ink-foreground/60">Resposta</div>
           </div>
         </div>
       </section>
