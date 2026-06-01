@@ -8,11 +8,16 @@ export interface ProductPageProps {
   subtitle: string;
   heroImage: string;
   intro: string;
-  models: { name: string; description: string }[];
+  // Cada modelo aceita uma imagem opcional. Para usar suas fotos reais,
+  // basta preencher `image` com a URL/import da foto do projeto instalado.
+  models: { name: string; description: string; image?: string }[];
   features: string[];
   ctaLabel?: string;
   seoHighlights?: { title: string; text: string }[];
+  // Mensagem pré-preenchida do WhatsApp específica desta página.
+  whatsappMessage?: string;
 }
+
 
 export function ProductPage({
   eyebrow,

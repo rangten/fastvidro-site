@@ -17,10 +17,15 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-ink text-ink-foreground border-b-2 border-primary/30">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8 lg:py-5">
-        <Link to="/" className="flex items-center gap-2 py-1" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Fast Vidro" className="h-16 sm:h-20 lg:h-24 w-auto object-contain" />
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:px-8 lg:py-6">
+        <Link to="/" className="flex items-center gap-2 py-1 pr-2" onClick={() => setOpen(false)}>
+          <img
+            src={logoAsset.url}
+            alt="Fast Vidro"
+            className="h-20 sm:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(250,204,21,0.15)]"
+          />
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-7">
           {nav.map((n) => (
