@@ -27,7 +27,7 @@ const products = [
   { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas.", logo: false },
   { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê.", logo: false },
   { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente.", logo: false },
-  { to: "/box-de-banheiro", title: "Box + Seguro", img: maisSeguroAsset.url, desc: "Película anti-estilhaço inclusa para máxima proteção da família.", logo: true },
+  { to: "/box-mais-seguro", title: "Box + Seguro", img: maisSeguroAsset.url, desc: "Película anti-estilhaço inclusa para máxima proteção da família.", logo: true },
 ] as const;
 
 const diffs = [
