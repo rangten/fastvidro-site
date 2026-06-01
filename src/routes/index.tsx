@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Shield, Zap, Award, Hammer, Star, ArrowRight, MessageCircle } from "lucide-react";
-import heroImg from "@/assets/hero-box.jpg";
+import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
 import boxImg from "@/assets/product-box.jpg";
 import portasImg from "@/assets/product-portas.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import projetosImg from "@/assets/product-projetos.jpg";
 import { SiteLayout } from "@/components/SiteLayout";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
