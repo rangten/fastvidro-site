@@ -33,6 +33,11 @@ export const Route = createFileRoute("/espelhos-led")({
           { name: "Sensor", description: "Acende automaticamente ao se aproximar." },
           { name: "Anti-embaçante", description: "Resistência interna que evita embaçamento." },
         ]}
+        seoHighlights={[
+          { title: "Espelho com LED sob medida para banheiro", text: "Projetamos e instalamos espelhos com LED sob medida para banheiros em São Paulo, com iluminação dimerizável e acabamento perfeito para qualquer nicho ou parede." },
+          { title: "Espelho LED para camarim com acionamento touch", text: "Camarins, ateliês e closets ganham vida com nossos espelhos LED touch: ligue, desligue e ajuste a intensidade com um simples toque, sem fios aparentes." },
+          { title: "Tecnologia, design e baixo consumo", text: "LEDs de alta eficiência (>30.000h), opção de luz quente, neutra ou fria e função anti-embaçante — tudo pensado para o uso real do seu dia a dia." },
+        ]}
       />
     </SiteLayout>
   ),
