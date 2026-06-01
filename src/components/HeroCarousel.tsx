@@ -12,18 +12,20 @@ import boxDesktop from "@/assets/hero-box-desktop.png.asset.json";
 import boxMobile from "@/assets/hero-box-mobile.png.asset.json";
 
 type Slide = {
+  kind: "text" | "image";
   eyebrow?: string;
   title?: React.ReactNode;
   subtitle?: string;
-  showText?: boolean;
   desktopImage: string;
   mobileImage: string;
-  primary: { label: string; href: string; icon?: React.ReactNode };
+  href?: string;
+  primary?: { label: string; href: string; icon?: React.ReactNode };
   secondary?: { label: string; to: string };
 };
 
 const slides: Slide[] = [
   {
+    kind: "text",
     eyebrow: "Fast Vidro",
     title: (
       <>
@@ -38,22 +40,16 @@ const slides: Slide[] = [
     secondary: { label: "Ver projetos", to: "/projetos" },
   },
   {
+    kind: "image",
     desktopImage: flexDesktop.url,
     mobileImage: flexMobile.url,
-    primary: {
-      label: "Orçamento via WhatsApp",
-      href: waLink("Olá! Quero orçamento do Box Flex Premium da Fast Vidro."),
-      icon: <MessageCircle className="h-4 w-4" />,
-    },
+    href: waLink("Olá! Quero orçamento do Box Flex Premium da Fast Vidro."),
   },
   {
+    kind: "image",
     desktopImage: boxDesktop.url,
     mobileImage: boxMobile.url,
-    primary: {
-      label: "Quero Box com Película",
-      href: waLink("Olá! Quero o Box +Seguro com película de proteção."),
-      icon: <Shield className="h-4 w-4" />,
-    },
+    href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
   },
 ];
 
@@ -83,60 +79,77 @@ export function HeroCarousel() {
         <div className="flex">
           {slides.map((s, i) => (
             <div key={i} className="relative flex-[0_0_100%] min-w-0">
-              <div className="relative min-h-[560px] sm:min-h-[620px] lg:min-h-[700px]">
-                <picture>
-                  <source media="(min-width: 768px)" srcSet={s.desktopImage} />
-                  <img
-                    src={s.mobileImage}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    loading={i === 0 ? "eager" : "lazy"}
-                  />
-                </picture>
-                {s.showText && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30" />
-                )}
-                <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-24 lg:py-36 h-full flex flex-col justify-end lg:justify-center">
-                  {s.showText && (
-                    <>
-                      {s.eyebrow && (
-                        <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
-                          {s.eyebrow}
-                        </span>
-                      )}
-                      {s.title && (
-                        <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] max-w-4xl">
-                          {s.title}
-                        </h1>
-                      )}
-                      {s.subtitle && (
-                        <p className="mt-6 max-w-xl text-base sm:text-lg text-ink-foreground/80">
-                          {s.subtitle}
-                        </p>
-                      )}
-                    </>
-                  )}
-                  <div className={`${s.showText ? "mt-9" : ""} flex flex-wrap gap-3`}>
-                    <a
-                      href={s.primary.href}
-                      target="_blank"
-                      rel="noopener"
-                      className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
-                    >
-                      {s.primary.icon} {s.primary.label}
-                    </a>
-                    {s.secondary && (
-                      <Link
-                        to={s.secondary.to}
-                        className="inline-flex items-center gap-2 rounded-md border-2 border-ink-foreground/30 px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:border-primary hover:text-primary transition"
-                      >
-                        {s.secondary.label} <ArrowRight className="h-4 w-4" />
-                      </Link>
+              {s.kind === "image" ? (
+                // Promotional slides: entire banner is clickable, image shown intact (no crop)
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener"
+                  className="block bg-ink"
+                  aria-label="Falar no WhatsApp"
+                >
+                  <picture>
+                    <source media="(min-width: 768px)" srcSet={s.desktopImage} />
+                    <img
+                      src={s.mobileImage}
+                      alt="Banner promocional Fast Vidro"
+                      className="block w-full h-auto max-h-[70vh] object-contain mx-auto"
+                      loading={i === 0 ? "eager" : "lazy"}
+                    />
+                  </picture>
+                </a>
+              ) : (
+                <div className="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[600px]">
+                  <picture>
+                    <source media="(min-width: 768px)" srcSet={s.desktopImage} />
+                    <img
+                      src={s.mobileImage}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading="eager"
+                    />
+                  </picture>
+                  <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/40 md:to-ink/20" />
+                  <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-20 lg:py-28 h-full flex flex-col justify-center">
+                    {s.eyebrow && (
+                      <span className="speed-line text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                        {s.eyebrow}
+                      </span>
+                    )}
+                    {s.title && (
+                      <h1 className="mt-4 text-4xl sm:text-6xl lg:text-7xl font-black leading-[0.95] max-w-4xl">
+                        {s.title}
+                      </h1>
+                    )}
+                    {s.subtitle && (
+                      <p className="mt-6 max-w-xl text-base sm:text-lg text-ink-foreground/80">
+                        {s.subtitle}
+                      </p>
+                    )}
+                    {s.primary && (
+                      <div className="mt-9 flex flex-wrap gap-3">
+                        <a
+                          href={s.primary.href}
+                          target="_blank"
+                          rel="noopener"
+                          className="inline-flex items-center gap-2 rounded-md bg-primary px-7 py-4 text-sm font-bold uppercase tracking-wide text-primary-foreground hover:shadow-yellow transition"
+                        >
+                          {s.primary.icon} {s.primary.label}
+                        </a>
+                        {s.secondary && (
+                          <Link
+                            to={s.secondary.to}
+                            className="inline-flex items-center gap-2 rounded-md border-2 border-ink-foreground/30 px-7 py-4 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:border-primary hover:text-primary transition"
+                          >
+                            {s.secondary.label} <ArrowRight className="h-4 w-4" />
+                          </Link>
+                        )}
+                      </div>
                     )}
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
@@ -171,6 +184,9 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+
+      {/* Floating WhatsApp CTA for promotional slides (discreet, bottom) */}
+      <noscript />
     </section>
   );
 }
