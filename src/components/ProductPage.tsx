@@ -11,6 +11,7 @@ export interface ProductPageProps {
   models: { name: string; description: string }[];
   features: string[];
   ctaLabel?: string;
+  seoHighlights?: { title: string; text: string }[];
 }
 
 export function ProductPage({
@@ -22,6 +23,7 @@ export function ProductPage({
   models,
   features,
   ctaLabel = "Pedir orçamento",
+  seoHighlights,
 }: ProductPageProps) {
   return (
     <>
