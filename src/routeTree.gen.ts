@@ -23,6 +23,7 @@ import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidr
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
+import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 
@@ -95,6 +96,11 @@ const BoxDeBanheiroTradicionalRoute =
 const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
   id: '/box-de-banheiro/piso-teto',
   path: '/box-de-banheiro/piso-teto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroTradicionalRoute = BoxDeBanheiroTradicionalRouteImport.update({
+  id: '/box-de-banheiro/tradicional',
+  path: '/box-de-banheiro/tradicional',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
