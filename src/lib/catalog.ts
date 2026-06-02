@@ -3,6 +3,7 @@ import portasImg from "@/assets/product-portas.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import projetosImg from "@/assets/product-projetos.jpg";
 import heroBox from "@/assets/hero-box.jpg";
+import flexCover from "@/assets/flex-cover.png.asset.json";
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
@@ -36,7 +37,7 @@ export const CATEGORIES: Record<string, Category> = {
     eyebrow: "Box de Banheiro",
     title: "Box de banheiro sob medida",
     models: [
-      { slug: "flex", name: "Flex", description: "Versátil para box de canto e frontal, perfil discreto.", longDescription: "O Box Flex é a escolha ideal para banheiros pequenos e médios em São Paulo. Com perfil discreto em alumínio anodizado, roldanas silenciosas e vidro temperado de 8mm, ele se adapta tanto a boxes frontais quanto de canto, garantindo abertura suave e máximo aproveitamento do espaço.", image: boxImg, gallery: placeholderGallery(boxImg) },
+      { slug: "flex", name: "Flex", description: "Versátil para box de canto e frontal, perfil discreto.", longDescription: "O Box Flex é a escolha ideal para banheiros pequenos e médios em São Paulo. Com perfil discreto em alumínio anodizado, roldanas silenciosas e vidro temperado de 8mm, ele se adapta tanto a boxes frontais quanto de canto, garantindo abertura suave e máximo aproveitamento do espaço.", image: flexCover.url, gallery: placeholderGallery(flexCover.url) },
       { slug: "piso-teto", name: "Piso Teto", description: "Painéis fixos do piso ao teto, visual minimalista.", longDescription: "O Box Piso Teto traz uma estética minimalista de alto padrão: painéis de vidro temperado vão do piso ao teto, sem perfis intermediários, criando uma sensação de amplitude e sofisticação no banheiro.", image: boxImg, gallery: placeholderGallery(boxImg) },
       { slug: "tradicional", name: "Tradicional", description: "Modelo clássico, ótimo custo-benefício.", longDescription: "O Box Tradicional é a solução clássica e mais procurada para reformas em São Paulo. Estrutura robusta, instalação rápida e excelente custo-benefício, mantendo o padrão de segurança Fast Vidro.", image: boxImg, gallery: placeholderGallery(boxImg) },
       { slug: "canto", name: "Canto", description: "Aproveita o espaço de boxes em L.", longDescription: "O Box de Canto aproveita totalmente boxes em formato L, permitindo aberturas independentes em cada lateral. Ideal para banheiros maiores ou áreas de chuveiro em ambiente molhado.", image: boxImg, gallery: placeholderGallery(boxImg) },
