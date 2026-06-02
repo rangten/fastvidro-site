@@ -24,6 +24,7 @@ import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
+import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro.nobre'
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 
@@ -103,6 +104,11 @@ const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
   path: '/box-de-banheiro/piso-teto',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BoxDeBanheiroNobreRoute = BoxDeBanheiroNobreRouteImport.update({
+  id: '/box-de-banheiro/nobre',
+  path: '/box-de-banheiro/nobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
   id: '/box-de-banheiro/flex',
   path: '/box-de-banheiro/flex',
@@ -122,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
+  '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
@@ -141,6 +148,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
+  '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
@@ -161,6 +169,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
+  '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
@@ -182,6 +191,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
+    | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
@@ -201,6 +211,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
+    | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
@@ -220,6 +231,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
+    | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
@@ -240,6 +252,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
   BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
+  BoxDeBanheiroNobreRoute: typeof BoxDeBanheiroNobreRoute
   BoxDeBanheiroPisoTetoRoute: typeof BoxDeBanheiroPisoTetoRoute
   BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
@@ -359,6 +372,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoxDeBanheiroPisoTetoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/box-de-banheiro/nobre': {
+      id: '/box-de-banheiro/nobre'
+      path: '/box-de-banheiro/nobre'
+      fullPath: '/box-de-banheiro/nobre'
+      preLoaderRoute: typeof BoxDeBanheiroNobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/box-de-banheiro/flex': {
       id: '/box-de-banheiro/flex'
       path: '/box-de-banheiro/flex'
@@ -384,6 +404,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
   BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
+  BoxDeBanheiroNobreRoute: BoxDeBanheiroNobreRoute,
   BoxDeBanheiroPisoTetoRoute: BoxDeBanheiroPisoTetoRoute,
   BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
@@ -398,3 +419,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
