@@ -8,6 +8,8 @@ import pisoTetoCover from "@/assets/piso-teto-cover.png.asset.json";
 import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
 import transferCover from "@/assets/transfer-cover.png.asset.json";
 import nobreCover from "@/assets/nobre-cover.png.asset.json";
+import eleganceCover from "@/assets/elegance-cover.png.asset.json";
+
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
@@ -46,7 +48,7 @@ export const CATEGORIES: Record<string, Category> = {
       { slug: "tradicional", name: "Tradicional", description: "Modelo clássico, ótimo custo-benefício.", longDescription: "O Box Tradicional é a solução clássica e mais procurada para reformas em São Paulo. Estrutura robusta, instalação rápida e excelente custo-benefício, mantendo o padrão de segurança Fast Vidro.", image: tradicionalCover.url, gallery: placeholderGallery(tradicionalCover.url) },
       { slug: "transfer", name: "3 Folhas de Correr", description: "Sistema com 3 folhas de correr, ideal para vãos pequenos.", longDescription: "O Box 3 Folhas de Correr (Transfer) é a solução perfeita para vãos pequenos: 1 folha fixa + 2 móveis que se recolhem atrás da fixa, garantindo até 2/3 de passagem livre no vão.", image: transferCover.url, gallery: placeholderGallery(transferCover.url) },
       { slug: "nobre", name: "Nobre", description: "Amortecedor duplo + alumínio reforçado.", longDescription: "O Box Nobre é o topo de linha da Ideia Glass: sistema de amortecimento na abertura e no fechamento, alumínio reforçado e puxador Asa Linear embutido. Segurança e acabamento premium.", image: nobreCover.url, gallery: placeholderGallery(nobreCover.url) },
-      { slug: "elegance", name: "Elegance", description: "Linhas finas, perfil reduzido, design moderno.", longDescription: "O Box Elegance combina linhas finas com roldanas aparentes em aço inox. Deslizamento silencioso e design contemporâneo — referência para reformas modernas em São Paulo.", image: boxImg, gallery: placeholderGallery(boxImg) },
+      { slug: "elegance", name: "Elegance", description: "Roldanas aparentes, design moderno e sofisticado.", longDescription: "O Box Elegance combina linhas finas com roldanas aparentes maciças sobre tubo cilíndrico. Deslizamento silencioso e design contemporâneo — referência para reformas modernas em São Paulo.", image: eleganceCover.url, gallery: placeholderGallery(eleganceCover.url) },
     ],
   },
   "portas-de-vidro": {
