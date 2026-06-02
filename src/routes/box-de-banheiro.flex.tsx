@@ -174,7 +174,7 @@ function BoxFlexPage() {
                   src={src}
                   alt={`Box Flex instalado — foto ${i + 1}`}
                   loading="lazy"
-                  className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-[1.02]"
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             ))}
