@@ -5,6 +5,7 @@ import portasImgAsset from "@/assets/card-portas-vidro.png.asset.json";
 import espelhosImgAsset from "@/assets/card-espelhos.jpg.asset.json";
 import projetosImgAsset from "@/assets/card-projetos.png.asset.json";
 import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
+import secureBoxHeroAsset from "@/assets/secure-box-hero.png.asset.json";
 import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg.asset.json";
 const boxImg = boxImgAsset.url;
 const portasImg = portasImgAsset.url;
@@ -82,7 +83,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative">
-            <img src={boxImg} alt="Box de banheiro Fast Vidro" className="rounded-xl shadow-ink w-full" loading="lazy" />
+            <img src={secureBoxHeroAsset.url} alt="Secure Box com película antiestilhaço — Fast Vidro" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
           </div>
         </div>
       </section>

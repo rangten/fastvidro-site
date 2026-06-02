@@ -3,6 +3,7 @@ import { ArrowLeft, Check, MessageCircle, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
+import secureBoxPelicula from "@/assets/secure-box-pelicula.png.asset.json";
 
 const META_TITLE = "Secure Box em SP | Box com Película Antiestilhaço - Fast Vidro";
 const META_DESC =
@@ -119,6 +120,20 @@ function SecureBoxPage() {
             modelo mais recomendado por arquitetos para residências com crianças, idosos ou
             pets.
           </p>
+
+          <figure className="mt-10 overflow-hidden rounded-xl shadow-ink ring-1 ring-border">
+            <img
+              src={secureBoxPelicula.url}
+              alt="Demonstração da película de segurança Secure Box — vidro estilhaçado mas íntegro"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <figcaption className="bg-ink text-ink-foreground/80 text-xs uppercase tracking-wider px-4 py-3 text-center">
+              Mesmo estilhaçado, o vidro permanece preso à película de segurança
+            </figcaption>
+          </figure>
+
+
 
           <h2 className="mt-12 text-3xl font-black">
             Alta Resistência Mecânica e Acabamento de Alto Padrão
