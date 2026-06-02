@@ -210,9 +210,13 @@ function Home() {
               Fale com um especialista
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img src={projetosImg} alt="Projeto" className="rounded-xl h-full object-cover" loading="lazy" />
-            <img src={ledImg} alt="LED" className="rounded-xl h-full object-cover mt-8" loading="lazy" />
+          <div className="w-full">
+            <img
+              src={sobreFastVidroAsset.url}
+              alt="Box de banheiro em vidro temperado instalado pela Fast Vidro"
+              className="w-full h-auto max-h-[520px] object-cover rounded-xl shadow-ink"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
