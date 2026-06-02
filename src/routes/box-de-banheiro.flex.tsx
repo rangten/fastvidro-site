@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
+import flexCover from "@/assets/flex-cover.png.asset.json";
 import img13 from "@/assets/flex-image-13.png.asset.json";
 import img14 from "@/assets/flex-image-14.png.asset.json";
 import img15 from "@/assets/flex-image-15.png.asset.json";
@@ -16,7 +17,7 @@ const WA_MSG =
   "Olá! Quero um orçamento do Box Flex (Zona Norte de SP) com a Fast Vidro.";
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
-const gallery = [img17.url, img13.url, img14.url, img15.url, img16.url, img17.url];
+const gallery = [flexCover.url, img17.url, flexCover.url, img17.url];
 
 export const Route = createFileRoute("/box-de-banheiro/flex")({
   head: () => ({
@@ -27,8 +28,8 @@ export const Route = createFileRoute("/box-de-banheiro/flex")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/box-de-banheiro/flex" },
-      { property: "og:image", content: img17.url },
-      { name: "twitter:image", content: img17.url },
+      { property: "og:image", content: flexCover.url },
+      { name: "twitter:image", content: flexCover.url },
     ],
     links: [{ rel: "canonical", href: "/box-de-banheiro/flex" }],
   }),
@@ -42,7 +43,7 @@ function BoxFlexPage() {
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
-          style={{ backgroundImage: `url(${img17.url})` }}
+          style={{ backgroundImage: `url(${flexCover.url})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
@@ -164,11 +165,11 @@ function BoxFlexPage() {
             Galeria
           </span>
           <h2 className="mt-3 text-3xl lg:text-4xl font-black">Box Flex instalado em SP</h2>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {gallery.map((src, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[3/4] flex items-center justify-center"
+                className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[4/3] flex items-center justify-center p-2"
               >
                 <img
                   src={src}
