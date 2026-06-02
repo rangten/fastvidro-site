@@ -21,6 +21,7 @@ import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro
 import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
 import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
+import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
@@ -85,6 +86,12 @@ const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
   path: '/espelhos/$modelo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BoxDeBanheiroTradicionalRoute =
+  BoxDeBanheiroTradicionalRouteImport.update({
+    id: '/box-de-banheiro/tradicional',
+    path: '/box-de-banheiro/tradicional',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
   id: '/box-de-banheiro/piso-teto',
   path: '/box-de-banheiro/piso-teto',
@@ -110,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -127,6 +135,7 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -145,6 +154,7 @@ export interface FileRoutesById {
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/tradicional'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -181,6 +192,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/tradicional'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -198,6 +210,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/tradicional'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -216,6 +229,7 @@ export interface RootRouteChildren {
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
   BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
   BoxDeBanheiroPisoTetoRoute: typeof BoxDeBanheiroPisoTetoRoute
+  BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
   PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
   ProjetosModeloRoute: typeof ProjetosModeloRoute
@@ -311,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspelhosModeloRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/box-de-banheiro/tradicional': {
+      id: '/box-de-banheiro/tradicional'
+      path: '/box-de-banheiro/tradicional'
+      fullPath: '/box-de-banheiro/tradicional'
+      preLoaderRoute: typeof BoxDeBanheiroTradicionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/box-de-banheiro/piso-teto': {
       id: '/box-de-banheiro/piso-teto'
       path: '/box-de-banheiro/piso-teto'
@@ -344,6 +365,7 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
   BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
   BoxDeBanheiroPisoTetoRoute: BoxDeBanheiroPisoTetoRoute,
+  BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
   PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
   ProjetosModeloRoute: ProjetosModeloRoute,
@@ -355,3 +377,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
