@@ -4,6 +4,7 @@ import espelhosImg from "@/assets/product-espelhos.jpg";
 import projetosImg from "@/assets/product-projetos.jpg";
 import heroBox from "@/assets/hero-box.jpg";
 import flexCover from "@/assets/flex-cover.png.asset.json";
+import pisoTetoCover from "@/assets/piso-teto-cover.png.asset.json";
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
