@@ -102,13 +102,13 @@ export function ModelDetailPage({
             {model.gallery.map((src, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[4/3]"
+                className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[3/4] flex items-center justify-center"
               >
                 <img
                   src={src}
                   alt={`${model.name} — foto ${i + 1}`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             ))}
