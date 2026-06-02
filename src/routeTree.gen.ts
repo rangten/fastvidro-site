@@ -21,6 +21,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
 import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
+import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -83,6 +84,11 @@ const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
   path: '/$modelo',
   getParentRoute: () => EspelhosRoute,
 } as any)
+const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
+  id: '/flex',
+  path: '/flex',
+  getParentRoute: () => BoxDeBanheiroRoute,
+} as any)
 const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
   id: '/$modelo',
   path: '/$modelo',
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -178,6 +189,7 @@ export interface FileRouteTypes {
     | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
@@ -281,6 +293,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspelhosModeloRouteImport
       parentRoute: typeof EspelhosRoute
     }
+    '/box-de-banheiro/flex': {
+      id: '/box-de-banheiro/flex'
+      path: '/flex'
+      fullPath: '/box-de-banheiro/flex'
+      preLoaderRoute: typeof BoxDeBanheiroFlexRouteImport
+      parentRoute: typeof BoxDeBanheiroRoute
+    }
     '/box-de-banheiro/$modelo': {
       id: '/box-de-banheiro/$modelo'
       path: '/$modelo'
@@ -293,10 +312,12 @@ declare module '@tanstack/react-router' {
 
 interface BoxDeBanheiroRouteChildren {
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
+  BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
 }
 
 const BoxDeBanheiroRouteChildren: BoxDeBanheiroRouteChildren = {
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
+  BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
 }
 
 const BoxDeBanheiroRouteWithChildren = BoxDeBanheiroRoute._addFileChildren(
