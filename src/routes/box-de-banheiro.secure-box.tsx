@@ -121,6 +121,20 @@ function SecureBoxPage() {
             pets.
           </p>
 
+          <figure className="mt-10 overflow-hidden rounded-xl shadow-ink ring-1 ring-border">
+            <img
+              src={secureBoxPelicula.url}
+              alt="Demonstração da película de segurança Secure Box — vidro estilhaçado mas íntegro"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <figcaption className="bg-ink text-ink-foreground/80 text-xs uppercase tracking-wider px-4 py-3 text-center">
+              Mesmo estilhaçado, o vidro permanece preso à película de segurança
+            </figcaption>
+          </figure>
+
+
+
           <h2 className="mt-12 text-3xl font-black">
             Alta Resistência Mecânica e Acabamento de Alto Padrão
           </h2>
