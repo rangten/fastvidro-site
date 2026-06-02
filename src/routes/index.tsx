@@ -3,9 +3,9 @@ import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
 import boxImgAsset from "@/assets/card-box-banheiro.png.asset.json";
 import portasImgAsset from "@/assets/card-portas-vidro.png.asset.json";
 import espelhosImgAsset from "@/assets/card-espelhos.jpg.asset.json";
-import ledImg from "@/assets/product-led.jpg";
 import projetosImgAsset from "@/assets/card-projetos.png.asset.json";
 import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
+import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg.asset.json";
 const boxImg = boxImgAsset.url;
 const portasImg = portasImgAsset.url;
 const espelhosImg = espelhosImgAsset.url;
@@ -210,9 +210,13 @@ function Home() {
               Fale com um especialista
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img src={projetosImg} alt="Projeto" className="rounded-xl h-full object-cover" loading="lazy" />
-            <img src={ledImg} alt="LED" className="rounded-xl h-full object-cover mt-8" loading="lazy" />
+          <div className="w-full">
+            <img
+              src={sobreFastVidroAsset.url}
+              alt="Box de banheiro em vidro temperado instalado pela Fast Vidro"
+              className="w-full h-auto max-h-[520px] object-cover rounded-xl shadow-ink"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
