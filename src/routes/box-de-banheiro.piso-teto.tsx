@@ -14,7 +14,7 @@ const META_DESC =
 const WA_MSG = "Olá! Quero um orçamento do Box Piso Teto (efeito sauna) com a Fast Vidro.";
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
-const gallery = [img2.url, img3.url, img4.url, img2.url, img3.url, img4.url];
+const gallery = [img2.url, img3.url, img4.url];
 
 export const Route = createFileRoute("/box-de-banheiro/piso-teto")({
   head: () => ({
