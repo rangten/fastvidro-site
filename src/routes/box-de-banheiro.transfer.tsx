@@ -117,25 +117,24 @@ function BoxTransferPage() {
           </p>
 
           <h2 className="mt-12 text-3xl font-black">
-            Design Moderno, Sem Trilho Inferior e Total Facilidade na Limpeza
+            Design Moderno, Deslizar Suave e Alta Praticidade
           </h2>
           <p className="mt-4 text-base leading-relaxed text-foreground/90">
             Além de salvar o espaço do seu banheiro, o Box Transfer de 3 Portas oferece uma
-            estética clean e altamente sofisticada. Uma de suas maiores vantagens funcionais é
-            que ele <strong>não utiliza trilho no chão na área de passagem</strong>, contando
-            apenas com guias discretas. Isso elimina o acúmulo de sujeira e água na base,
-            facilitando drasticamente a limpeza diária do banheiro e evitando tropeços,
-            trazendo muito mais segurança para crianças e idosos.
+            estética moderna e altamente sofisticada. O sistema funciona através de um trilho
+            guia na base, projetado especificamente para garantir que as folhas corram com
+            total estabilidade e alinhamento, evitando descarrilamentos e garantindo uma
+            excelente vedação contra a água do chuveiro.
           </p>
           <p className="mt-5 text-base leading-relaxed text-foreground/90">
-            Na Fast Vidro, priorizamos a durabilidade. Nossos modelos são produzidos
-            rigorosamente sob medida com painéis de vidro temperado de 8mm de alta resistência
-            e roldanas blindadas com rolamento suave, garantindo um deslizar leve, macio e
-            silencioso. Trabalhamos com diversas opções de cores de acabamento para os perfis
-            estruturais de alumínio de alta qualidade:{" "}
-            <strong>Branco, Preto, Cromado e Dourado</strong>. Tudo instalado após uma medição
-            técnica digital a laser para garantir vedação total e o prumo perfeito do seu
-            projeto.
+            Na Fast Vidro, priorizamos a máxima durabilidade. Nossos modelos são produzidos
+            rigorosamente sob medida com painéis de vidro temperado de 8mm de alta
+            resistência e roldanas blindadas de alta performance, o que proporciona um
+            deslizar leve, macio e muito silencioso no dia a dia. Para combinar com o seu
+            ambiente, trabalhamos com as seguintes opções de cores de acabamento para os
+            perfis estruturais de alumínio: <strong>Branco, Preto e Cromado</strong>. Tudo
+            instalado após uma medição técnica digital a laser para garantir o prumo perfeito
+            do seu projeto.
           </p>
 
           <h2 className="mt-12 text-3xl font-black">
