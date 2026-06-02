@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
-import boxImg from "@/assets/product-box.jpg";
-import portasImg from "@/assets/product-portas.jpg";
-import espelhosImg from "@/assets/product-espelhos.jpg";
+import boxImg from "@/assets/card-box-banheiro.png.asset.json";
+import portasImg from "@/assets/card-portas-vidro.png.asset.json";
+import espelhosImg from "@/assets/card-espelhos.jpg.asset.json";
 import ledImg from "@/assets/product-led.jpg";
-import projetosImg from "@/assets/product-projetos.jpg";
+import projetosImg from "@/assets/card-projetos.png.asset.json";
 import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
 import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
