@@ -6,6 +6,7 @@ import heroBox from "@/assets/hero-box.jpg";
 import flexCover from "@/assets/flex-cover.png.asset.json";
 import pisoTetoCover from "@/assets/piso-teto-cover.png.asset.json";
 import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
+import transferCover from "@/assets/transfer-cover.png.asset.json";
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
@@ -42,7 +43,7 @@ export const CATEGORIES: Record<string, Category> = {
       { slug: "flex", name: "Flex", description: "Versátil para box de canto e frontal, perfil discreto.", longDescription: "O Box Flex é a escolha ideal para banheiros pequenos e médios em São Paulo. Com perfil discreto em alumínio anodizado, roldanas silenciosas e vidro temperado de 8mm, ele se adapta tanto a boxes frontais quanto de canto, garantindo abertura suave e máximo aproveitamento do espaço.", image: flexCover.url, gallery: placeholderGallery(flexCover.url) },
       { slug: "piso-teto", name: "Piso Teto", description: "Painéis fixos do piso ao teto, visual minimalista.", longDescription: "O Box Piso Teto traz uma estética minimalista de alto padrão: painéis de vidro temperado vão do piso ao teto, sem perfis intermediários, criando uma sensação de amplitude e sofisticação no banheiro.", image: pisoTetoCover.url, gallery: placeholderGallery(pisoTetoCover.url) },
       { slug: "tradicional", name: "Tradicional", description: "Modelo clássico, ótimo custo-benefício.", longDescription: "O Box Tradicional é a solução clássica e mais procurada para reformas em São Paulo. Estrutura robusta, instalação rápida e excelente custo-benefício, mantendo o padrão de segurança Fast Vidro.", image: tradicionalCover.url, gallery: placeholderGallery(tradicionalCover.url) },
-      { slug: "transfer", name: "3 Folhas de Correr", description: "Sistema com 3 folhas de correr, ideal para vãos amplos.", longDescription: "O Box 3 Folhas de Correr é a solução perfeita para vãos amplos: três painéis de vidro temperado que deslizam suavemente, garantindo abertura prática e aproveitamento total do espaço.", image: boxImg, gallery: placeholderGallery(boxImg) },
+      { slug: "transfer", name: "3 Folhas de Correr", description: "Sistema com 3 folhas de correr, ideal para vãos pequenos.", longDescription: "O Box 3 Folhas de Correr (Transfer) é a solução perfeita para vãos pequenos: 1 folha fixa + 2 móveis que se recolhem atrás da fixa, garantindo até 2/3 de passagem livre no vão.", image: transferCover.url, gallery: placeholderGallery(transferCover.url) },
       { slug: "nobre", name: "Nobre", description: "Ferragens premium, acabamento sofisticado.", longDescription: "O Box Nobre é o nosso topo de linha: ferragens importadas, vidro temperado 10mm e acabamento em aço inox escovado. Para banheiros de alto padrão que merecem o melhor.", image: boxImg, gallery: placeholderGallery(boxImg) },
       { slug: "elegance", name: "Elegance", description: "Linhas finas, perfil reduzido, design moderno.", longDescription: "O Box Elegance combina linhas finas com roldanas aparentes em aço inox. Deslizamento silencioso e design contemporâneo — referência para reformas modernas em São Paulo.", image: boxImg, gallery: placeholderGallery(boxImg) },
     ],
