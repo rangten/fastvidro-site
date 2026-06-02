@@ -10,14 +10,14 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ProjetosRouteImport } from './routes/projetos'
-import { Route as PortasDeVidroRouteImport } from './routes/portas-de-vidro'
 import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
-import { Route as EspelhosRouteImport } from './routes/espelhos'
 import { Route as BoxMaisSeguroRouteImport } from './routes/box-mais-seguro'
-import { Route as BoxDeBanheiroRouteImport } from './routes/box-de-banheiro'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
+import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro.index'
+import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
+import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
 import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
 import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
@@ -29,34 +29,14 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosRoute = ProjetosRouteImport.update({
-  id: '/projetos',
-  path: '/projetos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroRoute = PortasDeVidroRouteImport.update({
-  id: '/portas-de-vidro',
-  path: '/portas-de-vidro',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const EspelhosLedRoute = EspelhosLedRouteImport.update({
   id: '/espelhos-led',
   path: '/espelhos-led',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EspelhosRoute = EspelhosRouteImport.update({
-  id: '/espelhos',
-  path: '/espelhos',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BoxMaisSeguroRoute = BoxMaisSeguroRouteImport.update({
   id: '/box-mais-seguro',
   path: '/box-mais-seguro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroRoute = BoxDeBanheiroRouteImport.update({
-  id: '/box-de-banheiro',
-  path: '/box-de-banheiro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -69,142 +49,167 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjetosIndexRoute = ProjetosIndexRouteImport.update({
+  id: '/projetos/',
+  path: '/projetos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroIndexRoute = PortasDeVidroIndexRouteImport.update({
+  id: '/portas-de-vidro/',
+  path: '/portas-de-vidro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosIndexRoute = EspelhosIndexRouteImport.update({
+  id: '/espelhos/',
+  path: '/espelhos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
+  id: '/box-de-banheiro/',
+  path: '/box-de-banheiro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => ProjetosRoute,
+  id: '/projetos/$modelo',
+  path: '/projetos/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => PortasDeVidroRoute,
+  id: '/portas-de-vidro/$modelo',
+  path: '/portas-de-vidro/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => EspelhosRoute,
+  id: '/espelhos/$modelo',
+  path: '/espelhos/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
-  id: '/flex',
-  path: '/flex',
-  getParentRoute: () => BoxDeBanheiroRoute,
+  id: '/box-de-banheiro/flex',
+  path: '/box-de-banheiro/flex',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => BoxDeBanheiroRoute,
+  id: '/box-de-banheiro/$modelo',
+  path: '/box-de-banheiro/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
   '/box-mais-seguro': typeof BoxMaisSeguroRoute
-  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
-  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
+  '/espelhos/': typeof EspelhosIndexRoute
+  '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
+  '/projetos/': typeof ProjetosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
   '/box-mais-seguro': typeof BoxMaisSeguroRoute
-  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
-  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/box-de-banheiro': typeof BoxDeBanheiroIndexRoute
+  '/espelhos': typeof EspelhosIndexRoute
+  '/portas-de-vidro': typeof PortasDeVidroIndexRoute
+  '/projetos': typeof ProjetosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-de-banheiro': typeof BoxDeBanheiroRouteWithChildren
   '/box-mais-seguro': typeof BoxMaisSeguroRoute
-  '/espelhos': typeof EspelhosRouteWithChildren
   '/espelhos-led': typeof EspelhosLedRoute
-  '/portas-de-vidro': typeof PortasDeVidroRouteWithChildren
-  '/projetos': typeof ProjetosRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
+  '/espelhos/': typeof EspelhosIndexRoute
+  '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
+  '/projetos/': typeof ProjetosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/blog'
-    | '/box-de-banheiro'
     | '/box-mais-seguro'
-    | '/espelhos'
     | '/espelhos-led'
-    | '/portas-de-vidro'
-    | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
+    | '/box-de-banheiro/'
+    | '/espelhos/'
+    | '/portas-de-vidro/'
+    | '/projetos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/blog'
-    | '/box-de-banheiro'
     | '/box-mais-seguro'
-    | '/espelhos'
     | '/espelhos-led'
-    | '/portas-de-vidro'
-    | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
+    | '/box-de-banheiro'
+    | '/espelhos'
+    | '/portas-de-vidro'
+    | '/projetos'
   id:
     | '__root__'
     | '/'
     | '/blog'
-    | '/box-de-banheiro'
     | '/box-mais-seguro'
-    | '/espelhos'
     | '/espelhos-led'
-    | '/portas-de-vidro'
-    | '/projetos'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/flex'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
     | '/projetos/$modelo'
+    | '/box-de-banheiro/'
+    | '/espelhos/'
+    | '/portas-de-vidro/'
+    | '/projetos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
-  BoxDeBanheiroRoute: typeof BoxDeBanheiroRouteWithChildren
   BoxMaisSeguroRoute: typeof BoxMaisSeguroRoute
-  EspelhosRoute: typeof EspelhosRouteWithChildren
   EspelhosLedRoute: typeof EspelhosLedRoute
-  PortasDeVidroRoute: typeof PortasDeVidroRouteWithChildren
-  ProjetosRoute: typeof ProjetosRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
+  BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
+  EspelhosModeloRoute: typeof EspelhosModeloRoute
+  PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
+  ProjetosModeloRoute: typeof ProjetosModeloRoute
+  BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
+  EspelhosIndexRoute: typeof EspelhosIndexRoute
+  PortasDeVidroIndexRoute: typeof PortasDeVidroIndexRoute
+  ProjetosIndexRoute: typeof ProjetosIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -216,20 +221,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos': {
-      id: '/projetos'
-      path: '/projetos'
-      fullPath: '/projetos'
-      preLoaderRoute: typeof ProjetosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro': {
-      id: '/portas-de-vidro'
-      path: '/portas-de-vidro'
-      fullPath: '/portas-de-vidro'
-      preLoaderRoute: typeof PortasDeVidroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/espelhos-led': {
       id: '/espelhos-led'
       path: '/espelhos-led'
@@ -237,25 +228,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspelhosLedRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/espelhos': {
-      id: '/espelhos'
-      path: '/espelhos'
-      fullPath: '/espelhos'
-      preLoaderRoute: typeof EspelhosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/box-mais-seguro': {
       id: '/box-mais-seguro'
       path: '/box-mais-seguro'
       fullPath: '/box-mais-seguro'
       preLoaderRoute: typeof BoxMaisSeguroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro': {
-      id: '/box-de-banheiro'
-      path: '/box-de-banheiro'
-      fullPath: '/box-de-banheiro'
-      preLoaderRoute: typeof BoxDeBanheiroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -272,105 +249,98 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projetos/': {
+      id: '/projetos/'
+      path: '/projetos'
+      fullPath: '/projetos/'
+      preLoaderRoute: typeof ProjetosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/': {
+      id: '/portas-de-vidro/'
+      path: '/portas-de-vidro'
+      fullPath: '/portas-de-vidro/'
+      preLoaderRoute: typeof PortasDeVidroIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/': {
+      id: '/espelhos/'
+      path: '/espelhos'
+      fullPath: '/espelhos/'
+      preLoaderRoute: typeof EspelhosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/': {
+      id: '/box-de-banheiro/'
+      path: '/box-de-banheiro'
+      fullPath: '/box-de-banheiro/'
+      preLoaderRoute: typeof BoxDeBanheiroIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projetos/$modelo': {
       id: '/projetos/$modelo'
-      path: '/$modelo'
+      path: '/projetos/$modelo'
       fullPath: '/projetos/$modelo'
       preLoaderRoute: typeof ProjetosModeloRouteImport
-      parentRoute: typeof ProjetosRoute
+      parentRoute: typeof rootRouteImport
     }
     '/portas-de-vidro/$modelo': {
       id: '/portas-de-vidro/$modelo'
-      path: '/$modelo'
+      path: '/portas-de-vidro/$modelo'
       fullPath: '/portas-de-vidro/$modelo'
       preLoaderRoute: typeof PortasDeVidroModeloRouteImport
-      parentRoute: typeof PortasDeVidroRoute
+      parentRoute: typeof rootRouteImport
     }
     '/espelhos/$modelo': {
       id: '/espelhos/$modelo'
-      path: '/$modelo'
+      path: '/espelhos/$modelo'
       fullPath: '/espelhos/$modelo'
       preLoaderRoute: typeof EspelhosModeloRouteImport
-      parentRoute: typeof EspelhosRoute
+      parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro/flex': {
       id: '/box-de-banheiro/flex'
-      path: '/flex'
+      path: '/box-de-banheiro/flex'
       fullPath: '/box-de-banheiro/flex'
       preLoaderRoute: typeof BoxDeBanheiroFlexRouteImport
-      parentRoute: typeof BoxDeBanheiroRoute
+      parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro/$modelo': {
       id: '/box-de-banheiro/$modelo'
-      path: '/$modelo'
+      path: '/box-de-banheiro/$modelo'
       fullPath: '/box-de-banheiro/$modelo'
       preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
-      parentRoute: typeof BoxDeBanheiroRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface BoxDeBanheiroRouteChildren {
-  BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
-  BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
-}
-
-const BoxDeBanheiroRouteChildren: BoxDeBanheiroRouteChildren = {
-  BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
-  BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
-}
-
-const BoxDeBanheiroRouteWithChildren = BoxDeBanheiroRoute._addFileChildren(
-  BoxDeBanheiroRouteChildren,
-)
-
-interface EspelhosRouteChildren {
-  EspelhosModeloRoute: typeof EspelhosModeloRoute
-}
-
-const EspelhosRouteChildren: EspelhosRouteChildren = {
-  EspelhosModeloRoute: EspelhosModeloRoute,
-}
-
-const EspelhosRouteWithChildren = EspelhosRoute._addFileChildren(
-  EspelhosRouteChildren,
-)
-
-interface PortasDeVidroRouteChildren {
-  PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
-}
-
-const PortasDeVidroRouteChildren: PortasDeVidroRouteChildren = {
-  PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
-}
-
-const PortasDeVidroRouteWithChildren = PortasDeVidroRoute._addFileChildren(
-  PortasDeVidroRouteChildren,
-)
-
-interface ProjetosRouteChildren {
-  ProjetosModeloRoute: typeof ProjetosModeloRoute
-}
-
-const ProjetosRouteChildren: ProjetosRouteChildren = {
-  ProjetosModeloRoute: ProjetosModeloRoute,
-}
-
-const ProjetosRouteWithChildren = ProjetosRoute._addFileChildren(
-  ProjetosRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
-  BoxDeBanheiroRoute: BoxDeBanheiroRouteWithChildren,
   BoxMaisSeguroRoute: BoxMaisSeguroRoute,
-  EspelhosRoute: EspelhosRouteWithChildren,
   EspelhosLedRoute: EspelhosLedRoute,
-  PortasDeVidroRoute: PortasDeVidroRouteWithChildren,
-  ProjetosRoute: ProjetosRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
+  BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
+  EspelhosModeloRoute: EspelhosModeloRoute,
+  PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
+  ProjetosModeloRoute: ProjetosModeloRoute,
+  BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
+  EspelhosIndexRoute: EspelhosIndexRoute,
+  PortasDeVidroIndexRoute: PortasDeVidroIndexRoute,
+  ProjetosIndexRoute: ProjetosIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

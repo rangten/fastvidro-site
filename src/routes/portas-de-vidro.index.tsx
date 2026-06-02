@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/catalog";
 
 const category = CATEGORIES["portas-de-vidro"];
 
-export const Route = createFileRoute("/portas-de-vidro")({
+export const Route = createFileRoute("/portas-de-vidro/")({
   head: () => ({
     meta: [
       { title: "Portas de Vidro — Fast Vidro" },
