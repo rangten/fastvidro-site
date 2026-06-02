@@ -70,29 +70,29 @@ const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => ProjetosRoute,
+  id: '/projetos/$modelo',
+  path: '/projetos/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => PortasDeVidroRoute,
+  id: '/portas-de-vidro/$modelo',
+  path: '/portas-de-vidro/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => EspelhosRoute,
+  id: '/espelhos/$modelo',
+  path: '/espelhos/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
-  id: '/flex',
-  path: '/flex',
-  getParentRoute: () => BoxDeBanheiroRoute,
+  id: '/box-de-banheiro/flex',
+  path: '/box-de-banheiro/flex',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
-  id: '/$modelo',
-  path: '/$modelo',
-  getParentRoute: () => BoxDeBanheiroRoute,
+  id: '/box-de-banheiro/$modelo',
+  path: '/box-de-banheiro/$modelo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -201,6 +201,11 @@ export interface RootRouteChildren {
   BoxMaisSeguroRoute: typeof BoxMaisSeguroRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
+  BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
+  EspelhosModeloRoute: typeof EspelhosModeloRoute
+  PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
+  ProjetosModeloRoute: typeof ProjetosModeloRoute
   BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
   EspelhosIndexRoute: typeof EspelhosIndexRoute
   PortasDeVidroIndexRoute: typeof PortasDeVidroIndexRoute
@@ -274,38 +279,38 @@ declare module '@tanstack/react-router' {
     }
     '/projetos/$modelo': {
       id: '/projetos/$modelo'
-      path: '/$modelo'
+      path: '/projetos/$modelo'
       fullPath: '/projetos/$modelo'
       preLoaderRoute: typeof ProjetosModeloRouteImport
-      parentRoute: typeof ProjetosRoute
+      parentRoute: typeof rootRouteImport
     }
     '/portas-de-vidro/$modelo': {
       id: '/portas-de-vidro/$modelo'
-      path: '/$modelo'
+      path: '/portas-de-vidro/$modelo'
       fullPath: '/portas-de-vidro/$modelo'
       preLoaderRoute: typeof PortasDeVidroModeloRouteImport
-      parentRoute: typeof PortasDeVidroRoute
+      parentRoute: typeof rootRouteImport
     }
     '/espelhos/$modelo': {
       id: '/espelhos/$modelo'
-      path: '/$modelo'
+      path: '/espelhos/$modelo'
       fullPath: '/espelhos/$modelo'
       preLoaderRoute: typeof EspelhosModeloRouteImport
-      parentRoute: typeof EspelhosRoute
+      parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro/flex': {
       id: '/box-de-banheiro/flex'
-      path: '/flex'
+      path: '/box-de-banheiro/flex'
       fullPath: '/box-de-banheiro/flex'
       preLoaderRoute: typeof BoxDeBanheiroFlexRouteImport
-      parentRoute: typeof BoxDeBanheiroRoute
+      parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro/$modelo': {
       id: '/box-de-banheiro/$modelo'
-      path: '/$modelo'
+      path: '/box-de-banheiro/$modelo'
       fullPath: '/box-de-banheiro/$modelo'
       preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
-      parentRoute: typeof BoxDeBanheiroRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -316,6 +321,11 @@ const rootRouteChildren: RootRouteChildren = {
   BoxMaisSeguroRoute: BoxMaisSeguroRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
+  BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
+  EspelhosModeloRoute: EspelhosModeloRoute,
+  PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
+  ProjetosModeloRoute: ProjetosModeloRoute,
   BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
   EspelhosIndexRoute: EspelhosIndexRoute,
   PortasDeVidroIndexRoute: PortasDeVidroIndexRoute,
