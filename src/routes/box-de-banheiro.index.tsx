@@ -6,7 +6,7 @@ import { CATEGORIES } from "@/lib/catalog";
 
 const category = CATEGORIES["box-de-banheiro"];
 
-export const Route = createFileRoute("/box-de-banheiro")({
+export const Route = createFileRoute("/box-de-banheiro/")({
   head: () => ({
     meta: [
       { title: "Box de Banheiro — Fast Vidro" },
