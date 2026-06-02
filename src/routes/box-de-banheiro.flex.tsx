@@ -3,10 +3,6 @@ import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import flexCover from "@/assets/flex-cover.png.asset.json";
-import img13 from "@/assets/flex-image-13.png.asset.json";
-import img14 from "@/assets/flex-image-14.png.asset.json";
-import img15 from "@/assets/flex-image-15.png.asset.json";
-import img16 from "@/assets/flex-image-16.png.asset.json";
 import img17 from "@/assets/flex-image-17.png.asset.json";
 
 const META_TITLE = "Box Flex na Zona Norte de SP | Box Articulado - Fast Vidro";
@@ -17,7 +13,7 @@ const WA_MSG =
   "Olá! Quero um orçamento do Box Flex (Zona Norte de SP) com a Fast Vidro.";
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
-const gallery = [flexCover.url, img17.url, flexCover.url, img17.url];
+const gallery = [flexCover.url, img17.url];
 
 export const Route = createFileRoute("/box-de-banheiro/flex")({
   head: () => ({
