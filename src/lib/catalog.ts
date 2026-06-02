@@ -6,6 +6,7 @@ import heroBox from "@/assets/hero-box.jpg";
 import flexCover from "@/assets/flex-cover.png.asset.json";
 import pisoTetoCover from "@/assets/piso-teto-cover.png.asset.json";
 import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
+import transferCover from "@/assets/transfer-cover.png.asset.json";
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
