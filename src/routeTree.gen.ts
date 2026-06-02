@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
-import { Route as BoxMaisSeguroRouteImport } from './routes/box-mais-seguro'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
@@ -23,6 +22,7 @@ import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidr
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
+import { Route as BoxDeBanheiroSecureBoxRouteImport } from './routes/box-de-banheiro.secure-box'
 import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
 import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro.nobre'
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
@@ -37,11 +37,6 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const EspelhosLedRoute = EspelhosLedRouteImport.update({
   id: '/espelhos-led',
   path: '/espelhos-led',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxMaisSeguroRoute = BoxMaisSeguroRouteImport.update({
-  id: '/box-mais-seguro',
-  path: '/box-mais-seguro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -100,6 +95,11 @@ const BoxDeBanheiroTradicionalRoute =
     path: '/box-de-banheiro/tradicional',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BoxDeBanheiroSecureBoxRoute = BoxDeBanheiroSecureBoxRouteImport.update({
+  id: '/box-de-banheiro/secure-box',
+  path: '/box-de-banheiro/secure-box',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
   id: '/box-de-banheiro/piso-teto',
   path: '/box-de-banheiro/piso-teto',
@@ -129,7 +129,6 @@ const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
@@ -137,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
@@ -150,7 +150,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
@@ -158,6 +157,7 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
@@ -172,7 +172,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/box-mais-seguro': typeof BoxMaisSeguroRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
@@ -180,6 +179,7 @@ export interface FileRoutesById {
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
   '/box-de-banheiro/piso-teto': typeof BoxDeBanheiroPisoTetoRoute
+  '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
@@ -195,7 +195,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/blog'
-    | '/box-mais-seguro'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
@@ -203,6 +202,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
@@ -216,7 +216,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/blog'
-    | '/box-mais-seguro'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
@@ -224,6 +223,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
@@ -237,7 +237,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/blog'
-    | '/box-mais-seguro'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/box-de-banheiro/$modelo'
@@ -245,6 +244,7 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
     | '/box-de-banheiro/piso-teto'
+    | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
@@ -259,7 +259,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
-  BoxMaisSeguroRoute: typeof BoxMaisSeguroRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
@@ -267,6 +266,7 @@ export interface RootRouteChildren {
   BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
   BoxDeBanheiroNobreRoute: typeof BoxDeBanheiroNobreRoute
   BoxDeBanheiroPisoTetoRoute: typeof BoxDeBanheiroPisoTetoRoute
+  BoxDeBanheiroSecureBoxRoute: typeof BoxDeBanheiroSecureBoxRoute
   BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
@@ -292,13 +292,6 @@ declare module '@tanstack/react-router' {
       path: '/espelhos-led'
       fullPath: '/espelhos-led'
       preLoaderRoute: typeof EspelhosLedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-mais-seguro': {
-      id: '/box-mais-seguro'
-      path: '/box-mais-seguro'
-      fullPath: '/box-mais-seguro'
-      preLoaderRoute: typeof BoxMaisSeguroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -378,6 +371,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoxDeBanheiroTradicionalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/box-de-banheiro/secure-box': {
+      id: '/box-de-banheiro/secure-box'
+      path: '/box-de-banheiro/secure-box'
+      fullPath: '/box-de-banheiro/secure-box'
+      preLoaderRoute: typeof BoxDeBanheiroSecureBoxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/box-de-banheiro/piso-teto': {
       id: '/box-de-banheiro/piso-teto'
       path: '/box-de-banheiro/piso-teto'
@@ -419,7 +419,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
-  BoxMaisSeguroRoute: BoxMaisSeguroRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
@@ -427,6 +426,7 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
   BoxDeBanheiroNobreRoute: BoxDeBanheiroNobreRoute,
   BoxDeBanheiroPisoTetoRoute: BoxDeBanheiroPisoTetoRoute,
+  BoxDeBanheiroSecureBoxRoute: BoxDeBanheiroSecureBoxRoute,
   BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
@@ -440,3 +440,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
