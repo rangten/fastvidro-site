@@ -5,6 +5,7 @@ import projetosImg from "@/assets/product-projetos.jpg";
 import heroBox from "@/assets/hero-box.jpg";
 import flexCover from "@/assets/flex-cover.png.asset.json";
 import pisoTetoCover from "@/assets/piso-teto-cover.png.asset.json";
+import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
 
 // ============================================================
 // CATÁLOGO CENTRAL — TODOS OS MODELOS DE TODAS AS CATEGORIAS
@@ -40,7 +41,7 @@ export const CATEGORIES: Record<string, Category> = {
     models: [
       { slug: "flex", name: "Flex", description: "Versátil para box de canto e frontal, perfil discreto.", longDescription: "O Box Flex é a escolha ideal para banheiros pequenos e médios em São Paulo. Com perfil discreto em alumínio anodizado, roldanas silenciosas e vidro temperado de 8mm, ele se adapta tanto a boxes frontais quanto de canto, garantindo abertura suave e máximo aproveitamento do espaço.", image: flexCover.url, gallery: placeholderGallery(flexCover.url) },
       { slug: "piso-teto", name: "Piso Teto", description: "Painéis fixos do piso ao teto, visual minimalista.", longDescription: "O Box Piso Teto traz uma estética minimalista de alto padrão: painéis de vidro temperado vão do piso ao teto, sem perfis intermediários, criando uma sensação de amplitude e sofisticação no banheiro.", image: pisoTetoCover.url, gallery: placeholderGallery(pisoTetoCover.url) },
-      { slug: "tradicional", name: "Tradicional", description: "Modelo clássico, ótimo custo-benefício.", longDescription: "O Box Tradicional é a solução clássica e mais procurada para reformas em São Paulo. Estrutura robusta, instalação rápida e excelente custo-benefício, mantendo o padrão de segurança Fast Vidro.", image: boxImg, gallery: placeholderGallery(boxImg) },
+      { slug: "tradicional", name: "Tradicional", description: "Modelo clássico, ótimo custo-benefício.", longDescription: "O Box Tradicional é a solução clássica e mais procurada para reformas em São Paulo. Estrutura robusta, instalação rápida e excelente custo-benefício, mantendo o padrão de segurança Fast Vidro.", image: tradicionalCover.url, gallery: placeholderGallery(tradicionalCover.url) },
       { slug: "canto", name: "Canto", description: "Aproveita o espaço de boxes em L.", longDescription: "O Box de Canto aproveita totalmente boxes em formato L, permitindo aberturas independentes em cada lateral. Ideal para banheiros maiores ou áreas de chuveiro em ambiente molhado.", image: boxImg, gallery: placeholderGallery(boxImg) },
       { slug: "transfer", name: "Transfer", description: "Sem perfil inferior, acessibilidade e limpeza.", longDescription: "O Box Transfer dispensa o perfil inferior, facilitando a passagem para cadeirantes e a limpeza do box. Solução acessível e segura para banheiros adaptados.", image: boxImg, gallery: placeholderGallery(boxImg) },
       { slug: "de-abrir", name: "De Abrir", description: "Porta pivotante, ideal para banheiros amplos.", longDescription: "O Box De Abrir utiliza dobradiças em aço inox com sistema pivotante. Indicado para banheiros amplos, oferece abertura ampla e visual sofisticado.", image: boxImg, gallery: placeholderGallery(boxImg) },
