@@ -57,12 +57,12 @@ export function ProductPage({
               ))}
             </ul>
           </div>
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
             <div className="absolute -inset-4 bg-gradient-yellow rounded-2xl rotate-2" />
             <img
               src={heroImage}
               alt={title}
-              className="relative rounded-xl shadow-ink w-full h-auto"
+              className="relative rounded-xl shadow-ink w-full h-auto max-h-[480px] object-cover"
               loading="lazy"
             />
           </div>
