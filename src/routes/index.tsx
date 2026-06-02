@@ -4,7 +4,7 @@ import boxImgAsset from "@/assets/card-box-banheiro.png.asset.json";
 import portasImgAsset from "@/assets/card-portas-vidro.png.asset.json";
 import espelhosImgAsset from "@/assets/card-espelhos.jpg.asset.json";
 import projetosImgAsset from "@/assets/card-projetos.png.asset.json";
-import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
+import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
 import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg.asset.json";
 const boxImg = boxImgAsset.url;
 const portasImg = portasImgAsset.url;
@@ -31,7 +31,7 @@ const products = [
   { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas.", logo: false },
   { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê.", logo: false },
   { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente.", logo: false },
-  { to: "/box-mais-seguro", title: "Box + Seguro", img: maisSeguroAsset.url, desc: "Película anti-estilhaço inclusa para máxima proteção da família.", logo: true },
+  { to: "/box-de-banheiro/secure-box", title: "Secure Box", img: secureBoxLogo.url, desc: "Película antiestilhaço de alta performance para máxima proteção da família.", logo: true },
 ] as const;
 
 const diffs = [
@@ -68,20 +68,18 @@ function Home() {
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.3em]">Destaque</span>
             <h2 className="mt-3 text-5xl lg:text-6xl font-black leading-[0.95]">
-              BOX <span className="italic">+Seguro</span>
+              SECURE BOX
             </h2>
             <p className="mt-5 text-base max-w-lg">
-              Tecnologia anti-estilhaço exclusiva: mesmo em caso de impacto, o vidro permanece
-              integrado à película de segurança, evitando acidentes em casa.
+              Secure Box — Tecnologia anti-estilhaço exclusiva: mesmo em caso de impacto, o vidro
+              permanece integrado à película de segurança, evitando acidentes em casa.
             </p>
-            <a
-              href={waLink("Olá! Quero saber mais sobre o Box +Seguro.")}
-              target="_blank"
-              rel="noopener"
+            <Link
+              to="/box-de-banheiro/secure-box"
               className="mt-7 inline-block rounded-md bg-ink px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink-foreground hover:bg-ink/80 transition"
             >
-              Quero o Box +Seguro
-            </a>
+              Quero o Secure Box
+            </Link>
           </div>
           <div className="relative">
             <img src={boxImg} alt="Box de banheiro Fast Vidro" className="rounded-xl shadow-ink w-full" loading="lazy" />

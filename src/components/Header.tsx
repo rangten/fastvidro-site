@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.png.asset.json";
-import maisSeguroAsset from "@/assets/mais-seguro.png.asset.json";
+import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
 import { waLink } from "@/lib/site";
 
 type NavItem = {
@@ -14,7 +14,7 @@ type NavItem = {
 const nav: NavItem[] = [
   { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
-  { to: "/box-mais-seguro", label: "Box + Seguro", image: { src: maisSeguroAsset.url, alt: "Box + Seguro" } },
+  { to: "/box-de-banheiro/secure-box", label: "Secure Box", image: { src: secureBoxLogo.url, alt: "Secure Box" } },
   { to: "/espelhos", label: "Espelhos" },
   { to: "/projetos", label: "Projetos" },
   { to: "/blog", label: "Blog" },
@@ -46,7 +46,7 @@ export function Header() {
                 <img
                   src={n.image.src}
                   alt={n.image.alt}
-                  className="h-16 lg:h-20 w-auto object-contain bg-white rounded-lg px-3 py-1.5 shadow-md ring-1 ring-black/5"
+                  className="h-16 lg:h-20 w-auto object-contain bg-black rounded-lg px-3 py-1.5 shadow-md ring-1 ring-primary/30"
                 />
               ) : (
                 n.label
@@ -88,7 +88,7 @@ export function Header() {
                   <img
                     src={n.image.src}
                     alt={n.image.alt}
-                    className="h-14 w-auto object-contain bg-white rounded-lg px-2.5 py-1 shadow-md"
+                    className="h-14 w-auto object-contain bg-black rounded-lg px-2.5 py-1 shadow-md ring-1 ring-primary/30"
                   />
                 )}
                 <span>{n.label}</span>
