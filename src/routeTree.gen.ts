@@ -17,6 +17,12 @@ import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
 import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro.index'
 import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
 import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
+import { Route as ProjetosResidencialRouteImport } from './routes/projetos.residencial'
+import { Route as ProjetosGuardaCorpoRouteImport } from './routes/projetos.guarda-corpo'
+import { Route as ProjetosFechamentoSacadaRouteImport } from './routes/projetos.fechamento-sacada'
+import { Route as ProjetosEscritoriosRouteImport } from './routes/projetos.escritorios'
+import { Route as ProjetosComercialRouteImport } from './routes/projetos.comercial'
+import { Route as ProjetosCoberturasRouteImport } from './routes/projetos.coberturas'
 import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
 import { Route as PortasDeVidroVisionRouteImport } from './routes/portas-de-vidro.vision'
 import { Route as PortasDeVidroVersatikRouteImport } from './routes/portas-de-vidro.versatik'
@@ -79,6 +85,37 @@ const EspelhosIndexRoute = EspelhosIndexRouteImport.update({
 const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
   id: '/box-de-banheiro/',
   path: '/box-de-banheiro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosResidencialRoute = ProjetosResidencialRouteImport.update({
+  id: '/projetos/residencial',
+  path: '/projetos/residencial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosGuardaCorpoRoute = ProjetosGuardaCorpoRouteImport.update({
+  id: '/projetos/guarda-corpo',
+  path: '/projetos/guarda-corpo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosFechamentoSacadaRoute =
+  ProjetosFechamentoSacadaRouteImport.update({
+    id: '/projetos/fechamento-sacada',
+    path: '/projetos/fechamento-sacada',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjetosEscritoriosRoute = ProjetosEscritoriosRouteImport.update({
+  id: '/projetos/escritorios',
+  path: '/projetos/escritorios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosComercialRoute = ProjetosComercialRouteImport.update({
+  id: '/projetos/comercial',
+  path: '/projetos/comercial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosCoberturasRoute = ProjetosCoberturasRouteImport.update({
+  id: '/projetos/coberturas',
+  path: '/projetos/coberturas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
@@ -226,6 +263,12 @@ export interface FileRoutesByFullPath {
   '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
   '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/projetos/coberturas': typeof ProjetosCoberturasRoute
+  '/projetos/comercial': typeof ProjetosComercialRoute
+  '/projetos/escritorios': typeof ProjetosEscritoriosRoute
+  '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
+  '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
+  '/projetos/residencial': typeof ProjetosResidencialRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
   '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
@@ -259,6 +302,12 @@ export interface FileRoutesByTo {
   '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
   '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/projetos/coberturas': typeof ProjetosCoberturasRoute
+  '/projetos/comercial': typeof ProjetosComercialRoute
+  '/projetos/escritorios': typeof ProjetosEscritoriosRoute
+  '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
+  '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
+  '/projetos/residencial': typeof ProjetosResidencialRoute
   '/box-de-banheiro': typeof BoxDeBanheiroIndexRoute
   '/espelhos': typeof EspelhosIndexRoute
   '/portas-de-vidro': typeof PortasDeVidroIndexRoute
@@ -293,6 +342,12 @@ export interface FileRoutesById {
   '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
   '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
+  '/projetos/coberturas': typeof ProjetosCoberturasRoute
+  '/projetos/comercial': typeof ProjetosComercialRoute
+  '/projetos/escritorios': typeof ProjetosEscritoriosRoute
+  '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
+  '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
+  '/projetos/residencial': typeof ProjetosResidencialRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
   '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
@@ -328,6 +383,12 @@ export interface FileRouteTypes {
     | '/portas-de-vidro/versatik'
     | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
+    | '/projetos/coberturas'
+    | '/projetos/comercial'
+    | '/projetos/escritorios'
+    | '/projetos/fechamento-sacada'
+    | '/projetos/guarda-corpo'
+    | '/projetos/residencial'
     | '/box-de-banheiro/'
     | '/espelhos/'
     | '/portas-de-vidro/'
@@ -361,6 +422,12 @@ export interface FileRouteTypes {
     | '/portas-de-vidro/versatik'
     | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
+    | '/projetos/coberturas'
+    | '/projetos/comercial'
+    | '/projetos/escritorios'
+    | '/projetos/fechamento-sacada'
+    | '/projetos/guarda-corpo'
+    | '/projetos/residencial'
     | '/box-de-banheiro'
     | '/espelhos'
     | '/portas-de-vidro'
@@ -394,6 +461,12 @@ export interface FileRouteTypes {
     | '/portas-de-vidro/versatik'
     | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
+    | '/projetos/coberturas'
+    | '/projetos/comercial'
+    | '/projetos/escritorios'
+    | '/projetos/fechamento-sacada'
+    | '/projetos/guarda-corpo'
+    | '/projetos/residencial'
     | '/box-de-banheiro/'
     | '/espelhos/'
     | '/portas-de-vidro/'
@@ -428,6 +501,12 @@ export interface RootRouteChildren {
   PortasDeVidroVersatikRoute: typeof PortasDeVidroVersatikRoute
   PortasDeVidroVisionRoute: typeof PortasDeVidroVisionRoute
   ProjetosModeloRoute: typeof ProjetosModeloRoute
+  ProjetosCoberturasRoute: typeof ProjetosCoberturasRoute
+  ProjetosComercialRoute: typeof ProjetosComercialRoute
+  ProjetosEscritoriosRoute: typeof ProjetosEscritoriosRoute
+  ProjetosFechamentoSacadaRoute: typeof ProjetosFechamentoSacadaRoute
+  ProjetosGuardaCorpoRoute: typeof ProjetosGuardaCorpoRoute
+  ProjetosResidencialRoute: typeof ProjetosResidencialRoute
   BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
   EspelhosIndexRoute: typeof EspelhosIndexRoute
   PortasDeVidroIndexRoute: typeof PortasDeVidroIndexRoute
@@ -490,6 +569,48 @@ declare module '@tanstack/react-router' {
       path: '/box-de-banheiro'
       fullPath: '/box-de-banheiro/'
       preLoaderRoute: typeof BoxDeBanheiroIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/residencial': {
+      id: '/projetos/residencial'
+      path: '/projetos/residencial'
+      fullPath: '/projetos/residencial'
+      preLoaderRoute: typeof ProjetosResidencialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/guarda-corpo': {
+      id: '/projetos/guarda-corpo'
+      path: '/projetos/guarda-corpo'
+      fullPath: '/projetos/guarda-corpo'
+      preLoaderRoute: typeof ProjetosGuardaCorpoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/fechamento-sacada': {
+      id: '/projetos/fechamento-sacada'
+      path: '/projetos/fechamento-sacada'
+      fullPath: '/projetos/fechamento-sacada'
+      preLoaderRoute: typeof ProjetosFechamentoSacadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/escritorios': {
+      id: '/projetos/escritorios'
+      path: '/projetos/escritorios'
+      fullPath: '/projetos/escritorios'
+      preLoaderRoute: typeof ProjetosEscritoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/comercial': {
+      id: '/projetos/comercial'
+      path: '/projetos/comercial'
+      fullPath: '/projetos/comercial'
+      preLoaderRoute: typeof ProjetosComercialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/coberturas': {
+      id: '/projetos/coberturas'
+      path: '/projetos/coberturas'
+      fullPath: '/projetos/coberturas'
+      preLoaderRoute: typeof ProjetosCoberturasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projetos/$modelo': {
@@ -684,6 +805,12 @@ const rootRouteChildren: RootRouteChildren = {
   PortasDeVidroVersatikRoute: PortasDeVidroVersatikRoute,
   PortasDeVidroVisionRoute: PortasDeVidroVisionRoute,
   ProjetosModeloRoute: ProjetosModeloRoute,
+  ProjetosCoberturasRoute: ProjetosCoberturasRoute,
+  ProjetosComercialRoute: ProjetosComercialRoute,
+  ProjetosEscritoriosRoute: ProjetosEscritoriosRoute,
+  ProjetosFechamentoSacadaRoute: ProjetosFechamentoSacadaRoute,
+  ProjetosGuardaCorpoRoute: ProjetosGuardaCorpoRoute,
+  ProjetosResidencialRoute: ProjetosResidencialRoute,
   BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
   EspelhosIndexRoute: EspelhosIndexRoute,
   PortasDeVidroIndexRoute: PortasDeVidroIndexRoute,
