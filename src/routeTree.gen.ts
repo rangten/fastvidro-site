@@ -26,6 +26,11 @@ import { Route as PortasDeVidroCorrerRouteImport } from './routes/portas-de-vidr
 import { Route as PortasDeVidroCertaRouteImport } from './routes/portas-de-vidro.certa'
 import { Route as PortasDeVidroAbrirRouteImport } from './routes/portas-de-vidro.abrir'
 import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
+import { Route as EspelhosPainelRouteImport } from './routes/espelhos.painel'
+import { Route as EspelhosOrganicoRouteImport } from './routes/espelhos.organico'
+import { Route as EspelhosLapidadoRouteImport } from './routes/espelhos.lapidado'
+import { Route as EspelhosBisoteRouteImport } from './routes/espelhos.bisote'
+import { Route as EspelhosBanheiroRouteImport } from './routes/espelhos.banheiro'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
@@ -121,6 +126,31 @@ const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
   path: '/portas-de-vidro/$modelo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EspelhosPainelRoute = EspelhosPainelRouteImport.update({
+  id: '/espelhos/painel',
+  path: '/espelhos/painel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosOrganicoRoute = EspelhosOrganicoRouteImport.update({
+  id: '/espelhos/organico',
+  path: '/espelhos/organico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosLapidadoRoute = EspelhosLapidadoRouteImport.update({
+  id: '/espelhos/lapidado',
+  path: '/espelhos/lapidado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosBisoteRoute = EspelhosBisoteRouteImport.update({
+  id: '/espelhos/bisote',
+  path: '/espelhos/bisote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosBanheiroRoute = EspelhosBanheiroRouteImport.update({
+  id: '/espelhos/banheiro',
+  path: '/espelhos/banheiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
   id: '/espelhos/$modelo',
   path: '/espelhos/$modelo',
@@ -182,6 +212,11 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/espelhos/banheiro': typeof EspelhosBanheiroRoute
+  '/espelhos/bisote': typeof EspelhosBisoteRoute
+  '/espelhos/lapidado': typeof EspelhosLapidadoRoute
+  '/espelhos/organico': typeof EspelhosOrganicoRoute
+  '/espelhos/painel': typeof EspelhosPainelRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
   '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
@@ -210,6 +245,11 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/espelhos/banheiro': typeof EspelhosBanheiroRoute
+  '/espelhos/bisote': typeof EspelhosBisoteRoute
+  '/espelhos/lapidado': typeof EspelhosLapidadoRoute
+  '/espelhos/organico': typeof EspelhosOrganicoRoute
+  '/espelhos/painel': typeof EspelhosPainelRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
   '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
@@ -239,6 +279,11 @@ export interface FileRoutesById {
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
+  '/espelhos/banheiro': typeof EspelhosBanheiroRoute
+  '/espelhos/bisote': typeof EspelhosBisoteRoute
+  '/espelhos/lapidado': typeof EspelhosLapidadoRoute
+  '/espelhos/organico': typeof EspelhosOrganicoRoute
+  '/espelhos/painel': typeof EspelhosPainelRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
   '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
   '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
@@ -269,6 +314,11 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
+    | '/espelhos/banheiro'
+    | '/espelhos/bisote'
+    | '/espelhos/lapidado'
+    | '/espelhos/organico'
+    | '/espelhos/painel'
     | '/portas-de-vidro/$modelo'
     | '/portas-de-vidro/abrir'
     | '/portas-de-vidro/certa'
@@ -297,6 +347,11 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
+    | '/espelhos/banheiro'
+    | '/espelhos/bisote'
+    | '/espelhos/lapidado'
+    | '/espelhos/organico'
+    | '/espelhos/painel'
     | '/portas-de-vidro/$modelo'
     | '/portas-de-vidro/abrir'
     | '/portas-de-vidro/certa'
@@ -325,6 +380,11 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
+    | '/espelhos/banheiro'
+    | '/espelhos/bisote'
+    | '/espelhos/lapidado'
+    | '/espelhos/organico'
+    | '/espelhos/painel'
     | '/portas-de-vidro/$modelo'
     | '/portas-de-vidro/abrir'
     | '/portas-de-vidro/certa'
@@ -354,6 +414,11 @@ export interface RootRouteChildren {
   BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
+  EspelhosBanheiroRoute: typeof EspelhosBanheiroRoute
+  EspelhosBisoteRoute: typeof EspelhosBisoteRoute
+  EspelhosLapidadoRoute: typeof EspelhosLapidadoRoute
+  EspelhosOrganicoRoute: typeof EspelhosOrganicoRoute
+  EspelhosPainelRoute: typeof EspelhosPainelRoute
   PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
   PortasDeVidroAbrirRoute: typeof PortasDeVidroAbrirRoute
   PortasDeVidroCertaRoute: typeof PortasDeVidroCertaRoute
@@ -490,6 +555,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PortasDeVidroModeloRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/espelhos/painel': {
+      id: '/espelhos/painel'
+      path: '/espelhos/painel'
+      fullPath: '/espelhos/painel'
+      preLoaderRoute: typeof EspelhosPainelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/organico': {
+      id: '/espelhos/organico'
+      path: '/espelhos/organico'
+      fullPath: '/espelhos/organico'
+      preLoaderRoute: typeof EspelhosOrganicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/lapidado': {
+      id: '/espelhos/lapidado'
+      path: '/espelhos/lapidado'
+      fullPath: '/espelhos/lapidado'
+      preLoaderRoute: typeof EspelhosLapidadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/bisote': {
+      id: '/espelhos/bisote'
+      path: '/espelhos/bisote'
+      fullPath: '/espelhos/bisote'
+      preLoaderRoute: typeof EspelhosBisoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/banheiro': {
+      id: '/espelhos/banheiro'
+      path: '/espelhos/banheiro'
+      fullPath: '/espelhos/banheiro'
+      preLoaderRoute: typeof EspelhosBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/espelhos/$modelo': {
       id: '/espelhos/$modelo'
       path: '/espelhos/$modelo'
@@ -570,6 +670,11 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
+  EspelhosBanheiroRoute: EspelhosBanheiroRoute,
+  EspelhosBisoteRoute: EspelhosBisoteRoute,
+  EspelhosLapidadoRoute: EspelhosLapidadoRoute,
+  EspelhosOrganicoRoute: EspelhosOrganicoRoute,
+  EspelhosPainelRoute: EspelhosPainelRoute,
   PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
   PortasDeVidroAbrirRoute: PortasDeVidroAbrirRoute,
   PortasDeVidroCertaRoute: PortasDeVidroCertaRoute,
@@ -587,3 +692,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
