@@ -21,6 +21,12 @@ import espelhoBanheiro from "@/assets/espelho-banheiro.jpg.asset.json";
 import painelEspelho from "@/assets/painel-espelho.jpg.asset.json";
 import espelhoLapidado from "@/assets/espelho-lapidado.png.asset.json";
 import espelhoBisote from "@/assets/espelho-bisote.png.asset.json";
+import projetoResidencial from "@/assets/projeto-residencial.jpg.asset.json";
+import projetoComercial from "@/assets/projeto-comercial.png.asset.json";
+import projetoEscritorios from "@/assets/projeto-escritorios.png.asset.json";
+import projetoGuardaCorpo from "@/assets/projeto-guarda-corpo.png.asset.json";
+import projetoFechamentoSacada from "@/assets/projeto-fechamento-sacada.png.asset.json";
+import projetoCoberturas from "@/assets/projeto-coberturas.png.asset.json";
 
 
 // ============================================================
