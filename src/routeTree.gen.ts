@@ -18,6 +18,13 @@ import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro
 import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
 import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
 import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
+import { Route as PortasDeVidroVisionRouteImport } from './routes/portas-de-vidro.vision'
+import { Route as PortasDeVidroVersatikRouteImport } from './routes/portas-de-vidro.versatik'
+import { Route as PortasDeVidroNobreRouteImport } from './routes/portas-de-vidro.nobre'
+import { Route as PortasDeVidroFlexRouteImport } from './routes/portas-de-vidro.flex'
+import { Route as PortasDeVidroCorrerRouteImport } from './routes/portas-de-vidro.correr'
+import { Route as PortasDeVidroCertaRouteImport } from './routes/portas-de-vidro.certa'
+import { Route as PortasDeVidroAbrirRouteImport } from './routes/portas-de-vidro.abrir'
 import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
@@ -72,6 +79,41 @@ const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
 const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
   id: '/projetos/$modelo',
   path: '/projetos/$modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroVisionRoute = PortasDeVidroVisionRouteImport.update({
+  id: '/portas-de-vidro/vision',
+  path: '/portas-de-vidro/vision',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroVersatikRoute = PortasDeVidroVersatikRouteImport.update({
+  id: '/portas-de-vidro/versatik',
+  path: '/portas-de-vidro/versatik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroNobreRoute = PortasDeVidroNobreRouteImport.update({
+  id: '/portas-de-vidro/nobre',
+  path: '/portas-de-vidro/nobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroFlexRoute = PortasDeVidroFlexRouteImport.update({
+  id: '/portas-de-vidro/flex',
+  path: '/portas-de-vidro/flex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroCorrerRoute = PortasDeVidroCorrerRouteImport.update({
+  id: '/portas-de-vidro/correr',
+  path: '/portas-de-vidro/correr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroCertaRoute = PortasDeVidroCertaRouteImport.update({
+  id: '/portas-de-vidro/certa',
+  path: '/portas-de-vidro/certa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroAbrirRoute = PortasDeVidroAbrirRouteImport.update({
+  id: '/portas-de-vidro/abrir',
+  path: '/portas-de-vidro/abrir',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
@@ -141,6 +183,13 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
+  '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
+  '/portas-de-vidro/correr': typeof PortasDeVidroCorrerRoute
+  '/portas-de-vidro/flex': typeof PortasDeVidroFlexRoute
+  '/portas-de-vidro/nobre': typeof PortasDeVidroNobreRoute
+  '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
+  '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
@@ -162,6 +211,13 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
+  '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
+  '/portas-de-vidro/correr': typeof PortasDeVidroCorrerRoute
+  '/portas-de-vidro/flex': typeof PortasDeVidroFlexRoute
+  '/portas-de-vidro/nobre': typeof PortasDeVidroNobreRoute
+  '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
+  '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
   '/box-de-banheiro': typeof BoxDeBanheiroIndexRoute
   '/espelhos': typeof EspelhosIndexRoute
@@ -184,6 +240,13 @@ export interface FileRoutesById {
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/portas-de-vidro/$modelo': typeof PortasDeVidroModeloRoute
+  '/portas-de-vidro/abrir': typeof PortasDeVidroAbrirRoute
+  '/portas-de-vidro/certa': typeof PortasDeVidroCertaRoute
+  '/portas-de-vidro/correr': typeof PortasDeVidroCorrerRoute
+  '/portas-de-vidro/flex': typeof PortasDeVidroFlexRoute
+  '/portas-de-vidro/nobre': typeof PortasDeVidroNobreRoute
+  '/portas-de-vidro/versatik': typeof PortasDeVidroVersatikRoute
+  '/portas-de-vidro/vision': typeof PortasDeVidroVisionRoute
   '/projetos/$modelo': typeof ProjetosModeloRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
@@ -207,6 +270,13 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
+    | '/portas-de-vidro/abrir'
+    | '/portas-de-vidro/certa'
+    | '/portas-de-vidro/correr'
+    | '/portas-de-vidro/flex'
+    | '/portas-de-vidro/nobre'
+    | '/portas-de-vidro/versatik'
+    | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
     | '/box-de-banheiro/'
     | '/espelhos/'
@@ -228,6 +298,13 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
+    | '/portas-de-vidro/abrir'
+    | '/portas-de-vidro/certa'
+    | '/portas-de-vidro/correr'
+    | '/portas-de-vidro/flex'
+    | '/portas-de-vidro/nobre'
+    | '/portas-de-vidro/versatik'
+    | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
     | '/box-de-banheiro'
     | '/espelhos'
@@ -249,6 +326,13 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/transfer'
     | '/espelhos/$modelo'
     | '/portas-de-vidro/$modelo'
+    | '/portas-de-vidro/abrir'
+    | '/portas-de-vidro/certa'
+    | '/portas-de-vidro/correr'
+    | '/portas-de-vidro/flex'
+    | '/portas-de-vidro/nobre'
+    | '/portas-de-vidro/versatik'
+    | '/portas-de-vidro/vision'
     | '/projetos/$modelo'
     | '/box-de-banheiro/'
     | '/espelhos/'
@@ -271,6 +355,13 @@ export interface RootRouteChildren {
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
   PortasDeVidroModeloRoute: typeof PortasDeVidroModeloRoute
+  PortasDeVidroAbrirRoute: typeof PortasDeVidroAbrirRoute
+  PortasDeVidroCertaRoute: typeof PortasDeVidroCertaRoute
+  PortasDeVidroCorrerRoute: typeof PortasDeVidroCorrerRoute
+  PortasDeVidroFlexRoute: typeof PortasDeVidroFlexRoute
+  PortasDeVidroNobreRoute: typeof PortasDeVidroNobreRoute
+  PortasDeVidroVersatikRoute: typeof PortasDeVidroVersatikRoute
+  PortasDeVidroVisionRoute: typeof PortasDeVidroVisionRoute
   ProjetosModeloRoute: typeof ProjetosModeloRoute
   BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
   EspelhosIndexRoute: typeof EspelhosIndexRoute
@@ -341,6 +432,55 @@ declare module '@tanstack/react-router' {
       path: '/projetos/$modelo'
       fullPath: '/projetos/$modelo'
       preLoaderRoute: typeof ProjetosModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/vision': {
+      id: '/portas-de-vidro/vision'
+      path: '/portas-de-vidro/vision'
+      fullPath: '/portas-de-vidro/vision'
+      preLoaderRoute: typeof PortasDeVidroVisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/versatik': {
+      id: '/portas-de-vidro/versatik'
+      path: '/portas-de-vidro/versatik'
+      fullPath: '/portas-de-vidro/versatik'
+      preLoaderRoute: typeof PortasDeVidroVersatikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/nobre': {
+      id: '/portas-de-vidro/nobre'
+      path: '/portas-de-vidro/nobre'
+      fullPath: '/portas-de-vidro/nobre'
+      preLoaderRoute: typeof PortasDeVidroNobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/flex': {
+      id: '/portas-de-vidro/flex'
+      path: '/portas-de-vidro/flex'
+      fullPath: '/portas-de-vidro/flex'
+      preLoaderRoute: typeof PortasDeVidroFlexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/correr': {
+      id: '/portas-de-vidro/correr'
+      path: '/portas-de-vidro/correr'
+      fullPath: '/portas-de-vidro/correr'
+      preLoaderRoute: typeof PortasDeVidroCorrerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/certa': {
+      id: '/portas-de-vidro/certa'
+      path: '/portas-de-vidro/certa'
+      fullPath: '/portas-de-vidro/certa'
+      preLoaderRoute: typeof PortasDeVidroCertaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/abrir': {
+      id: '/portas-de-vidro/abrir'
+      path: '/portas-de-vidro/abrir'
+      fullPath: '/portas-de-vidro/abrir'
+      preLoaderRoute: typeof PortasDeVidroAbrirRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portas-de-vidro/$modelo': {
@@ -431,6 +571,13 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
   PortasDeVidroModeloRoute: PortasDeVidroModeloRoute,
+  PortasDeVidroAbrirRoute: PortasDeVidroAbrirRoute,
+  PortasDeVidroCertaRoute: PortasDeVidroCertaRoute,
+  PortasDeVidroCorrerRoute: PortasDeVidroCorrerRoute,
+  PortasDeVidroFlexRoute: PortasDeVidroFlexRoute,
+  PortasDeVidroNobreRoute: PortasDeVidroNobreRoute,
+  PortasDeVidroVersatikRoute: PortasDeVidroVersatikRoute,
+  PortasDeVidroVisionRoute: PortasDeVidroVisionRoute,
   ProjetosModeloRoute: ProjetosModeloRoute,
   BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
   EspelhosIndexRoute: EspelhosIndexRoute,
