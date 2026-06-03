@@ -23,7 +23,8 @@ import espelhoLapidado from "@/assets/espelho-lapidado.png.asset.json";
 import espelhoBisote from "@/assets/espelho-bisote.png.asset.json";
 import projetoResidencial from "@/assets/projeto-residencial.jpg.asset.json";
 import projetoComercial from "@/assets/projeto-comercial.png.asset.json";
-import projetoEscritorios from "@/assets/projeto-escritorios.png.asset.json";
+import projetoEscritorios from "@/assets/escritorio-interior.png.asset.json";
+import comercialInterior from "@/assets/comercial-interior.png.asset.json";
 import projetoGuardaCorpo from "@/assets/projeto-guarda-corpo.png.asset.json";
 import projetoFechamentoSacada from "@/assets/projeto-fechamento-sacada.png.asset.json";
 import projetoCoberturas from "@/assets/projeto-coberturas.png.asset.json";
@@ -101,7 +102,7 @@ export const CATEGORIES: Record<string, Category> = {
     title: "Projetos personalizados em vidro",
     models: [
       { slug: "residencial", name: "Residencial", description: "Soluções sob medida para casas e apartamentos.", longDescription: "Projetos Residenciais sob medida: guarda-corpos, fechamentos de sacada, divisórias e mais. Atendemos casas e apartamentos em toda a Capital e Grande SP.", image: projetoResidencial.url, gallery: placeholderGallery(projetoResidencial.url) },
-      { slug: "comercial", name: "Comercial", description: "Fachadas, vitrines e divisórias para o seu negócio.", longDescription: "Projetos Comerciais: fachadas em vidro temperado, vitrines, divisórias de loja e escritório. Solução completa para o seu negócio.", image: projetoComercial.url, gallery: placeholderGallery(projetoComercial.url) },
+      { slug: "comercial", name: "Comercial", description: "Fachadas, vitrines e divisórias para o seu negócio.", longDescription: "Projetos Comerciais: fachadas em vidro temperado, vitrines, divisórias de loja e escritório. Solução completa para o seu negócio.", image: projetoComercial.url, gallery: [comercialInterior.url, projetoComercial.url, comercialInterior.url, projetoComercial.url, comercialInterior.url, projetoComercial.url] },
       { slug: "escritorios", name: "Escritórios", description: "Divisórias de vidro para ambientes corporativos.", longDescription: "Divisórias de vidro para escritórios corporativos, integrando ambientes sem perder privacidade. Sistemas com vidro duplo e jateado disponíveis.", image: projetoEscritorios.url, gallery: placeholderGallery(projetoEscritorios.url) },
       { slug: "guarda-corpo", name: "Guarda-corpo", description: "Vidro temperado para sacadas e escadas.", longDescription: "Guarda-corpos em vidro temperado para sacadas, escadas e mezaninos. Segurança certificada e visual contemporâneo.", image: projetoGuardaCorpo.url, gallery: placeholderGallery(projetoGuardaCorpo.url) },
       { slug: "fechamento-sacada", name: "Fechamento de Sacada", description: "Cortinas de vidro retráteis e silenciosas.", longDescription: "Fechamento de Sacada com vidro temperado retrátil: silencioso, seguro e fácil de manusear. Aumenta a área útil e protege contra vento e chuva.", image: projetoFechamentoSacada.url, gallery: placeholderGallery(projetoFechamentoSacada.url) },
