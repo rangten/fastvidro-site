@@ -16,6 +16,11 @@ import portaFlex from "@/assets/porta-flex.png.asset.json";
 import portaDeGiro from "@/assets/porta-de-giro.png.asset.json";
 import portaCorrer from "@/assets/porta-correr.png.asset.json";
 import portaVersatik from "@/assets/porta-versatik.png.asset.json";
+import espelhoOrganico from "@/assets/espelho-organico.png.asset.json";
+import espelhoBanheiro from "@/assets/espelho-banheiro.jpg.asset.json";
+import painelEspelho from "@/assets/painel-espelho.jpg.asset.json";
+import espelhoLapidado from "@/assets/espelho-lapidado.png.asset.json";
+import espelhoBisote from "@/assets/espelho-bisote.png.asset.json";
 
 
 // ============================================================
