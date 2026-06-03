@@ -9,6 +9,13 @@ import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
 import transferCover from "@/assets/transfer-cover.png.asset.json";
 import nobreCover from "@/assets/nobre-cover.png.asset.json";
 import eleganceCover from "@/assets/elegance-cover.png.asset.json";
+import portaVision from "@/assets/porta-vision.png.asset.json";
+import portaNobre from "@/assets/porta-nobre.png.asset.json";
+import portaCerta from "@/assets/porta-certa.png.asset.json";
+import portaFlex from "@/assets/porta-flex.png.asset.json";
+import portaDeGiro from "@/assets/porta-de-giro.png.asset.json";
+import portaCorrer from "@/assets/porta-correr.png.asset.json";
+import portaVersatik from "@/assets/porta-versatik.png.asset.json";
 
 
 // ============================================================
@@ -56,13 +63,13 @@ export const CATEGORIES: Record<string, Category> = {
     eyebrow: "Portas de Vidro",
     title: "Portas de vidro sob medida",
     models: [
-      { slug: "vision", name: "Vision", description: "Linhas finas, ideal para escritórios modernos.", longDescription: "A Porta Vision tem perfil ultrafino em alumínio, ideal para escritórios, salas de reunião e lofts modernos. Vidro temperado de alta segurança e visual minimalista.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "nobre", name: "Nobre", description: "Acabamento premium para alto padrão.", longDescription: "A Porta Nobre é a escolha para projetos de alto padrão: ferragens importadas, vidro 10mm e acabamento premium em alumínio anodizado.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "certo", name: "Certo", description: "Solução robusta para grandes vãos.", longDescription: "A Porta Certo foi pensada para grandes vãos comerciais e residenciais, com estrutura reforçada e ferragens de alta resistência.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "flex", name: "Flex", description: "Adaptável a múltiplas configurações.", longDescription: "A Porta Flex se adapta a múltiplas configurações: abre, corre ou pivota conforme o projeto. Versatilidade total para arquitetos e designers.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "de-abrir", name: "De Abrir", description: "Porta tradicional pivotante com molas.", longDescription: "A Porta De Abrir é o clássico pivotante com molas hidráulicas. Robusta, durável e elegante — solução tradicional reinventada com vidro temperado.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "de-correr", name: "De Correr", description: "Aproveitamento total do espaço.", longDescription: "A Porta De Correr libera 100% do espaço útil. Trilho superior reforçado e roldanas silenciosas para uso intenso no dia a dia.", image: portasImg, gallery: placeholderGallery(portasImg) },
-      { slug: "versatik", name: "Versatik", description: "Sistema deslizante silencioso e suave.", longDescription: "A Porta Versatik usa sistema deslizante com amortecedor, garantindo fechamento suave e silencioso. Perfeita para integrar ambientes pequenos sem perder área útil.", image: portasImg, gallery: placeholderGallery(portasImg) },
+      { slug: "vision", name: "Vision", description: "Linhas finas, ideal para escritórios modernos.", longDescription: "A Porta Vision tem perfil ultrafino em alumínio, ideal para escritórios, salas de reunião e lofts modernos. Vidro temperado de alta segurança e visual minimalista.", image: portaVision.url, gallery: placeholderGallery(portaVision.url) },
+      { slug: "nobre", name: "Nobre", description: "Acabamento premium para alto padrão.", longDescription: "A Porta Nobre é a escolha para projetos de alto padrão: ferragens importadas, vidro 10mm e acabamento premium em alumínio anodizado.", image: portaNobre.url, gallery: placeholderGallery(portaNobre.url) },
+      { slug: "certo", name: "Certo", description: "Solução robusta para grandes vãos.", longDescription: "A Porta Certo foi pensada para grandes vãos comerciais e residenciais, com estrutura reforçada e ferragens de alta resistência.", image: portaCerta.url, gallery: placeholderGallery(portaCerta.url) },
+      { slug: "flex", name: "Flex", description: "Adaptável a múltiplas configurações.", longDescription: "A Porta Flex se adapta a múltiplas configurações: abre, corre ou pivota conforme o projeto. Versatilidade total para arquitetos e designers.", image: portaFlex.url, gallery: placeholderGallery(portaFlex.url) },
+      { slug: "de-abrir", name: "De Abrir", description: "Porta tradicional pivotante com molas.", longDescription: "A Porta De Abrir é o clássico pivotante com molas hidráulicas. Robusta, durável e elegante — solução tradicional reinventada com vidro temperado.", image: portaDeGiro.url, gallery: placeholderGallery(portaDeGiro.url) },
+      { slug: "de-correr", name: "De Correr", description: "Aproveitamento total do espaço.", longDescription: "A Porta De Correr libera 100% do espaço útil. Trilho superior reforçado e roldanas silenciosas para uso intenso no dia a dia.", image: portaCorrer.url, gallery: placeholderGallery(portaCorrer.url) },
+      { slug: "versatik", name: "Versatik", description: "Sistema deslizante silencioso e suave.", longDescription: "A Porta Versatik usa sistema deslizante com amortecedor, garantindo fechamento suave e silencioso. Perfeita para integrar ambientes pequenos sem perder área útil.", image: portaVersatik.url, gallery: placeholderGallery(portaVersatik.url) },
     ],
   },
   "espelhos": {
