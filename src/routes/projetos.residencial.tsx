@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-residencial.jpg.asset.json";
+import hero from "@/assets/projeto-residencial.jpg";
 
 const TITLE = "Projetos Residenciais em Vidro em SP | Sob Medida - Fast Vidro";
 const DESC = "Engenharia em vidros para projetos residenciais na Zona Norte de SP. Instalação sob medida de portas, janelas, escadas, guarda-corpo, espelhos e coberturas. Peça seu orçamento!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/residencial")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/residencial" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/residencial")({
       eyebrow="Projetos Residenciais"
       h1="Projetos Residenciais de Vidro em São Paulo: Sofisticação para o Seu Lar"
       heroLead="Vidraçaria referência em projetos residenciais na Zona Norte de SP, com atendimento em toda a capital."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Projeto residencial em vidro Fast Vidro"
       benefits={[
         "Portas, janelas e escadas sob medida",

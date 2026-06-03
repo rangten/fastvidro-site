@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import espelhoOrganico from "@/assets/espelho-organico.png.asset.json";
+import espelhoOrganico from "@/assets/espelho-organico.png";
 
 export const Route = createFileRoute("/espelhos/organico")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/espelhos/organico")({
       eyebrow="Espelho Orgânico"
       h1="Espelho Orgânico em São Paulo: A Maior Tendência em Decoração Sob Medida"
       heroLead="Transforme seu ambiente com leveza e personalidade. O Espelho Orgânico da Fast Vidro traz formas fluidas e curvas naturais que valorizam a iluminação e ampliam qualquer espaço com um toque de arte contemporânea."
-      heroImage={espelhoOrganico.url}
+      heroImage={espelhoOrganico}
       heroImageAlt="Espelho Orgânico lapidado sob medida instalado em sala de estar em São Paulo"
       benefits={[
         "Formatos fluidos e assimétricos inspirados na natureza",

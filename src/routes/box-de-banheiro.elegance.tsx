@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/elegance-cover.png.asset.json";
-import img1 from "@/assets/elegance-1.png.asset.json";
-import img2 from "@/assets/elegance-2.png.asset.json";
-import img3 from "@/assets/elegance-3.png.asset.json";
-import img4 from "@/assets/elegance-4.png.asset.json";
+import cover from "@/assets/elegance-cover.png";
+import img1 from "@/assets/elegance-1.png";
+import img2 from "@/assets/elegance-2.png";
+import img3 from "@/assets/elegance-3.png";
+import img4 from "@/assets/elegance-4.png";
 
 const META_TITLE = "Box Elegance Roldanas Aparentes em SP | Box de Inox - Fast Vidro";
 const META_DESC =
@@ -15,7 +15,7 @@ const META_DESC =
 const WA_MSG = "Olá! Quero um orçamento do Box Elegance com Roldanas Aparentes com a Fast Vidro.";
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
-const gallery = [img1.url, img2.url, img3.url, img4.url];
+const gallery = [img1, img2, img3, img4];
 
 export const Route = createFileRoute("/box-de-banheiro/elegance")({
   head: () => ({
@@ -26,8 +26,8 @@ export const Route = createFileRoute("/box-de-banheiro/elegance")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/box-de-banheiro/elegance" },
-      { property: "og:image", content: cover.url },
-      { name: "twitter:image", content: cover.url },
+      { property: "og:image", content: cover },
+      { name: "twitter:image", content: cover },
     ],
     links: [{ rel: "canonical", href: "/box-de-banheiro/elegance" }],
   }),
@@ -41,7 +41,7 @@ function BoxElegancePage() {
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <div
           className="absolute inset-0 opacity-30 bg-cover bg-center"
-          style={{ backgroundImage: `url(${cover.url})` }}
+          style={{ backgroundImage: `url(${cover})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">

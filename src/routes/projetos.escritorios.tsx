@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/escritorio-interior.png.asset.json";
+import hero from "@/assets/escritorio-interior.png";
 
 const TITLE = "Divisórias de Vidro para Escritório em SP | Fast Vidro";
 const DESC = "Otimize seu espaço corporativo com divisórias de vidro para escritórios na Zona Norte de SP. Soluções acústicas para salas de reunião e ambientes integrados. Peça orçamento!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/escritorios")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/escritorios" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/escritorios")({
       eyebrow="Divisórias de Escritório"
       h1="Divisórias de Vidro para Escritórios em São Paulo: Modernidade e Acústica Corporativa"
       heroLead="Ambiente de trabalho integrado, iluminado e privativo com divisórias de vidro instaladas em toda a capital paulista."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Divisória de vidro para escritório Fast Vidro"
       benefits={[
         "Isolamento acústico com passagem de luz natural",

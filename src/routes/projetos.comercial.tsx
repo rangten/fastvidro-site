@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/comercial-interior.png.asset.json";
+import hero from "@/assets/comercial-interior.png";
 
 const TITLE = "Vidraçaria para Projetos Comerciais em SP | Vitrines - Fast Vidro";
 const DESC = "Especialista em projetos comerciais na Zona Norte de SP. Instalação de vitrines de lojas, portas de vidro temperado e janelas institucionais de alta resistência. Solicite orçamento!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/comercial")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/comercial" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/comercial")({
       eyebrow="Projetos Comerciais"
       h1="Projetos Comerciais em Vidro em São Paulo: Impacto Visual para o Seu Negócio"
       heroLead="Soluções robustas e seguras em vidro para comércios, lojas de shopping e prédios empresariais em toda a Grande SP."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Projeto comercial em vidro Fast Vidro"
       benefits={[
         "Vitrines de grande porte e alta transparência",

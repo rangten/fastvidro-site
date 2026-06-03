@@ -6,10 +6,10 @@ import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
 import heroDefault from "@/assets/hero-box.jpg";
-import flexDesktop from "@/assets/hero-flex-desktop.png.asset.json";
-import flexMobile from "@/assets/hero-flex-mobile.png.asset.json";
-import boxDesktop from "@/assets/hero-box-desktop.png.asset.json";
-import boxMobile from "@/assets/hero-box-mobile.png.asset.json";
+import flexDesktop from "@/assets/hero-flex-desktop.png";
+import flexMobile from "@/assets/hero-flex-mobile.png";
+import boxDesktop from "@/assets/hero-box-desktop.png";
+import boxMobile from "@/assets/hero-box-mobile.png";
 
 type Slide = {
   kind: "text" | "image";
@@ -41,14 +41,14 @@ const slides: Slide[] = [
   },
   {
     kind: "image",
-    desktopImage: flexDesktop.url,
-    mobileImage: flexMobile.url,
+    desktopImage: flexDesktop,
+    mobileImage: flexMobile,
     href: waLink("Olá! Quero orçamento do Box Flex Premium da Fast Vidro."),
   },
   {
     kind: "image",
-    desktopImage: boxDesktop.url,
-    mobileImage: boxMobile.url,
+    desktopImage: boxDesktop,
+    mobileImage: boxMobile,
     href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
   },
 ];

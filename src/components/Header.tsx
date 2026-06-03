@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/fast-vidro-logo.png.asset.json";
-import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
+import logoAsset from "@/assets/fast-vidro-logo.png";
+import secureBoxLogo from "@/assets/secure-box-logo.png";
 import { waLink } from "@/lib/site";
 
 type NavItem = {
@@ -14,7 +14,7 @@ type NavItem = {
 const nav: NavItem[] = [
   { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
-  { to: "/box-de-banheiro/secure-box", label: "Secure Box", image: { src: secureBoxLogo.url, alt: "Secure Box" } },
+  { to: "/box-de-banheiro/secure-box", label: "Secure Box", image: { src: secureBoxLogo, alt: "Secure Box" } },
   { to: "/espelhos", label: "Espelhos" },
   { to: "/projetos", label: "Projetos" },
   { to: "/blog", label: "Blog" },
@@ -27,7 +27,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:px-8 lg:py-6">
         <Link to="/" className="flex items-center gap-2 py-1 pr-2" onClick={() => setOpen(false)}>
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Fast Vidro"
             className="h-20 sm:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(250,204,21,0.15)]"
           />

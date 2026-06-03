@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-de-giro.png.asset.json";
+import img from "@/assets/porta-de-giro.png";
 
 const TITLE = "Porta de Abrir de Vidro em SP | Porta de Giro Tradicional - Fast Vidro";
 const DESC = "Procurando Porta de Abrir de vidro temperado sob medida na Zona Norte de SP? Modelos clássicos com dobradiças e fechaduras para salas, cozinhas e escritórios. Peça orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/abrir")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/abrir" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/abrir" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/abrir")({
       eyebrow="Porta de Abrir"
       h1="Porta de Abrir em São Paulo: O Charme Clássico do Sistema de Giro"
       heroLead="Porta de giro tradicional e segura, com dobradiças de alta resistência e vedação superior para salas, escritórios e entradas."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta de Abrir / de Giro tradicional - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta de Abrir com a Fast Vidro."
       benefits={[

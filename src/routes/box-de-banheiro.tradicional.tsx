@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/tradicional-cover.png.asset.json";
-import imgCanto from "@/assets/tradicional-canto.png.asset.json";
-import imgAbrir from "@/assets/tradicional-abrir.png.asset.json";
-import imgCorrer from "@/assets/tradicional-correr.png.asset.json";
+import cover from "@/assets/tradicional-cover.png";
+import imgCanto from "@/assets/tradicional-canto.png";
+import imgAbrir from "@/assets/tradicional-abrir.png";
+import imgCorrer from "@/assets/tradicional-correr.png";
 
 const META_TITLE = "Box Tradicional de Vidro em SP | Modelos de Correr e Abrir - Fast Vidro";
 const META_DESC =
@@ -16,17 +16,17 @@ const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MS
 
 const variantes = [
   {
-    img: imgCorrer.url,
+    img: imgCorrer,
     title: "Box Frontal (F1) — De Correr",
     desc: "1 folha fixa + 1 folha de correr para vãos de parede a parede. Otimiza o lateral e garante vedação perfeita.",
   },
   {
-    img: imgCanto.url,
+    img: imgCanto,
     title: "Box de Canto (Box em L)",
     desc: "2 folhas fixas + 2 folhas de correr que se encontram no centro. Ideal para chuveiros posicionados no canto.",
   },
   {
-    img: imgAbrir.url,
+    img: imgAbrir,
     title: "Box com Porta de Abrir",
     desc: "1 folha fixa + 1 porta de giro com dobradiças de alta resistência. Design clean para vãos menores.",
   },
@@ -41,8 +41,8 @@ export const Route = createFileRoute("/box-de-banheiro/tradicional")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/box-de-banheiro/tradicional" },
-      { property: "og:image", content: cover.url },
-      { name: "twitter:image", content: cover.url },
+      { property: "og:image", content: cover },
+      { name: "twitter:image", content: cover },
     ],
     links: [{ rel: "canonical", href: "/box-de-banheiro/tradicional" }],
   }),
@@ -56,7 +56,7 @@ function BoxTradicionalPage() {
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <div
           className="absolute inset-0 opacity-30 bg-cover bg-center"
-          style={{ backgroundImage: `url(${cover.url})` }}
+          style={{ backgroundImage: `url(${cover})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">

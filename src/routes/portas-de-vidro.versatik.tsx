@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-versatik.png.asset.json";
+import img from "@/assets/porta-versatik.png";
 
 const TITLE = "Porta Versatik em SP | Sistema de Portas Simultâneas - Fast Vidro";
 const DESC = "Conheça a Porta Versatik na Zona Norte de SP. Tecnologia de engenharia que move várias folhas de vidro ao mesmo tempo, liberando vãos gigantes. Peça orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/versatik")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/versatik" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/versatik" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/versatik")({
       eyebrow="Porta Versatik"
       h1="Porta Versatik em São Paulo: Engenharia Inteligente para Vãos Amplos"
       heroLead="Sistema com tração simultânea — várias folhas deslizam juntas, liberando até 2/3 do vão com um único movimento."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta Versatik com abertura simultânea - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta Versatik com a Fast Vidro."
       benefits={[

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import espelhoBanheiro from "@/assets/espelho-banheiro.jpg.asset.json";
+import espelhoBanheiro from "@/assets/espelho-banheiro.jpg";
 
 export const Route = createFileRoute("/espelhos/banheiro")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/espelhos/banheiro")({
       eyebrow="Espelho para Banheiro"
       h1="Espelho para Banheiro em São Paulo: Amplitude e Praticidade para o seu Lavabo"
       heroLead="O espelho certo transforma seu banheiro. A Fast Vidro projeta e instala espelhos sob medida com proteção contra oxidação, ideais para resistir à umidade e valorizar seu espaço."
-      heroImage={espelhoBanheiro.url}
+      heroImage={espelhoBanheiro}
       heroImageAlt="Espelho para banheiro sob medida instalado em lavabo na Zona Norte de SP"
       benefits={[
         "Proteção especial contra oxidação e umidade",

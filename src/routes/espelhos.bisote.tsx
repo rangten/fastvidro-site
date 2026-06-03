@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import espelhoBisote from "@/assets/espelho-bisote.png.asset.json";
+import espelhoBisote from "@/assets/espelho-bisote.png";
 
 export const Route = createFileRoute("/espelhos/bisote")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/espelhos/bisote")({
       eyebrow="Espelho Bisotê"
       h1="Espelho Bisotê em São Paulo: O Requinte das Bordas Chanfradas com Efeito Cristal"
       heroLead="Conferir um aspecto clássico, nobre e imponente ao seu ambiente. A Fast Vidro domina a arte do acabamento lapidado ornamental na Zona Norte de São Paulo."
-      heroImage={espelhoBisote.url}
+      heroImage={espelhoBisote}
       heroImageAlt="Espelho bisotê com bordas chanfradas decorativas em hall de entrada em São Paulo"
       benefits={[
         "Corte chanfrado que cria moldura natural no espelho",
