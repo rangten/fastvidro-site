@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-correr.png.asset.json";
+import img from "@/assets/porta-correr.png";
 
 const TITLE = "Porta de Correr de Vidro em SP | Divisória de Ambientes - Fast Vidro";
 const DESC = "Otimize seu espaço com a Porta de Correr de Vidro na Zona Norte de SP. Deslizamento suave sobre trilhos para integrar ou dividir salas e cozinhas. Peça seu orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/correr")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/correr" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/correr" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/correr")({
       eyebrow="Porta de Correr"
       h1="Porta de Correr em São Paulo: Economia de Espaço e Integração Moderna"
       heroLead="Porta tradicional de correr com deslizamento suave e silencioso, perfeita para integrar ambientes residenciais e comerciais."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta tradicional de correr em vidro - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta de Correr com a Fast Vidro."
       benefits={[

@@ -1,16 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
-import boxImgAsset from "@/assets/card-box-banheiro.png.asset.json";
-import portasImgAsset from "@/assets/card-portas-vidro.png.asset.json";
-import espelhosImgAsset from "@/assets/card-espelhos.jpg.asset.json";
-import projetosImgAsset from "@/assets/card-projetos.png.asset.json";
-import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
-import secureBoxHeroAsset from "@/assets/secure-box-hero.png.asset.json";
-import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg.asset.json";
-const boxImg = boxImgAsset.url;
-const portasImg = portasImgAsset.url;
-const espelhosImg = espelhosImgAsset.url;
-const projetosImg = projetosImgAsset.url;
+import boxImgAsset from "@/assets/card-box-banheiro.png";
+import portasImgAsset from "@/assets/card-portas-vidro.png";
+import espelhosImgAsset from "@/assets/card-espelhos.jpg";
+import projetosImgAsset from "@/assets/card-projetos.png";
+import secureBoxLogo from "@/assets/secure-box-logo.png";
+import secureBoxHeroAsset from "@/assets/secure-box-hero.png";
+import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg";
+const boxImg = boxImgAsset;
+const portasImg = portasImgAsset;
+const espelhosImg = espelhosImgAsset;
+const projetosImg = projetosImgAsset;
 import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { waLink } from "@/lib/site";
@@ -32,7 +32,7 @@ const products = [
   { to: "/portas-de-vidro", title: "Portas de Vidro", img: portasImg, desc: "Vision, Nobre, Flex, de Correr, Versatik e personalizadas.", logo: false },
   { to: "/espelhos", title: "Espelhos", img: espelhosImg, desc: "Decorativos sob medida com lapidação reta ou bisotê.", logo: false },
   { to: "/projetos", title: "Projetos", img: projetosImg, desc: "Soluções em vidro personalizadas para qualquer ambiente.", logo: false },
-  { to: "/box-de-banheiro/secure-box", title: "Secure Box", img: secureBoxLogo.url, desc: "Película antiestilhaço de alta performance para máxima proteção da família.", logo: true },
+  { to: "/box-de-banheiro/secure-box", title: "Secure Box", img: secureBoxLogo, desc: "Película antiestilhaço de alta performance para máxima proteção da família.", logo: true },
 ] as const;
 
 const diffs = [
@@ -83,7 +83,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative">
-            <img src={secureBoxHeroAsset.url} alt="Secure Box com película antiestilhaço — Fast Vidro" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
+            <img src={secureBoxHeroAsset} alt="Secure Box com película antiestilhaço — Fast Vidro" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
           </div>
         </div>
       </section>
@@ -211,7 +211,7 @@ function Home() {
           </div>
           <div className="w-full">
             <img
-              src={sobreFastVidroAsset.url}
+              src={sobreFastVidroAsset}
               alt="Box de banheiro em vidro temperado instalado pela Fast Vidro"
               className="w-full h-auto max-h-[520px] object-cover rounded-xl shadow-ink"
               loading="lazy"

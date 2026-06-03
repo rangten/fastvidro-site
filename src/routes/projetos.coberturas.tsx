@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-coberturas.png.asset.json";
+import hero from "@/assets/projeto-coberturas.png";
 
 const TITLE = "Cobertura de Vidro em SP | Vidro Laminado Estrutural - Fast Vidro";
 const DESC = "Projetos de coberturas de vidro laminado na Zona Norte de SP. Iluminação natural com segurança e proteção térmica para garagens, corredores e áreas gourmet. Peça orçamento!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/coberturas")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/coberturas" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/coberturas")({
       eyebrow="Coberturas de Vidro"
       h1="Coberturas de Vidro em São Paulo: Iluminação Natural com Engenharia de Alta Resistência"
       heroLead="Estruturas envidraçadas em vidro laminado para garagens, jardins, pergolados e áreas gourmet, com total segurança."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Cobertura de vidro laminado Fast Vidro"
       benefits={[
         "Vidro laminado obrigatório para sobre cabeças",

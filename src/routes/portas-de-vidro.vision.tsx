@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-vision.png.asset.json";
+import img from "@/assets/porta-vision.png";
 
 const TITLE = "Porta Vision em SP | Engenharia de Roldanas Aparentes - Fast Vidro";
 const DESC = "Conheça a Porta Vision com roldanas aparentes de alta performance na Zona Norte de SP. Design inovador e deslizamento ultra suave para divisões de ambientes. Peça orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/vision")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/vision" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/vision" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/vision")({
       eyebrow="Porta Vision"
       h1="Porta Vision em São Paulo: Sofisticação com Engenharia de Roldanas Aparentes"
       heroLead="Sistema deslizante com roldanas aparentes de alto desempenho, vidro temperado e design minimalista para integrar ambientes com sofisticação."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta Vision com roldanas aparentes - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta Vision com a Fast Vidro."
       benefits={[

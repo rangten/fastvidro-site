@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import flexCover from "@/assets/flex-cover.png.asset.json";
-import flex1 from "@/assets/flex-1.png.asset.json";
-import flex2 from "@/assets/flex-2.png.asset.json";
-import flex3 from "@/assets/flex-3.png.asset.json";
-import flex4 from "@/assets/flex-4.png.asset.json";
-import flex5 from "@/assets/flex-5.png.asset.json";
+import flexCover from "@/assets/flex-cover.png";
+import flex1 from "@/assets/flex-1.png";
+import flex2 from "@/assets/flex-2.png";
+import flex3 from "@/assets/flex-3.png";
+import flex4 from "@/assets/flex-4.png";
+import flex5 from "@/assets/flex-5.png";
 
 const META_TITLE = "Box Flex na Zona Norte de SP | Box Articulado - Fast Vidro";
 const META_DESC =
@@ -17,7 +17,7 @@ const WA_MSG =
   "Olá! Quero um orçamento do Box Flex (Zona Norte de SP) com a Fast Vidro.";
 const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WA_MSG)}`;
 
-const gallery = [flex1.url, flex2.url, flex3.url, flex4.url, flex5.url];
+const gallery = [flex1, flex2, flex3, flex4, flex5];
 
 
 export const Route = createFileRoute("/box-de-banheiro/flex")({
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/box-de-banheiro/flex")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/box-de-banheiro/flex" },
-      { property: "og:image", content: flexCover.url },
-      { name: "twitter:image", content: flexCover.url },
+      { property: "og:image", content: flexCover },
+      { name: "twitter:image", content: flexCover },
     ],
     links: [{ rel: "canonical", href: "/box-de-banheiro/flex" }],
   }),
@@ -44,7 +44,7 @@ function BoxFlexPage() {
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
-          style={{ backgroundImage: `url(${flexCover.url})` }}
+          style={{ backgroundImage: `url(${flexCover})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">

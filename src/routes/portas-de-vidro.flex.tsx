@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-flex.png.asset.json";
+import img from "@/assets/porta-flex.png";
 
 const TITLE = "Porta Flex Articulada em SP | Porta Camarão de Vidro - Fast Vidro";
 const DESC = "Ganhe espaço com a Porta Flex articulada na Zona Norte de SP. Sistema camarão sem trilho inferior, perfeito para vãos estreitos e compactos. Solicite orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/flex")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/flex" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/flex" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/flex")({
       eyebrow="Porta Flex"
       h1="Porta Flex em São Paulo: O Sistema Articulado Camarão que Salva Espaço"
       heroLead="Sistema de porta articulada inteligente, tipo camarão, sem trilho inferior — perfeita para vãos estreitos."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta Flex articulada camarão - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta Flex (camarão) com a Fast Vidro."
       benefits={[

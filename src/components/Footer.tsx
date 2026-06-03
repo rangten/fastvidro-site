@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
-import logoAsset from "@/assets/fast-vidro-logo.png.asset.json";
+import logoAsset from "@/assets/fast-vidro-logo.png";
 import { SITE, waLink } from "@/lib/site";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logoAsset.url} alt="Fast Vidro" className="h-16 w-auto" />
+          <img src={logoAsset} alt="Fast Vidro" className="h-16 w-auto" />
           <p className="mt-4 max-w-sm text-sm text-ink-foreground/70">
             Soluções em vidro com velocidade, segurança e acabamento premium para sua casa ou obra.
           </p>

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-guarda-corpo.png.asset.json";
+import hero from "@/assets/projeto-guarda-corpo.png";
 
 const TITLE = "Guarda-Corpo de Vidro em SP | Torres e Bottons Inox - Fast Vidro";
 const DESC = "Instalação de Guarda-Corpo de vidro laminado ou temperado laminado na Zona Norte de SP. Segurança máxima para escadas e sacadas com torres ou bottons de aço inox. Peça já!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/guarda-corpo")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/guarda-corpo" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/guarda-corpo")({
       eyebrow="Guarda-Corpo de Vidro"
       h1="Guarda-Corpo de Vidro em São Paulo: Segurança Máxima com Acabamento em Inox"
       heroLead="Projetos seguindo todas as normas técnicas, com vidro laminado e fixação em aço inox para escadas, sacadas e mezaninos."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Guarda-corpo de vidro com bottons inox Fast Vidro"
       benefits={[
         "Vidro laminado ou temperado laminado",

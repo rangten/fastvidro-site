@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import painelEspelho from "@/assets/painel-espelho.jpg.asset.json";
+import painelEspelho from "@/assets/painel-espelho.jpg";
 
 export const Route = createFileRoute("/espelhos/painel")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/espelhos/painel")({
       eyebrow="Painel de Espelho"
       h1="Painel de Espelho em São Paulo: Luxo e Iluminação para Grandes Paredes"
       heroLead="Dobre a percepção de espaço e crie uma atmosfera de luxo. A Fast Vidro é referência em revestimentos espelhados de grande porte na Zona Norte de São Paulo."
-      heroImage={painelEspelho.url}
+      heroImage={painelEspelho}
       heroImageAlt="Painel de espelho revestindo parede inteira em sala de jantar em São Paulo"
       benefits={[
         "Junta seca com emenda quase invisível",

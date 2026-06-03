@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import secureBoxLogo from "@/assets/secure-box-logo.png.asset.json";
-import secureBoxPelicula from "@/assets/secure-box-pelicula.png.asset.json";
+import secureBoxLogo from "@/assets/secure-box-logo.png";
+import secureBoxPelicula from "@/assets/secure-box-pelicula.png";
 
 const META_TITLE = "Secure Box em SP | Box com Película Antiestilhaço - Fast Vidro";
 const META_DESC =
@@ -30,8 +30,8 @@ export const Route = createFileRoute("/box-de-banheiro/secure-box")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/box-de-banheiro/secure-box" },
-      { property: "og:image", content: secureBoxLogo.url },
-      { name: "twitter:image", content: secureBoxLogo.url },
+      { property: "og:image", content: secureBoxLogo },
+      { name: "twitter:image", content: secureBoxLogo },
     ],
     links: [{ rel: "canonical", href: "/box-de-banheiro/secure-box" }],
   }),
@@ -87,7 +87,7 @@ function SecureBoxPage() {
             <div className="relative">
               <div className="rounded-xl overflow-hidden bg-black flex items-center justify-center p-8 ring-1 ring-white/10">
                 <img
-                  src={secureBoxLogo.url}
+                  src={secureBoxLogo}
                   alt="Secure Box — Película de Segurança para Box de Vidro Temperado"
                   className="max-h-80 w-auto object-contain"
                 />
@@ -123,7 +123,7 @@ function SecureBoxPage() {
 
           <figure className="mt-10 overflow-hidden rounded-xl shadow-ink ring-1 ring-border">
             <img
-              src={secureBoxPelicula.url}
+              src={secureBoxPelicula}
               alt="Demonstração da película de segurança Secure Box — vidro estilhaçado mas íntegro"
               className="w-full h-auto object-cover"
               loading="lazy"

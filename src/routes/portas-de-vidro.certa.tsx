@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-certa.png.asset.json";
+import img from "@/assets/porta-certa.png";
 
 const TITLE = "Porta Certa em SP | Abertura Total em 180° - Fast Vidro";
 const DESC = "Otimize espaço com a Porta Certa na Zona Norte de SP. O único sistema de giro que abre 180 graus para os dois lados, ideal para passagens compactas. Peça já seu orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/certa")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/certa" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/certa" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/certa")({
       eyebrow="Porta Certa"
       h1="Porta Certa em São Paulo: Praticidade e Abertura Total em 180°"
       heroLead="Sistema de porta de giro com dobradiça oculta e abertura para os dois lados — design inovador para passagens compactas."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta Certa com abertura 180 graus - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta Certa com a Fast Vidro."
       benefits={[

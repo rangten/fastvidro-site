@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-fechamento-sacada.png.asset.json";
+import hero from "@/assets/projeto-fechamento-sacada.png";
 
 const TITLE = "Fechamento de Sacada em SP | Envidraçamento de Sacadas - Fast Vidro";
 const DESC = "Ganhe um novo ambiente com o fechamento de sacada na Zona Norte de SP. Envidraçamento retrátil articulado com vedação total contra chuva, vento e poeira. Peça seu orçamento!";
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/projetos/fechamento-sacada")({
       { name: "description", content: DESC },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
-      { property: "og:image", content: hero.url },
+      { property: "og:image", content: hero },
       { property: "og:url", content: "/projetos/fechamento-sacada" },
       { property: "og:type", content: "product" },
     ],
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/projetos/fechamento-sacada")({
       eyebrow="Fechamento de Sacada"
       h1="Fechamento de Sacada em São Paulo: Proteção, Conforto e Valorização do Seu Imóvel"
       heroLead="Sistemas retráteis articulados para edifícios residenciais em toda a capital, com vedação contra ventos, chuva e poluição."
-      heroImage={hero.url}
+      heroImage={hero}
       heroImageAlt="Fechamento de sacada com vidro retrátil Fast Vidro"
       benefits={[
         "Folhas que deslizam e articulam no canto",

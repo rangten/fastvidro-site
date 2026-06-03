@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-nobre.png.asset.json";
+import img from "@/assets/porta-nobre.png";
 
 const TITLE = "Porta Nobre com Amortecedor em SP | Alumínio Reforçado - Fast Vidro";
 const DESC = "Procurando Porta Nobre com sistema de amortecimento duplo na Zona Norte de SP? Conheça o modelo premium com perfis robustos para fechamentos e divisórias. Peça seu orçamento!";
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/portas-de-vidro/nobre")({
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "/portas-de-vidro/nobre" },
-      { property: "og:image", content: img.url },
-      { name: "twitter:image", content: img.url },
+      { property: "og:image", content: img },
+      { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: "/portas-de-vidro/nobre" }],
   }),
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/portas-de-vidro/nobre")({
       eyebrow="Porta Nobre"
       h1="Porta Nobre em São Paulo: Robustez e Sistema Antimpacto Premium"
       heroLead="Sistema de porta deslizante com amortecedores duplos e segurança reforçada — alumínio robusto para divisórias e fechamentos amplos."
-      heroImage={img.url}
+      heroImage={img}
       heroImageAlt="Porta Nobre com amortecedor e alumínio reforçado - Fast Vidro"
       waMessage="Olá! Quero um orçamento para a Porta Nobre com a Fast Vidro."
       benefits={[

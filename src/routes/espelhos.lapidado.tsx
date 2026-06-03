@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import espelhoLapidado from "@/assets/espelho-lapidado.png.asset.json";
+import espelhoLapidado from "@/assets/espelho-lapidado.png";
 
 export const Route = createFileRoute("/espelhos/lapidado")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/espelhos/lapidado")({
       eyebrow="Espelho Lapidado"
       h1="Espelho Lapidado em São Paulo: Estilo Minimalista com Bordas Polidas de Alta Segurança"
       heroLead="O clássico do minimalismo. A Fast Vidro oferece o melhor serviço de corte e tratamento de bordas da cidade, com forte atuação na Zona Norte de São Paulo."
-      heroImage={espelhoLapidado.url}
+      heroImage={espelhoLapidado}
       heroImageAlt="Espelho lapidado com bordas polidas instalado em parede de sala em São Paulo"
       benefits={[
         "Bordas polidas eliminando partes cortantes do vidro",
