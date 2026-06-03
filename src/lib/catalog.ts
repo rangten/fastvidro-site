@@ -9,6 +9,13 @@ import tradicionalCover from "@/assets/tradicional-cover.png.asset.json";
 import transferCover from "@/assets/transfer-cover.png.asset.json";
 import nobreCover from "@/assets/nobre-cover.png.asset.json";
 import eleganceCover from "@/assets/elegance-cover.png.asset.json";
+import portaVision from "@/assets/porta-vision.png.asset.json";
+import portaNobre from "@/assets/porta-nobre.png.asset.json";
+import portaCerta from "@/assets/porta-certa.png.asset.json";
+import portaFlex from "@/assets/porta-flex.png.asset.json";
+import portaDeGiro from "@/assets/porta-de-giro.png.asset.json";
+import portaCorrer from "@/assets/porta-correr.png.asset.json";
+import portaVersatik from "@/assets/porta-versatik.png.asset.json";
 
 
 // ============================================================
