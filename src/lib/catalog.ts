@@ -16,6 +16,11 @@ import portaFlex from "@/assets/porta-flex.png.asset.json";
 import portaDeGiro from "@/assets/porta-de-giro.png.asset.json";
 import portaCorrer from "@/assets/porta-correr.png.asset.json";
 import portaVersatik from "@/assets/porta-versatik.png.asset.json";
+import espelhoOrganico from "@/assets/espelho-organico.png.asset.json";
+import espelhoBanheiro from "@/assets/espelho-banheiro.jpg.asset.json";
+import painelEspelho from "@/assets/painel-espelho.jpg.asset.json";
+import espelhoLapidado from "@/assets/espelho-lapidado.png.asset.json";
+import espelhoBisote from "@/assets/espelho-bisote.png.asset.json";
 
 
 // ============================================================
@@ -77,11 +82,11 @@ export const CATEGORIES: Record<string, Category> = {
     eyebrow: "Espelhos",
     title: "Espelhos sob medida",
     models: [
-      { slug: "decorativo", name: "Decorativo", description: "Sob medida, formas livres e geométricas.", longDescription: "Os Espelhos Decorativos da Fast Vidro são cortados sob medida em formatos livres e geométricos — circulares, hexagonais, orgânicos. Eleva qualquer ambiente da casa.", image: espelhosImg, gallery: placeholderGallery(espelhosImg) },
-      { slug: "banheiro", name: "Banheiro", description: "Resistência à umidade e fácil limpeza.", longDescription: "Os Espelhos para Banheiro recebem tratamento antiembaçante e proteção contra umidade, garantindo durabilidade mesmo em ambientes molhados.", image: espelhosImg, gallery: placeholderGallery(espelhosImg) },
-      { slug: "parede-inteira", name: "Parede Inteira", description: "Amplia visualmente o ambiente.", longDescription: "Espelhos de Parede Inteira ampliam visualmente o ambiente, refletindo luz natural e dando sensação de amplitude. Indicado para salas, halls e academias residenciais.", image: espelhosImg, gallery: placeholderGallery(espelhosImg) },
-      { slug: "lapidacao-reta", name: "Lapidação Reta", description: "Bordas polidas com acabamento limpo.", longDescription: "A Lapidação Reta deixa as bordas do espelho polidas e perfeitas ao toque, sem necessidade de moldura. Acabamento limpo e moderno.", image: espelhosImg, gallery: placeholderGallery(espelhosImg) },
-      { slug: "bisote", name: "Bisotê", description: "Borda inclinada e brilhante, charme clássico.", longDescription: "O Bisotê cria uma borda inclinada que reflete a luz de forma elegante. Charme clássico para espelhos de banheiro, salas e quartos.", image: espelhosImg, gallery: placeholderGallery(espelhosImg) },
+      { slug: "decorativo", name: "Espelho Orgânico", description: "Formas orgânicas sob medida, design contemporâneo.", longDescription: "O Espelho Orgânico da Fast Vidro é cortado sob medida em formas fluidas e contemporâneas, trazendo personalidade e movimento para qualquer ambiente. Perfeito para lavabos, banheiros e salas modernas.", image: espelhoOrganico.url, gallery: placeholderGallery(espelhoOrganico.url) },
+      { slug: "banheiro", name: "Espelho Banheiro", description: "Resistência à umidade e fácil limpeza.", longDescription: "Os Espelhos para Banheiro recebem tratamento antiembaçante e proteção contra umidade, garantindo durabilidade mesmo em ambientes molhados.", image: espelhoBanheiro.url, gallery: placeholderGallery(espelhoBanheiro.url) },
+      { slug: "parede-inteira", name: "Painel de Espelho", description: "Amplia visualmente o ambiente.", longDescription: "Painéis de espelho ampliam visualmente o ambiente, refletindo luz natural e dando sensação de amplitude. Indicado para salas, halls e academias residenciais.", image: painelEspelho.url, gallery: placeholderGallery(painelEspelho.url) },
+      { slug: "lapidacao-reta", name: "Espelho Lapidado", description: "Bordas polidas com acabamento limpo.", longDescription: "A Lapidação Reta deixa as bordas do espelho polidas e perfeitas ao toque, sem necessidade de moldura. Acabamento limpo e moderno.", image: espelhoLapidado.url, gallery: placeholderGallery(espelhoLapidado.url) },
+      { slug: "bisote", name: "Espelho Bisotê", description: "Borda inclinada e brilhante, charme clássico.", longDescription: "O Bisotê cria uma borda inclinada que reflete a luz de forma elegante. Charme clássico para espelhos de banheiro, salas e quartos.", image: espelhoBisote.url, gallery: placeholderGallery(espelhoBisote.url) },
     ],
   },
   "projetos": {
