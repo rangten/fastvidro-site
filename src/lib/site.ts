@@ -4,12 +4,12 @@
 // Exemplo: "5511967652289" para (11) 96765-2289
 // Esta é a ÚNICA constante usada em todos os botões do site.
 // ============================================================
-export const WHATSAPP_NUMBER = "5511967652289";
+export const WHATSAPP_NUMBER = "5511990238648";
 
 export const SITE = {
   name: "Fast Vidro",
   tagline: "Agilidade e segurança em vidros",
-  phone: "(11) 96765-2289",
+  phone: "(11) 99023-8648",
   whatsapp: WHATSAPP_NUMBER,
   email: "contato@fastvidro.com.br",
   address:

@@ -37,7 +37,7 @@ const slides: Slide[] = [
     desktopImage: heroDefault,
     mobileImage: heroDefault,
     primary: { label: "Pedir orçamento", href: waLink(), icon: <MessageCircle className="h-4 w-4" /> },
-    secondary: { label: "Ver projetos", to: "/projetos" },
+    secondary: { label: "Ver box", to: "/box-de-banheiro" },
   },
   {
     kind: "image",
