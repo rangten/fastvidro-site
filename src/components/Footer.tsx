@@ -18,7 +18,7 @@ export function Footer() {
             rel="noopener"
             className="mt-6 inline-flex items-center gap-2 text-sm text-ink-foreground/80 hover:text-primary"
           >
-            <Instagram className="h-4 w-4" /> @fastvidro
+            <Instagram className="h-4 w-4" /> @fast.vidro
           </a>
         </div>
 
@@ -28,7 +28,6 @@ export function Footer() {
             <li><Link to="/box-de-banheiro" className="text-ink-foreground/80 hover:text-primary">Box de Banheiro</Link></li>
             <li><Link to="/portas-de-vidro" className="text-ink-foreground/80 hover:text-primary">Portas de Vidro</Link></li>
             <li><Link to="/espelhos" className="text-ink-foreground/80 hover:text-primary">Espelhos</Link></li>
-            <li><Link to="/espelhos-led" className="text-ink-foreground/80 hover:text-primary">Espelhos LED</Link></li>
             <li><Link to="/projetos" className="text-ink-foreground/80 hover:text-primary">Projetos sob medida</Link></li>
           </ul>
         </div>
@@ -37,7 +36,6 @@ export function Footer() {
           <h4 className="text-sm font-bold tracking-widest text-primary">CONTATO</h4>
           <ul className="mt-4 space-y-3 text-sm text-ink-foreground/80">
             <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> {SITE.phone}</li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> {SITE.email}</li>
             <li className="flex items-start gap-2"><MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" /> <span>{SITE.address}</span></li>
           </ul>
           <a
