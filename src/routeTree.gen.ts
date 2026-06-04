@@ -47,6 +47,7 @@ import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.
 import { Route as BoxDeBanheiroEleganceRouteImport } from './routes/box-de-banheiro.elegance'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
+import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -240,12 +241,19 @@ const BlogFastVidroHistoriaRoute = BlogFastVidroHistoriaRouteImport.update({
   path: '/blog/fast-vidro-historia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogEspelhosLedSobMedidaRoute =
+  BlogEspelhosLedSobMedidaRouteImport.update({
+    id: '/blog_/espelhos-led-sob-medida',
+    path: '/blog/espelhos-led-sob-medida',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
@@ -286,6 +294,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
@@ -327,6 +336,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
@@ -369,6 +379,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
@@ -409,6 +420,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
@@ -449,6 +461,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/espelhos-led-sob-medida'
     | '/blog_/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
@@ -490,6 +503,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
   BoxDeBanheiroEleganceRoute: typeof BoxDeBanheiroEleganceRoute
@@ -794,6 +808,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogFastVidroHistoriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/espelhos-led-sob-medida': {
+      id: '/blog_/espelhos-led-sob-medida'
+      path: '/blog/espelhos-led-sob-medida'
+      fullPath: '/blog/espelhos-led-sob-medida'
+      preLoaderRoute: typeof BlogEspelhosLedSobMedidaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -802,6 +823,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
   BoxDeBanheiroEleganceRoute: BoxDeBanheiroEleganceRoute,
@@ -840,3 +862,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
