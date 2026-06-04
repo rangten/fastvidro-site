@@ -6,6 +6,7 @@ import boxImg from "@/assets/product-box.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
+import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -57,11 +58,12 @@ const posts: Array<{
   },
   {
     tag: "Espelhos LED",
-    date: "Jun 2026",
-    img: ledImg,
-    title: "Espelho com LED Sob Medida: Como escolher a iluminação perfeita para seu banheiro",
+    date: "04 de Junho de 2026",
+    img: espelhosLedImg,
+    title: "Espelho com LED Sob Medida: Como Escolher a Iluminação Perfeita para seu Banheiro",
     excerpt:
-      "Luz quente, neutra ou fria? Frontal, retroiluminado ou com sensor touch? Mostramos como escolher o espelho com LED sob medida certo para banheiros, lavabos e camarins, considerando rotina, decoração e o tamanho real do seu ambiente.",
+      "Descubra como escolher a iluminação ideal para o seu espelho com LED sob medida. Luz quente, neutra ou fria? Frontal ou retroiluminado? Veja o guia completo da Fast Vidro em São Paulo.",
+    to: "/blog/espelhos-led-sob-medida",
   },
 ];
 
