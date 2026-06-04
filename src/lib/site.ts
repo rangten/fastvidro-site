@@ -14,7 +14,7 @@ export const SITE = {
   email: "contato@fastvidro.com.br",
   address:
     "Atendemos toda a Capital de São Paulo, Grande SP e Regiões Metropolitanas (Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé, Alphaville e região).",
-  instagram: "https://instagram.com/fastvidro",
+  instagram: "https://instagram.com/fast.vidro",
   tiktok: "https://tiktok.com/@fastvidro",
   google: "https://g.page/fastvidro",
 };
