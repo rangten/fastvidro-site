@@ -58,13 +58,15 @@ export function ProductPage({
             </ul>
           </div>
           <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
-            <div className="absolute -inset-4 bg-gradient-yellow rounded-2xl rotate-2" />
-            <img
-              src={heroImage}
-              alt={title}
-              className="relative rounded-xl shadow-ink w-full h-auto max-h-[480px] object-cover"
-              loading="lazy"
-            />
+            <div className="absolute -inset-4 rounded-2xl bg-gradient-yellow rotate-2" />
+            <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-card p-3 shadow-ink sm:p-4">
+              <img
+                src={heroImage}
+                alt={title}
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
-import img from "@/assets/product-espelhos.jpg";
+import img from "@/assets/espelhos-hero-sala-jantar.png";
 import { CATEGORIES } from "@/lib/catalog";
 
 const category = CATEGORIES["espelhos"];

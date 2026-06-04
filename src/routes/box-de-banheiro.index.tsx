@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
-import imgAsset from "@/assets/box-ouro-frontal.png";
-const img = imgAsset;
+import img from "@/assets/box-banheiro-hero-real.png";
 import { CATEGORIES } from "@/lib/catalog";
 
 const category = CATEGORIES["box-de-banheiro"];
