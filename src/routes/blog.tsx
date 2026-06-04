@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
 import boxImg from "@/assets/product-box.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
+import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -20,7 +21,24 @@ export const Route = createFileRoute("/blog")({
   component: Blog,
 });
 
-const posts = [
+const posts: Array<{
+  tag: string;
+  date: string;
+  img: string;
+  title: string;
+  excerpt: string;
+  to?: string;
+}> = [
+  {
+    tag: "Quem Somos",
+    date: "Jun 2026",
+    img: quemSomosImg,
+    title:
+      "Fast Vidro: Mais de 30 Anos de História, Inovação e Soluções em Vidros e Box de Banheiro em São Paulo",
+    excerpt:
+      "Conheça a trajetória da Fast Vidro desde 1995, nossos valores, a linha completa de produtos (Secure Box, Flex, Elegance, espelhos, portas) e as regiões de São Paulo onde atendemos com agilidade.",
+    to: "/blog/fast-vidro-historia",
+  },
   {
     tag: "Box de Banheiro",
     date: "Jun 2026",
@@ -83,14 +101,23 @@ function Blog() {
                 </div>
                 <h3 className="mt-3 text-xl font-black leading-tight">{p.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">{p.excerpt}</p>
-                <a
-                  href={waLink(`Olá! Quero saber mais sobre: ${p.title}`)}
-                  target="_blank"
-                  rel="noopener"
-                  className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
-                >
-                  Falar com especialista <ArrowRight className="h-3.5 w-3.5" />
-                </a>
+                {p.to ? (
+                  <Link
+                    to={p.to}
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
+                  >
+                    Ler artigo completo <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                ) : (
+                  <a
+                    href={waLink(`Olá! Quero saber mais sobre: ${p.title}`)}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
+                  >
+                    Falar com especialista <ArrowRight className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
             </article>
           ))}
