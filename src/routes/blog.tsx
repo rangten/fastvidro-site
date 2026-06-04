@@ -2,11 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
-import boxImg from "@/assets/product-box.jpg";
-import ledImg from "@/assets/product-led.jpg";
-import espelhosImg from "@/assets/product-espelhos.jpg";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
+import secureBoxImg from "@/assets/blog-secure-box-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -31,30 +29,14 @@ const posts: Array<{
   to?: string;
 }> = [
   {
-    tag: "Quem Somos",
-    date: "Jun 2026",
-    img: quemSomosImg,
+    tag: "Segurança e Tecnologia",
+    date: "04 de Junho de 2026",
+    img: secureBoxImg,
     title:
-      "Fast Vidro: Mais de 30 Anos de História, Inovação e Soluções em Vidros e Box de Banheiro em São Paulo",
+      "O que é Secure Box? Conheça a Película de Proteção para Box de Vidro Temperado que Protege sua Família",
     excerpt:
-      "Conheça a trajetória da Fast Vidro desde 1995, nossos valores, a linha completa de produtos (Secure Box, Flex, Elegance, espelhos, portas) e as regiões de São Paulo onde atendemos com agilidade.",
-    to: "/blog/fast-vidro-historia",
-  },
-  {
-    tag: "Box de Banheiro",
-    date: "Jun 2026",
-    img: boxImg,
-    title: "Onde Comprar Box Flex para Banheiro Pequeno na Zona Norte de SP?",
-    excerpt:
-      "Se você mora em Santana, Tucuruvi ou Vila Maria e precisa otimizar o espaço do banheiro, o Box Flex é a melhor escolha. Neste guia explicamos onde comprar, faixas de preço, prazos de instalação e por que ele se tornou o queridinho dos apartamentos compactos da Zona Norte de São Paulo.",
-  },
-  {
-    tag: "Segurança",
-    date: "Jun 2026",
-    img: espelhosImg,
-    title: "Qual a diferença entre o Vidro Comum e o Vidro Temperado com Película Box +Seguro?",
-    excerpt:
-      "Vidro comum, temperado e temperado com película Box +Seguro não são a mesma coisa — e a diferença pode evitar acidentes graves em casa. Entenda como funciona a tecnologia anti-estilhaço, quando ela é obrigatória e por que a Fast Vidro adota esse padrão em todos os seus projetos.",
+      "Entenda como a tecnologia Secure Box, a película de segurança da Fast Vidro, mantém os fragmentos de vidro presos em caso de quebra — protegendo crianças, idosos e toda a família.",
+    to: "/blog/secure-box-pelicula-protecao",
   },
   {
     tag: "Espelhos LED",
@@ -64,6 +46,16 @@ const posts: Array<{
     excerpt:
       "Descubra como escolher a iluminação ideal para o seu espelho com LED sob medida. Luz quente, neutra ou fria? Frontal ou retroiluminado? Veja o guia completo da Fast Vidro em São Paulo.",
     to: "/blog/espelhos-led-sob-medida",
+  },
+  {
+    tag: "Quem Somos",
+    date: "Jun 2026",
+    img: quemSomosImg,
+    title:
+      "Fast Vidro: Mais de 30 Anos de História, Inovação e Soluções em Vidros e Box de Banheiro em São Paulo",
+    excerpt:
+      "Conheça a trajetória da Fast Vidro desde 1995, nossos valores, a linha completa de produtos (Secure Box, Flex, Elegance, espelhos, portas) e as regiões de São Paulo onde atendemos com agilidade.",
+    to: "/blog/fast-vidro-historia",
   },
 ];
 
