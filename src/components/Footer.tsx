@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.png";
 import { SITE, waLink } from "@/lib/site";
 
