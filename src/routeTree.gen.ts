@@ -46,6 +46,7 @@ import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroEleganceRouteImport } from './routes/box-de-banheiro.elegance'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
+import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -234,12 +235,18 @@ const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
   path: '/box-de-banheiro/$modelo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogFastVidroHistoriaRoute = BlogFastVidroHistoriaRouteImport.update({
+  id: '/blog_/fast-vidro-historia',
+  path: '/blog/fast-vidro-historia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
@@ -279,6 +286,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
@@ -319,6 +327,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
@@ -360,6 +369,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
@@ -399,6 +409,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
@@ -438,6 +449,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/fast-vidro-historia'
     | '/box-de-banheiro/$modelo'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
@@ -478,6 +490,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
   BoxDeBanheiroEleganceRoute: typeof BoxDeBanheiroEleganceRoute
   BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
@@ -774,6 +787,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/fast-vidro-historia': {
+      id: '/blog_/fast-vidro-historia'
+      path: '/blog/fast-vidro-historia'
+      fullPath: '/blog/fast-vidro-historia'
+      preLoaderRoute: typeof BlogFastVidroHistoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -782,6 +802,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
   BoxDeBanheiroEleganceRoute: BoxDeBanheiroEleganceRoute,
   BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
