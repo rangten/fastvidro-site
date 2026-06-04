@@ -6,6 +6,7 @@ import boxImg from "@/assets/product-box.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
+import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
