@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
 import boxImg from "@/assets/product-box.jpg";
 import ledImg from "@/assets/product-led.jpg";
 import espelhosImg from "@/assets/product-espelhos.jpg";
+import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
