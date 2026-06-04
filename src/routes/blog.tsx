@@ -101,14 +101,23 @@ function Blog() {
                 </div>
                 <h3 className="mt-3 text-xl font-black leading-tight">{p.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">{p.excerpt}</p>
-                <a
-                  href={waLink(`Olá! Quero saber mais sobre: ${p.title}`)}
-                  target="_blank"
-                  rel="noopener"
-                  className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
-                >
-                  Falar com especialista <ArrowRight className="h-3.5 w-3.5" />
-                </a>
+                {p.to ? (
+                  <Link
+                    to={p.to}
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
+                  >
+                    Ler artigo completo <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                ) : (
+                  <a
+                    href={waLink(`Olá! Quero saber mais sobre: ${p.title}`)}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground hover:text-primary"
+                  >
+                    Falar com especialista <ArrowRight className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
             </article>
           ))}
