@@ -21,7 +21,24 @@ export const Route = createFileRoute("/blog")({
   component: Blog,
 });
 
-const posts = [
+const posts: Array<{
+  tag: string;
+  date: string;
+  img: string;
+  title: string;
+  excerpt: string;
+  to?: string;
+}> = [
+  {
+    tag: "Quem Somos",
+    date: "Jun 2026",
+    img: quemSomosImg,
+    title:
+      "Fast Vidro: Mais de 30 Anos de História, Inovação e Soluções em Vidros e Box de Banheiro em São Paulo",
+    excerpt:
+      "Conheça a trajetória da Fast Vidro desde 1995, nossos valores, a linha completa de produtos (Secure Box, Flex, Elegance, espelhos, portas) e as regiões de São Paulo onde atendemos com agilidade.",
+    to: "/blog/fast-vidro-historia",
+  },
   {
     tag: "Box de Banheiro",
     date: "Jun 2026",
