@@ -25,6 +25,18 @@ type Slide = {
 
 const slides: Slide[] = [
   {
+    kind: "image",
+    desktopImage: boxDesktop,
+    mobileImage: boxMobile,
+    href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
+  },
+  {
+    kind: "image",
+    desktopImage: flexDesktop,
+    mobileImage: flexMobile,
+    href: waLink("Olá! Quero orçamento do Box Flex Premium da Fast Vidro."),
+  },
+  {
     kind: "text",
     eyebrow: "Fast Vidro",
     title: (
@@ -38,18 +50,6 @@ const slides: Slide[] = [
     mobileImage: heroDefault,
     primary: { label: "Pedir orçamento", href: waLink(), icon: <MessageCircle className="h-4 w-4" /> },
     secondary: { label: "Ver box", to: "/box-de-banheiro" },
-  },
-  {
-    kind: "image",
-    desktopImage: flexDesktop,
-    mobileImage: flexMobile,
-    href: waLink("Olá! Quero orçamento do Box Flex Premium da Fast Vidro."),
-  },
-  {
-    kind: "image",
-    desktopImage: boxDesktop,
-    mobileImage: boxMobile,
-    href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
   },
 ];
 
