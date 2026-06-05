@@ -1,5 +1,25 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MapPin, Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+
+function InstagramColorIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true">
+      <defs>
+        <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+          <stop offset="0%" stopColor="#fdf497" />
+          <stop offset="5%" stopColor="#fdf497" />
+          <stop offset="45%" stopColor="#fd5949" />
+          <stop offset="60%" stopColor="#d6249f" />
+          <stop offset="90%" stopColor="#285AEB" />
+        </radialGradient>
+      </defs>
+      <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#ig-grad)" />
+      <rect x="14" y="14" width="36" height="36" rx="10" fill="none" stroke="#fff" strokeWidth="3.5" />
+      <circle cx="32" cy="32" r="8" fill="none" stroke="#fff" strokeWidth="3.5" />
+      <circle cx="46" cy="18" r="2.5" fill="#fff" />
+    </svg>
+  );
+}
 import logoAsset from "@/assets/fast-vidro-logo.png";
 import { SITE, waLink } from "@/lib/site";
 
