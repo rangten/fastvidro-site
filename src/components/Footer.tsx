@@ -36,9 +36,9 @@ export function Footer() {
             href={SITE.instagram}
             target="_blank"
             rel="noopener"
-            className="mt-6 inline-flex items-center gap-2 text-sm text-ink-foreground/80 hover:text-primary"
+            className="mt-6 inline-flex items-center gap-3 text-base font-medium text-ink-foreground/90 hover:text-primary"
           >
-            <Instagram className="h-4 w-4" /> @fast.vidro
+            <InstagramColorIcon className="h-8 w-8" /> @fast.vidro
           </a>
         </div>
 
