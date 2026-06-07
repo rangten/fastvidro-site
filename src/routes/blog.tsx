@@ -6,6 +6,7 @@ import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import secureBoxImg from "@/assets/blog-secure-box-cover.png";
 import boxSantanaImg from "@/assets/blog-box-banheiro-santana-cover.png";
+import boxMandaquiImg from "@/assets/blog-box-mandaqui-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -29,6 +30,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Mandaqui",
+    date: "07 de Junho de 2026",
+    img: boxMandaquiImg,
+    title:
+      "Guia do Box de Banheiro no Mandaqui: Projetos Modernos, Segurança com SECURE BOX e Tendências de Vidraçaria",
+    excerpt:
+      "Procurando box de banheiro no Mandaqui? Modelos de vidro temperado 8mm Cebrace/Guardian, película SECURE BOX e instalação ágil em toda a Zona Norte de SP.",
+    to: "/blog/box-banheiro-mandaqui",
+  },
   {
     tag: "Box de Banheiro • Santana",
     date: "04 de Junho de 2026",
@@ -96,9 +107,15 @@ function Blog() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
             <article key={p.title} className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary transition flex flex-col">
-              <div className="aspect-[16/10] overflow-hidden bg-muted">
-                <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-              </div>
+              {p.to ? (
+                <Link to={p.to} className="block aspect-[16/10] overflow-hidden bg-muted" aria-label={p.title}>
+                  <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                </Link>
+              ) : (
+                <div className="aspect-[16/10] overflow-hidden bg-muted">
+                  <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                </div>
+              )}
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider">
                   <span className="text-primary">{p.tag}</span>
