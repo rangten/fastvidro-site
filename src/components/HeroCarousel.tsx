@@ -6,10 +6,10 @@ import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
 import heroDefault from "@/assets/hero-box.jpg";
-import flexDesktop from "@/assets/hero-flex-desktop.png";
-import flexMobile from "@/assets/hero-flex-mobile.png";
-import boxDesktop from "@/assets/hero-box-desktop.png";
-import boxMobile from "@/assets/hero-box-mobile.png";
+import flexDesktop from "@/assets/hero-flex-desktop.webp";
+import flexMobile from "@/assets/hero-flex-mobile.webp";
+import boxDesktop from "@/assets/hero-box-desktop.webp";
+import boxMobile from "@/assets/hero-box-mobile.webp";
 
 type Slide = {
   kind: "text" | "image";
