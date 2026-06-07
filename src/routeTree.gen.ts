@@ -49,6 +49,7 @@ import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheir
 import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
+import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -254,12 +255,19 @@ const BlogEspelhosLedSobMedidaRoute =
     path: '/blog/espelhos-led-sob-medida',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBoxBanheiroVidroSantanaRoute =
+  BlogBoxBanheiroVidroSantanaRouteImport.update({
+    id: '/blog_/box-banheiro-vidro-santana',
+    path: '/blog/box-banheiro-vidro-santana',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -302,6 +310,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -345,6 +354,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog_/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -389,6 +399,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-vidro-santana'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/blog/secure-box-pelicula-protecao'
@@ -431,6 +442,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-vidro-santana'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/blog/secure-box-pelicula-protecao'
@@ -473,6 +485,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/box-banheiro-vidro-santana'
     | '/blog_/espelhos-led-sob-medida'
     | '/blog_/fast-vidro-historia'
     | '/blog_/secure-box-pelicula-protecao'
@@ -516,6 +529,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogBoxBanheiroVidroSantanaRoute: typeof BlogBoxBanheiroVidroSantanaRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
   BlogSecureBoxPeliculaProtecaoRoute: typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -836,6 +850,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogEspelhosLedSobMedidaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-banheiro-vidro-santana': {
+      id: '/blog_/box-banheiro-vidro-santana'
+      path: '/blog/box-banheiro-vidro-santana'
+      fullPath: '/blog/box-banheiro-vidro-santana'
+      preLoaderRoute: typeof BlogBoxBanheiroVidroSantanaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -844,6 +865,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogBoxBanheiroVidroSantanaRoute: BlogBoxBanheiroVidroSantanaRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
   BlogSecureBoxPeliculaProtecaoRoute: BlogSecureBoxPeliculaProtecaoRoute,
