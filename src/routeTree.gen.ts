@@ -50,6 +50,7 @@ import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
+import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -261,12 +262,18 @@ const BlogBoxBanheiroVidroSantanaRoute =
     path: '/blog/box-banheiro-vidro-santana',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBoxBanheiroMandaquiRoute = BlogBoxBanheiroMandaquiRouteImport.update({
+  id: '/blog_/box-banheiro-mandaqui',
+  path: '/blog/box-banheiro-mandaqui',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -310,6 +317,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -354,6 +362,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog_/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -399,6 +408,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
@@ -442,6 +452,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
@@ -485,6 +496,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/box-banheiro-mandaqui'
     | '/blog_/box-banheiro-vidro-santana'
     | '/blog_/espelhos-led-sob-medida'
     | '/blog_/fast-vidro-historia'
@@ -529,6 +541,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogBoxBanheiroMandaquiRoute: typeof BlogBoxBanheiroMandaquiRoute
   BlogBoxBanheiroVidroSantanaRoute: typeof BlogBoxBanheiroVidroSantanaRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
@@ -857,6 +870,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxBanheiroVidroSantanaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-banheiro-mandaqui': {
+      id: '/blog_/box-banheiro-mandaqui'
+      path: '/blog/box-banheiro-mandaqui'
+      fullPath: '/blog/box-banheiro-mandaqui'
+      preLoaderRoute: typeof BlogBoxBanheiroMandaquiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -865,6 +885,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogBoxBanheiroMandaquiRoute: BlogBoxBanheiroMandaquiRoute,
   BlogBoxBanheiroVidroSantanaRoute: BlogBoxBanheiroVidroSantanaRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
