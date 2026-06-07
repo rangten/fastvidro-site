@@ -107,7 +107,7 @@ export function HeroCarousel() {
                       alt=""
                       aria-hidden="true"
                       className="absolute inset-0 h-full w-full object-cover"
-                      loading="eager"
+                      loading="lazy"
                     />
                   </picture>
                   <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/40 md:to-ink/20" />
