@@ -5,6 +5,7 @@ import heroImg from "@/assets/product-projetos.jpg";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import secureBoxImg from "@/assets/blog-secure-box-cover.png";
+import boxSantanaImg from "@/assets/blog-box-banheiro-santana-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -28,6 +29,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Santana",
+    date: "04 de Junho de 2026",
+    img: boxSantanaImg,
+    title:
+      "Box de Banheiro em Vidro em Santana: Segurança e Elegância para Seu Projeto | Vidraçaria Santana",
+    excerpt:
+      "Box de banheiro em vidro temperado em Santana com a Fast Vidro: modelos sob medida, vidros Cebrace/Guardian e película Secure Box. Vidraçaria Santana desde 1995.",
+    to: "/blog/box-banheiro-vidro-santana",
+  },
   {
     tag: "Segurança e Tecnologia",
     date: "04 de Junho de 2026",
