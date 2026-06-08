@@ -7,6 +7,7 @@ import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import secureBoxImg from "@/assets/blog-secure-box-cover.png";
 import boxSantanaImg from "@/assets/blog-box-banheiro-santana-cover.png";
 import boxMandaquiImg from "@/assets/blog-box-mandaqui-cover.png";
+import boxZonaNorteImg from "@/assets/blog-box-zona-norte-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -23,6 +24,19 @@ export const Route = createFileRoute("/blog")({
 });
 
 const posts: Array<{
+}> & any = ([
+  {
+    tag: "Box de Banheiro • Zona Norte SP",
+    date: "08 de Junho de 2026",
+    img: boxZonaNorteImg,
+    title:
+      "Onde Encontrar Box de Banheiro na Zona Norte de SP? Guia Completo de Modelos, Preços e Segurança",
+    excerpt:
+      "Guia completo para encontrar box de banheiro na Zona Norte de SP: modelos, vidros Cebrace/Guardian 8mm, película SECURE BOX e instalação a partir de 12x R$ 89,99.",
+    to: "/blog/box-banheiro-zona-norte",
+  },
+] as any);
+const _posts_orig: Array<{
   tag: string;
   date: string;
   img: string;
