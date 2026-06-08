@@ -24,7 +24,13 @@ export const Route = createFileRoute("/blog")({
 });
 
 const posts: Array<{
-}> & any = ([
+  tag: string;
+  date: string;
+  img: string;
+  title: string;
+  excerpt: string;
+  to?: string;
+}> = [
   {
     tag: "Box de Banheiro • Zona Norte SP",
     date: "08 de Junho de 2026",
@@ -35,15 +41,6 @@ const posts: Array<{
       "Guia completo para encontrar box de banheiro na Zona Norte de SP: modelos, vidros Cebrace/Guardian 8mm, película SECURE BOX e instalação a partir de 12x R$ 89,99.",
     to: "/blog/box-banheiro-zona-norte",
   },
-] as any);
-const _posts_orig: Array<{
-  tag: string;
-  date: string;
-  img: string;
-  title: string;
-  excerpt: string;
-  to?: string;
-}> = [
   {
     tag: "Box de Banheiro • Mandaqui",
     date: "07 de Junho de 2026",
