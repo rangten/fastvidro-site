@@ -9,6 +9,7 @@ import boxSantanaImg from "@/assets/blog-box-banheiro-santana-cover.png";
 import boxMandaquiImg from "@/assets/blog-box-mandaqui-cover.png";
 import boxZonaNorteImg from "@/assets/blog-box-zona-norte-cover.png";
 import boxJardimSPImg from "@/assets/blog-box-jardim-sao-paulo-cover.png";
+import boxTucuruviImg from "@/assets/blog-box-tucuruvi-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
