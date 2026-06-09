@@ -34,6 +34,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Box de Banheiro • Tucuruvi",
+    date: "09 de Junho de 2026",
+    img: boxTucuruviImg,
+    title:
+      "Box de Banheiro no Tucuruvi: Modelos Ideais, Preços e Segurança Máxima para Seu Imóvel",
+    excerpt:
+      "Guia completo de box de banheiro no Tucuruvi: modelos para apartamentos e sobrados, vidros Cebrace/Guardian 8mm, película SECURE BOX e instalação a partir de 12x R$ 89,99.",
+    to: "/blog/box-banheiro-tucuruvi",
+  },
+  {
     tag: "Box de Banheiro • Jardim São Paulo",
     date: "09 de Junho de 2026",
     img: boxJardimSPImg,
