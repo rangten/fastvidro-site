@@ -52,6 +52,7 @@ import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.esp
 import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
 import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
 import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
+import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog_.box-banheiro-jardim-sao-paulo'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -274,12 +275,19 @@ const BlogBoxBanheiroMandaquiRoute = BlogBoxBanheiroMandaquiRouteImport.update({
   path: '/blog/box-banheiro-mandaqui',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogBoxBanheiroJardimSaoPauloRoute =
+  BlogBoxBanheiroJardimSaoPauloRouteImport.update({
+    id: '/blog_/box-banheiro-jardim-sao-paulo',
+    path: '/blog/box-banheiro-jardim-sao-paulo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
@@ -325,6 +333,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
@@ -371,6 +380,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog_/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog_/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog_/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
@@ -418,6 +428,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/box-banheiro-zona-norte'
@@ -463,6 +474,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/box-banheiro-zona-norte'
@@ -508,6 +520,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/box-banheiro-jardim-sao-paulo'
     | '/blog_/box-banheiro-mandaqui'
     | '/blog_/box-banheiro-vidro-santana'
     | '/blog_/box-banheiro-zona-norte'
@@ -554,6 +567,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogBoxBanheiroJardimSaoPauloRoute: typeof BlogBoxBanheiroJardimSaoPauloRoute
   BlogBoxBanheiroMandaquiRoute: typeof BlogBoxBanheiroMandaquiRoute
   BlogBoxBanheiroVidroSantanaRoute: typeof BlogBoxBanheiroVidroSantanaRoute
   BlogBoxBanheiroZonaNorteRoute: typeof BlogBoxBanheiroZonaNorteRoute
@@ -898,6 +912,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxBanheiroMandaquiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-banheiro-jardim-sao-paulo': {
+      id: '/blog_/box-banheiro-jardim-sao-paulo'
+      path: '/blog/box-banheiro-jardim-sao-paulo'
+      fullPath: '/blog/box-banheiro-jardim-sao-paulo'
+      preLoaderRoute: typeof BlogBoxBanheiroJardimSaoPauloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -906,6 +927,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogBoxBanheiroJardimSaoPauloRoute: BlogBoxBanheiroJardimSaoPauloRoute,
   BlogBoxBanheiroMandaquiRoute: BlogBoxBanheiroMandaquiRoute,
   BlogBoxBanheiroVidroSantanaRoute: BlogBoxBanheiroVidroSantanaRoute,
   BlogBoxBanheiroZonaNorteRoute: BlogBoxBanheiroZonaNorteRoute,
