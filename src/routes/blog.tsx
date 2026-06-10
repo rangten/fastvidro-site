@@ -11,6 +11,7 @@ import boxZonaNorteImg from "@/assets/blog-box-zona-norte-cover.png";
 import boxJardimSPImg from "@/assets/blog-box-jardim-sao-paulo-cover.png";
 import boxTucuruviImg from "@/assets/blog-box-tucuruvi-cover.png";
 import boxCasaVerdeImg from "@/assets/blog-box-casa-verde-imirim-cover.png";
+import boxVilaGuilhermeImg from "@/assets/blog-box-vila-guilherme-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -34,6 +35,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Vila Guilherme",
+    date: "10 de Junho de 2026",
+    img: boxVilaGuilhermeImg,
+    title:
+      "Box de Banheiro na Vila Guilherme: Guia de Modelos, Design e Segurança para Seu Banheiro",
+    excerpt:
+      "Guia completo de box de banheiro na Vila Guilherme: modelos, vidros Cebrace/Guardian 8mm, película SECURE BOX e instalação a partir de 12x R$ 89,99.",
+    to: "/blog/box-banheiro-vila-guilherme",
+  },
   {
     tag: "Box de Banheiro • Casa Verde e Imirim",
     date: "10 de Junho de 2026",
