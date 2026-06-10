@@ -54,6 +54,7 @@ import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.
 import { Route as BlogBoxBanheiroTucuruviRouteImport } from './routes/blog_.box-banheiro-tucuruvi'
 import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
 import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog_.box-banheiro-jardim-sao-paulo'
+import { Route as BlogBoxBanheiroCasaVerdeImirimRouteImport } from './routes/blog_.box-banheiro-casa-verde-imirim'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -287,12 +288,19 @@ const BlogBoxBanheiroJardimSaoPauloRoute =
     path: '/blog/box-banheiro-jardim-sao-paulo',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBoxBanheiroCasaVerdeImirimRoute =
+  BlogBoxBanheiroCasaVerdeImirimRouteImport.update({
+    id: '/blog_/box-banheiro-casa-verde-imirim',
+    path: '/blog/box-banheiro-casa-verde-imirim',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-tucuruvi': typeof BlogBoxBanheiroTucuruviRoute
@@ -340,6 +348,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog/box-banheiro-tucuruvi': typeof BlogBoxBanheiroTucuruviRoute
@@ -388,6 +397,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog_/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog_/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
   '/blog_/box-banheiro-tucuruvi': typeof BlogBoxBanheiroTucuruviRoute
@@ -437,6 +447,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-casa-verde-imirim'
     | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-tucuruvi'
@@ -484,6 +495,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-banheiro-casa-verde-imirim'
     | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
     | '/blog/box-banheiro-tucuruvi'
@@ -531,6 +543,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/box-banheiro-casa-verde-imirim'
     | '/blog_/box-banheiro-jardim-sao-paulo'
     | '/blog_/box-banheiro-mandaqui'
     | '/blog_/box-banheiro-tucuruvi'
@@ -579,6 +592,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogBoxBanheiroCasaVerdeImirimRoute: typeof BlogBoxBanheiroCasaVerdeImirimRoute
   BlogBoxBanheiroJardimSaoPauloRoute: typeof BlogBoxBanheiroJardimSaoPauloRoute
   BlogBoxBanheiroMandaquiRoute: typeof BlogBoxBanheiroMandaquiRoute
   BlogBoxBanheiroTucuruviRoute: typeof BlogBoxBanheiroTucuruviRoute
@@ -939,6 +953,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxBanheiroJardimSaoPauloRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-banheiro-casa-verde-imirim': {
+      id: '/blog_/box-banheiro-casa-verde-imirim'
+      path: '/blog/box-banheiro-casa-verde-imirim'
+      fullPath: '/blog/box-banheiro-casa-verde-imirim'
+      preLoaderRoute: typeof BlogBoxBanheiroCasaVerdeImirimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -947,6 +968,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogBoxBanheiroCasaVerdeImirimRoute: BlogBoxBanheiroCasaVerdeImirimRoute,
   BlogBoxBanheiroJardimSaoPauloRoute: BlogBoxBanheiroJardimSaoPauloRoute,
   BlogBoxBanheiroMandaquiRoute: BlogBoxBanheiroMandaquiRoute,
   BlogBoxBanheiroTucuruviRoute: BlogBoxBanheiroTucuruviRoute,

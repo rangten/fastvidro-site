@@ -10,6 +10,7 @@ import boxMandaquiImg from "@/assets/blog-box-mandaqui-cover.png";
 import boxZonaNorteImg from "@/assets/blog-box-zona-norte-cover.png";
 import boxJardimSPImg from "@/assets/blog-box-jardim-sao-paulo-cover.png";
 import boxTucuruviImg from "@/assets/blog-box-tucuruvi-cover.png";
+import boxCasaVerdeImg from "@/assets/blog-box-casa-verde-imirim-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -33,6 +34,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Casa Verde e Imirim",
+    date: "10 de Junho de 2026",
+    img: boxCasaVerdeImg,
+    title:
+      "Box de Banheiro na Casa Verde e Imirim: Modelos, Preços e Segurança para Sua Reforma",
+    excerpt:
+      "Guia completo de box de banheiro na Casa Verde e Imirim: modelos, vidros Cebrace/Guardian 8mm, película SECURE BOX e instalação a partir de 12x R$ 89,99.",
+    to: "/blog/box-banheiro-casa-verde-imirim",
+  },
   {
     tag: "Box de Banheiro • Tucuruvi",
     date: "09 de Junho de 2026",
