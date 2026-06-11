@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { allBairroSlugs } from "@/lib/bairros";
 
-const BASE_URL = "";
+const BASE_URL = "https://www.fastvidro.com.br";
 
 interface SitemapEntry {
   path: string;
