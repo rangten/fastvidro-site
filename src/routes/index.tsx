@@ -13,6 +13,7 @@ const espelhosImg = espelhosImgAsset;
 const projetosImg = projetosImgAsset;
 import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { RegioesAtendidasCard } from "@/components/RegioesAtendidasCard";
 import { waLink } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
@@ -187,6 +188,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <RegioesAtendidasCard />
 
       <section className="bg-ink text-ink-foreground py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
