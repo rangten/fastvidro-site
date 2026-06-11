@@ -17,6 +17,7 @@ import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
 import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro.index'
 import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
 import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
+import { Route as ServicosBairroRouteImport } from './routes/servicos.$bairro'
 import { Route as ProjetosResidencialRouteImport } from './routes/projetos.residencial'
 import { Route as ProjetosGuardaCorpoRouteImport } from './routes/projetos.guarda-corpo'
 import { Route as ProjetosFechamentoSacadaRouteImport } from './routes/projetos.fechamento-sacada'
@@ -95,6 +96,11 @@ const EspelhosIndexRoute = EspelhosIndexRouteImport.update({
 const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
   id: '/box-de-banheiro/',
   path: '/box-de-banheiro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosBairroRoute = ServicosBairroRouteImport.update({
+  id: '/servicos/$bairro',
+  path: '/servicos/$bairro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosResidencialRoute = ProjetosResidencialRouteImport.update({
@@ -346,6 +352,7 @@ export interface FileRoutesByFullPath {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
   '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
@@ -395,6 +402,7 @@ export interface FileRoutesByTo {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro': typeof BoxDeBanheiroIndexRoute
   '/espelhos': typeof EspelhosIndexRoute
   '/portas-de-vidro': typeof PortasDeVidroIndexRoute
@@ -445,6 +453,7 @@ export interface FileRoutesById {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/espelhos/': typeof EspelhosIndexRoute
   '/portas-de-vidro/': typeof PortasDeVidroIndexRoute
@@ -496,6 +505,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/servicos/$bairro'
     | '/box-de-banheiro/'
     | '/espelhos/'
     | '/portas-de-vidro/'
@@ -545,6 +555,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/servicos/$bairro'
     | '/box-de-banheiro'
     | '/espelhos'
     | '/portas-de-vidro'
@@ -594,6 +605,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/servicos/$bairro'
     | '/box-de-banheiro/'
     | '/espelhos/'
     | '/portas-de-vidro/'
@@ -644,6 +656,7 @@ export interface RootRouteChildren {
   ProjetosFechamentoSacadaRoute: typeof ProjetosFechamentoSacadaRoute
   ProjetosGuardaCorpoRoute: typeof ProjetosGuardaCorpoRoute
   ProjetosResidencialRoute: typeof ProjetosResidencialRoute
+  ServicosBairroRoute: typeof ServicosBairroRoute
   BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
   EspelhosIndexRoute: typeof EspelhosIndexRoute
   PortasDeVidroIndexRoute: typeof PortasDeVidroIndexRoute
@@ -706,6 +719,13 @@ declare module '@tanstack/react-router' {
       path: '/box-de-banheiro'
       fullPath: '/box-de-banheiro/'
       preLoaderRoute: typeof BoxDeBanheiroIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos/$bairro': {
+      id: '/servicos/$bairro'
+      path: '/servicos/$bairro'
+      fullPath: '/servicos/$bairro'
+      preLoaderRoute: typeof ServicosBairroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projetos/residencial': {
@@ -1028,6 +1048,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjetosFechamentoSacadaRoute: ProjetosFechamentoSacadaRoute,
   ProjetosGuardaCorpoRoute: ProjetosGuardaCorpoRoute,
   ProjetosResidencialRoute: ProjetosResidencialRoute,
+  ServicosBairroRoute: ServicosBairroRoute,
   BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
   EspelhosIndexRoute: EspelhosIndexRoute,
   PortasDeVidroIndexRoute: PortasDeVidroIndexRoute,
