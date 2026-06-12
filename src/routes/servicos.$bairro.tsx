@@ -105,19 +105,19 @@ function BairroPage() {
       </section>
 
       {/* Projeto Hero estilizado — rodízio por bairro */}
-      <section className="mx-auto max-w-6xl px-4 pt-12 lg:px-8 lg:pt-16">
-        <figure className="relative overflow-hidden rounded-3xl ring-1 ring-border bg-card shadow-xl">
-          <div className="absolute -top-3 left-6 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground shadow-md">
-            <MapPin className="h-3 w-3" /> Projeto Fast Vidro • {nome}
+      <section className="mx-auto max-w-4xl px-4 pt-12 lg:px-8 lg:pt-16">
+        <figure className="relative rounded-3xl ring-1 ring-border bg-card shadow-xl">
+          <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-wide text-primary-foreground shadow-md whitespace-nowrap">
+            <MapPin className="h-3.5 w-3.5" /> Projeto Fast Vidro • {nome}
           </div>
           <img
             src={projeto.src}
             alt={projetoAlt}
             loading="lazy"
             decoding="async"
-            className="w-full h-[320px] sm:h-[420px] lg:h-[520px] object-cover"
+            className="w-full h-[240px] sm:h-[320px] lg:h-[400px] object-contain rounded-3xl"
           />
-          <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 lg:p-8">
+          <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 lg:p-8 rounded-b-3xl">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
               Modelo instalado
             </p>
