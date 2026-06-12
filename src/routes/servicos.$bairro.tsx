@@ -105,24 +105,48 @@ function BairroPage() {
       </section>
 
       {/* Projeto Hero estilizado — rodízio por bairro */}
-      <section className="mx-auto max-w-4xl px-4 pt-12 lg:px-8 lg:pt-16">
-        <figure className="relative rounded-3xl ring-1 ring-border bg-card shadow-xl">
+      <section className="mx-auto max-w-5xl px-4 pt-12 lg:px-8 lg:pt-16">
+        <figure
+          className="relative overflow-hidden rounded-3xl ring-1 ring-border shadow-xl grid grid-cols-1 lg:grid-cols-2"
+          style={{
+            background:
+              "radial-gradient(120% 80% at 80% 20%, hsl(var(--primary) / 0.15), transparent 60%), linear-gradient(135deg, #0b0f19 0%, #111726 50%, #0b0f19 100%)",
+          }}
+        >
           <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-wide text-primary-foreground shadow-md whitespace-nowrap">
             <MapPin className="h-3.5 w-3.5" /> Projeto Fast Vidro • {nome}
           </div>
-          <img
-            src={projeto.src}
-            alt={projetoAlt}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-[240px] sm:h-[320px] lg:h-[400px] object-contain rounded-3xl"
-          />
-          <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 lg:p-8 rounded-b-3xl">
+
+          {/* Coluna imagem */}
+          <div className="relative flex items-center justify-center p-6 lg:p-8 min-h-[320px] lg:min-h-[460px]">
+            <div
+              aria-hidden
+              className="absolute inset-0 opacity-40"
+              style={{
+                background:
+                  "radial-gradient(60% 60% at 50% 50%, hsl(var(--primary) / 0.25), transparent 70%)",
+              }}
+            />
+            <img
+              src={projeto.src}
+              alt={projetoAlt}
+              loading="lazy"
+              decoding="async"
+              className="relative max-h-[280px] sm:max-h-[360px] lg:max-h-[440px] w-auto max-w-full object-contain drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Coluna texto */}
+          <figcaption className="relative flex flex-col justify-end gap-3 p-6 pt-0 lg:p-10 lg:justify-center text-white">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
               Modelo instalado
             </p>
-            <p className="mt-1 text-white text-lg lg:text-2xl font-black leading-tight">
+            <p className="text-2xl lg:text-3xl font-black leading-tight">
               {projeto.modelo}
+            </p>
+            <p className="text-sm lg:text-base text-white/70 leading-relaxed">
+              Projeto real Fast Vidro entregue em {nome} — vidro temperado 8mm
+              Cebrace/Guardian com película de segurança SECURE BOX.
             </p>
           </figcaption>
         </figure>
