@@ -107,24 +107,27 @@ function BairroPage() {
       {/* Projeto Hero estilizado — rodízio por bairro */}
       <section className="mx-auto max-w-5xl px-4 pt-12 lg:px-8 lg:pt-16">
         <figure
-          className="relative overflow-hidden rounded-3xl ring-1 ring-border shadow-xl grid grid-cols-1 lg:grid-cols-2"
+          className="relative overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl grid grid-cols-1 lg:grid-cols-2"
           style={{
-            background:
-              "radial-gradient(120% 80% at 80% 20%, hsl(var(--primary) / 0.15), transparent 60%), linear-gradient(135deg, #0b0f19 0%, #111726 50%, #0b0f19 100%)",
+            backgroundColor: "#0b0f19",
+            backgroundImage:
+              "radial-gradient(120% 80% at 85% 15%, rgba(250,204,21,0.18), transparent 55%), linear-gradient(135deg, #0b0f19 0%, #111726 55%, #0b0f19 100%)",
           }}
         >
-          <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-wide text-primary-foreground shadow-md whitespace-nowrap">
-            <MapPin className="h-3.5 w-3.5" /> Projeto Fast Vidro • {nome}
-          </div>
-
           {/* Coluna imagem */}
-          <div className="relative flex items-center justify-center p-6 lg:p-8 min-h-[320px] lg:min-h-[460px]">
+          <div
+            className="relative flex items-center justify-center p-6 pt-14 lg:p-8 lg:pt-16 min-h-[340px] lg:min-h-[480px]"
+            style={{ backgroundColor: "transparent" }}
+          >
+            <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-wide text-primary-foreground shadow-md whitespace-nowrap">
+              <MapPin className="h-3.5 w-3.5" /> Projeto Fast Vidro • {nome}
+            </div>
             <div
               aria-hidden
-              className="absolute inset-0 opacity-40"
+              className="absolute inset-0 opacity-40 pointer-events-none"
               style={{
                 background:
-                  "radial-gradient(60% 60% at 50% 50%, hsl(var(--primary) / 0.25), transparent 70%)",
+                  "radial-gradient(60% 60% at 50% 55%, rgba(250,204,21,0.22), transparent 70%)",
               }}
             />
             <img
@@ -132,22 +135,26 @@ function BairroPage() {
               alt={projetoAlt}
               loading="lazy"
               decoding="async"
-              className="relative max-h-[280px] sm:max-h-[360px] lg:max-h-[440px] w-auto max-w-full object-contain drop-shadow-2xl"
+              className="relative max-h-[300px] sm:max-h-[380px] lg:max-h-[440px] w-auto max-w-full object-contain drop-shadow-2xl"
             />
           </div>
 
           {/* Coluna texto */}
-          <figcaption className="relative flex flex-col justify-end gap-3 p-6 pt-0 lg:p-10 lg:justify-center text-white">
+          <figcaption className="relative flex flex-col justify-center gap-3 p-6 pt-2 lg:p-10 text-white">
             <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
               Modelo instalado
             </p>
-            <p className="text-2xl lg:text-3xl font-black leading-tight">
+            <p className="text-2xl lg:text-3xl font-black leading-tight text-white">
               {projeto.modelo}
             </p>
-            <p className="text-sm lg:text-base text-white/70 leading-relaxed">
+            <p className="text-sm lg:text-base text-white/75 leading-relaxed">
               Projeto real Fast Vidro entregue em {nome} — vidro temperado 8mm
               Cebrace/Guardian com película de segurança SECURE BOX.
             </p>
+            <div className="mt-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-white/60">
+              <span className="h-px w-8 bg-primary" />
+              {zona.label} • São Paulo
+            </div>
           </figcaption>
         </figure>
       </section>
