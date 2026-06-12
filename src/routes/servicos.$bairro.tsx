@@ -4,6 +4,25 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { bairroFromSlug } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import heroImg from "@/assets/regioes-sp-hero.jpg";
+import projeto1 from "@/assets/projeto-box-piso-teto-frontal-reto.jpg";
+import projeto2 from "@/assets/projeto-box-canto-tradicional-reto.jpg";
+import projeto3 from "@/assets/projeto-box-flex.jpg";
+import projeto4 from "@/assets/projeto-box-porta-abrir.jpg";
+import projeto5 from "@/assets/projeto-box-piso-teto-canto-cromado.jpg";
+
+const PROJETOS_HERO = [
+  { src: projeto1, modelo: "Box Piso Teto Frontal Kit Reto" },
+  { src: projeto2, modelo: "Box Canto Tradicional Kit Reto" },
+  { src: projeto3, modelo: "Box Flex Articulado" },
+  { src: projeto4, modelo: "Box Porta de Abrir" },
+  { src: projeto5, modelo: "Box Piso Teto Canto Kit Reto Cromado" },
+] as const;
+
+function hashSlug(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return h;
+}
 
 export const Route = createFileRoute("/servicos/$bairro")({
   loader: ({ params }) => {
