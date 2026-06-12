@@ -70,6 +70,8 @@ function BairroPage() {
   const { nome, zona } = Route.useLoaderData();
   const waMsg = `Olá! Gostaria de um orçamento de box de vidro da Fast Vidro para o meu imóvel aqui em ${nome}.`;
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+  const projeto = PROJETOS_HERO[hashSlug(nome) % PROJETOS_HERO.length];
+  const projetoAlt = `Instalação de box de vidro sob medida em ${nome} - Fast Vidro`;
 
   return (
     <SiteLayout>
@@ -100,6 +102,30 @@ function BairroPage() {
             <MessageCircle className="h-4 w-4" /> Pedir orçamento agora
           </a>
         </div>
+      </section>
+
+      {/* Projeto Hero estilizado — rodízio por bairro */}
+      <section className="mx-auto max-w-6xl px-4 pt-12 lg:px-8 lg:pt-16">
+        <figure className="relative overflow-hidden rounded-3xl ring-1 ring-border bg-card shadow-xl">
+          <div className="absolute -top-3 left-6 z-10 inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-primary-foreground shadow-md">
+            <MapPin className="h-3 w-3" /> Projeto Fast Vidro • {nome}
+          </div>
+          <img
+            src={projeto.src}
+            alt={projetoAlt}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-[320px] sm:h-[420px] lg:h-[520px] object-cover"
+          />
+          <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 lg:p-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">
+              Modelo instalado
+            </p>
+            <p className="mt-1 text-white text-lg lg:text-2xl font-black leading-tight">
+              {projeto.modelo}
+            </p>
+          </figcaption>
+        </figure>
       </section>
 
       {/* Texto da zona (único por zona — evita duplicidade) */}
