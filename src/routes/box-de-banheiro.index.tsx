@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
+import { ColorOptionsSection } from "@/components/ColorOptionsSection";
 import img from "@/assets/box-banheiro-hero-real.png";
 import { CATEGORIES } from "@/lib/catalog";
 
@@ -39,6 +40,7 @@ export const Route = createFileRoute("/box-de-banheiro/")({
           { title: "Box Elegance com roldanas aparentes", text: "O Box Elegance traz roldanas aparentes em aço inox, design sofisticado e deslizamento silencioso — referência para reformas de alto padrão em SP." },
         ]}
       />
+      <ColorOptionsSection />
     </SiteLayout>
   ),
 });
