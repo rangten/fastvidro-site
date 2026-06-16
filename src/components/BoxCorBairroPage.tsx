@@ -9,9 +9,12 @@ import projeto2 from "@/assets/projeto-box-canto-tradicional-reto.jpg";
 import projeto3 from "@/assets/projeto-box-flex.jpg";
 import projeto4 from "@/assets/projeto-box-porta-abrir.jpg";
 import projeto5 from "@/assets/projeto-box-piso-teto-canto-cromado.jpg";
+import fume1 from "@/assets/box-fume-1.png";
+import fume2 from "@/assets/box-fume-2.png";
+import fume3 from "@/assets/box-fume-3.png";
 
-// Arrays separados — substitua futuramente por fotos reais por cor
-export const FOTOS_FUME = [projeto1, projeto2, projeto3, projeto4, projeto5];
+// Arrays separados — fotos reais por cor
+export const FOTOS_FUME = [fume1, fume2, fume3];
 export const FOTOS_INCOLOR = [projeto5, projeto4, projeto3, projeto2, projeto1];
 
 function hashSlug(s: string): number {
