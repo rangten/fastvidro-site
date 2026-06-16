@@ -37,7 +37,7 @@ export const Route = createFileRoute("/box-fume/")({
               Box de Banheiro e Box de Vidro Fumê Sob Medida
             </h1>
             <h2 className="mt-5 max-w-3xl text-lg lg:text-xl text-ink-foreground/80 font-semibold">
-              Modelos de Box para Banheiro com Instalação Rápida e Preço de Fábrica
+              Modelos de Box para Banheiro Fumê com Instalação Rápida e Design Moderno
             </h2>
             <a
               href={waUrl}
@@ -53,7 +53,6 @@ export const Route = createFileRoute("/box-fume/")({
         {/* SEO Rich Content */}
         <section className="mx-auto max-w-7xl px-4 lg:px-8 py-16 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Imagem */}
             <figure
               className="relative overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl flex items-center justify-center p-6"
               style={{
@@ -67,17 +66,16 @@ export const Route = createFileRoute("/box-fume/")({
                 alt="Box de Vidro Fumê sob medida - Fast Vidro"
                 loading="lazy"
                 decoding="async"
-                className="max-h-[360px] sm:max-h-[420px] lg:max-h-[480px] w-auto max-w-full object-contain drop-shadow-2xl"
+                className="max-h-[350px] lg:max-h-[450px] w-auto max-w-full object-contain mx-auto drop-shadow-2xl"
               />
             </figure>
 
-            {/* Texto */}
             <div>
               <h3 className="text-2xl lg:text-3xl font-black leading-tight text-foreground">
-                Onde Encontrar Box de Banheiro com Acabamento Premium?
+                Onde Encontrar Box de Banheiro Fumê com Acabamento de Alta Engenharia?
               </h3>
               <p className="mt-5 text-base lg:text-lg leading-relaxed text-foreground/85">
-                Se você está redecorando ou construindo e quer saber onde encontrar box de banheiro com a máxima qualidade, a Fast Vidro oferece uma linha completa de box de vidro temperado 8mm. Desenvolvemos projetos personalizados para todos os estilos de ambientes, incluindo o moderno box frontal, o tradicional box de correr, o sofisticado box até o teto (totalmente vedado), além de soluções inteligentes como o box de canto (em L), o clássico box de abrir, o versátil box flex articulado (tipo camarão para espaços compactos) e o elegante box elegance com roldanas de inox aparentes.
+                Para quem busca aliar privacidade, sofisticação e um toque de modernidade no projeto do banheiro, a Fast Vidro oferece a linha premium de box de vidro fumê temperado 8mm (trabalhamos com marcas líderes como Cebrace e Guardian). Desenvolvemos soluções personalizadas para atender perfeitamente ao seu espaço, incluindo o imponente box frontal fumê, o prático box de correr, o sofisticado box até o teto (ideal para projetos modernos), além do funcional box de canto (em L), do clássico box de abrir, do exclusivo box elegance com roldanas de inox aparentes e do versátil box flex articulado (sistema camarão que otimiza vãos compactos).
               </p>
             </div>
           </div>
