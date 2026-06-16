@@ -22,11 +22,13 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/espelhos-led", changefreq: "monthly", priority: "0.9" },
           { path: "/projetos", changefreq: "monthly", priority: "0.8" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
-          ...allBairroSlugs().map((slug) => ({
-            path: `/servicos/${slug}`,
-            changefreq: "monthly" as const,
-            priority: "0.7",
-          })),
+          { path: "/box-fume", changefreq: "monthly", priority: "0.8" },
+          { path: "/box-incolor", changefreq: "monthly", priority: "0.8" },
+          ...allBairroSlugs().flatMap((slug) => [
+            { path: `/servicos/${slug}`, changefreq: "monthly" as const, priority: "0.7" },
+            { path: `/box-fume/${slug}`, changefreq: "monthly" as const, priority: "0.6" },
+            { path: `/box-incolor/${slug}`, changefreq: "monthly" as const, priority: "0.6" },
+          ]),
         ];
 
         const urls = entries.map((e) =>
