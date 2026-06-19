@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { ZONAS, toSlug } from "@/lib/bairros";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import { FOTOS_INCOLOR } from "@/components/BoxCorBairroPage";
+import { FOTOS_INCOLOR } from "@/lib/fotos";
 
 export const Route = createFileRoute("/box-incolor/")({
   head: () => ({

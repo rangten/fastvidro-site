@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { ZONAS, toSlug } from "@/lib/bairros";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import { FOTOS_FUME } from "@/components/BoxCorBairroPage";
+import { FOTOS_FUME } from "@/lib/fotos";
 
 export const Route = createFileRoute("/box-fume/")({
   head: () => ({
