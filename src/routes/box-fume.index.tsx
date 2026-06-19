@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ZONAS, toSlug } from "@/lib/bairros";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import { FOTOS_FUME } from "@/components/BoxCorBairroPage";
+import { FOTOS_FUME } from "@/lib/fotos";
 
 export const Route = createFileRoute("/box-fume/")({
   head: () => ({
@@ -97,7 +98,7 @@ export const Route = createFileRoute("/box-fume/")({
                   {z.bairros.map((b) => (
                     <li key={b}>
                       <Link
-                        to="/box-fume/$bairro"
+                        to="/servicos/$bairro"
                         params={{ bairro: toSlug(b) }}
                         className="inline-block rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary transition"
                       >
@@ -110,6 +111,7 @@ export const Route = createFileRoute("/box-fume/")({
             ))}
           </div>
         </section>
+      <RegioesPremiumFooter />
       </SiteLayout>
     );
   },
