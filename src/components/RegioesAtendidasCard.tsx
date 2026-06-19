@@ -21,7 +21,7 @@ export function RegioesAtendidasCard() {
         </p>
       </div>
 
-      {/* Card bento-style: assimétrico, com faixa amarela diagonal e contagem */}
+      {/* Card bento-style: assimétrico, com faixa amarela diagonal */}
       <div className="grid gap-5 lg:grid-cols-12">
         {/* Painel principal */}
         <button
