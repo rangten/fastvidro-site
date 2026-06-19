@@ -166,6 +166,9 @@ function BairroPage() {
         <p className="text-base lg:text-lg leading-relaxed text-foreground/90">{zona.texto}</p>
       </section>
 
+      {/* Variações (modelos × cores) — todas pré-renderizadas no HTML para SEO */}
+      <BoxVariationTabs bairro={nome} />
+
       {/* H2 Segurança */}
       <section className="bg-muted py-16">
         <div className="mx-auto max-w-5xl px-4 lg:px-8">
@@ -235,6 +238,9 @@ function BairroPage() {
           </a>
         </div>
       </section>
+
+      {/* Rodapé geográfico semântico */}
+      <RegioesPremiumFooter />
     </SiteLayout>
   );
 }
