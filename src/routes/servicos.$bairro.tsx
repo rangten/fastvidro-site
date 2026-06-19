@@ -3,6 +3,8 @@ import { Shield, Check, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { bairroFromSlug } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
+import { BoxVariationTabs } from "@/components/BoxVariationTabs";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import heroImg from "@/assets/regioes-sp-hero.jpg";
 import projeto1 from "@/assets/projeto-box-piso-teto-frontal-reto.jpg";
 import projeto2 from "@/assets/projeto-box-canto-tradicional-reto.jpg";
