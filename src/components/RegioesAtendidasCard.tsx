@@ -79,7 +79,6 @@ export function RegioesAtendidasCard() {
                 </span>
                 <div>
                   <div className="text-sm font-black uppercase tracking-wider">{z.label}</div>
-                  <div className="text-xs text-muted-foreground">{z.bairros.length} bairros</div>
                 </div>
               </div>
               <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition" />
