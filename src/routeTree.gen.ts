@@ -52,6 +52,7 @@ import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheir
 import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
+import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
 import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
 import { Route as BlogBoxBanheiroVilaGuilhermeRouteImport } from './routes/blog_.box-banheiro-vila-guilherme'
 import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
@@ -279,6 +280,12 @@ const BlogEspelhosLedSobMedidaRoute =
     path: '/blog/espelhos-led-sob-medida',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogCorBoxIncolorFumeVerdeBronzeRoute =
+  BlogCorBoxIncolorFumeVerdeBronzeRouteImport.update({
+    id: '/blog_/cor-box-incolor-fume-verde-bronze',
+    path: '/blog/cor-box-incolor-fume-verde-bronze',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogBoxBanheiroZonaNorteRoute =
   BlogBoxBanheiroZonaNorteRouteImport.update({
     id: '/blog_/box-banheiro-zona-norte',
@@ -332,6 +339,7 @@ export interface FileRoutesByFullPath {
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
+  '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -384,6 +392,7 @@ export interface FileRoutesByTo {
   '/blog/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
+  '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -437,6 +446,7 @@ export interface FileRoutesById {
   '/blog_/box-banheiro-vidro-santana': typeof BlogBoxBanheiroVidroSantanaRoute
   '/blog_/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog_/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
+  '/blog_/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog_/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -491,6 +501,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/box-banheiro-vila-guilherme'
     | '/blog/box-banheiro-zona-norte'
+    | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/blog/secure-box-pelicula-protecao'
@@ -543,6 +554,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-vidro-santana'
     | '/blog/box-banheiro-vila-guilherme'
     | '/blog/box-banheiro-zona-norte'
+    | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
     | '/blog/secure-box-pelicula-protecao'
@@ -595,6 +607,7 @@ export interface FileRouteTypes {
     | '/blog_/box-banheiro-vidro-santana'
     | '/blog_/box-banheiro-vila-guilherme'
     | '/blog_/box-banheiro-zona-norte'
+    | '/blog_/cor-box-incolor-fume-verde-bronze'
     | '/blog_/espelhos-led-sob-medida'
     | '/blog_/fast-vidro-historia'
     | '/blog_/secure-box-pelicula-protecao'
@@ -648,6 +661,7 @@ export interface RootRouteChildren {
   BlogBoxBanheiroVidroSantanaRoute: typeof BlogBoxBanheiroVidroSantanaRoute
   BlogBoxBanheiroVilaGuilhermeRoute: typeof BlogBoxBanheiroVilaGuilhermeRoute
   BlogBoxBanheiroZonaNorteRoute: typeof BlogBoxBanheiroZonaNorteRoute
+  BlogCorBoxIncolorFumeVerdeBronzeRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
   BlogSecureBoxPeliculaProtecaoRoute: typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -992,6 +1006,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogEspelhosLedSobMedidaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/cor-box-incolor-fume-verde-bronze': {
+      id: '/blog_/cor-box-incolor-fume-verde-bronze'
+      path: '/blog/cor-box-incolor-fume-verde-bronze'
+      fullPath: '/blog/cor-box-incolor-fume-verde-bronze'
+      preLoaderRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/box-banheiro-zona-norte': {
       id: '/blog_/box-banheiro-zona-norte'
       path: '/blog/box-banheiro-zona-norte'
@@ -1056,6 +1077,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBoxBanheiroVidroSantanaRoute: BlogBoxBanheiroVidroSantanaRoute,
   BlogBoxBanheiroVilaGuilhermeRoute: BlogBoxBanheiroVilaGuilhermeRoute,
   BlogBoxBanheiroZonaNorteRoute: BlogBoxBanheiroZonaNorteRoute,
+  BlogCorBoxIncolorFumeVerdeBronzeRoute: BlogCorBoxIncolorFumeVerdeBronzeRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
   BlogSecureBoxPeliculaProtecaoRoute: BlogSecureBoxPeliculaProtecaoRoute,
@@ -1099,13 +1121,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
