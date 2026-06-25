@@ -38,6 +38,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Manutenção • Box de Vidro",
+    date: "25 de Junho de 2026",
+    img: manutencaoImg,
+    title:
+      "Manutenção do Box de Banheiro: Você Sabia que Ela é Obrigatória uma Vez por Ano?",
+    excerpt:
+      "Descubra por que a revisão anual do box de vidro temperado é obrigatória pela NBR 14207 da ABNT e como a Fast Vidro realiza a manutenção preventiva em São Paulo.",
+    to: "/blog/manutencao-box-banheiro",
+  },
+  {
     tag: "Guia de Cores • Box de Vidro",
     date: "25 de Junho de 2026",
     img: corBoxImg,
