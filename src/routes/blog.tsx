@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
+import manutencaoImg from "@/assets/blog-manutencao-box-cover.png";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
 import secureBoxImg from "@/assets/blog-secure-box-cover.png";
@@ -36,6 +37,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Manutenção • Box de Vidro",
+    date: "25 de Junho de 2026",
+    img: manutencaoImg,
+    title:
+      "Manutenção do Box de Banheiro: Você Sabia que Ela é Obrigatória uma Vez por Ano?",
+    excerpt:
+      "Descubra por que a revisão anual do box de vidro temperado é obrigatória pela NBR 14207 da ABNT e como a Fast Vidro realiza a manutenção preventiva em São Paulo.",
+    to: "/blog/manutencao-box-banheiro",
+  },
   {
     tag: "Guia de Cores • Box de Vidro",
     date: "25 de Junho de 2026",
