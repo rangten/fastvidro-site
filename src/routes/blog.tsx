@@ -12,6 +12,7 @@ import boxJardimSPImg from "@/assets/blog-box-jardim-sao-paulo-cover.png";
 import boxTucuruviImg from "@/assets/blog-box-tucuruvi-cover.png";
 import boxCasaVerdeImg from "@/assets/blog-box-casa-verde-imirim-cover.png";
 import boxVilaGuilhermeImg from "@/assets/blog-box-vila-guilherme-cover.png";
+import corBoxImg from "@/assets/blog-cor-box-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -35,6 +36,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Guia de Cores • Box de Vidro",
+    date: "25 de Junho de 2026",
+    img: corBoxImg,
+    title:
+      "Vidro Incolor, Fumê, Verde ou Bronze? Guia Definitivo para Escolher a Cor do Seu Box",
+    excerpt:
+      "Guia completo para escolher a cor do box de vidro temperado: incolor, fumê, verde ou bronze. Vantagens, estilos e indicações para cada tipo de banheiro.",
+    to: "/blog/cor-box-incolor-fume-verde-bronze",
+  },
   {
     tag: "Box de Banheiro • Vila Guilherme",
     date: "10 de Junho de 2026",
