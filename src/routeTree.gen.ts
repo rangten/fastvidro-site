@@ -55,6 +55,7 @@ import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-v
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
 import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
+import { Route as BlogBoxEleganceRoldanasAparentesRouteImport } from './routes/blog_.box-elegance-roldanas-aparentes'
 import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
 import { Route as BlogBoxConvencionalVsAteOTetoRouteImport } from './routes/blog_.box-convencional-vs-ate-o-teto'
 import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
@@ -304,6 +305,12 @@ const BlogBoxTradicionalVsFlexRoute =
     path: '/blog/box-tradicional-vs-flex',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBoxEleganceRoldanasAparentesRoute =
+  BlogBoxEleganceRoldanasAparentesRouteImport.update({
+    id: '/blog_/box-elegance-roldanas-aparentes',
+    path: '/blog/box-elegance-roldanas-aparentes',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogBoxDeCantoRoute = BlogBoxDeCantoRouteImport.update({
   id: '/blog_/box-de-canto',
   path: '/blog/box-de-canto',
@@ -383,6 +390,7 @@ export interface FileRoutesByFullPath {
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
+  '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -442,6 +450,7 @@ export interface FileRoutesByTo {
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
+  '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -502,6 +511,7 @@ export interface FileRoutesById {
   '/blog_/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog_/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog_/box-de-canto': typeof BlogBoxDeCantoRoute
+  '/blog_/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog_/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog_/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -563,6 +573,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-zona-norte'
     | '/blog/box-convencional-vs-ate-o-teto'
     | '/blog/box-de-canto'
+    | '/blog/box-elegance-roldanas-aparentes'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
@@ -622,6 +633,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-zona-norte'
     | '/blog/box-convencional-vs-ate-o-teto'
     | '/blog/box-de-canto'
+    | '/blog/box-elegance-roldanas-aparentes'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
@@ -681,6 +693,7 @@ export interface FileRouteTypes {
     | '/blog_/box-banheiro-zona-norte'
     | '/blog_/box-convencional-vs-ate-o-teto'
     | '/blog_/box-de-canto'
+    | '/blog_/box-elegance-roldanas-aparentes'
     | '/blog_/box-tradicional-vs-flex'
     | '/blog_/cor-box-incolor-fume-verde-bronze'
     | '/blog_/espelhos-led-sob-medida'
@@ -741,6 +754,7 @@ export interface RootRouteChildren {
   BlogBoxBanheiroZonaNorteRoute: typeof BlogBoxBanheiroZonaNorteRoute
   BlogBoxConvencionalVsAteOTetoRoute: typeof BlogBoxConvencionalVsAteOTetoRoute
   BlogBoxDeCantoRoute: typeof BlogBoxDeCantoRoute
+  BlogBoxEleganceRoldanasAparentesRoute: typeof BlogBoxEleganceRoldanasAparentesRoute
   BlogBoxTradicionalVsFlexRoute: typeof BlogBoxTradicionalVsFlexRoute
   BlogCorBoxIncolorFumeVerdeBronzeRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
@@ -1109,6 +1123,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxTradicionalVsFlexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-elegance-roldanas-aparentes': {
+      id: '/blog_/box-elegance-roldanas-aparentes'
+      path: '/blog/box-elegance-roldanas-aparentes'
+      fullPath: '/blog/box-elegance-roldanas-aparentes'
+      preLoaderRoute: typeof BlogBoxEleganceRoldanasAparentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/box-de-canto': {
       id: '/blog_/box-de-canto'
       path: '/blog/box-de-canto'
@@ -1205,6 +1226,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBoxBanheiroZonaNorteRoute: BlogBoxBanheiroZonaNorteRoute,
   BlogBoxConvencionalVsAteOTetoRoute: BlogBoxConvencionalVsAteOTetoRoute,
   BlogBoxDeCantoRoute: BlogBoxDeCantoRoute,
+  BlogBoxEleganceRoldanasAparentesRoute: BlogBoxEleganceRoldanasAparentesRoute,
   BlogBoxTradicionalVsFlexRoute: BlogBoxTradicionalVsFlexRoute,
   BlogCorBoxIncolorFumeVerdeBronzeRoute: BlogCorBoxIncolorFumeVerdeBronzeRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,

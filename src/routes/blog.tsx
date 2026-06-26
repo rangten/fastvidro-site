@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
+import boxEleganceImg from "@/assets/blog-box-elegance-roldanas-aparentes-cover.png";
 import boxDeCantoImg from "@/assets/blog-box-de-canto-cover.png";
 import boxAbrirVsCorrerImg from "@/assets/blog-box-abrir-vs-correr-cover.png";
 import box3FolhasImg from "@/assets/blog-box-3-folhas-versatik-cover.png";
