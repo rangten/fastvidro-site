@@ -52,6 +52,7 @@ import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheir
 import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
 import { Route as BlogManutencaoBoxBanheiroRouteImport } from './routes/blog_.manutencao-box-banheiro'
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
+import { Route as BlogFaqBoxBanheiroRouteImport } from './routes/blog_.faq-box-banheiro'
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
 import { Route as BlogComoSaberQualBoxUsarRouteImport } from './routes/blog_.como-saber-qual-box-usar'
@@ -291,6 +292,11 @@ const BlogFastVidroHistoriaRoute = BlogFastVidroHistoriaRouteImport.update({
   path: '/blog/fast-vidro-historia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogFaqBoxBanheiroRoute = BlogFaqBoxBanheiroRouteImport.update({
+  id: '/blog_/faq-box-banheiro',
+  path: '/blog/faq-box-banheiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogEspelhosLedSobMedidaRoute =
   BlogEspelhosLedSobMedidaRouteImport.update({
     id: '/blog_/espelhos-led-sob-medida',
@@ -426,6 +432,7 @@ export interface FileRoutesByFullPath {
   '/blog/como-saber-qual-box-usar': typeof BlogComoSaberQualBoxUsarRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
+  '/blog/faq-box-banheiro': typeof BlogFaqBoxBanheiroRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -490,6 +497,7 @@ export interface FileRoutesByTo {
   '/blog/como-saber-qual-box-usar': typeof BlogComoSaberQualBoxUsarRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
+  '/blog/faq-box-banheiro': typeof BlogFaqBoxBanheiroRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -555,6 +563,7 @@ export interface FileRoutesById {
   '/blog_/como-saber-qual-box-usar': typeof BlogComoSaberQualBoxUsarRoute
   '/blog_/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
+  '/blog_/faq-box-banheiro': typeof BlogFaqBoxBanheiroRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
   '/blog_/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog_/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -621,6 +630,7 @@ export interface FileRouteTypes {
     | '/blog/como-saber-qual-box-usar'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
+    | '/blog/faq-box-banheiro'
     | '/blog/fast-vidro-historia'
     | '/blog/manutencao-box-banheiro'
     | '/blog/secure-box-pelicula-protecao'
@@ -685,6 +695,7 @@ export interface FileRouteTypes {
     | '/blog/como-saber-qual-box-usar'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
+    | '/blog/faq-box-banheiro'
     | '/blog/fast-vidro-historia'
     | '/blog/manutencao-box-banheiro'
     | '/blog/secure-box-pelicula-protecao'
@@ -749,6 +760,7 @@ export interface FileRouteTypes {
     | '/blog_/como-saber-qual-box-usar'
     | '/blog_/cor-box-incolor-fume-verde-bronze'
     | '/blog_/espelhos-led-sob-medida'
+    | '/blog_/faq-box-banheiro'
     | '/blog_/fast-vidro-historia'
     | '/blog_/manutencao-box-banheiro'
     | '/blog_/secure-box-pelicula-protecao'
@@ -814,6 +826,7 @@ export interface RootRouteChildren {
   BlogComoSaberQualBoxUsarRoute: typeof BlogComoSaberQualBoxUsarRoute
   BlogCorBoxIncolorFumeVerdeBronzeRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
+  BlogFaqBoxBanheiroRoute: typeof BlogFaqBoxBanheiroRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
   BlogManutencaoBoxBanheiroRoute: typeof BlogManutencaoBoxBanheiroRoute
   BlogSecureBoxPeliculaProtecaoRoute: typeof BlogSecureBoxPeliculaProtecaoRoute
@@ -1158,6 +1171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogFastVidroHistoriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/faq-box-banheiro': {
+      id: '/blog_/faq-box-banheiro'
+      path: '/blog/faq-box-banheiro'
+      fullPath: '/blog/faq-box-banheiro'
+      preLoaderRoute: typeof BlogFaqBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/espelhos-led-sob-medida': {
       id: '/blog_/espelhos-led-sob-medida'
       path: '/blog/espelhos-led-sob-medida'
@@ -1318,6 +1338,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogComoSaberQualBoxUsarRoute: BlogComoSaberQualBoxUsarRoute,
   BlogCorBoxIncolorFumeVerdeBronzeRoute: BlogCorBoxIncolorFumeVerdeBronzeRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
+  BlogFaqBoxBanheiroRoute: BlogFaqBoxBanheiroRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
   BlogManutencaoBoxBanheiroRoute: BlogManutencaoBoxBanheiroRoute,
   BlogSecureBoxPeliculaProtecaoRoute: BlogSecureBoxPeliculaProtecaoRoute,

@@ -24,6 +24,7 @@ import boxCasaVerdeImg from "@/assets/blog-box-casa-verde-imirim-cover.png";
 import boxVilaGuilhermeImg from "@/assets/blog-box-vila-guilherme-cover.png";
 import corBoxImg from "@/assets/blog-cor-box-cover.png";
 import qualBoxImg from "@/assets/blog-qual-box-usar-cover.png";
+import faqBoxImg from "@/assets/blog-faq-box-banheiro-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -47,6 +48,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "FAQ • Dúvidas Frequentes",
+    date: "7 de Julho de 2026",
+    img: faqBoxImg,
+    title:
+      "Guia de Dúvidas Frequentes (FAQ): Tudo o que Você Precisa Saber antes de Comprar Seu Box de Vidro",
+    excerpt:
+      "As 14 principais dúvidas sobre box de banheiro respondidas por especialistas da Fast Vidro: Box Flex, segurança, película Secure Box, preços e atendimento em São Paulo.",
+    to: "/blog/faq-box-banheiro",
+  },
   {
     tag: "Guia Técnico • Escolha de Box",
     date: "6 de Julho de 2026",
