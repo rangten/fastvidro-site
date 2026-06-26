@@ -49,6 +49,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "FAQ • Dúvidas Frequentes",
+    date: "7 de Julho de 2026",
+    img: faqBoxImg,
+    title:
+      "Guia de Dúvidas Frequentes (FAQ): Tudo o que Você Precisa Saber antes de Comprar Seu Box de Vidro",
+    excerpt:
+      "As 14 principais dúvidas sobre box de banheiro respondidas por especialistas da Fast Vidro: Box Flex, segurança, película Secure Box, preços e atendimento em São Paulo.",
+    to: "/blog/faq-box-banheiro",
+  },
+  {
     tag: "Guia Técnico • Escolha de Box",
     date: "6 de Julho de 2026",
     img: qualBoxImg,
