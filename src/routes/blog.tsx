@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
+import boxAbrirVsCorrerImg from "@/assets/blog-box-abrir-vs-correr-cover.png";
 import box3FolhasImg from "@/assets/blog-box-3-folhas-versatik-cover.png";
 import convencionalVsPisoTetoImg from "@/assets/blog-box-convencional-vs-piso-teto-cover.png";
 import tradicionalVsFlexImg from "@/assets/blog-box-tradicional-vs-flex-cover.png";
@@ -40,6 +41,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Comparativo • Box de Vidro",
+    date: "30 de Junho de 2026",
+    img: boxAbrirVsCorrerImg,
+    title:
+      "Box de Abrir (Porta de Giro) vs. Box de Correr: Quando Escolher Cada Modelo?",
+    excerpt:
+      "Comparativo técnico completo entre Box de Abrir (Porta de Giro) e Box de Correr: vão livre, espaço, trilhos, cores e segurança. Descubra o ideal para o seu banheiro em SP.",
+    to: "/blog/box-abrir-vs-correr",
+  },
   {
     tag: "Guia Técnico • Box de Vidro",
     date: "29 de Junho de 2026",
