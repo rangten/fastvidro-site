@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import alertaSegurancaImg from "@/assets/blog-alerta-seguranca-box-travando-cover.png";
 import limparBoxImg from "@/assets/blog-como-limpar-box-cover.png";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
