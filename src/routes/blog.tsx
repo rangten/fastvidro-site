@@ -48,6 +48,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Guia Técnico • Escolha de Box",
+    date: "6 de Julho de 2026",
+    img: qualBoxImg,
+    title:
+      "Como Saber Qual Box Usar? O Guia Definitivo para Escolher o Box de Vidro Perfeito para Seu Banheiro",
+    excerpt:
+      "Cruzamos dimensões do banheiro com a engenharia de cada modelo (Flex, Versatik, Elegance e mais). Use a Matriz de Decisão Rápida e descubra o box ideal para o seu vão.",
+    to: "/blog/como-saber-qual-box-usar",
+  },
+  {
     tag: "Guia Técnico • Medição",
     date: "5 de Julho de 2026",
     img: comoMedirImg,
