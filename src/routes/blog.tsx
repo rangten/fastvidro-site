@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import comoMedirImg from "@/assets/blog-como-medir-box-cover.png";
 import alertaSegurancaImg from "@/assets/blog-alerta-seguranca-box-travando-cover.png";
 import limparBoxImg from "@/assets/blog-como-limpar-box-cover.png";
 import { SiteLayout } from "@/components/SiteLayout";
@@ -45,6 +46,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Guia Técnico • Medição",
+    date: "5 de Julho de 2026",
+    img: comoMedirImg,
+    title:
+      "Como Medir Seu Box de Forma Correta antes de Pedir um Orçamento: O Guia Técnico Passo a Passo",
+    excerpt:
+      "Aprenda a medir o vão do box de banheiro com a regra dos 3 pontos, defina a altura ideal e use nossa tabela de modelos por largura para pedir um orçamento preciso na Fast Vidro.",
+    to: "/blog/como-medir-box-banheiro",
+  },
   {
     tag: "Segurança • Manutenção",
     date: "4 de Julho de 2026",
