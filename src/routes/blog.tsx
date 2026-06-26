@@ -45,6 +45,16 @@ const posts: Array<{
 }> = [
   {
     tag: "Guia Técnico • Box de Vidro",
+    date: "2 de Julho de 2026",
+    img: boxEleganceImg,
+    title:
+      "Box Elegance (Roldanas Aparentes): O Guia Definitivo do Box de Alto Padrão para Seu Banheiro",
+    excerpt:
+      "Conheça o Box Elegance com Roldanas Aparentes da Fast Vidro: design premium, deslize suave, metais nobres e vidro temperado 8mm/10mm. Veja cores, segurança com Película Secure Box e atendimento em São Paulo.",
+    to: "/blog/box-elegance-roldanas-aparentes",
+  },
+  {
+    tag: "Guia Técnico • Box de Vidro",
     date: "1 de Julho de 2026",
     img: boxDeCantoImg,
     title:
