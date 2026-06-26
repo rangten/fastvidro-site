@@ -39,6 +39,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Comparativo • Box de Vidro",
+    date: "27 de Junho de 2026",
+    img: convencionalVsPisoTetoImg,
+    title:
+      "Box de Banheiro Convencional vs. Box Até o Teto: Qual o Melhor para Seu Banheiro?",
+    excerpt:
+      "Análise completa dos modelos convencional e piso-teto: retenção de calor, proteção de móveis, investimento e segurança. Descubra o ideal para o seu banheiro.",
+    to: "/blog/box-convencional-vs-ate-o-teto",
+  },
+  {
     tag: "Manutenção • Box de Vidro",
     date: "25 de Junho de 2026",
     img: manutencaoImg,
