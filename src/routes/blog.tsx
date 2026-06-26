@@ -23,6 +23,7 @@ import boxTucuruviImg from "@/assets/blog-box-tucuruvi-cover.png";
 import boxCasaVerdeImg from "@/assets/blog-box-casa-verde-imirim-cover.png";
 import boxVilaGuilhermeImg from "@/assets/blog-box-vila-guilherme-cover.png";
 import corBoxImg from "@/assets/blog-cor-box-cover.png";
+import qualBoxImg from "@/assets/blog-qual-box-usar-cover.png";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
