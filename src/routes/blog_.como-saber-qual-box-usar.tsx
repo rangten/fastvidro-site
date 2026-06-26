@@ -6,7 +6,7 @@ import heroImg from "@/assets/product-projetos.jpg";
 import { waLink, WA_MESSAGES } from "@/lib/site";
 import { Phone, ShieldCheck, Palette, Box, ChevronRight } from "lucide-react";
 
-export const Route = createFileRoute("/blog/como-saber-qual-box-usar")({
+export const Route = createFileRoute("/blog_/como-saber-qual-box-usar")({
   head: () => ({
     meta: [
       { title: "Como Saber Qual Box Usar? Guia Definitivo para Escolher o Box de Vidro Perfeito — Fast Vidro" },
