@@ -42,6 +42,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Comparativo • Box de Vidro",
+    date: "30 de Junho de 2026",
+    img: boxAbrirVsCorrerImg,
+    title:
+      "Box de Abrir (Porta de Giro) vs. Box de Correr: Quando Escolher Cada Modelo?",
+    excerpt:
+      "Comparativo técnico completo entre Box de Abrir (Porta de Giro) e Box de Correr: vão livre, espaço, trilhos, cores e segurança. Descubra o ideal para o seu banheiro em SP.",
+    to: "/blog/box-abrir-vs-correr",
+  },
+  {
     tag: "Guia Técnico • Box de Vidro",
     date: "29 de Junho de 2026",
     img: box3FolhasImg,
