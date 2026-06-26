@@ -63,6 +63,7 @@ import { Route as BlogBoxBanheiroTucuruviRouteImport } from './routes/blog_.box-
 import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
 import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog_.box-banheiro-jardim-sao-paulo'
 import { Route as BlogBoxBanheiroCasaVerdeImirimRouteImport } from './routes/blog_.box-banheiro-casa-verde-imirim'
+import { Route as BlogBox3FolhasSistemaVersatikRouteImport } from './routes/blog_.box-3-folhas-sistema-versatik'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -347,12 +348,19 @@ const BlogBoxBanheiroCasaVerdeImirimRoute =
     path: '/blog/box-banheiro-casa-verde-imirim',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBox3FolhasSistemaVersatikRoute =
+  BlogBox3FolhasSistemaVersatikRouteImport.update({
+    id: '/blog_/box-3-folhas-sistema-versatik',
+    path: '/blog/box-3-folhas-sistema-versatik',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
@@ -409,6 +417,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
@@ -466,6 +475,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog_/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
   '/blog_/box-banheiro-jardim-sao-paulo': typeof BlogBoxBanheiroJardimSaoPauloRoute
   '/blog_/box-banheiro-mandaqui': typeof BlogBoxBanheiroMandaquiRoute
@@ -524,6 +534,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-3-folhas-sistema-versatik'
     | '/blog/box-banheiro-casa-verde-imirim'
     | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
@@ -580,6 +591,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/box-3-folhas-sistema-versatik'
     | '/blog/box-banheiro-casa-verde-imirim'
     | '/blog/box-banheiro-jardim-sao-paulo'
     | '/blog/box-banheiro-mandaqui'
@@ -636,6 +648,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/box-3-folhas-sistema-versatik'
     | '/blog_/box-banheiro-casa-verde-imirim'
     | '/blog_/box-banheiro-jardim-sao-paulo'
     | '/blog_/box-banheiro-mandaqui'
@@ -693,6 +706,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogBox3FolhasSistemaVersatikRoute: typeof BlogBox3FolhasSistemaVersatikRoute
   BlogBoxBanheiroCasaVerdeImirimRoute: typeof BlogBoxBanheiroCasaVerdeImirimRoute
   BlogBoxBanheiroJardimSaoPauloRoute: typeof BlogBoxBanheiroJardimSaoPauloRoute
   BlogBoxBanheiroMandaquiRoute: typeof BlogBoxBanheiroMandaquiRoute
@@ -1125,6 +1139,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxBanheiroCasaVerdeImirimRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-3-folhas-sistema-versatik': {
+      id: '/blog_/box-3-folhas-sistema-versatik'
+      path: '/blog/box-3-folhas-sistema-versatik'
+      fullPath: '/blog/box-3-folhas-sistema-versatik'
+      preLoaderRoute: typeof BlogBox3FolhasSistemaVersatikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -1133,6 +1154,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogBox3FolhasSistemaVersatikRoute: BlogBox3FolhasSistemaVersatikRoute,
   BlogBoxBanheiroCasaVerdeImirimRoute: BlogBoxBanheiroCasaVerdeImirimRoute,
   BlogBoxBanheiroJardimSaoPauloRoute: BlogBoxBanheiroJardimSaoPauloRoute,
   BlogBoxBanheiroMandaquiRoute: BlogBoxBanheiroMandaquiRoute,
