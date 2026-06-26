@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import alertaSegurancaImg from "@/assets/blog-alerta-seguranca-box-travando-cover.png";
 import limparBoxImg from "@/assets/blog-como-limpar-box-cover.png";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
@@ -44,6 +45,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Segurança • Manutenção",
+    date: "4 de Julho de 2026",
+    img: alertaSegurancaImg,
+    title:
+      "Alerta de Segurança: Box Travando ou Emperrado? Pare de Usar Agora e Chame a Assistência!",
+    excerpt:
+      "Box de banheiro travando ou emperrado é risco de acidente. Saiba os sinais de alerta, por que ocorre e como a manutenção preventiva da Fast Vidro protege sua família em São Paulo.",
+    to: "/blog/alerta-seguranca-box-travando",
+  },
   {
     tag: "Limpeza • Box de Vidro",
     date: "3 de Julho de 2026",

@@ -68,6 +68,7 @@ import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog
 import { Route as BlogBoxBanheiroCasaVerdeImirimRouteImport } from './routes/blog_.box-banheiro-casa-verde-imirim'
 import { Route as BlogBoxAbrirVsCorrerRouteImport } from './routes/blog_.box-abrir-vs-correr'
 import { Route as BlogBox3FolhasSistemaVersatikRouteImport } from './routes/blog_.box-3-folhas-sistema-versatik'
+import { Route as BlogAlertaSegurancaBoxTravandoRouteImport } from './routes/blog_.alerta-seguranca-box-travando'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -380,12 +381,19 @@ const BlogBox3FolhasSistemaVersatikRoute =
     path: '/blog/box-3-folhas-sistema-versatik',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogAlertaSegurancaBoxTravandoRoute =
+  BlogAlertaSegurancaBoxTravandoRouteImport.update({
+    id: '/blog_/alerta-seguranca-box-travando',
+    path: '/blog/alerta-seguranca-box-travando',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
   '/blog/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog/box-abrir-vs-correr': typeof BlogBoxAbrirVsCorrerRoute
   '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
@@ -447,6 +455,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
   '/blog/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog/box-abrir-vs-correr': typeof BlogBoxAbrirVsCorrerRoute
   '/blog/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
@@ -509,6 +518,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/blog_/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
   '/blog_/box-3-folhas-sistema-versatik': typeof BlogBox3FolhasSistemaVersatikRoute
   '/blog_/box-abrir-vs-correr': typeof BlogBoxAbrirVsCorrerRoute
   '/blog_/box-banheiro-casa-verde-imirim': typeof BlogBoxBanheiroCasaVerdeImirimRoute
@@ -572,6 +582,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/alerta-seguranca-box-travando'
     | '/blog/box-3-folhas-sistema-versatik'
     | '/blog/box-abrir-vs-correr'
     | '/blog/box-banheiro-casa-verde-imirim'
@@ -633,6 +644,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog/alerta-seguranca-box-travando'
     | '/blog/box-3-folhas-sistema-versatik'
     | '/blog/box-abrir-vs-correr'
     | '/blog/box-banheiro-casa-verde-imirim'
@@ -694,6 +706,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/espelhos-led'
     | '/sitemap.xml'
+    | '/blog_/alerta-seguranca-box-travando'
     | '/blog_/box-3-folhas-sistema-versatik'
     | '/blog_/box-abrir-vs-correr'
     | '/blog_/box-banheiro-casa-verde-imirim'
@@ -756,6 +769,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  BlogAlertaSegurancaBoxTravandoRoute: typeof BlogAlertaSegurancaBoxTravandoRoute
   BlogBox3FolhasSistemaVersatikRoute: typeof BlogBox3FolhasSistemaVersatikRoute
   BlogBoxAbrirVsCorrerRoute: typeof BlogBoxAbrirVsCorrerRoute
   BlogBoxBanheiroCasaVerdeImirimRoute: typeof BlogBoxBanheiroCasaVerdeImirimRoute
@@ -1228,6 +1242,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBox3FolhasSistemaVersatikRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/alerta-seguranca-box-travando': {
+      id: '/blog_/alerta-seguranca-box-travando'
+      path: '/blog/alerta-seguranca-box-travando'
+      fullPath: '/blog/alerta-seguranca-box-travando'
+      preLoaderRoute: typeof BlogAlertaSegurancaBoxTravandoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -1236,6 +1257,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  BlogAlertaSegurancaBoxTravandoRoute: BlogAlertaSegurancaBoxTravandoRoute,
   BlogBox3FolhasSistemaVersatikRoute: BlogBox3FolhasSistemaVersatikRoute,
   BlogBoxAbrirVsCorrerRoute: BlogBoxAbrirVsCorrerRoute,
   BlogBoxBanheiroCasaVerdeImirimRoute: BlogBoxBanheiroCasaVerdeImirimRoute,
