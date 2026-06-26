@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
+import boxDeCantoImg from "@/assets/blog-box-de-canto-cover.png";
 import boxAbrirVsCorrerImg from "@/assets/blog-box-abrir-vs-correr-cover.png";
 import box3FolhasImg from "@/assets/blog-box-3-folhas-versatik-cover.png";
 import convencionalVsPisoTetoImg from "@/assets/blog-box-convencional-vs-piso-teto-cover.png";
@@ -41,6 +42,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Guia Técnico • Box de Vidro",
+    date: "1 de Julho de 2026",
+    img: boxDeCantoImg,
+    title:
+      "Box de Canto (Em L / Angular): A Solução Inteligente para Otimizar Banheiros Quadrados e Quinas",
+    excerpt:
+      "Conheça o Box de Canto da Fast Vidro: a solução ideal para banheiros quadrados e quinas. Veja vantagens, cores, segurança com Película Secure Box e atendimento em toda São Paulo.",
+    to: "/blog/box-de-canto",
+  },
   {
     tag: "Comparativo • Box de Vidro",
     date: "30 de Junho de 2026",

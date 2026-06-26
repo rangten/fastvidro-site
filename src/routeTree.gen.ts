@@ -55,6 +55,7 @@ import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-v
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
 import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
+import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
 import { Route as BlogBoxConvencionalVsAteOTetoRouteImport } from './routes/blog_.box-convencional-vs-ate-o-teto'
 import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
 import { Route as BlogBoxBanheiroVilaGuilhermeRouteImport } from './routes/blog_.box-banheiro-vila-guilherme'
@@ -303,6 +304,11 @@ const BlogBoxTradicionalVsFlexRoute =
     path: '/blog/box-tradicional-vs-flex',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogBoxDeCantoRoute = BlogBoxDeCantoRouteImport.update({
+  id: '/blog_/box-de-canto',
+  path: '/blog/box-de-canto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogBoxConvencionalVsAteOTetoRoute =
   BlogBoxConvencionalVsAteOTetoRouteImport.update({
     id: '/blog_/box-convencional-vs-ate-o-teto',
@@ -376,6 +382,7 @@ export interface FileRoutesByFullPath {
   '/blog/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
+  '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -434,6 +441,7 @@ export interface FileRoutesByTo {
   '/blog/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
+  '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -493,6 +501,7 @@ export interface FileRoutesById {
   '/blog_/box-banheiro-vila-guilherme': typeof BlogBoxBanheiroVilaGuilhermeRoute
   '/blog_/box-banheiro-zona-norte': typeof BlogBoxBanheiroZonaNorteRoute
   '/blog_/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
+  '/blog_/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog_/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog_/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
@@ -553,6 +562,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-vila-guilherme'
     | '/blog/box-banheiro-zona-norte'
     | '/blog/box-convencional-vs-ate-o-teto'
+    | '/blog/box-de-canto'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
@@ -611,6 +621,7 @@ export interface FileRouteTypes {
     | '/blog/box-banheiro-vila-guilherme'
     | '/blog/box-banheiro-zona-norte'
     | '/blog/box-convencional-vs-ate-o-teto'
+    | '/blog/box-de-canto'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
@@ -669,6 +680,7 @@ export interface FileRouteTypes {
     | '/blog_/box-banheiro-vila-guilherme'
     | '/blog_/box-banheiro-zona-norte'
     | '/blog_/box-convencional-vs-ate-o-teto'
+    | '/blog_/box-de-canto'
     | '/blog_/box-tradicional-vs-flex'
     | '/blog_/cor-box-incolor-fume-verde-bronze'
     | '/blog_/espelhos-led-sob-medida'
@@ -728,6 +740,7 @@ export interface RootRouteChildren {
   BlogBoxBanheiroVilaGuilhermeRoute: typeof BlogBoxBanheiroVilaGuilhermeRoute
   BlogBoxBanheiroZonaNorteRoute: typeof BlogBoxBanheiroZonaNorteRoute
   BlogBoxConvencionalVsAteOTetoRoute: typeof BlogBoxConvencionalVsAteOTetoRoute
+  BlogBoxDeCantoRoute: typeof BlogBoxDeCantoRoute
   BlogBoxTradicionalVsFlexRoute: typeof BlogBoxTradicionalVsFlexRoute
   BlogCorBoxIncolorFumeVerdeBronzeRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
@@ -1096,6 +1109,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxTradicionalVsFlexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-de-canto': {
+      id: '/blog_/box-de-canto'
+      path: '/blog/box-de-canto'
+      fullPath: '/blog/box-de-canto'
+      preLoaderRoute: typeof BlogBoxDeCantoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/box-convencional-vs-ate-o-teto': {
       id: '/blog_/box-convencional-vs-ate-o-teto'
       path: '/blog/box-convencional-vs-ate-o-teto'
@@ -1184,6 +1204,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBoxBanheiroVilaGuilhermeRoute: BlogBoxBanheiroVilaGuilhermeRoute,
   BlogBoxBanheiroZonaNorteRoute: BlogBoxBanheiroZonaNorteRoute,
   BlogBoxConvencionalVsAteOTetoRoute: BlogBoxConvencionalVsAteOTetoRoute,
+  BlogBoxDeCantoRoute: BlogBoxDeCantoRoute,
   BlogBoxTradicionalVsFlexRoute: BlogBoxTradicionalVsFlexRoute,
   BlogCorBoxIncolorFumeVerdeBronzeRoute: BlogCorBoxIncolorFumeVerdeBronzeRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
