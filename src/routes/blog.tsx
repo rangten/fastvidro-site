@@ -41,6 +41,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Guia Técnico • Box de Vidro",
+    date: "29 de Junho de 2026",
+    img: box3FolhasImg,
+    title:
+      "Box 3 Folhas (Sistema Versatik): O Guia Completo para Máxima Abertura de Vão e Acessibilidade",
+    excerpt:
+      "Conheça o Box 3 Folhas com Sistema Versatik: máxima abertura de vão, acessibilidade, design moderno, cores de perfil e segurança com Película Secure Box em São Paulo.",
+    to: "/blog/box-3-folhas-sistema-versatik",
+  },
+  {
     tag: "Comparativo • Box de Vidro",
     date: "28 de Junho de 2026",
     img: tradicionalVsFlexImg,
