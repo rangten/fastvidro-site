@@ -1,3 +1,4 @@
+import { createFileRoute } from '@tanstack/react-router'
 import limparBoxImg from "@/assets/blog-como-limpar-box-cover.png";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
