@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
+import box3FolhasImg from "@/assets/blog-box-3-folhas-versatik-cover.png";
 import convencionalVsPisoTetoImg from "@/assets/blog-box-convencional-vs-piso-teto-cover.png";
 import tradicionalVsFlexImg from "@/assets/blog-box-tradicional-vs-flex-cover.png";
 import manutencaoImg from "@/assets/blog-manutencao-box-cover.png";
@@ -39,6 +40,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Guia Técnico • Box de Vidro",
+    date: "29 de Junho de 2026",
+    img: box3FolhasImg,
+    title:
+      "Box 3 Folhas (Sistema Versatik): O Guia Completo para Máxima Abertura de Vão e Acessibilidade",
+    excerpt:
+      "Conheça o Box 3 Folhas com Sistema Versatik: máxima abertura de vão, acessibilidade, design moderno, cores de perfil e segurança com Película Secure Box em São Paulo.",
+    to: "/blog/box-3-folhas-sistema-versatik",
+  },
   {
     tag: "Comparativo • Box de Vidro",
     date: "28 de Junho de 2026",
