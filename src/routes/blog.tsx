@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import heroImg from "@/assets/product-projetos.jpg";
 import convencionalVsPisoTetoImg from "@/assets/blog-box-convencional-vs-piso-teto-cover.png";
+import tradicionalVsFlexImg from "@/assets/blog-box-tradicional-vs-flex-cover.png";
 import manutencaoImg from "@/assets/blog-manutencao-box-cover.png";
 import quemSomosImg from "@/assets/blog-quem-somos-cover.png";
 import espelhosLedImg from "@/assets/blog-espelhos-led-cover.png";
@@ -38,6 +39,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Comparativo • Box de Vidro",
+    date: "28 de Junho de 2026",
+    img: tradicionalVsFlexImg,
+    title:
+      "Box Tradicional de Correr vs. Box Flex (Sanfonado): Qual a Melhor Solução para Banheiros Pequenos?",
+    excerpt:
+      "Comparativo definitivo entre Box de Correr e Box Flex Sanfonado: vão livre, mecânica, estética, cores e segurança com a Película Secure Box. Ideal para banheiros pequenos em SP.",
+    to: "/blog/box-tradicional-vs-flex",
+  },
   {
     tag: "Comparativo • Box de Vidro",
     date: "27 de Junho de 2026",
