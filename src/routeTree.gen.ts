@@ -54,6 +54,7 @@ import { Route as BlogManutencaoBoxBanheiroRouteImport } from './routes/blog_.ma
 import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
 import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
 import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
+import { Route as BlogComoLimparBoxBanheiroRouteImport } from './routes/blog_.como-limpar-box-banheiro'
 import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
 import { Route as BlogBoxEleganceRoldanasAparentesRouteImport } from './routes/blog_.box-elegance-roldanas-aparentes'
 import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
@@ -299,6 +300,12 @@ const BlogCorBoxIncolorFumeVerdeBronzeRoute =
     path: '/blog/cor-box-incolor-fume-verde-bronze',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogComoLimparBoxBanheiroRoute =
+  BlogComoLimparBoxBanheiroRouteImport.update({
+    id: '/blog_/como-limpar-box-banheiro',
+    path: '/blog/como-limpar-box-banheiro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogBoxTradicionalVsFlexRoute =
   BlogBoxTradicionalVsFlexRouteImport.update({
     id: '/blog_/box-tradicional-vs-flex',
@@ -392,6 +399,7 @@ export interface FileRoutesByFullPath {
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
+  '/blog/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -452,6 +460,7 @@ export interface FileRoutesByTo {
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
+  '/blog/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
   '/blog/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -513,6 +522,7 @@ export interface FileRoutesById {
   '/blog_/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog_/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
   '/blog_/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
+  '/blog_/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
   '/blog_/cor-box-incolor-fume-verde-bronze': typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   '/blog_/espelhos-led-sob-medida': typeof BlogEspelhosLedSobMedidaRoute
   '/blog_/fast-vidro-historia': typeof BlogFastVidroHistoriaRoute
@@ -575,6 +585,7 @@ export interface FileRouteTypes {
     | '/blog/box-de-canto'
     | '/blog/box-elegance-roldanas-aparentes'
     | '/blog/box-tradicional-vs-flex'
+    | '/blog/como-limpar-box-banheiro'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
@@ -635,6 +646,7 @@ export interface FileRouteTypes {
     | '/blog/box-de-canto'
     | '/blog/box-elegance-roldanas-aparentes'
     | '/blog/box-tradicional-vs-flex'
+    | '/blog/como-limpar-box-banheiro'
     | '/blog/cor-box-incolor-fume-verde-bronze'
     | '/blog/espelhos-led-sob-medida'
     | '/blog/fast-vidro-historia'
@@ -695,6 +707,7 @@ export interface FileRouteTypes {
     | '/blog_/box-de-canto'
     | '/blog_/box-elegance-roldanas-aparentes'
     | '/blog_/box-tradicional-vs-flex'
+    | '/blog_/como-limpar-box-banheiro'
     | '/blog_/cor-box-incolor-fume-verde-bronze'
     | '/blog_/espelhos-led-sob-medida'
     | '/blog_/fast-vidro-historia'
@@ -756,6 +769,7 @@ export interface RootRouteChildren {
   BlogBoxDeCantoRoute: typeof BlogBoxDeCantoRoute
   BlogBoxEleganceRoldanasAparentesRoute: typeof BlogBoxEleganceRoldanasAparentesRoute
   BlogBoxTradicionalVsFlexRoute: typeof BlogBoxTradicionalVsFlexRoute
+  BlogComoLimparBoxBanheiroRoute: typeof BlogComoLimparBoxBanheiroRoute
   BlogCorBoxIncolorFumeVerdeBronzeRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRoute
   BlogEspelhosLedSobMedidaRoute: typeof BlogEspelhosLedSobMedidaRoute
   BlogFastVidroHistoriaRoute: typeof BlogFastVidroHistoriaRoute
@@ -1116,6 +1130,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/como-limpar-box-banheiro': {
+      id: '/blog_/como-limpar-box-banheiro'
+      path: '/blog/como-limpar-box-banheiro'
+      fullPath: '/blog/como-limpar-box-banheiro'
+      preLoaderRoute: typeof BlogComoLimparBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/box-tradicional-vs-flex': {
       id: '/blog_/box-tradicional-vs-flex'
       path: '/blog/box-tradicional-vs-flex'
@@ -1228,6 +1249,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBoxDeCantoRoute: BlogBoxDeCantoRoute,
   BlogBoxEleganceRoldanasAparentesRoute: BlogBoxEleganceRoldanasAparentesRoute,
   BlogBoxTradicionalVsFlexRoute: BlogBoxTradicionalVsFlexRoute,
+  BlogComoLimparBoxBanheiroRoute: BlogComoLimparBoxBanheiroRoute,
   BlogCorBoxIncolorFumeVerdeBronzeRoute: BlogCorBoxIncolorFumeVerdeBronzeRoute,
   BlogEspelhosLedSobMedidaRoute: BlogEspelhosLedSobMedidaRoute,
   BlogFastVidroHistoriaRoute: BlogFastVidroHistoriaRoute,
