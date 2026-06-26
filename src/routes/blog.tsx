@@ -45,6 +45,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Limpeza • Box de Vidro",
+    date: "3 de Julho de 2026",
+    img: limparBoxImg,
+    title:
+      "Como Limpar o Box de Banheiro Corretamente: O Guia Definitivo para Eliminar Manchas sem Danificar o Vidro",
+    excerpt:
+      "Aprenda a limpar seu box de vidro temperado corretamente: receita caseira com bicarbonato e vinagre, produtos que nunca deve usar e tabela de frequência para manter o box novo por anos.",
+    to: "/blog/como-limpar-box-banheiro",
+  },
+  {
     tag: "Guia Técnico • Box de Vidro",
     date: "2 de Julho de 2026",
     img: boxEleganceImg,
