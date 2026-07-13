@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import secureBoxLogo from "@/assets/secure-box-logo.png";
 import secureBoxPelicula from "@/assets/secure-box-pelicula.png";
@@ -228,6 +229,7 @@ function SecureBoxPage() {
         <MessageCircle className="h-5 w-5" />
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
+      <RegioesPremiumFooter basePath="/secure-box" title="Secure Box nas Regiões Atendidas" />
     </SiteLayout>
   );
 }
