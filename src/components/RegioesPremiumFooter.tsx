@@ -4,7 +4,7 @@ import { ZONAS, toSlug } from "@/lib/bairros";
 
 interface Props {
   /** Base path para os links dos bairros. Default: "/servicos". */
-  basePath?: "/servicos" | "/espelhos" | "/portas-de-vidro";
+  basePath?: "/servicos" | "/espelhos" | "/portas-de-vidro" | "/projetos";
   title?: string;
 }
 
@@ -61,6 +61,14 @@ export function RegioesPremiumFooter({
                       ) : basePath === "/portas-de-vidro" ? (
                         <Link
                           to="/portas-de-vidro/$modelo"
+                          params={{ modelo: slug }}
+                          className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
+                        >
+                          {b}
+                        </Link>
+                      ) : basePath === "/projetos" ? (
+                        <Link
+                          to="/projetos/$modelo"
                           params={{ modelo: slug }}
                           className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
                         >

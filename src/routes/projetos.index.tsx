@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import img from "@/assets/projetos-hero-fachada-clara.png";
 import { CATEGORIES } from "@/lib/catalog";
 
@@ -34,6 +35,7 @@ export const Route = createFileRoute("/projetos/")({
         models={category.models}
         ctaLabel="Solicitar projeto personalizado"
       />
+      <RegioesPremiumFooter basePath="/projetos" />
     </SiteLayout>
   ),
 });
