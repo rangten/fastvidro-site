@@ -40,6 +40,7 @@ export const Route = createFileRoute("/portas-de-vidro/")({
           { title: "Instalação em toda a Capital e Grande SP", text: "Fabricação sob medida com ferragens importadas e instalação por equipe própria em Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé e Alphaville." },
         ]}
       />
+      <RegioesPremiumFooter basePath="/portas-de-vidro" />
     </SiteLayout>
   ),
 });
