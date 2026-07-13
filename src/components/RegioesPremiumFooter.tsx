@@ -4,7 +4,7 @@ import { ZONAS, toSlug } from "@/lib/bairros";
 
 interface Props {
   /** Base path para os links dos bairros. Default: "/servicos". */
-  basePath?: "/servicos" | "/espelhos" | "/portas-de-vidro" | "/projetos";
+  basePath?: "/servicos" | "/espelhos" | "/portas-de-vidro" | "/projetos" | "/secure-box";
   title?: string;
 }
 
