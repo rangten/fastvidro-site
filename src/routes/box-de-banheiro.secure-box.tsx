@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import secureBoxLogo from "@/assets/secure-box-logo.png";
 import secureBoxPelicula from "@/assets/secure-box-pelicula.png";
