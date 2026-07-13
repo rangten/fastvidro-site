@@ -2,11 +2,20 @@ import { Link } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
 import { ZONAS, toSlug } from "@/lib/bairros";
 
+interface Props {
+  /** Base path para os links dos bairros. Default: "/servicos". */
+  basePath?: "/servicos" | "/espelhos";
+  title?: string;
+}
+
 /**
  * Rodapé geográfico semântico — apenas nomes de bairros agrupados por zona.
  * NÃO repetir termos de produtos para evitar keyword stuffing.
  */
-export function RegioesPremiumFooter() {
+export function RegioesPremiumFooter({
+  basePath = "/servicos",
+  title = "Regiões de Atendimento Premium",
+}: Props = {}) {
   return (
     <section
       aria-labelledby="regioes-premium-title"
@@ -22,7 +31,7 @@ export function RegioesPremiumFooter() {
               id="regioes-premium-title"
               className="mt-3 text-2xl lg:text-3xl font-black leading-tight"
             >
-              Regiões de Atendimento Premium
+              {title}
             </h2>
           </div>
           <p className="max-w-md text-sm text-muted-foreground">
@@ -37,17 +46,20 @@ export function RegioesPremiumFooter() {
                 {z.label}
               </h3>
               <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
-                {z.bairros.map((b) => (
-                  <li key={b}>
-                    <Link
-                      to="/servicos/$bairro"
-                      params={{ bairro: toSlug(b) }}
-                      className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
-                    >
-                      {b}
-                    </Link>
-                  </li>
-                ))}
+                {z.bairros.map((b) => {
+                  const slug = toSlug(b);
+                  const href = `${basePath}/${slug}`;
+                  return (
+                    <li key={b}>
+                      <Link
+                        to={href}
+                        className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
+                      >
+                        {b}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -56,3 +68,4 @@ export function RegioesPremiumFooter() {
     </section>
   );
 }
+
