@@ -229,6 +229,7 @@ function SecureBoxPage() {
         <MessageCircle className="h-5 w-5" />
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
+      <RegioesPremiumFooter basePath="/secure-box" title="Secure Box nas Regiões Atendidas" />
     </SiteLayout>
   );
 }
