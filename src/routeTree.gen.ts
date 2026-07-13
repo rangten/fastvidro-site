@@ -20,6 +20,7 @@ import { Route as BoxIncolorIndexRouteImport } from './routes/box-incolor.index'
 import { Route as BoxFumeIndexRouteImport } from './routes/box-fume.index'
 import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
 import { Route as ServicosBairroRouteImport } from './routes/servicos.$bairro'
+import { Route as SecureBoxBairroRouteImport } from './routes/secure-box.$bairro'
 import { Route as ProjetosResidencialRouteImport } from './routes/projetos.residencial'
 import { Route as ProjetosGuardaCorpoRouteImport } from './routes/projetos.guarda-corpo'
 import { Route as ProjetosFechamentoSacadaRouteImport } from './routes/projetos.fechamento-sacada'
@@ -126,6 +127,11 @@ const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
 const ServicosBairroRoute = ServicosBairroRouteImport.update({
   id: '/servicos/$bairro',
   path: '/servicos/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecureBoxBairroRoute = SecureBoxBairroRouteImport.update({
+  id: '/secure-box/$bairro',
+  path: '/secure-box/$bairro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosResidencialRoute = ProjetosResidencialRouteImport.update({
@@ -465,6 +471,7 @@ export interface FileRoutesByFullPath {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/secure-box/$bairro': typeof SecureBoxBairroRoute
   '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/box-fume/': typeof BoxFumeIndexRoute
@@ -530,6 +537,7 @@ export interface FileRoutesByTo {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/secure-box/$bairro': typeof SecureBoxBairroRoute
   '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro': typeof BoxDeBanheiroIndexRoute
   '/box-fume': typeof BoxFumeIndexRoute
@@ -596,6 +604,7 @@ export interface FileRoutesById {
   '/projetos/fechamento-sacada': typeof ProjetosFechamentoSacadaRoute
   '/projetos/guarda-corpo': typeof ProjetosGuardaCorpoRoute
   '/projetos/residencial': typeof ProjetosResidencialRoute
+  '/secure-box/$bairro': typeof SecureBoxBairroRoute
   '/servicos/$bairro': typeof ServicosBairroRoute
   '/box-de-banheiro/': typeof BoxDeBanheiroIndexRoute
   '/box-fume/': typeof BoxFumeIndexRoute
@@ -663,6 +672,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/secure-box/$bairro'
     | '/servicos/$bairro'
     | '/box-de-banheiro/'
     | '/box-fume/'
@@ -728,6 +738,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/secure-box/$bairro'
     | '/servicos/$bairro'
     | '/box-de-banheiro'
     | '/box-fume'
@@ -793,6 +804,7 @@ export interface FileRouteTypes {
     | '/projetos/fechamento-sacada'
     | '/projetos/guarda-corpo'
     | '/projetos/residencial'
+    | '/secure-box/$bairro'
     | '/servicos/$bairro'
     | '/box-de-banheiro/'
     | '/box-fume/'
@@ -859,6 +871,7 @@ export interface RootRouteChildren {
   ProjetosFechamentoSacadaRoute: typeof ProjetosFechamentoSacadaRoute
   ProjetosGuardaCorpoRoute: typeof ProjetosGuardaCorpoRoute
   ProjetosResidencialRoute: typeof ProjetosResidencialRoute
+  SecureBoxBairroRoute: typeof SecureBoxBairroRoute
   ServicosBairroRoute: typeof ServicosBairroRoute
   BoxDeBanheiroIndexRoute: typeof BoxDeBanheiroIndexRoute
   BoxFumeIndexRoute: typeof BoxFumeIndexRoute
@@ -945,6 +958,13 @@ declare module '@tanstack/react-router' {
       path: '/servicos/$bairro'
       fullPath: '/servicos/$bairro'
       preLoaderRoute: typeof ServicosBairroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/secure-box/$bairro': {
+      id: '/secure-box/$bairro'
+      path: '/secure-box/$bairro'
+      fullPath: '/secure-box/$bairro'
+      preLoaderRoute: typeof SecureBoxBairroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projetos/residencial': {
@@ -1371,6 +1391,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjetosFechamentoSacadaRoute: ProjetosFechamentoSacadaRoute,
   ProjetosGuardaCorpoRoute: ProjetosGuardaCorpoRoute,
   ProjetosResidencialRoute: ProjetosResidencialRoute,
+  SecureBoxBairroRoute: SecureBoxBairroRoute,
   ServicosBairroRoute: ServicosBairroRoute,
   BoxDeBanheiroIndexRoute: BoxDeBanheiroIndexRoute,
   BoxFumeIndexRoute: BoxFumeIndexRoute,
