@@ -41,7 +41,6 @@ import { Route as EspelhosLapidadoRouteImport } from './routes/espelhos.lapidado
 import { Route as EspelhosBisoteRouteImport } from './routes/espelhos.bisote'
 import { Route as EspelhosBanheiroRouteImport } from './routes/espelhos.banheiro'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
-import { Route as EspelhosBairroRouteImport } from './routes/espelhos.$bairro'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroSecureBoxRouteImport } from './routes/box-de-banheiro.secure-box'
@@ -233,11 +232,6 @@ const EspelhosBanheiroRoute = EspelhosBanheiroRouteImport.update({
 const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
   id: '/espelhos/$modelo',
   path: '/espelhos/$modelo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosBairroRoute = EspelhosBairroRouteImport.update({
-  id: '/espelhos/$bairro',
-  path: '/espelhos/$bairro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroTransferRoute = BoxDeBanheiroTransferRouteImport.update({
@@ -450,7 +444,6 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
-  '/espelhos/$bairro': typeof EspelhosBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -516,7 +509,6 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
-  '/espelhos/$bairro': typeof EspelhosBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -583,7 +575,6 @@ export interface FileRoutesById {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
-  '/espelhos/$bairro': typeof EspelhosBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -651,7 +642,6 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
-    | '/espelhos/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -717,7 +707,6 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
-    | '/espelhos/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -783,7 +772,6 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
-    | '/espelhos/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -850,7 +838,6 @@ export interface RootRouteChildren {
   BoxDeBanheiroSecureBoxRoute: typeof BoxDeBanheiroSecureBoxRoute
   BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
-  EspelhosBairroRoute: typeof EspelhosBairroRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
   EspelhosBanheiroRoute: typeof EspelhosBanheiroRoute
   EspelhosBisoteRoute: typeof EspelhosBisoteRoute
@@ -1105,13 +1092,6 @@ declare module '@tanstack/react-router' {
       path: '/espelhos/$modelo'
       fullPath: '/espelhos/$modelo'
       preLoaderRoute: typeof EspelhosModeloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/$bairro': {
-      id: '/espelhos/$bairro'
-      path: '/espelhos/$bairro'
-      fullPath: '/espelhos/$bairro'
-      preLoaderRoute: typeof EspelhosBairroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/box-de-banheiro/transfer': {
@@ -1370,7 +1350,6 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroSecureBoxRoute: BoxDeBanheiroSecureBoxRoute,
   BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
-  EspelhosBairroRoute: EspelhosBairroRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
   EspelhosBanheiroRoute: EspelhosBanheiroRoute,
   EspelhosBisoteRoute: EspelhosBisoteRoute,
