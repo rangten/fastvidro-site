@@ -35,6 +35,7 @@ export const Route = createFileRoute("/projetos/")({
         models={category.models}
         ctaLabel="Solicitar projeto personalizado"
       />
+      <RegioesPremiumFooter basePath="/projetos" />
     </SiteLayout>
   ),
 });
