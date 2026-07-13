@@ -48,15 +48,25 @@ export function RegioesPremiumFooter({
               <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
                 {z.bairros.map((b) => {
                   const slug = toSlug(b);
-                  const href = `${basePath}/${slug}`;
                   return (
                     <li key={b}>
-                      <Link
-                        to={href}
-                        className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
-                      >
-                        {b}
-                      </Link>
+                      {basePath === "/espelhos" ? (
+                        <Link
+                          to="/espelhos/$modelo"
+                          params={{ modelo: slug }}
+                          className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
+                        >
+                          {b}
+                        </Link>
+                      ) : (
+                        <Link
+                          to="/servicos/$bairro"
+                          params={{ bairro: slug }}
+                          className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
+                        >
+                          {b}
+                        </Link>
+                      )}
                     </li>
                   );
                 })}
