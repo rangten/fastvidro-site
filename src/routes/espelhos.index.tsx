@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import img from "@/assets/espelhos-hero-sala-jantar.png";
 import { CATEGORIES } from "@/lib/catalog";
 
@@ -33,6 +34,11 @@ export const Route = createFileRoute("/espelhos/")({
         modelLinkBase="/espelhos"
         models={category.models}
       />
+      <RegioesPremiumFooter
+        basePath="/espelhos"
+        title="Espelhos sob Medida por Bairro em São Paulo"
+      />
     </SiteLayout>
   ),
 });
+
