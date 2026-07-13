@@ -58,6 +58,14 @@ export function RegioesPremiumFooter({
                         >
                           {b}
                         </Link>
+                      ) : basePath === "/portas-de-vidro" ? (
+                        <Link
+                          to="/portas-de-vidro/$modelo"
+                          params={{ modelo: slug }}
+                          className="text-xs text-foreground/75 hover:text-primary hover:underline transition"
+                        >
+                          {b}
+                        </Link>
                       ) : (
                         <Link
                           to="/servicos/$bairro"
