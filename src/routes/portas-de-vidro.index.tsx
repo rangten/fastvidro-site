@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
+import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import img from "@/assets/portas-vidro-hero-fachada.png";
 import { CATEGORIES } from "@/lib/catalog";
 
@@ -39,6 +40,7 @@ export const Route = createFileRoute("/portas-de-vidro/")({
           { title: "Instalação em toda a Capital e Grande SP", text: "Fabricação sob medida com ferragens importadas e instalação por equipe própria em Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé e Alphaville." },
         ]}
       />
+      <RegioesPremiumFooter basePath="/portas-de-vidro" />
     </SiteLayout>
   ),
 });
