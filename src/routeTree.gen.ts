@@ -42,6 +42,8 @@ import { Route as EspelhosLapidadoRouteImport } from './routes/espelhos.lapidado
 import { Route as EspelhosBisoteRouteImport } from './routes/espelhos.bisote'
 import { Route as EspelhosBanheiroRouteImport } from './routes/espelhos.banheiro'
 import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
+import { Route as BoxIncolorBairroRouteImport } from './routes/box-incolor.$bairro'
+import { Route as BoxFumeBairroRouteImport } from './routes/box-fume.$bairro'
 import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
 import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
 import { Route as BoxDeBanheiroSecureBoxRouteImport } from './routes/box-de-banheiro.secure-box'
@@ -238,6 +240,16 @@ const EspelhosBanheiroRoute = EspelhosBanheiroRouteImport.update({
 const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
   id: '/espelhos/$modelo',
   path: '/espelhos/$modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxIncolorBairroRoute = BoxIncolorBairroRouteImport.update({
+  id: '/box-incolor/$bairro',
+  path: '/box-incolor/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxFumeBairroRoute = BoxFumeBairroRouteImport.update({
+  id: '/box-fume/$bairro',
+  path: '/box-fume/$bairro',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoxDeBanheiroTransferRoute = BoxDeBanheiroTransferRouteImport.update({
@@ -450,6 +462,8 @@ export interface FileRoutesByFullPath {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
+  '/box-fume/$bairro': typeof BoxFumeBairroRoute
+  '/box-incolor/$bairro': typeof BoxIncolorBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -516,6 +530,8 @@ export interface FileRoutesByTo {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
+  '/box-fume/$bairro': typeof BoxFumeBairroRoute
+  '/box-incolor/$bairro': typeof BoxIncolorBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -583,6 +599,8 @@ export interface FileRoutesById {
   '/box-de-banheiro/secure-box': typeof BoxDeBanheiroSecureBoxRoute
   '/box-de-banheiro/tradicional': typeof BoxDeBanheiroTradicionalRoute
   '/box-de-banheiro/transfer': typeof BoxDeBanheiroTransferRoute
+  '/box-fume/$bairro': typeof BoxFumeBairroRoute
+  '/box-incolor/$bairro': typeof BoxIncolorBairroRoute
   '/espelhos/$modelo': typeof EspelhosModeloRoute
   '/espelhos/banheiro': typeof EspelhosBanheiroRoute
   '/espelhos/bisote': typeof EspelhosBisoteRoute
@@ -651,6 +669,8 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
+    | '/box-fume/$bairro'
+    | '/box-incolor/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -717,6 +737,8 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
+    | '/box-fume/$bairro'
+    | '/box-incolor/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -783,6 +805,8 @@ export interface FileRouteTypes {
     | '/box-de-banheiro/secure-box'
     | '/box-de-banheiro/tradicional'
     | '/box-de-banheiro/transfer'
+    | '/box-fume/$bairro'
+    | '/box-incolor/$bairro'
     | '/espelhos/$modelo'
     | '/espelhos/banheiro'
     | '/espelhos/bisote'
@@ -850,6 +874,8 @@ export interface RootRouteChildren {
   BoxDeBanheiroSecureBoxRoute: typeof BoxDeBanheiroSecureBoxRoute
   BoxDeBanheiroTradicionalRoute: typeof BoxDeBanheiroTradicionalRoute
   BoxDeBanheiroTransferRoute: typeof BoxDeBanheiroTransferRoute
+  BoxFumeBairroRoute: typeof BoxFumeBairroRoute
+  BoxIncolorBairroRoute: typeof BoxIncolorBairroRoute
   EspelhosModeloRoute: typeof EspelhosModeloRoute
   EspelhosBanheiroRoute: typeof EspelhosBanheiroRoute
   EspelhosBisoteRoute: typeof EspelhosBisoteRoute
@@ -1114,6 +1140,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspelhosModeloRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/box-incolor/$bairro': {
+      id: '/box-incolor/$bairro'
+      path: '/box-incolor/$bairro'
+      fullPath: '/box-incolor/$bairro'
+      preLoaderRoute: typeof BoxIncolorBairroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-fume/$bairro': {
+      id: '/box-fume/$bairro'
+      path: '/box-fume/$bairro'
+      fullPath: '/box-fume/$bairro'
+      preLoaderRoute: typeof BoxFumeBairroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/box-de-banheiro/transfer': {
       id: '/box-de-banheiro/transfer'
       path: '/box-de-banheiro/transfer'
@@ -1370,6 +1410,8 @@ const rootRouteChildren: RootRouteChildren = {
   BoxDeBanheiroSecureBoxRoute: BoxDeBanheiroSecureBoxRoute,
   BoxDeBanheiroTradicionalRoute: BoxDeBanheiroTradicionalRoute,
   BoxDeBanheiroTransferRoute: BoxDeBanheiroTransferRoute,
+  BoxFumeBairroRoute: BoxFumeBairroRoute,
+  BoxIncolorBairroRoute: BoxIncolorBairroRoute,
   EspelhosModeloRoute: EspelhosModeloRoute,
   EspelhosBanheiroRoute: EspelhosBanheiroRoute,
   EspelhosBisoteRoute: EspelhosBisoteRoute,
@@ -1403,13 +1445,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
