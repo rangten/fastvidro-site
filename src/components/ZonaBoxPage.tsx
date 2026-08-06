@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, MessageCircle, ShieldCheck, Ruler, Truck } from "lucide-react";
 import { waLink } from "@/lib/site";
+import { toSlug, bairroFromSlug } from "@/lib/bairros";
 import {
   Accordion,
   AccordionContent,
@@ -89,14 +90,27 @@ export function ZonaBoxPage(props: ZonaBoxPageProps) {
               <MapPin className="h-3 w-3" /> Bairros atendidos
             </span>
             <ul className="mt-4 flex flex-wrap gap-2">
-              {bairros.map((b) => (
-                <li
-                  key={b}
-                  className="rounded-full border border-primary/30 bg-background px-3 py-1.5 text-xs font-semibold text-foreground/80"
-                >
-                  {b}
-                </li>
-              ))}
+              {bairros.map((b) => {
+                const slug = toSlug(b);
+                const exists = !!bairroFromSlug(slug);
+                const base =
+                  "inline-block rounded-full border border-primary/40 bg-background px-3 py-1.5 text-xs font-semibold text-foreground/80";
+                return (
+                  <li key={b}>
+                    {exists ? (
+                      <Link
+                        to="/servicos/$bairro"
+                        params={{ bairro: slug }}
+                        className={`${base} cursor-pointer transition-colors duration-200 hover:bg-primary hover:text-primary-foreground hover:border-primary`}
+                      >
+                        {b}
+                      </Link>
+                    ) : (
+                      <span className={base}>{b}</span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

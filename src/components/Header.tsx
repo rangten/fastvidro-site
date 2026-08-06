@@ -93,12 +93,18 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href={waLink()}
+            href="https://wa.me/5511990238648"
             target="_blank"
             rel="noopener"
-            className="hidden md:inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-bold uppercase tracking-wide text-primary-foreground transition hover:shadow-yellow"
+            className="hidden md:inline-flex items-center gap-3 rounded-md bg-primary px-5 py-2.5 text-primary-foreground transition hover:shadow-yellow"
           >
-            <MessageCircle className="h-4 w-4" /> Orçamento
+            <MessageCircle className="h-7 w-7" />
+            <span className="flex flex-col leading-tight text-left">
+              <span className="text-[10px] font-semibold uppercase tracking-wider">
+                WhatsApp e Orçamento
+              </span>
+              <span className="text-lg font-black">(11) 99023-8648</span>
+            </span>
           </a>
           <button
             className="lg:hidden p-2 text-ink-foreground"

@@ -36,7 +36,7 @@ export const Route = createFileRoute("/box-de-vidro-zona-norte")({
         h1="Box de Banheiro Sob Medida na Zona Norte de São Paulo"
         subtitle="Atendimento expresso, medição rápida e instalação de box de vidro temperado na Zona Norte."
         heroImage={hero}
-        bairros={["Santana", "Tucuruvi", "Mandaqui", "Tremembé", "Jaçanã", "Vila Maria", "Vila Guilherme", "Imirim", "Casa Verde", "Cachoeirinha"]}
+        bairros={["Santana", "Tucuruvi", "Mandaqui", "Tremembé", "Jaçanã", "Vila Maria", "Vila Guilherme", "Imirim", "Casa Verde", "Vila Nova Cachoeirinha", "Parada Inglesa", "Freguesia do Ó"]}
         intro="A Fast Vidro é especialista em box de banheiro sob medida na Zona Norte de São Paulo. Com equipe técnica dedicada à região, fazemos medição digital precisa, fabricação em vidro temperado de 8mm certificado e instalação limpa e rápida — ideal para apartamentos e casas dos bairros da ZN."
         differentials={[
           { title: "Equipe técnica dedicada à ZN", text: "Instaladores que atendem exclusivamente a Zona Norte, com agenda rápida e deslocamento curto." },

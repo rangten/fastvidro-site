@@ -36,7 +36,7 @@ export const Route = createFileRoute("/box-de-vidro-zona-sul")({
         h1="Box de Banheiro de Vidro Temperado na Zona Sul"
         subtitle="Soluções modernas de box de vidro para residências e apartamentos na Zona Sul com acabamento impecável."
         heroImage={hero}
-        bairros={["Moema", "Vila Mariana", "Campo Belo", "Brooklin", "Santo Amaro", "Morumbi", "Ipiranga", "Jabaquara", "Saúde", "Vila Mascote"]}
+        bairros={["Moema", "Vila Mariana", "Campo Belo", "Brooklin", "Santo Amaro", "Morumbi", "Ipiranga", "Jabaquara", "Saúde", "Itaim Bibi", "Paraíso", "Vila Clementino"]}
         intro="Na Zona Sul de São Paulo, a Fast Vidro executa projetos de box de banheiro voltados a apartamentos e residências de alto padrão: fechamento de vãos sob medida, roldanas aparentes em inox, perfis de linhas retas e vedação de alta performance. Cada projeto é medido em obra e fabricado em vidro temperado de 8mm."
         differentials={[
           { title: "Projetos para apartamentos", text: "Aproveitamento máximo de banheiros compactos e vãos irregulares típicos de prédios da ZS." },
