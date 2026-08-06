@@ -122,6 +122,14 @@ export function Header() {
       {open && (
         <div className="lg:hidden border-t border-primary/20 bg-ink">
           <nav className="flex flex-col px-4 py-3">
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener"
+              className="mb-3 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-bold uppercase text-primary-foreground"
+            >
+              <MessageCircle className="h-4 w-4" /> (11) 99023-8648
+            </a>
             <div className="border-b border-white/5">
               <div className="flex items-center justify-between">
                 <Link
