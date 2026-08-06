@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, MessageCircle, ShieldCheck, Ruler, Truck } from "lucide-react";
 import { waLink } from "@/lib/site";
+import { toSlug, bairroFromSlug } from "@/lib/bairros";
 import {
   Accordion,
   AccordionContent,
