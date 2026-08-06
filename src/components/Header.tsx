@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.png";
 import secureBoxLogo from "@/assets/secure-box-logo.png";
 import { waLink } from "@/lib/site";
@@ -11,8 +11,15 @@ type NavItem = {
   image?: { src: string; alt: string };
 };
 
+const BOX_SUBMENU = [
+  { to: "/box-de-banheiro", label: "Ver Todos os Box (Página Principal)" },
+  { to: "/box-de-vidro-zona-norte", label: "Box de Vidro — Zona Norte" },
+  { to: "/box-de-vidro-zona-sul", label: "Box de Vidro — Zona Sul" },
+  { to: "/box-de-vidro-zona-oeste", label: "Box de Vidro — Zona Oeste" },
+  { to: "/box-de-vidro-zona-leste", label: "Box de Vidro — Zona Leste" },
+] as const;
+
 const nav: NavItem[] = [
-  { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
   { to: "/box-de-banheiro/secure-box", label: "Secure Box", image: { src: secureBoxLogo, alt: "Secure Box" } },
   { to: "/espelhos", label: "Espelhos" },
@@ -22,6 +29,7 @@ const nav: NavItem[] = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [boxOpen, setBoxOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-ink text-ink-foreground border-b-2 border-primary/30">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:px-8 lg:py-6">
@@ -35,7 +43,35 @@ export function Header() {
 
 
         <nav className="hidden lg:flex items-center gap-7">
+          <div className="relative group">
+            <div className="flex items-center gap-1">
+              <Link
+                to="/box-de-banheiro"
+                className="flex items-center text-sm font-semibold uppercase tracking-wide text-ink-foreground/80 transition hover:text-primary"
+                activeProps={{ className: "text-primary" }}
+              >
+                Box de Banheiro
+              </Link>
+              <ChevronDown className="h-4 w-4 text-ink-foreground/60 transition group-hover:rotate-180 group-hover:text-primary" />
+            </div>
+            <div className="invisible absolute left-0 top-full z-50 w-72 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <ul className="overflow-hidden rounded-lg border border-primary/30 bg-ink shadow-xl">
+                {BOX_SUBMENU.map((s) => (
+                  <li key={s.to}>
+                    <Link
+                      to={s.to}
+                      className="block border-b border-white/5 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-foreground/80 transition last:border-0 hover:bg-primary/10 hover:text-primary"
+                      activeProps={{ className: "text-primary" }}
+                    >
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
           {nav.map((n) => (
+
             <Link
               key={`${n.to}-${n.label}`}
               to={n.to}
@@ -77,7 +113,43 @@ export function Header() {
       {open && (
         <div className="lg:hidden border-t border-primary/20 bg-ink">
           <nav className="flex flex-col px-4 py-3">
+            <div className="border-b border-white/5">
+              <div className="flex items-center justify-between">
+                <Link
+                  to="/box-de-banheiro"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90"
+                >
+                  Box de Banheiro
+                </Link>
+                <button
+                  type="button"
+                  aria-label="Abrir submenu de Box de Banheiro"
+                  aria-expanded={boxOpen}
+                  onClick={() => setBoxOpen((v) => !v)}
+                  className="p-2 text-ink-foreground/70"
+                >
+                  <ChevronDown className={`h-5 w-5 transition ${boxOpen ? "rotate-180 text-primary" : ""}`} />
+                </button>
+              </div>
+              {boxOpen && (
+                <ul className="pb-2 pl-3">
+                  {BOX_SUBMENU.map((s) => (
+                    <li key={s.to}>
+                      <Link
+                        to={s.to}
+                        onClick={() => setOpen(false)}
+                        className="block py-2.5 text-xs font-semibold uppercase tracking-wide text-ink-foreground/70 hover:text-primary"
+                      >
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
             {nav.map((n) => (
+
               <Link
                 key={`${n.to}-${n.label}`}
                 to={n.to}

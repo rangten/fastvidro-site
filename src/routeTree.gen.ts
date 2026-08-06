@@ -11,6 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
+import { Route as BoxDeVidroZonaSulRouteImport } from './routes/box-de-vidro-zona-sul'
+import { Route as BoxDeVidroZonaOesteRouteImport } from './routes/box-de-vidro-zona-oeste'
+import { Route as BoxDeVidroZonaNorteRouteImport } from './routes/box-de-vidro-zona-norte'
+import { Route as BoxDeVidroZonaLesteRouteImport } from './routes/box-de-vidro-zona-leste'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
@@ -84,6 +88,26 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const EspelhosLedRoute = EspelhosLedRouteImport.update({
   id: '/espelhos-led',
   path: '/espelhos-led',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeVidroZonaSulRoute = BoxDeVidroZonaSulRouteImport.update({
+  id: '/box-de-vidro-zona-sul',
+  path: '/box-de-vidro-zona-sul',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeVidroZonaOesteRoute = BoxDeVidroZonaOesteRouteImport.update({
+  id: '/box-de-vidro-zona-oeste',
+  path: '/box-de-vidro-zona-oeste',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeVidroZonaNorteRoute = BoxDeVidroZonaNorteRouteImport.update({
+  id: '/box-de-vidro-zona-norte',
+  path: '/box-de-vidro-zona-norte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeVidroZonaLesteRoute = BoxDeVidroZonaLesteRouteImport.update({
+  id: '/box-de-vidro-zona-leste',
+  path: '/box-de-vidro-zona-leste',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -429,6 +453,10 @@ const BlogAlertaSegurancaBoxTravandoRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/box-de-vidro-zona-leste': typeof BoxDeVidroZonaLesteRoute
+  '/box-de-vidro-zona-norte': typeof BoxDeVidroZonaNorteRoute
+  '/box-de-vidro-zona-oeste': typeof BoxDeVidroZonaOesteRoute
+  '/box-de-vidro-zona-sul': typeof BoxDeVidroZonaSulRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
@@ -497,6 +525,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/box-de-vidro-zona-leste': typeof BoxDeVidroZonaLesteRoute
+  '/box-de-vidro-zona-norte': typeof BoxDeVidroZonaNorteRoute
+  '/box-de-vidro-zona-oeste': typeof BoxDeVidroZonaOesteRoute
+  '/box-de-vidro-zona-sul': typeof BoxDeVidroZonaSulRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
@@ -566,6 +598,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
+  '/box-de-vidro-zona-leste': typeof BoxDeVidroZonaLesteRoute
+  '/box-de-vidro-zona-norte': typeof BoxDeVidroZonaNorteRoute
+  '/box-de-vidro-zona-oeste': typeof BoxDeVidroZonaOesteRoute
+  '/box-de-vidro-zona-sul': typeof BoxDeVidroZonaSulRoute
   '/espelhos-led': typeof EspelhosLedRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog_/alerta-seguranca-box-travando': typeof BlogAlertaSegurancaBoxTravandoRoute
@@ -636,6 +672,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/blog'
+    | '/box-de-vidro-zona-leste'
+    | '/box-de-vidro-zona-norte'
+    | '/box-de-vidro-zona-oeste'
+    | '/box-de-vidro-zona-sul'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/blog/alerta-seguranca-box-travando'
@@ -704,6 +744,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/blog'
+    | '/box-de-vidro-zona-leste'
+    | '/box-de-vidro-zona-norte'
+    | '/box-de-vidro-zona-oeste'
+    | '/box-de-vidro-zona-sul'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/blog/alerta-seguranca-box-travando'
@@ -772,6 +816,10 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/blog'
+    | '/box-de-vidro-zona-leste'
+    | '/box-de-vidro-zona-norte'
+    | '/box-de-vidro-zona-oeste'
+    | '/box-de-vidro-zona-sul'
     | '/espelhos-led'
     | '/sitemap.xml'
     | '/blog_/alerta-seguranca-box-travando'
@@ -841,6 +889,10 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
+  BoxDeVidroZonaLesteRoute: typeof BoxDeVidroZonaLesteRoute
+  BoxDeVidroZonaNorteRoute: typeof BoxDeVidroZonaNorteRoute
+  BoxDeVidroZonaOesteRoute: typeof BoxDeVidroZonaOesteRoute
+  BoxDeVidroZonaSulRoute: typeof BoxDeVidroZonaSulRoute
   EspelhosLedRoute: typeof EspelhosLedRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogAlertaSegurancaBoxTravandoRoute: typeof BlogAlertaSegurancaBoxTravandoRoute
@@ -921,6 +973,34 @@ declare module '@tanstack/react-router' {
       path: '/espelhos-led'
       fullPath: '/espelhos-led'
       preLoaderRoute: typeof EspelhosLedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-vidro-zona-sul': {
+      id: '/box-de-vidro-zona-sul'
+      path: '/box-de-vidro-zona-sul'
+      fullPath: '/box-de-vidro-zona-sul'
+      preLoaderRoute: typeof BoxDeVidroZonaSulRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-vidro-zona-oeste': {
+      id: '/box-de-vidro-zona-oeste'
+      path: '/box-de-vidro-zona-oeste'
+      fullPath: '/box-de-vidro-zona-oeste'
+      preLoaderRoute: typeof BoxDeVidroZonaOesteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-vidro-zona-norte': {
+      id: '/box-de-vidro-zona-norte'
+      path: '/box-de-vidro-zona-norte'
+      fullPath: '/box-de-vidro-zona-norte'
+      preLoaderRoute: typeof BoxDeVidroZonaNorteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-vidro-zona-leste': {
+      id: '/box-de-vidro-zona-leste'
+      path: '/box-de-vidro-zona-leste'
+      fullPath: '/box-de-vidro-zona-leste'
+      preLoaderRoute: typeof BoxDeVidroZonaLesteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -1377,6 +1457,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
+  BoxDeVidroZonaLesteRoute: BoxDeVidroZonaLesteRoute,
+  BoxDeVidroZonaNorteRoute: BoxDeVidroZonaNorteRoute,
+  BoxDeVidroZonaOesteRoute: BoxDeVidroZonaOesteRoute,
+  BoxDeVidroZonaSulRoute: BoxDeVidroZonaSulRoute,
   EspelhosLedRoute: EspelhosLedRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogAlertaSegurancaBoxTravandoRoute: BlogAlertaSegurancaBoxTravandoRoute,

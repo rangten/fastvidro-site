@@ -17,6 +17,10 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/box-de-banheiro", changefreq: "monthly", priority: "0.9" },
+          { path: "/box-de-vidro-zona-norte", changefreq: "monthly", priority: "0.9" },
+          { path: "/box-de-vidro-zona-sul", changefreq: "monthly", priority: "0.9" },
+          { path: "/box-de-vidro-zona-oeste", changefreq: "monthly", priority: "0.9" },
+          { path: "/box-de-vidro-zona-leste", changefreq: "monthly", priority: "0.9" },
           { path: "/portas-de-vidro", changefreq: "monthly", priority: "0.9" },
           { path: "/espelhos", changefreq: "monthly", priority: "0.9" },
           { path: "/espelhos-led", changefreq: "monthly", priority: "0.9" },
