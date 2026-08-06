@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.png";
 import secureBoxLogo from "@/assets/secure-box-logo.png";
 import { waLink } from "@/lib/site";
@@ -11,15 +11,8 @@ type NavItem = {
   image?: { src: string; alt: string };
 };
 
-const BOX_SUBMENU = [
-  { to: "/box-de-banheiro", label: "Ver Todos os Box (Página Principal)" },
-  { to: "/box-de-vidro-zona-norte", label: "Box de Vidro — Zona Norte" },
-  { to: "/box-de-vidro-zona-sul", label: "Box de Vidro — Zona Sul" },
-  { to: "/box-de-vidro-zona-oeste", label: "Box de Vidro — Zona Oeste" },
-  { to: "/box-de-vidro-zona-leste", label: "Box de Vidro — Zona Leste" },
-] as const;
-
 const nav: NavItem[] = [
+  { to: "/box-de-banheiro", label: "Box de Banheiro" },
   { to: "/portas-de-vidro", label: "Portas de Vidro" },
   { to: "/box-de-banheiro/secure-box", label: "Secure Box", image: { src: secureBoxLogo, alt: "Secure Box" } },
   { to: "/espelhos", label: "Espelhos" },
