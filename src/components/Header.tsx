@@ -29,6 +29,7 @@ const nav: NavItem[] = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [boxOpen, setBoxOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-ink text-ink-foreground border-b-2 border-primary/30">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:px-8 lg:py-6">
