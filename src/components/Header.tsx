@@ -94,41 +94,6 @@ export function Header() {
             >
               <MessageCircle className="h-4 w-4" /> (11) 99023-8648
             </a>
-            <div className="border-b border-white/5">
-              <div className="flex items-center justify-between">
-                <Link
-                  to="/box-de-banheiro"
-                  onClick={() => setOpen(false)}
-                  className="flex-1 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90"
-                >
-                  Box de Banheiro
-                </Link>
-                <button
-                  type="button"
-                  aria-label="Abrir submenu de Box de Banheiro"
-                  aria-expanded={boxOpen}
-                  onClick={() => setBoxOpen((v) => !v)}
-                  className="p-2 text-ink-foreground/70"
-                >
-                  <ChevronDown className={`h-5 w-5 transition ${boxOpen ? "rotate-180 text-primary" : ""}`} />
-                </button>
-              </div>
-              {boxOpen && (
-                <ul className="pb-2 pl-3">
-                  {BOX_SUBMENU.map((s) => (
-                    <li key={s.to}>
-                      <Link
-                        to={s.to}
-                        onClick={() => setOpen(false)}
-                        className="block py-2.5 text-xs font-semibold uppercase tracking-wide text-ink-foreground/70 hover:text-primary"
-                      >
-                        {s.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
             {nav.map((n) => (
 
               <Link
