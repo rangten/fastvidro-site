@@ -43,7 +43,35 @@ export function Header() {
 
 
         <nav className="hidden lg:flex items-center gap-7">
+          <div className="relative group">
+            <div className="flex items-center gap-1">
+              <Link
+                to="/box-de-banheiro"
+                className="flex items-center text-sm font-semibold uppercase tracking-wide text-ink-foreground/80 transition hover:text-primary"
+                activeProps={{ className: "text-primary" }}
+              >
+                Box de Banheiro
+              </Link>
+              <ChevronDown className="h-4 w-4 text-ink-foreground/60 transition group-hover:rotate-180 group-hover:text-primary" />
+            </div>
+            <div className="invisible absolute left-0 top-full z-50 w-72 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100">
+              <ul className="overflow-hidden rounded-lg border border-primary/30 bg-ink shadow-xl">
+                {BOX_SUBMENU.map((s) => (
+                  <li key={s.to}>
+                    <Link
+                      to={s.to}
+                      className="block border-b border-white/5 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-foreground/80 transition last:border-0 hover:bg-primary/10 hover:text-primary"
+                      activeProps={{ className: "text-primary" }}
+                    >
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
           {nav.map((n) => (
+
             <Link
               key={`${n.to}-${n.label}`}
               to={n.to}
