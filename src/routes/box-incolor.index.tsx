@@ -100,7 +100,7 @@ export const Route = createFileRoute("/box-incolor/")({
                   {z.bairros.map((b) => (
                     <li key={b}>
                       <Link
-                        to="/servicos/$bairro"
+                        to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                         params={{ bairro: toSlug(b) }}
                         className="inline-block rounded-full border border-border bg-card px-3 py-1.5 text-xs font-semibold hover:border-primary hover:text-primary transition"
                       >

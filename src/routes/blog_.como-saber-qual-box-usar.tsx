@@ -286,10 +286,10 @@ function ComoSaberQualBoxUsar() {
           </p>
 
           <ul>
-            <li><strong>Zona Sul:</strong> Projetos entregues no <Link to="/servicos/morumbi" className="text-primary hover:underline">Morumbi</Link>, <Link to="/servicos/moema" className="text-primary hover:underline">Moema</Link>, Brooklin, Vila Olímpia, Campo Belo, Santo Amaro, Saúde e Vila Mariana.</li>
-            <li><strong>Zona Oeste:</strong> Instalações sob medida em <Link to="/servicos/pinheiros" className="text-primary hover:underline">Pinheiros</Link>, Perdizes, Lapa, Vila Madalena, Alto de Pinheiros e Butantã.</li>
-            <li><strong>Zona Norte:</strong> Atendimento técnico rápido em <Link to="/servicos/santana" className="text-primary hover:underline">Santana</Link>, <Link to="/servicos/tucuruvi" className="text-primary hover:underline">Tucuruvi</Link>, <Link to="/servicos/casa-verde" className="text-primary hover:underline">Casa Verde</Link>, Freguesia do Ó e <Link to="/servicos/mandaqui" className="text-primary hover:underline">Mandaqui</Link>.</li>
-            <li><strong>Zona Leste:</strong> Atendemos com agilidade no <Link to="/servicos/tatuape" className="text-primary hover:underline">Tatuapé</Link>, Anália Franco, Mooca, Vila Formosa e Penha.</li>
+            <li><strong>Zona Sul:</strong> Projetos entregues no <Link to="/servicos/$bairro" params={{ bairro: "morumbi" }} className="text-primary hover:underline">Morumbi</Link>, <Link to="/servicos/$bairro" params={{ bairro: "moema" }} className="text-primary hover:underline">Moema</Link>, Brooklin, Vila Olímpia, Campo Belo, Santo Amaro, Saúde e Vila Mariana.</li>
+            <li><strong>Zona Oeste:</strong> Instalações sob medida em <Link to="/servicos/$bairro" params={{ bairro: "pinheiros" }} className="text-primary hover:underline">Pinheiros</Link>, Perdizes, Lapa, Vila Madalena, Alto de Pinheiros e Butantã.</li>
+            <li><strong>Zona Norte:</strong> Atendimento técnico rápido em <Link to="/servicos/$bairro" params={{ bairro: "santana" }} className="text-primary hover:underline">Santana</Link>, <Link to="/servicos/$bairro" params={{ bairro: "tucuruvi" }} className="text-primary hover:underline">Tucuruvi</Link>, <Link to="/servicos/$bairro" params={{ bairro: "casa-verde" }} className="text-primary hover:underline">Casa Verde</Link>, Freguesia do Ó e <Link to="/servicos/$bairro" params={{ bairro: "mandaqui" }} className="text-primary hover:underline">Mandaqui</Link>.</li>
+            <li><strong>Zona Leste:</strong> Atendemos com agilidade no <Link to="/servicos/$bairro" params={{ bairro: "tatuape" }} className="text-primary hover:underline">Tatuapé</Link>, Anália Franco, Mooca, Vila Formosa e Penha.</li>
             <li><strong>Centro e Região Metropolitana:</strong> Atendimento nos Jardins, Consolação, Higienópolis e também nas cidades do Grande ABC (Santo André, São Bernardo e São Caetano).</li>
           </ul>
 

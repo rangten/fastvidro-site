@@ -391,43 +391,43 @@ function Post() {
             <ul className="list-disc pl-6 space-y-2">
               <li>
                 <strong>Zona Sul:</strong>{" "}
-                <Link to="/servicos/morumbi" className="text-primary hover:underline font-bold">Morumbi</Link>,{" "}
-                <Link to="/servicos/santo-amaro" className="text-primary hover:underline font-bold">Santo Amaro</Link>,{" "}
-                <Link to="/servicos/brooklin" className="text-primary hover:underline font-bold">Brooklin</Link>,{" "}
-                <Link to="/servicos/vila-olimpia" className="text-primary hover:underline font-bold">Vila Olímpia</Link>,{" "}
-                <Link to="/servicos/moema" className="text-primary hover:underline font-bold">Moema</Link>,{" "}
-                <Link to="/servicos/saude" className="text-primary hover:underline font-bold">Saúde</Link> e arredores.
+                <Link to="/servicos/$bairro" params={{ bairro: "morumbi" }} className="text-primary hover:underline font-bold">Morumbi</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "santo-amaro" }} className="text-primary hover:underline font-bold">Santo Amaro</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "brooklin" }} className="text-primary hover:underline font-bold">Brooklin</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-olimpia" }} className="text-primary hover:underline font-bold">Vila Olímpia</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "moema" }} className="text-primary hover:underline font-bold">Moema</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "saude" }} className="text-primary hover:underline font-bold">Saúde</Link> e arredores.
               </li>
               <li>
                 <strong>Zona Oeste:</strong>{" "}
-                <Link to="/servicos/pinheiros" className="text-primary hover:underline font-bold">Pinheiros</Link>,{" "}
-                <Link to="/servicos/perdizes" className="text-primary hover:underline font-bold">Perdizes</Link>,{" "}
-                <Link to="/servicos/lapa" className="text-primary hover:underline font-bold">Lapa</Link>,{" "}
-                <Link to="/servicos/vila-madalena" className="text-primary hover:underline font-bold">Vila Madalena</Link>,{" "}
-                <Link to="/servicos/butanta" className="text-primary hover:underline font-bold">Butantã</Link> e{" "}
-                <Link to="/servicos/alto-de-pinheiros" className="text-primary hover:underline font-bold">Alto de Pinheiros</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "pinheiros" }} className="text-primary hover:underline font-bold">Pinheiros</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "perdizes" }} className="text-primary hover:underline font-bold">Perdizes</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "lapa" }} className="text-primary hover:underline font-bold">Lapa</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-madalena" }} className="text-primary hover:underline font-bold">Vila Madalena</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "butanta" }} className="text-primary hover:underline font-bold">Butantã</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "alto-de-pinheiros" }} className="text-primary hover:underline font-bold">Alto de Pinheiros</Link>.
               </li>
               <li>
                 <strong>Zona Norte:</strong>{" "}
-                <Link to="/servicos/santana" className="text-primary hover:underline font-bold">Santana</Link>,{" "}
-                <Link to="/servicos/tucuruvi" className="text-primary hover:underline font-bold">Tucuruvi</Link>,{" "}
-                <Link to="/servicos/vila-maria" className="text-primary hover:underline font-bold">Vila Maria</Link>,{" "}
-                <Link to="/servicos/casa-verde" className="text-primary hover:underline font-bold">Casa Verde</Link> e{" "}
-                <Link to="/servicos/freguesia-do-o" className="text-primary hover:underline font-bold">Freguesia do Ó</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "santana" }} className="text-primary hover:underline font-bold">Santana</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "tucuruvi" }} className="text-primary hover:underline font-bold">Tucuruvi</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-maria" }} className="text-primary hover:underline font-bold">Vila Maria</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "casa-verde" }} className="text-primary hover:underline font-bold">Casa Verde</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "freguesia-do-o" }} className="text-primary hover:underline font-bold">Freguesia do Ó</Link>.
               </li>
               <li>
                 <strong>Zona Leste:</strong>{" "}
-                <Link to="/servicos/tatuape" className="text-primary hover:underline font-bold">Tatuapé</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "tatuape" }} className="text-primary hover:underline font-bold">Tatuapé</Link>,{" "}
                 Anália Franco,{" "}
-                <Link to="/servicos/mooca" className="text-primary hover:underline font-bold">Mooca</Link>,{" "}
-                <Link to="/servicos/vila-formosa" className="text-primary hover:underline font-bold">Vila Formosa</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "mooca" }} className="text-primary hover:underline font-bold">Mooca</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-formosa" }} className="text-primary hover:underline font-bold">Vila Formosa</Link> e{" "}
                 Itaquera.
               </li>
               <li>
                 <strong>Centro e Região Metropolitana:</strong>{" "}
-                <Link to="/servicos/consolacao" className="text-primary hover:underline font-bold">Consolação</Link>,{" "}
-                <Link to="/servicos/bela-vista" className="text-primary hover:underline font-bold">Bela Vista</Link>,{" "}
-                <Link to="/servicos/jardins" className="text-primary hover:underline font-bold">Jardins</Link> e também a região do ABC (Santo André, São Bernardo e São Caetano).
+                <Link to="/servicos/$bairro" params={{ bairro: "consolacao" }} className="text-primary hover:underline font-bold">Consolação</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "bela-vista" }} className="text-primary hover:underline font-bold">Bela Vista</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "jardins" }} className="text-primary hover:underline font-bold">Jardins</Link> e também a região do ABC (Santo André, São Bernardo e São Caetano).
               </li>
             </ul>
             <p>

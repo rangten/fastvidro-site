@@ -436,45 +436,45 @@ function Post() {
             <ul className="list-disc pl-6 space-y-2">
               <li>
                 <strong>Zona Sul:</strong> Atendimento rápido no{" "}
-                <Link to="/servicos/morumbi" className="text-primary hover:underline font-bold">Morumbi</Link>,{" "}
-                <Link to="/servicos/moema" className="text-primary hover:underline font-bold">Moema</Link>,{" "}
-                <Link to="/servicos/brooklin" className="text-primary hover:underline font-bold">Brooklin</Link>,{" "}
-                <Link to="/servicos/vila-olimpia" className="text-primary hover:underline font-bold">Vila Olímpia</Link>,{" "}
-                <Link to="/servicos/campo-belo" className="text-primary hover:underline font-bold">Campo Belo</Link>,{" "}
-                <Link to="/servicos/santo-amaro" className="text-primary hover:underline font-bold">Santo Amaro</Link>,{" "}
-                <Link to="/servicos/saude" className="text-primary hover:underline font-bold">Saúde</Link> e{" "}
-                <Link to="/servicos/vila-mariana" className="text-primary hover:underline font-bold">Vila Mariana</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "morumbi" }} className="text-primary hover:underline font-bold">Morumbi</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "moema" }} className="text-primary hover:underline font-bold">Moema</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "brooklin" }} className="text-primary hover:underline font-bold">Brooklin</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-olimpia" }} className="text-primary hover:underline font-bold">Vila Olímpia</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "campo-belo" }} className="text-primary hover:underline font-bold">Campo Belo</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "santo-amaro" }} className="text-primary hover:underline font-bold">Santo Amaro</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "saude" }} className="text-primary hover:underline font-bold">Saúde</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-mariana" }} className="text-primary hover:underline font-bold">Vila Mariana</Link>.
               </li>
               <li>
                 <strong>Zona Oeste:</strong> Manutenções e novas instalações em{" "}
-                <Link to="/servicos/pinheiros" className="text-primary hover:underline font-bold">Pinheiros</Link>,{" "}
-                <Link to="/servicos/perdizes" className="text-primary hover:underline font-bold">Perdizes</Link>,{" "}
-                <Link to="/servicos/lapa" className="text-primary hover:underline font-bold">Lapa</Link>,{" "}
-                <Link to="/servicos/vila-madalena" className="text-primary hover:underline font-bold">Vila Madalena</Link>,{" "}
-                <Link to="/servicos/alto-de-pinheiros" className="text-primary hover:underline font-bold">Alto de Pinheiros</Link> e{" "}
-                <Link to="/servicos/butanta" className="text-primary hover:underline font-bold">Butantã</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "pinheiros" }} className="text-primary hover:underline font-bold">Pinheiros</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "perdizes" }} className="text-primary hover:underline font-bold">Perdizes</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "lapa" }} className="text-primary hover:underline font-bold">Lapa</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-madalena" }} className="text-primary hover:underline font-bold">Vila Madalena</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "alto-de-pinheiros" }} className="text-primary hover:underline font-bold">Alto de Pinheiros</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "butanta" }} className="text-primary hover:underline font-bold">Butantã</Link>.
               </li>
               <li>
                 <strong>Zona Norte:</strong> Atendimento técnico ágil em{" "}
-                <Link to="/servicos/santana" className="text-primary hover:underline font-bold">Santana</Link>,{" "}
-                <Link to="/servicos/tucuruvi" className="text-primary hover:underline font-bold">Tucuruvi</Link>,{" "}
-                <Link to="/servicos/casa-verde" className="text-primary hover:underline font-bold">Casa Verde</Link>,{" "}
-                <Link to="/servicos/freguesia-do-o" className="text-primary hover:underline font-bold">Freguesia do Ó</Link> e{" "}
-                <Link to="/servicos/mandaqui" className="text-primary hover:underline font-bold">Mandaqui</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "santana" }} className="text-primary hover:underline font-bold">Santana</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "tucuruvi" }} className="text-primary hover:underline font-bold">Tucuruvi</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "casa-verde" }} className="text-primary hover:underline font-bold">Casa Verde</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "freguesia-do-o" }} className="text-primary hover:underline font-bold">Freguesia do Ó</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "mandaqui" }} className="text-primary hover:underline font-bold">Mandaqui</Link>.
               </li>
               <li>
                 <strong>Zona Leste:</strong> Atendemos com frota própria no{" "}
-                <Link to="/servicos/tatuape" className="text-primary hover:underline font-bold">Tatuapé</Link>,{" "}
-                <Link to="/servicos/analia-franco" className="text-primary hover:underline font-bold">Anália Franco</Link>,{" "}
-                <Link to="/servicos/mooca" className="text-primary hover:underline font-bold">Mooca</Link>,{" "}
-                <Link to="/servicos/vila-formosa" className="text-primary hover:underline font-bold">Vila Formosa</Link> e{" "}
-                <Link to="/servicos/penha" className="text-primary hover:underline font-bold">Penha</Link>.
+                <Link to="/servicos/$bairro" params={{ bairro: "tatuape" }} className="text-primary hover:underline font-bold">Tatuapé</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "analia-franco" }} className="text-primary hover:underline font-bold">Anália Franco</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "mooca" }} className="text-primary hover:underline font-bold">Mooca</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "vila-formosa" }} className="text-primary hover:underline font-bold">Vila Formosa</Link> e{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "penha" }} className="text-primary hover:underline font-bold">Penha</Link>.
               </li>
               <li>
                 <strong>Centro e Região Metropolitana:</strong> Projetos
-                executados nos <Link to="/servicos/jardins" className="text-primary hover:underline font-bold">Jardins</Link>,{" "}
-                <Link to="/servicos/consolacao" className="text-primary hover:underline font-bold">Consolação</Link>,{" "}
-                <Link to="/servicos/higienopolis" className="text-primary hover:underline font-bold">Higienópolis</Link> e também no
+                executados nos <Link to="/servicos/$bairro" params={{ bairro: "jardins" }} className="text-primary hover:underline font-bold">Jardins</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "consolacao" }} className="text-primary hover:underline font-bold">Consolação</Link>,{" "}
+                <Link to="/servicos/$bairro" params={{ bairro: "higienopolis" }} className="text-primary hover:underline font-bold">Higienópolis</Link> e também no
                 Grande ABC (Santo André, São Bernardo e São Caetano).
               </li>
             </ul>
