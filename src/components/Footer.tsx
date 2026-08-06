@@ -43,6 +43,16 @@ export function Footer() {
         </div>
 
         <div>
+          <h4 className="text-sm font-bold tracking-widest text-primary">REGIÕES ATENDIDAS</h4>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li><Link to="/box-de-vidro-zona-norte" className="text-ink-foreground/80 hover:text-primary">Box de Vidro Zona Norte</Link></li>
+            <li><Link to="/box-de-vidro-zona-sul" className="text-ink-foreground/80 hover:text-primary">Box de Vidro Zona Sul</Link></li>
+            <li><Link to="/box-de-vidro-zona-oeste" className="text-ink-foreground/80 hover:text-primary">Box de Vidro Zona Oeste</Link></li>
+            <li><Link to="/box-de-vidro-zona-leste" className="text-ink-foreground/80 hover:text-primary">Box de Vidro Zona Leste</Link></li>
+          </ul>
+        </div>
+
+        <div>
           <h4 className="text-sm font-bold tracking-widest text-primary">PRODUTOS</h4>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/box-de-banheiro" className="text-ink-foreground/80 hover:text-primary">Box de Banheiro</Link></li>

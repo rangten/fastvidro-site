@@ -474,7 +474,7 @@ function Post() {
               ].map(([slug, name]) => (
                 <Link
                   key={slug}
-                  to="/servicos/$bairro"
+                  to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                   params={{ bairro: slug }}
                   className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition"
                 >
@@ -498,7 +498,7 @@ function Post() {
               ].map(([slug, name]) => (
                 <Link
                   key={slug}
-                  to="/servicos/$bairro"
+                  to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                   params={{ bairro: slug }}
                   className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition"
                 >
@@ -520,7 +520,7 @@ function Post() {
               ].map(([slug, name]) => (
                 <Link
                   key={slug}
-                  to="/servicos/$bairro"
+                  to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                   params={{ bairro: slug }}
                   className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition"
                 >
@@ -541,7 +541,7 @@ function Post() {
               ].map(([slug, name]) => (
                 <Link
                   key={slug}
-                  to="/servicos/$bairro"
+                  to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                   params={{ bairro: slug }}
                   className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition"
                 >
@@ -559,7 +559,7 @@ function Post() {
               ].map(([slug, name]) => (
                 <Link
                   key={slug}
-                  to="/servicos/$bairro"
+                  to="/servicos/$bairro" params={{ bairro: "$bairro" }}
                   params={{ bairro: slug }}
                   className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-bold uppercase tracking-wider hover:border-primary hover:text-primary transition"
                 >
