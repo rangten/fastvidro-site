@@ -36,7 +36,7 @@ export const Route = createFileRoute("/box-de-vidro-zona-leste")({
         h1="Box de Vidro para Banheiro na Zona Leste de São Paulo"
         subtitle="Qualidade, segurança e preço direto da fábrica para instalação de box de vidro na Zona Leste."
         heroImage={hero}
-        bairros={["Tatuapé", "Anália Franco", "Mooca", "Vila Formosa", "Belém", "Penha", "Vila Prudente", "Carrão", "Itaquera", "Aricanduva"]}
+        bairros={["Tatuapé", "Mooca", "Vila Formosa", "Belém", "Penha", "Vila Prudente", "Vila Carrão", "Ipiranga"]}
         intro="A Fast Vidro atende a Zona Leste de São Paulo com o melhor custo-benefício em box de banheiro: fabricação própria, vidro temperado de 8mm certificado e agilidade de entrega. Do Tatuapé a Itaquera, nossa equipe faz a medição gratuita e instala com garantia total."
         differentials={[
           { title: "Melhor custo-benefício", text: "Preço direto da fábrica, sem intermediários, com condições facilitadas de pagamento." },

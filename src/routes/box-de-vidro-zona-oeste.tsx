@@ -36,7 +36,7 @@ export const Route = createFileRoute("/box-de-vidro-zona-oeste")({
         h1="Instalação de Box de Banheiro na Zona Oeste de SP"
         subtitle="Agilidade na medição e modelos exclusivos de box de vidro temperado na Zona Oeste."
         heroImage={hero}
-        bairros={["Pinheiros", "Perdizes", "Lapa", "Vila Madalena", "Alto de Pinheiros", "Pompéia", "Butantã", "Vila Leopoldina", "Jaguaré", "Barra Funda"]}
+        bairros={["Pinheiros", "Perdizes", "Lapa", "Vila Madalena", "Butantã", "Pompéia", "Vila Leopoldina", "Barra Funda", "Vila Olímpia", "Alphaville", "Osasco", "Barueri"]}
         intro="A Zona Oeste concentra apartamentos modernos e reformas de estética refinada. A Fast Vidro atende a região com foco em sofisticação: perfis minimalistas, ferragens discretas e o box articulado Flex, ideal para banheiros compactos que exigem aproveitamento inteligente de cada centímetro."
         differentials={[
           { title: "Sofisticação no acabamento", text: "Perfis slim e ferragens em cores especiais para projetos assinados por arquitetos." },
