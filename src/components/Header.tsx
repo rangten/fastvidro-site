@@ -96,10 +96,13 @@ export function Header() {
             href="https://wa.me/5511990238648"
             target="_blank"
             rel="noopener"
-            className="hidden md:inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-primary-foreground transition hover:shadow-yellow"
+            className="inline-flex items-center gap-1.5 rounded-md bg-primary py-1 pl-2 pr-2.5 text-primary-foreground transition hover:shadow-yellow md:gap-2 md:px-3 md:py-2"
           >
-            <MessageCircle className="h-6 w-6 shrink-0" />
-            <span className="flex flex-col leading-tight text-left">
+            <MessageCircle className="h-4 w-4 shrink-0 md:h-6 md:w-6" />
+            <span className="text-[11px] font-black whitespace-nowrap md:hidden">
+              (11) 99023-8648
+            </span>
+            <span className="hidden flex-col leading-tight text-left md:flex">
               <span className="text-[10px] font-semibold uppercase tracking-wider">
                 WhatsApp e Orçamento
               </span>
