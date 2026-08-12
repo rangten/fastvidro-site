@@ -65,7 +65,7 @@ export function ProductPage({
             <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-card p-3 shadow-ink sm:p-4">
               <img
                 src={heroImage}
-                alt={title}
+                alt={heroImageAlt ?? title}
                 className="h-full w-full object-contain"
                 loading="lazy"
               />
