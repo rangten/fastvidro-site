@@ -215,10 +215,65 @@ function Home() {
           <div className="w-full">
             <img
               src={sobreFastVidroAsset}
-              alt="Box de banheiro em vidro temperado instalado pela Fast Vidro"
+              alt="Box de vidro temperado instalado em São Paulo - Fast Vidros"
               className="w-full h-auto max-h-[520px] object-cover rounded-xl shadow-ink"
               loading="lazy"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Bloco de conteúdo SEO — instalação de box em SP por região */}
+      <section className="bg-ink text-ink-foreground border-t border-white/10 py-16 lg:py-20">
+        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+          <div className="border-l-4 border-primary pl-6">
+            <h2 className="text-3xl lg:text-4xl font-black text-ink-foreground">
+              Instalação Rápida de Box de Banheiro em São Paulo
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-ink-foreground/80">
+              A Fast Vidros é especializada no fornecimento e instalação ágil de box para banheiro
+              em São Paulo. Trabalhamos com vidro temperado de alta resistência, acabamentos
+              impecáveis em alumínio e opções modernas para transformar o seu banheiro com agilidade,
+              segurança e transparência.
+            </p>
+
+            <h3 className="mt-10 text-2xl font-black text-primary">
+              Atendimento Especializado nos Principais Bairros de SP
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-ink-foreground/80">
+              Atendemos com medição rápida e equipe própria na Zona Norte (Santana, Tucuruvi,
+              Mandaqui, Vila Guilherme, Vila Maria, Casa Verde, Jaçanã, Tremembé, Limão e Imirim),
+              Zona Leste (Tatuapé, Mooca, Vila Carrão, Anália Franco e Belém), Zona Oeste (Lapa,
+              Vila Leopoldina, Perdizes e Pinheiros) e Zona Sul (Itaim Bibi, Moema, Vila Mariana e
+              Morumbi). Se você busca praticidade e cumprimento rigoroso de prazos, a Fast Vidros é
+              a sua melhor escolha.
+            </p>
+
+            <h3 className="mt-10 text-2xl font-black text-primary">
+              Diferenciais do Nosso Box de Vidro
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-ink-foreground/80">
+              Oferecemos modelos de box frontal de abrir, box de correr, box de canto e opções sob
+              medida com películas de proteção e materiais das melhores marcas do mercado. Cada
+              projeto é executado com foco na vedação eficiente e durabilidade dos acessórios.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { to: "/box-de-vidro-zona-norte", label: "Zona Norte" },
+              { to: "/box-de-vidro-zona-leste", label: "Zona Leste" },
+              { to: "/box-de-vidro-zona-oeste", label: "Zona Oeste" },
+              { to: "/box-de-vidro-zona-sul", label: "Zona Sul" },
+            ].map((r) => (
+              <Link
+                key={r.to}
+                to={r.to}
+                className="rounded-lg border border-white/10 bg-white/[0.03] px-4 py-4 text-center text-sm font-bold uppercase tracking-wide text-ink-foreground/90 hover:border-primary hover:text-primary transition"
+              >
+                Box {r.label}
+              </Link>
+            ))}
           </div>
         </div>
       </section>
