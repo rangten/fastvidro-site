@@ -114,7 +114,7 @@ function Home() {
                   <div className="absolute inset-0 flex items-center justify-center bg-white p-6">
                     <img
                       src={p.img}
-                      alt={p.title}
+                      alt={`${p.title} — película anti-estilhaço Fast Vidros`}
                       loading="lazy"
                       className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105"
                     />
@@ -122,7 +122,7 @@ function Home() {
                 ) : (
                   <img
                     src={p.img}
-                    alt={p.title}
+                    alt={`${p.title} em vidro temperado instalado em São Paulo - Fast Vidros`}
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
