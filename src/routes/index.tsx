@@ -84,7 +84,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative">
-            <img src={secureBoxHeroAsset} alt="Secure Box com película antiestilhaço — Fast Vidro" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
+            <img src={secureBoxHeroAsset} alt="Secure Box com película anti-estilhaço em vidro temperado instalado em São Paulo - Fast Vidros" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
           </div>
         </div>
       </section>
