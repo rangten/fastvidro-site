@@ -79,6 +79,69 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Bloco de links internos por região — SEO Local */}
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              zona: "Zona Norte",
+              links: [
+                ["santana", "Santana"],
+                ["tucuruvi", "Tucuruvi"],
+                ["mandaqui", "Mandaqui"],
+                ["vila-maria", "Vila Maria"],
+                ["casa-verde", "Casa Verde"],
+              ],
+            },
+            {
+              zona: "Zona Leste",
+              links: [
+                ["tatuape", "Tatuapé"],
+                ["mooca", "Mooca"],
+                ["vila-carrão", "Vila Carrão"],
+                ["analia-franco", "Anália Franco"],
+                ["belem", "Belém"],
+              ],
+            },
+            {
+              zona: "Zona Oeste",
+              links: [
+                ["lapa", "Lapa"],
+                ["vila-leopoldina", "Vila Leopoldina"],
+                ["perdizes", "Perdizes"],
+                ["pinheiros", "Pinheiros"],
+              ],
+            },
+            {
+              zona: "Zona Sul",
+              links: [
+                ["itaim-bibi", "Itaim Bibi"],
+                ["moema", "Moema"],
+                ["vila-mariana", "Vila Mariana"],
+                ["morumbi", "Morumbi"],
+              ],
+            },
+          ].map((g) => (
+            <div key={g.zona}>
+              <h4 className="text-xs font-bold tracking-widest text-primary">{g.zona.toUpperCase()}</h4>
+              <ul className="mt-3 space-y-1.5 text-sm">
+                {g.links.map(([slug, name]) => (
+                  <li key={slug}>
+                    <Link
+                      to="/servicos/$bairro"
+                      params={{ bairro: slug }}
+                      className="text-ink-foreground/70 hover:text-primary transition"
+                    >
+                      Box {name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="border-t border-white/10 py-5 text-center text-xs text-ink-foreground/50">
         © {new Date().getFullYear()} {SITE.name}. Todos os direitos reservados.
       </div>
