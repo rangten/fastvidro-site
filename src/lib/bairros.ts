@@ -52,7 +52,7 @@ export const ZONAS: ZonaInfo[] = [
     label: "Zona Leste",
     bairros: [
       "Mooca", "Penha", "Vila Formosa", "Tatuapé", "Vila Prudente",
-      "Belém", "Vila Carrão", "Ipiranga",
+      "Belém", "Vila Carrão", "Ipiranga", "Anália Franco",
     ],
     texto:
       "A Zona Leste se consolidou como uma das regiões com maior crescimento vertical e modernização residencial de São Paulo. Com rotinas dinâmicas, os novos apartamentos na ZL exigem inteligência na hora de otimizar espaço nos banheiros e salas. A Fast Vidro leva para a Zona Leste sistemas articulados (retráteis) e soluções sob medida que resolvem vãos estreitos, trazendo facilidade de limpeza e um acabamento industrial impecável.",
