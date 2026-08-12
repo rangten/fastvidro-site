@@ -19,10 +19,10 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fast Vidro — Agilidade e Segurança em Vidros" },
-      { name: "description", content: "Box de banheiro, portas de vidro, espelhos e projetos sob medida em São Paulo com tecnologia anti-estilhaço." },
-      { property: "og:title", content: "Fast Vidro — Agilidade e Segurança em Vidros" },
-      { property: "og:description", content: "Box, portas, espelhos e projetos personalizados em vidro. Orçamento rápido pelo WhatsApp." },
+      { title: "Box de Banheiro na Zona Norte e Toda SP com Entrega Rápida | Fast Vidros" },
+      { name: "description", content: "Box de banheiro em vidro temperado em São Paulo (Zona Norte, Sul, Leste e Oeste) com instalação rápida, tecnologia anti-estilhaço e acabamento premium. Peça orçamento pelo WhatsApp." },
+      { property: "og:title", content: "Box de Banheiro na Zona Norte e Toda SP com Entrega Rápida | Fast Vidros" },
+      { property: "og:description", content: "Instalação ágil de box de vidro temperado em toda São Paulo. Segurança, acabamento premium e entrega rápida." },
     ],
   }),
   component: Home,
