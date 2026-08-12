@@ -55,6 +55,7 @@ import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banhe
 import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro.nobre'
 import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
 import { Route as BoxDeBanheiroEleganceRouteImport } from './routes/box-de-banheiro.elegance'
+import { Route as BoxDeBanheiroDeAbrirRouteImport } from './routes/box-de-banheiro.de-abrir'
 import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
 import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
 import { Route as BlogManutencaoBoxBanheiroRouteImport } from './routes/blog_.manutencao-box-banheiro'
@@ -312,6 +313,11 @@ const BoxDeBanheiroEleganceRoute = BoxDeBanheiroEleganceRouteImport.update({
   path: '/box-de-banheiro/elegance',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BoxDeBanheiroDeAbrirRoute = BoxDeBanheiroDeAbrirRouteImport.update({
+  id: '/box-de-banheiro/de-abrir',
+  path: '/box-de-banheiro/de-abrir',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
   id: '/box-de-banheiro/$modelo',
   path: '/box-de-banheiro/$modelo',
@@ -483,6 +489,7 @@ export interface FileRoutesByFullPath {
   '/blog/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/de-abrir': typeof BoxDeBanheiroDeAbrirRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
@@ -555,6 +562,7 @@ export interface FileRoutesByTo {
   '/blog/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/de-abrir': typeof BoxDeBanheiroDeAbrirRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
@@ -628,6 +636,7 @@ export interface FileRoutesById {
   '/blog_/manutencao-box-banheiro': typeof BlogManutencaoBoxBanheiroRoute
   '/blog_/secure-box-pelicula-protecao': typeof BlogSecureBoxPeliculaProtecaoRoute
   '/box-de-banheiro/$modelo': typeof BoxDeBanheiroModeloRoute
+  '/box-de-banheiro/de-abrir': typeof BoxDeBanheiroDeAbrirRoute
   '/box-de-banheiro/elegance': typeof BoxDeBanheiroEleganceRoute
   '/box-de-banheiro/flex': typeof BoxDeBanheiroFlexRoute
   '/box-de-banheiro/nobre': typeof BoxDeBanheiroNobreRoute
@@ -702,6 +711,7 @@ export interface FileRouteTypes {
     | '/blog/manutencao-box-banheiro'
     | '/blog/secure-box-pelicula-protecao'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/de-abrir'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
@@ -774,6 +784,7 @@ export interface FileRouteTypes {
     | '/blog/manutencao-box-banheiro'
     | '/blog/secure-box-pelicula-protecao'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/de-abrir'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
@@ -846,6 +857,7 @@ export interface FileRouteTypes {
     | '/blog_/manutencao-box-banheiro'
     | '/blog_/secure-box-pelicula-protecao'
     | '/box-de-banheiro/$modelo'
+    | '/box-de-banheiro/de-abrir'
     | '/box-de-banheiro/elegance'
     | '/box-de-banheiro/flex'
     | '/box-de-banheiro/nobre'
@@ -919,6 +931,7 @@ export interface RootRouteChildren {
   BlogManutencaoBoxBanheiroRoute: typeof BlogManutencaoBoxBanheiroRoute
   BlogSecureBoxPeliculaProtecaoRoute: typeof BlogSecureBoxPeliculaProtecaoRoute
   BoxDeBanheiroModeloRoute: typeof BoxDeBanheiroModeloRoute
+  BoxDeBanheiroDeAbrirRoute: typeof BoxDeBanheiroDeAbrirRoute
   BoxDeBanheiroEleganceRoute: typeof BoxDeBanheiroEleganceRoute
   BoxDeBanheiroFlexRoute: typeof BoxDeBanheiroFlexRoute
   BoxDeBanheiroNobreRoute: typeof BoxDeBanheiroNobreRoute
@@ -1283,6 +1296,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BoxDeBanheiroEleganceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/box-de-banheiro/de-abrir': {
+      id: '/box-de-banheiro/de-abrir'
+      path: '/box-de-banheiro/de-abrir'
+      fullPath: '/box-de-banheiro/de-abrir'
+      preLoaderRoute: typeof BoxDeBanheiroDeAbrirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/box-de-banheiro/$modelo': {
       id: '/box-de-banheiro/$modelo'
       path: '/box-de-banheiro/$modelo'
@@ -1487,6 +1507,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogManutencaoBoxBanheiroRoute: BlogManutencaoBoxBanheiroRoute,
   BlogSecureBoxPeliculaProtecaoRoute: BlogSecureBoxPeliculaProtecaoRoute,
   BoxDeBanheiroModeloRoute: BoxDeBanheiroModeloRoute,
+  BoxDeBanheiroDeAbrirRoute: BoxDeBanheiroDeAbrirRoute,
   BoxDeBanheiroEleganceRoute: BoxDeBanheiroEleganceRoute,
   BoxDeBanheiroFlexRoute: BoxDeBanheiroFlexRoute,
   BoxDeBanheiroNobreRoute: BoxDeBanheiroNobreRoute,

@@ -8,12 +8,14 @@ export interface ProductPageProps {
   title: string;
   subtitle: string;
   heroImage: string;
+  /** Alt descritivo (com localização) para a imagem de destaque da seção "Sobre". */
+  heroImageAlt?: string;
   intro: string;
   // Base do link de cada modelo (ex: "/box-de-banheiro"). O slug é concatenado.
   modelLinkBase?: string;
   // Cada modelo aceita uma imagem opcional. Para usar suas fotos reais,
   // basta preencher `image` com a URL/import da foto do projeto instalado.
-  models: { slug?: string; name: string; description: string; image?: string }[];
+  models: { slug?: string; name: string; description: string; image?: string; imageAlt?: string }[];
   features: string[];
   ctaLabel?: string;
   seoHighlights?: { title: string; text: string }[];
@@ -27,6 +29,7 @@ export function ProductPage({
   title,
   subtitle,
   heroImage,
+  heroImageAlt,
   intro,
   models,
   modelLinkBase,
@@ -62,7 +65,7 @@ export function ProductPage({
             <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-card p-3 shadow-ink sm:p-4">
               <img
                 src={heroImage}
-                alt={title}
+                alt={heroImageAlt ?? title}
                 className="h-full w-full object-contain"
                 loading="lazy"
               />
@@ -91,7 +94,7 @@ export function ProductPage({
                     {m.image ? (
                       <img
                         src={m.image}
-                        alt={`Modelo ${m.name}`}
+                        alt={m.imageAlt ?? `Modelo ${m.name}`}
                         loading="lazy"
                         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                       />
