@@ -436,7 +436,7 @@ function Post() {
             <p>
               Atendimento preventivo rápido no{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "morumbi" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -444,7 +444,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "moema" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -452,7 +452,7 @@ function Post() {
               </Link>
               , Brooklin,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "vila-olimpia" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -460,7 +460,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "campo-belo" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -468,7 +468,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "santo-amaro" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -476,7 +476,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "saude" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -484,7 +484,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "ipiranga" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -492,7 +492,7 @@ function Post() {
               </Link>{" "}
               e{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "vila-mariana" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -505,7 +505,7 @@ function Post() {
             <p>
               Vistorias técnicas especializadas em{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "pinheiros" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -513,7 +513,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "perdizes" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -521,7 +521,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "lapa" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -529,7 +529,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "vila-madalena" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -542,7 +542,7 @@ function Post() {
             <p>
               Reparos e trocas de kits em{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "santana" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -550,7 +550,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "tucuruvi" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -558,7 +558,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "casa-verde" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -566,7 +566,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "freguesia-do-o" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -574,7 +574,7 @@ function Post() {
               </Link>{" "}
               e{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "mandaqui" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -587,7 +587,7 @@ function Post() {
             <p>
               Atendimento ágil nos bairros do{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "tatuape" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -595,7 +595,7 @@ function Post() {
               </Link>
               , Anália Franco,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "mooca" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -603,7 +603,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "vila-formosa" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -611,7 +611,7 @@ function Post() {
               </Link>
               , Belenzinho e{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "penha" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -626,7 +626,7 @@ function Post() {
             <p>
               Atendemos os{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "jardins" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -634,7 +634,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "consolacao" }}
                 className="text-primary hover:underline font-bold"
               >
@@ -642,7 +642,7 @@ function Post() {
               </Link>
               ,{" "}
               <Link
-                to="/servicos/$bairro" params={{ bairro: "$bairro" }}
+                to="/servicos/$bairro"
                 params={{ bairro: "higienopolis" }}
                 className="text-primary hover:underline font-bold"
               >

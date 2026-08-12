@@ -89,7 +89,7 @@ function ComoSaberQualBoxUsar() {
             Se o seu banheiro possui um vão curto, os modelos de correr tradicionais de duas folhas estão descartados, pois a porta ocuparia apenas metade do espaço, deixando a passagem livre estreita demais.
           </p>
           <p>
-            <strong>A Escolha Certa:</strong> Invista no <Link to="/box-de-banheiro/abrir" className="text-primary hover:underline font-semibold">Box de Abrir (Porta de Giro)</Link> — se houver área livre na frente para o raio de abertura da porta — ou no moderno <Link to="/box-de-banheiro/flex" className="text-primary hover:underline font-semibold">Box Flex (Sanfonado/Articulado)</Link>. O Box Flex dobra as folhas de vidro e as recolhe rente à parede, liberando até 90% do vão total para uma entrada confortável.
+            <strong>A Escolha Certa:</strong> Invista no <Link to="/box-de-banheiro/$modelo" params={{ modelo: "abrir" }} className="text-primary hover:underline font-semibold">Box de Abrir (Porta de Giro)</Link> — se houver área livre na frente para o raio de abertura da porta — ou no moderno <Link to="/box-de-banheiro/flex" className="text-primary hover:underline font-semibold">Box Flex (Sanfonado/Articulado)</Link>. O Box Flex dobra as folhas de vidro e as recolhe rente à parede, liberando até 90% do vão total para uma entrada confortável.
           </p>
 
           <h3>Vãos Médios (De 95 cm a 1,20 m)</h3>
