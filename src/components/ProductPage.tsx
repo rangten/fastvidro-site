@@ -29,6 +29,7 @@ export function ProductPage({
   title,
   subtitle,
   heroImage,
+  heroImageAlt,
   intro,
   models,
   modelLinkBase,
