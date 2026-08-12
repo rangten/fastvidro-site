@@ -12,9 +12,9 @@ import secureBoxLogo from "@/assets/secure-box-logo.png";
 import boxAbrirImg from "@/assets/tradicional-abrir.png";
 
 const CANONICAL = "https://www.fastvidro.com.br/box-de-banheiro";
-const META_TITLE = "Box de Banheiro na Zona Norte e Toda SP | Medição e Instalação Rápida";
+const META_TITLE = "Box de Banheiro em SP: Elegance, Flex e Secure Box | Fast Vidros";
 const META_DESC =
-  "Box de banheiro sob medida em vidro temperado na Zona Norte e toda São Paulo. Modelos Flex, Piso Teto, Tradicional, Secure, Elegance e de Abrir. Medição técnica gratuita e instalação rápida.";
+  "Instalação ágil de box de banheiro em vidro temperado na Zona Norte e SP. Conheça o Secure Box e modelos Elegance e Flex. Solicite orçamento via WhatsApp!";
 
 const H1_TITLE = "Box de Banheiro na Zona Norte e Toda SP | Mediação e Instalação Rápida";
 

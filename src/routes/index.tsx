@@ -19,10 +19,10 @@ import { waLink } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Box de Banheiro na Zona Norte e Toda SP com Entrega Rápida | Fast Vidros" },
-      { name: "description", content: "Box de banheiro em vidro temperado em São Paulo (Zona Norte, Sul, Leste e Oeste) com instalação rápida, tecnologia anti-estilhaço e acabamento premium. Peça orçamento pelo WhatsApp." },
-      { property: "og:title", content: "Box de Banheiro na Zona Norte e Toda SP com Entrega Rápida | Fast Vidros" },
-      { property: "og:description", content: "Instalação ágil de box de vidro temperado em toda São Paulo. Segurança, acabamento premium e entrega rápida." },
+      { title: "Box de Banheiro na Zona Norte e SP com Instalação Rápida | Fast Vidros" },
+      { name: "description", content: "Vidraçaria na Zona Norte e São Paulo. Box de banheiro sob medida, Secure Box com película de proteção, espelhos e portas. Medição e orçamento no mesmo dia!" },
+      { property: "og:title", content: "Box de Banheiro na Zona Norte e SP com Instalação Rápida | Fast Vidros" },
+      { property: "og:description", content: "Vidraçaria na Zona Norte e São Paulo. Box de banheiro sob medida, Secure Box com película de proteção, espelhos e portas. Medição e orçamento no mesmo dia!" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.fastvidro.com.br/" },
     ],
