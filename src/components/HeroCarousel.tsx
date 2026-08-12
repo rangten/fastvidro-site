@@ -38,14 +38,15 @@ const slides: Slide[] = [
   },
   {
     kind: "text",
-    eyebrow: "Fast Vidro",
+    eyebrow: "Fast Vidros",
     title: (
       <>
-        Agilidade e <span className="text-primary">segurança</span> em vidros.
+        Box de Banheiro na Zona Norte e Toda SP com{" "}
+        <span className="text-primary">Entrega Rápida</span>
       </>
     ),
     subtitle:
-      "Box de banheiro, portas, espelhos e projetos sob medida com tecnologia anti-estilhaço e instalação rápida.",
+      "Instalação ágil de box em vidro temperado em toda São Paulo — Zona Norte, Leste, Oeste e Sul — com tecnologia anti-estilhaço e acabamento premium.",
     desktopImage: heroDefault,
     mobileImage: heroDefault,
     primary: { label: "Pedir orçamento", href: waLink(), icon: <MessageCircle className="h-4 w-4" /> },
