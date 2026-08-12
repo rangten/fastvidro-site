@@ -10,10 +10,10 @@ const category = CATEGORIES["espelhos"];
 export const Route = createFileRoute("/espelhos/")({
   head: () => ({
     meta: [
-      { title: "Espelhos sob medida — Fast Vidro" },
-      { name: "description", content: "Espelhos decorativos, para banheiro e parede inteira. Acabamentos com lapidação reta ou bisotê." },
-      { property: "og:title", content: "Espelhos sob medida — Fast Vidro" },
-      { property: "og:description", content: "Espelhos com acabamento premium para qualquer ambiente." },
+      { title: "Espelhos Sob Medida na Zona Norte e SP | LED e Bisotê | Fast Vidros" },
+      { name: "description", content: "Espelhos decorativos, orgânicos, com LED e bisotê para banheiros e ambientes. Fabricação e instalação sob medida em toda São Paulo." },
+      { property: "og:title", content: "Espelhos Sob Medida na Zona Norte e SP | LED e Bisotê | Fast Vidros" },
+      { property: "og:description", content: "Espelhos decorativos, orgânicos, com LED e bisotê para banheiros e ambientes. Fabricação e instalação sob medida em toda São Paulo." },
     ],
   }),
   component: () => (
