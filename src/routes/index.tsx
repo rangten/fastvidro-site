@@ -290,6 +290,15 @@ function Home() {
               medida com películas de proteção e materiais das melhores marcas do mercado. Cada
               projeto é executado com foco na vedação eficiente e durabilidade dos acessórios.
             </p>
+
+            <p className="mt-4 text-base leading-relaxed text-ink-foreground/80">
+              Também oferecemos a linha exclusiva{" "}
+              <Link to="/box-de-banheiro/secure-box" className="font-bold text-primary hover:underline">
+                <strong>Secure Box</strong>
+              </Link>
+              : box de vidro temperado acompanhado de película de proteção para evitar acidentes e
+              garantir a retenção de estilhaços. Ideal para famílias com crianças e idosos.
+            </p>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
