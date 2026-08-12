@@ -94,7 +94,7 @@ export function ProductPage({
                     {m.image ? (
                       <img
                         src={m.image}
-                        alt={`Modelo ${m.name}`}
+                        alt={m.imageAlt ?? `Modelo ${m.name}`}
                         loading="lazy"
                         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                       />
