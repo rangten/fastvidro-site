@@ -23,6 +23,39 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Box de banheiro em vidro temperado em São Paulo (Zona Norte, Sul, Leste e Oeste) com instalação rápida, tecnologia anti-estilhaço e acabamento premium. Peça orçamento pelo WhatsApp." },
       { property: "og:title", content: "Box de Banheiro na Zona Norte e Toda SP com Entrega Rápida | Fast Vidros" },
       { property: "og:description", content: "Instalação ágil de box de vidro temperado em toda São Paulo. Segurança, acabamento premium e entrega rápida." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.fastvidro.com.br/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://www.fastvidro.com.br/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.fastvidro.com.br/#business",
+          name: "Fast Vidros",
+          description: "Box de banheiro, portas de vidro, espelhos e espelhos LED. Projetos sob medida com tecnologia anti-estilhaço em São Paulo.",
+          url: "https://www.fastvidro.com.br/",
+          telephone: "+5511990238648",
+          image: "https://www.fastvidro.com.br/favicon.png",
+          priceRange: "$$",
+          areaServed: { "@type": "City", name: "São Paulo, SP" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "São Paulo",
+            addressRegion: "SP",
+            addressCountry: "BR",
+          },
+          sameAs: [
+            "https://instagram.com/fast.vidro",
+            "https://tiktok.com/@fastvidro",
+            "https://g.page/fastvidro",
+          ],
+        }),
+      },
     ],
   }),
   component: Home,
@@ -256,6 +289,15 @@ function Home() {
               Oferecemos modelos de box frontal de abrir, box de correr, box de canto e opções sob
               medida com películas de proteção e materiais das melhores marcas do mercado. Cada
               projeto é executado com foco na vedação eficiente e durabilidade dos acessórios.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-ink-foreground/80">
+              Também oferecemos a linha exclusiva{" "}
+              <Link to="/box-de-banheiro/secure-box" className="font-bold text-primary hover:underline">
+                <strong>Secure Box</strong>
+              </Link>
+              : box de vidro temperado acompanhado de película de proteção para evitar acidentes e
+              garantir a retenção de estilhaços. Ideal para famílias com crianças e idosos.
             </p>
           </div>
 
