@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-versatik.png";
+import img from "@/assets/porta-versatik.webp";
 
 const TITLE = "Porta Versatik em SP | Sistema de Portas Simultâneas - Fast Vidro";
 const DESC = "Conheça a Porta Versatik na Zona Norte de SP. Tecnologia de engenharia que move várias folhas de vidro ao mesmo tempo, liberando vãos gigantes. Peça orçamento!";

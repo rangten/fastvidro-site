@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-residencial.jpg";
+import hero from "@/assets/projeto-residencial.webp";
 
 const TITLE = "Projetos Residenciais em Vidro em SP | Sob Medida - Fast Vidro";
 const DESC = "Engenharia em vidros para projetos residenciais na Zona Norte de SP. Instalação sob medida de portas, janelas, escadas, guarda-corpo, espelhos e coberturas. Peça seu orçamento!";

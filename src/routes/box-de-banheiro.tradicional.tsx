@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/tradicional-cover.png";
-import imgCanto from "@/assets/tradicional-canto.png";
-import imgAbrir from "@/assets/tradicional-abrir.png";
-import imgCorrer from "@/assets/tradicional-correr.png";
+import cover from "@/assets/tradicional-cover.webp";
+import imgCanto from "@/assets/tradicional-canto.webp";
+import imgAbrir from "@/assets/tradicional-abrir.webp";
+import imgCorrer from "@/assets/tradicional-correr.webp";
 
 const META_TITLE = "Box Tradicional de Vidro em SP | Modelos de Correr e Abrir - Fast Vidro";
 const META_DESC =

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-casa-verde-imirim-cover.png";
+import cover from "@/assets/blog-box-casa-verde-imirim-cover.webp";
 
 const TITLE =
   "Box de Banheiro na Casa Verde e Imirim: Modelos, Preços e Segurança para Sua Reforma | Vidraçaria Zona Norte";

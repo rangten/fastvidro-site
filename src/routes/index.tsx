@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shield, Zap, Award, Hammer, Star, ArrowRight } from "lucide-react";
-import boxImgAsset from "@/assets/card-box-banheiro.png";
-import portasImgAsset from "@/assets/card-portas-vidro.png";
-import espelhosImgAsset from "@/assets/card-espelhos.jpg";
-import projetosImgAsset from "@/assets/card-projetos.png";
-import secureBoxLogo from "@/assets/secure-box-logo.png";
-import secureBoxHeroAsset from "@/assets/secure-box-hero.png";
-import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.jpg";
+import boxImgAsset from "@/assets/card-box-banheiro.webp";
+import portasImgAsset from "@/assets/card-portas-vidro.webp";
+import espelhosImgAsset from "@/assets/card-espelhos.webp";
+import projetosImgAsset from "@/assets/card-projetos.webp";
+import secureBoxLogo from "@/assets/secure-box-logo.webp";
+import secureBoxHeroAsset from "@/assets/secure-box-hero.webp";
+import sobreFastVidroAsset from "@/assets/sobre-fast-vidro.webp";
 const boxImg = boxImgAsset;
 const portasImg = portasImgAsset;
 const espelhosImg = espelhosImgAsset;
@@ -15,6 +15,9 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { RegioesAtendidasCard } from "@/components/RegioesAtendidasCard";
 import { waLink } from "@/lib/site";
+import heroBoxMobile from "@/assets/hero-box-mobile.webp";
+import heroBoxDesktop from "@/assets/hero-box-desktop.webp";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,7 +31,10 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.fastvidro.com.br/" },
+      { rel: "preload", as: "image", href: heroBoxMobile, media: "(max-width: 767px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroBoxDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
     ],
+
     scripts: [
       {
         type: "application/ld+json",
@@ -117,7 +123,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative">
-            <img src={secureBoxHeroAsset} alt="Secure Box com película anti-estilhaço em vidro temperado instalado em São Paulo - Fast Vidros" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
+            <img src={secureBoxHeroAsset} width={1200} height={800} decoding="async" alt="Secure Box com película anti-estilhaço em vidro temperado instalado em São Paulo - Fast Vidros" className="rounded-xl shadow-ink w-full max-h-[520px] object-cover" loading="lazy" />
           </div>
         </div>
       </section>
@@ -148,6 +154,9 @@ function Home() {
                     <img
                       src={p.img}
                       alt={`${p.title} — película anti-estilhaço Fast Vidros`}
+                      width={600}
+                      height={750}
+                      decoding="async"
                       loading="lazy"
                       className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-105"
                     />
@@ -156,6 +165,9 @@ function Home() {
                   <img
                     src={p.img}
                     alt={`${p.title} em vidro temperado instalado em São Paulo - Fast Vidros`}
+                    width={600}
+                    height={750}
+                    decoding="async"
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
@@ -249,6 +261,9 @@ function Home() {
             <img
               src={sobreFastVidroAsset}
               alt="Box de vidro temperado instalado em São Paulo - Fast Vidros"
+              width={1200}
+              height={800}
+              decoding="async"
               className="w-full h-auto max-h-[520px] object-cover rounded-xl shadow-ink"
               loading="lazy"
             />

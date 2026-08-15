@@ -71,7 +71,8 @@ export function PortaSeoPage({
                   src={heroImage}
                   alt={heroImageAlt}
                   className="w-full h-auto object-cover"
-                />
+loading="eager" fetchPriority="high" decoding="async"
+/>
               </div>
             </div>
           </div>

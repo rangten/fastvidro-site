@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MirrorSeoPage } from "@/components/MirrorSeoPage";
-import painelEspelho from "@/assets/painel-espelho.jpg";
+import painelEspelho from "@/assets/painel-espelho.webp";
 
 export const Route = createFileRoute("/espelhos/painel")({
   head: () => ({

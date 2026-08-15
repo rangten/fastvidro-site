@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/piso-teto-cover.png";
-import img2 from "@/assets/piso-teto-2.png";
-import img3 from "@/assets/piso-teto-3.png";
-import img4 from "@/assets/piso-teto-4.png";
+import cover from "@/assets/piso-teto-cover.webp";
+import img2 from "@/assets/piso-teto-2.webp";
+import img3 from "@/assets/piso-teto-3.webp";
+import img4 from "@/assets/piso-teto-4.webp";
 
 const META_TITLE = "Box Piso ao Teto em SP | Box Até o Teto Efeito Sauna - Fast Vidro";
 const META_DESC =

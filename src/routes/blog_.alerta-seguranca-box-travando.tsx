@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-alerta-seguranca-box-travando-cover.png";
+import cover from "@/assets/blog-alerta-seguranca-box-travando-cover.webp";
 
 const TITLE =
   "Alerta de Segurança: Box Travando ou Emperrado? Pare de Usar Agora e Chame a Assistência! | Fast Vidro";

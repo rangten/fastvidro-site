@@ -5,12 +5,12 @@ import { bairroFromSlug } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { BoxVariationTabs } from "@/components/BoxVariationTabs";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
-import projeto1 from "@/assets/projeto-box-piso-teto-frontal-reto.jpg";
-import projeto2 from "@/assets/projeto-box-canto-tradicional-reto.jpg";
-import projeto3 from "@/assets/projeto-box-flex.jpg";
-import projeto4 from "@/assets/projeto-box-porta-abrir.jpg";
-import projeto5 from "@/assets/projeto-box-piso-teto-canto-cromado.jpg";
+import heroImg from "@/assets/regioes-sp-hero.webp";
+import projeto1 from "@/assets/projeto-box-piso-teto-frontal-reto.webp";
+import projeto2 from "@/assets/projeto-box-canto-tradicional-reto.webp";
+import projeto3 from "@/assets/projeto-box-flex.webp";
+import projeto4 from "@/assets/projeto-box-porta-abrir.webp";
+import projeto5 from "@/assets/projeto-box-piso-teto-canto-cromado.webp";
 
 const PROJETOS_HERO = [
   { src: projeto1, modelo: "Box Piso Teto Frontal Kit Reto" },

@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ZonaBoxPage, faqJsonLd } from "@/components/ZonaBoxPage";
-import hero from "@/assets/box-banheiro-hero-real.png";
-import tradCover from "@/assets/tradicional-cover.png";
-import tradCorrer from "@/assets/tradicional-correr.png";
-import tradCanto from "@/assets/tradicional-canto.png";
-import pisoTetoCover from "@/assets/piso-teto-cover.png";
+import hero from "@/assets/box-banheiro-hero-real.webp";
+import tradCover from "@/assets/tradicional-cover.webp";
+import tradCorrer from "@/assets/tradicional-correr.webp";
+import tradCanto from "@/assets/tradicional-canto.webp";
+import pisoTetoCover from "@/assets/piso-teto-cover.webp";
 
 const FAQ = [
   { q: "Qual o preço de um box de vidro na Zona Leste?", a: "O valor depende do vão, do modelo e da cor do vidro. Enviamos o orçamento pelo WhatsApp em poucos minutos após as medidas iniciais." },

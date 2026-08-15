@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
-import coverImg from "@/assets/blog-qual-box-usar-cover.png";
-import heroImg from "@/assets/product-projetos.jpg";
+import coverImg from "@/assets/blog-qual-box-usar-cover.webp";
+import heroImg from "@/assets/product-projetos.webp";
 import { waLink, WA_MESSAGES } from "@/lib/site";
 import { Phone, ShieldCheck, Palette, Box, ChevronRight } from "lucide-react";
 
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/blog_/como-saber-qual-box-usar")({
       { property: "og:title", content: "Como Saber Qual Box Usar? Guia Definitivo para Escolher o Box de Vidro Perfeito — Fast Vidro" },
       { property: "og:description", content: "Aprenda a escolher o box de banheiro ideal: análise de vão, layout, altura e segurança. Guia completo da Fast Vidro com tabela de decisão rápida." },
       { property: "og:type", content: "article" },
-      { property: "og:image", content: "https://glass-swift-site.lovable.app/src/assets/blog-qual-box-usar-cover.png" },
+      { property: "og:image", content: "https://glass-swift-site.lovable.app/src/assets/blog-qual-box-usar-cover.webp" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "article:published_time", content: "2026-07-06" },
       { name: "robots", content: "index, follow" },
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog_/como-saber-qual-box-usar")({
           "@type": "Article",
           headline: "Como Saber Qual Box Usar? O Guia Definitivo para Escolher o Box de Vidro Perfeito para Seu Banheiro",
           description: "Aprenda a escolher o box de banheiro ideal: análise de vão, layout, altura e segurança. Guia completo da Fast Vidro com tabela de decisão rápida.",
-          image: "https://glass-swift-site.lovable.app/src/assets/blog-qual-box-usar-cover.png",
+          image: "https://glass-swift-site.lovable.app/src/assets/blog-qual-box-usar-cover.webp",
           author: { "@type": "Organization", name: "Fast Vidro" },
           publisher: {
             "@type": "Organization",

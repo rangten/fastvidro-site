@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-fechamento-sacada.png";
+import hero from "@/assets/projeto-fechamento-sacada.webp";
 
 const TITLE = "Fechamento de Sacada em SP | Envidraçamento de Sacadas - Fast Vidro";
 const DESC = "Ganhe um novo ambiente com o fechamento de sacada na Zona Norte de SP. Envidraçamento retrátil articulado com vedação total contra chuva, vento e poeira. Peça seu orçamento!";

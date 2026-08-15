@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/tradicional-abrir.png";
-import imgAbrir from "@/assets/tradicional-abrir.png";
-import imgCorrer from "@/assets/tradicional-correr.png";
-import imgCanto from "@/assets/tradicional-canto.png";
+import cover from "@/assets/tradicional-abrir.webp";
+import imgAbrir from "@/assets/tradicional-abrir.webp";
+import imgCorrer from "@/assets/tradicional-correr.webp";
+import imgCanto from "@/assets/tradicional-canto.webp";
 
 const CANONICAL = "https://www.fastvidro.com.br/box-de-banheiro/de-abrir";
 const META_TITLE = "Box de Abrir em SP | Porta de Giro em Vidro Temperado - Fast Vidro";

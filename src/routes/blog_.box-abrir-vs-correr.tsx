@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-abrir-vs-correr-cover.png";
+import cover from "@/assets/blog-box-abrir-vs-correr-cover.webp";
 
 const TITLE =
   "Box de Abrir (Porta de Giro) vs. Box de Correr: Quando Escolher Cada Modelo? | Fast Vidro";

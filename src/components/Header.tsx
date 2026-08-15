@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/fast-vidro-logo.png";
-import secureBoxLogo from "@/assets/secure-box-logo.png";
+import logoAsset from "@/assets/fast-vidro-logo.webp";
+import secureBoxLogo from "@/assets/secure-box-logo.webp";
 import { waLink } from "@/lib/site";
 
 type NavItem = {
@@ -30,7 +30,8 @@ export function Header() {
             src={logoAsset}
             alt="Fast Vidro"
             className="h-20 sm:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(250,204,21,0.15)]"
-          />
+loading="lazy" decoding="async"
+/>
         </Link>
 
 
@@ -47,7 +48,8 @@ export function Header() {
                   src={n.image.src}
                   alt={n.image.alt}
                   className="h-16 lg:h-20 w-auto object-contain bg-black rounded-lg px-3 py-1.5 shadow-md ring-1 ring-primary/30"
-                />
+loading="lazy" decoding="async"
+/>
               ) : (
                 n.label
               )}
@@ -107,7 +109,8 @@ export function Header() {
                     src={n.image.src}
                     alt={n.image.alt}
                     className="h-14 w-auto object-contain bg-black rounded-lg px-2.5 py-1 shadow-md ring-1 ring-primary/30"
-                  />
+loading="lazy" decoding="async"
+/>
                 )}
                 <span>{n.label}</span>
               </Link>

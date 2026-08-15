@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-jardim-sao-paulo-cover.png";
+import cover from "@/assets/blog-box-jardim-sao-paulo-cover.webp";
 
 const TITLE =
   "Box de Banheiro no Jardim São Paulo: Modelos de Alto Padrão, Segurança e Instalação sob Medida | Vidraçaria Zona Norte";

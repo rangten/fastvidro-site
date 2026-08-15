@@ -6,14 +6,14 @@ import { getModel } from "@/lib/catalog";
 import { bairroFromSlug, type ZonaInfo } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
-import pCorrer from "@/assets/porta-correr.png";
-import pVersatik from "@/assets/porta-versatik.png";
-import pGiro from "@/assets/porta-de-giro.png";
-import pFlex from "@/assets/porta-flex.png";
-import pNobre from "@/assets/porta-nobre.png";
-import pVision from "@/assets/porta-vision.png";
-import pFachada from "@/assets/portas-vidro-hero-fachada.png";
+import heroImg from "@/assets/regioes-sp-hero.webp";
+import pCorrer from "@/assets/porta-correr.webp";
+import pVersatik from "@/assets/porta-versatik.webp";
+import pGiro from "@/assets/porta-de-giro.webp";
+import pFlex from "@/assets/porta-flex.webp";
+import pNobre from "@/assets/porta-nobre.webp";
+import pVision from "@/assets/porta-vision.webp";
+import pFachada from "@/assets/portas-vidro-hero-fachada.webp";
 
 const GALERIA = [
   { src: pCorrer, modelo: "Porta de Correr" },

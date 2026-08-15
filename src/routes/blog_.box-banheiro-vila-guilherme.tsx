@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-vila-guilherme-cover.png";
+import cover from "@/assets/blog-box-vila-guilherme-cover.webp";
 
 const TITLE =
   "Box de Banheiro na Vila Guilherme: Guia de Modelos, Design e Segurança para Seu Banheiro | Vidraçaria Zona Norte";

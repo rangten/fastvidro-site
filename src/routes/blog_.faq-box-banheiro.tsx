@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar, HelpCircle, ShieldCheck, Palette, Box, ChevronRight, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-faq-box-banheiro-cover.png";
+import cover from "@/assets/blog-faq-box-banheiro-cover.webp";
 
 const TITLE =
   "Guia de Dúvidas Frequentes (FAQ): Tudo o que Você Precisa Saber antes de Comprar Seu Box de Vidro | Fast Vidro";

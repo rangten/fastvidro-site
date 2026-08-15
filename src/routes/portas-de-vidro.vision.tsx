@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-vision.png";
+import img from "@/assets/porta-vision.webp";
 
 const TITLE = "Porta Vision em SP | Engenharia de Roldanas Aparentes - Fast Vidro";
 const DESC = "Conheça a Porta Vision com roldanas aparentes de alta performance na Zona Norte de SP. Design inovador e deslizamento ultra suave para divisões de ambientes. Peça orçamento!";

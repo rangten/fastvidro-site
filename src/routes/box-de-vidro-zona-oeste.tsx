@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ZonaBoxPage, faqJsonLd } from "@/components/ZonaBoxPage";
-import hero from "@/assets/box-banheiro-hero-real.png";
-import flexCover from "@/assets/flex-cover.png";
-import flex1 from "@/assets/flex-1.png";
-import flex2 from "@/assets/flex-2.png";
-import eleganceCover from "@/assets/elegance-cover.png";
+import hero from "@/assets/box-banheiro-hero-real.webp";
+import flexCover from "@/assets/flex-cover.webp";
+import flex1 from "@/assets/flex-1.webp";
+import flex2 from "@/assets/flex-2.webp";
+import eleganceCover from "@/assets/elegance-cover.webp";
 
 const FAQ = [
   { q: "O box articulado (Flex) serve para banheiro pequeno?", a: "Sim. O modelo Flex dobra as folhas de vidro para dentro do vão, liberando circulação — é a melhor escolha para banheiros compactos da Zona Oeste." },

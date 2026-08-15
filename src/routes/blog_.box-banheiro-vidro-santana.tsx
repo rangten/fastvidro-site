@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-banheiro-santana-cover.png";
+import cover from "@/assets/blog-box-banheiro-santana-cover.webp";
 
 const TITLE =
   "Box de Banheiro em Vidro em Santana: Segurança e Elegância para Seu Projeto | Vidraçaria Santana";

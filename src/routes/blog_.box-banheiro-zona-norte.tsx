@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-zona-norte-cover.png";
+import cover from "@/assets/blog-box-zona-norte-cover.webp";
 
 const TITLE =
   "Onde Encontrar Box de Banheiro na Zona Norte de SP? Guia Completo de Modelos, Preços e Segurança | Vidraçaria Zona Norte";
@@ -82,7 +82,8 @@ function Post() {
               src={cover}
               alt="Box de banheiro na Zona Norte de SP com película Secure Box — Fast Vidro"
               className="w-full h-auto object-cover"
-            />
+loading="eager" fetchPriority="high" decoding="async"
+/>
           </figure>
 
           <div className="prose-fast mt-10 space-y-5 text-base leading-relaxed text-foreground/90">
