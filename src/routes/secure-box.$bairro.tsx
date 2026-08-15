@@ -4,11 +4,11 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { bairroFromSlug, type ZonaInfo } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
-import secureHero from "@/assets/secure-box-hero.png";
-import securePelicula from "@/assets/secure-box-pelicula.png";
-import secureLogo from "@/assets/secure-box-logo.png";
-import secureCover from "@/assets/blog-secure-box-cover.png";
+import heroImg from "@/assets/regioes-sp-hero.webp";
+import secureHero from "@/assets/secure-box-hero.webp";
+import securePelicula from "@/assets/secure-box-pelicula.webp";
+import secureLogo from "@/assets/secure-box-logo.webp";
+import secureCover from "@/assets/blog-secure-box-cover.webp";
 
 const GALERIA = [
   { src: secureHero, modelo: "Secure Box Instalado" },

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/comercial-interior.png";
+import hero from "@/assets/comercial-interior.webp";
 
 const TITLE = "Vidraçaria para Projetos Comerciais em SP | Vitrines - Fast Vidro";
 const DESC = "Especialista em projetos comerciais na Zona Norte de SP. Instalação de vitrines de lojas, portas de vidro temperado e janelas institucionais de alta resistência. Solicite orçamento!";

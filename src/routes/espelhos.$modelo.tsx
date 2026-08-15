@@ -6,13 +6,13 @@ import { getModel } from "@/lib/catalog";
 import { bairroFromSlug, type ZonaInfo } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
-import espOrganico from "@/assets/espelho-organico.png";
-import espBisote from "@/assets/espelho-bisote.png";
-import espLapidado from "@/assets/espelho-lapidado.png";
-import espBanheiro from "@/assets/espelho-banheiro.jpg";
-import espPainel from "@/assets/painel-espelho.jpg";
-import espSala from "@/assets/espelhos-hero-sala-jantar.png";
+import heroImg from "@/assets/regioes-sp-hero.webp";
+import espOrganico from "@/assets/espelho-organico.webp";
+import espBisote from "@/assets/espelho-bisote.webp";
+import espLapidado from "@/assets/espelho-lapidado.webp";
+import espBanheiro from "@/assets/espelho-banheiro.webp";
+import espPainel from "@/assets/painel-espelho.webp";
+import espSala from "@/assets/espelhos-hero-sala-jantar.webp";
 
 const GALERIA = [
   { src: espOrganico, modelo: "Espelho Orgânico" },

@@ -3,8 +3,8 @@ import { ArrowLeft, Check, MessageCircle, Shield } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import secureBoxLogo from "@/assets/secure-box-logo.png";
-import secureBoxPelicula from "@/assets/secure-box-pelicula.png";
+import secureBoxLogo from "@/assets/secure-box-logo.webp";
+import secureBoxPelicula from "@/assets/secure-box-pelicula.webp";
 
 const META_TITLE = "Secure Box em SP | Box com Película Antiestilhaço - Fast Vidro";
 const META_DESC =

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-de-canto-cover.png";
+import cover from "@/assets/blog-box-de-canto-cover.webp";
 
 const TITLE =
   "Box de Canto (Em L / Angular): A Solução Inteligente para Otimizar Banheiros Quadrados e Quinas | Fast Vidro";

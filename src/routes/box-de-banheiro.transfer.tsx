@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/transfer-cover.png";
-import img1 from "@/assets/transfer-1.png";
-import img2 from "@/assets/transfer-2.png";
-import img3 from "@/assets/transfer-3.png";
-import img4 from "@/assets/transfer-4.png";
+import cover from "@/assets/transfer-cover.webp";
+import img1 from "@/assets/transfer-1.webp";
+import img2 from "@/assets/transfer-2.webp";
+import img3 from "@/assets/transfer-3.webp";
+import img4 from "@/assets/transfer-4.webp";
 
 const META_TITLE = "Box Transfer 3 Portas em SP | Box para Vãos Pequenos - Fast Vidro";
 const META_DESC =

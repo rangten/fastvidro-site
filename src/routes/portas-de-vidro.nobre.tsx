@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-nobre.png";
+import img from "@/assets/porta-nobre.webp";
 
 const TITLE = "Porta Nobre com Amortecedor em SP | Alumínio Reforçado - Fast Vidro";
 const DESC = "Procurando Porta Nobre com sistema de amortecimento duplo na Zona Norte de SP? Conheça o modelo premium com perfis robustos para fechamentos e divisórias. Peça seu orçamento!";

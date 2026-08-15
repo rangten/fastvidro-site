@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-correr.png";
+import img from "@/assets/porta-correr.webp";
 
 const TITLE = "Porta de Correr de Vidro em SP | Divisória de Ambientes - Fast Vidro";
 const DESC = "Otimize seu espaço com a Porta de Correr de Vidro na Zona Norte de SP. Deslizamento suave sobre trilhos para integrar ou dividir salas e cozinhas. Peça seu orçamento!";

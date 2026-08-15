@@ -6,14 +6,14 @@ import { getModel } from "@/lib/catalog";
 import { bairroFromSlug, type ZonaInfo } from "@/lib/bairros";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { RegioesPremiumFooter } from "@/components/RegioesPremiumFooter";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
-import pGuardaCorpo from "@/assets/projeto-guarda-corpo.png";
-import pSacada from "@/assets/projeto-fechamento-sacada.png";
-import pCoberturas from "@/assets/projeto-coberturas.png";
-import pComercial from "@/assets/projeto-comercial.png";
-import pEscritorios from "@/assets/projeto-escritorios.png";
-import pResidencial from "@/assets/projeto-residencial.jpg";
-import pFachada from "@/assets/projetos-hero-fachada-clara.png";
+import heroImg from "@/assets/regioes-sp-hero.webp";
+import pGuardaCorpo from "@/assets/projeto-guarda-corpo.webp";
+import pSacada from "@/assets/projeto-fechamento-sacada.webp";
+import pCoberturas from "@/assets/projeto-coberturas.webp";
+import pComercial from "@/assets/projeto-comercial.webp";
+import pEscritorios from "@/assets/projeto-escritorios.webp";
+import pResidencial from "@/assets/projeto-residencial.webp";
+import pFachada from "@/assets/projetos-hero-fachada-clara.webp";
 
 const GALERIA = [
   { src: pGuardaCorpo, modelo: "Guarda-corpo de Vidro" },

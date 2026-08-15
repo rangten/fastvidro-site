@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, MessageCircle, ArrowRight, Shield } from "lu
 import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
-import heroDefault from "@/assets/hero-box.jpg";
+import heroDefault from "@/assets/hero-box.webp";
 import flexDesktop from "@/assets/hero-flex-desktop.webp";
 import flexMobile from "@/assets/hero-flex-mobile.webp";
 import boxDesktop from "@/assets/hero-box-desktop.webp";

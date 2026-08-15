@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-de-giro.png";
+import img from "@/assets/porta-de-giro.webp";
 
 const TITLE = "Porta de Abrir de Vidro em SP | Porta de Giro Tradicional - Fast Vidro";
 const DESC = "Procurando Porta de Abrir de vidro temperado sob medida na Zona Norte de SP? Modelos clássicos com dobradiças e fechaduras para salas, cozinhas e escritórios. Peça orçamento!";

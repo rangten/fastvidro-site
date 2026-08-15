@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-tradicional-vs-flex-cover.png";
+import cover from "@/assets/blog-box-tradicional-vs-flex-cover.webp";
 
 export const Route = createFileRoute("/blog_/box-tradicional-vs-flex")({
   head: () => ({

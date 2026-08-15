@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-guarda-corpo.png";
+import hero from "@/assets/projeto-guarda-corpo.webp";
 
 const TITLE = "Guarda-Corpo de Vidro em SP | Torres e Bottons Inox - Fast Vidro";
 const DESC = "Instalação de Guarda-Corpo de vidro laminado ou temperado laminado na Zona Norte de SP. Segurança máxima para escadas e sacadas com torres ou bottons de aço inox. Peça já!";

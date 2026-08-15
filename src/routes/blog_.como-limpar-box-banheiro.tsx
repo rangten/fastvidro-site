@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-como-limpar-box-cover.png";
+import cover from "@/assets/blog-como-limpar-box-cover.webp";
 
 const TITLE =
   "Como Limpar o Box de Banheiro Corretamente: O Guia Definitivo para Eliminar Manchas sem Danificar o Vidro | Fast Vidro";

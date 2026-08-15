@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import cover from "@/assets/elegance-cover.png";
-import img1 from "@/assets/elegance-1.png";
-import img2 from "@/assets/elegance-2.png";
-import img3 from "@/assets/elegance-3.png";
-import img4 from "@/assets/elegance-4.png";
+import cover from "@/assets/elegance-cover.webp";
+import img1 from "@/assets/elegance-1.webp";
+import img2 from "@/assets/elegance-2.webp";
+import img3 from "@/assets/elegance-3.webp";
+import img4 from "@/assets/elegance-4.webp";
 
 const META_TITLE = "Box Elegance Roldanas Aparentes em SP | Box de Inox - Fast Vidro";
 const META_DESC =

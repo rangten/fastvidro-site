@@ -20,7 +20,7 @@ function InstagramColorIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-import logoAsset from "@/assets/fast-vidro-logo.png";
+import logoAsset from "@/assets/fast-vidro-logo.webp";
 import { SITE, waLink } from "@/lib/site";
 
 export function Footer() {

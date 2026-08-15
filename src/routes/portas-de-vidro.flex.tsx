@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-flex.png";
+import img from "@/assets/porta-flex.webp";
 
 const TITLE = "Porta Flex Articulada em SP | Porta Camarão de Vidro - Fast Vidro";
 const DESC = "Ganhe espaço com a Porta Flex articulada na Zona Norte de SP. Sistema camarão sem trilho inferior, perfeito para vãos estreitos e compactos. Solicite orçamento!";

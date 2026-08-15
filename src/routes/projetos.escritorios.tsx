@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/escritorio-interior.png";
+import hero from "@/assets/escritorio-interior.webp";
 
 const TITLE = "Divisórias de Vidro para Escritório em SP | Fast Vidro";
 const DESC = "Otimize seu espaço corporativo com divisórias de vidro para escritórios na Zona Norte de SP. Soluções acústicas para salas de reunião e ambientes integrados. Peça orçamento!";

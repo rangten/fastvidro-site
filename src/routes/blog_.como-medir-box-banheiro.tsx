@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-como-medir-box-cover.png";
+import cover from "@/assets/blog-como-medir-box-cover.webp";
 
 const TITLE =
   "Como Medir Seu Box de Forma Correta antes de Pedir um Orçamento: O Guia Técnico Passo a Passo | Fast Vidro";

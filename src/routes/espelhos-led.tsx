@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ProductPage } from "@/components/ProductPage";
-import img from "@/assets/product-led.jpg";
+import img from "@/assets/product-led.webp";
 
 export const Route = createFileRoute("/espelhos-led")({
   head: () => ({

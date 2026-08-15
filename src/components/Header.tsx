@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
-import logoAsset from "@/assets/fast-vidro-logo.png";
-import secureBoxLogo from "@/assets/secure-box-logo.png";
+import logoAsset from "@/assets/fast-vidro-logo.webp";
+import secureBoxLogo from "@/assets/secure-box-logo.webp";
 import { waLink } from "@/lib/site";
 
 type NavItem = {

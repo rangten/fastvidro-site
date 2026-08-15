@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WHATSAPP_NUMBER } from "@/lib/site";
-import flexCover from "@/assets/flex-cover.png";
-import flex1 from "@/assets/flex-1.png";
-import flex2 from "@/assets/flex-2.png";
-import flex3 from "@/assets/flex-3.png";
-import flex4 from "@/assets/flex-4.png";
-import flex5 from "@/assets/flex-5.png";
+import flexCover from "@/assets/flex-cover.webp";
+import flex1 from "@/assets/flex-1.webp";
+import flex2 from "@/assets/flex-2.webp";
+import flex3 from "@/assets/flex-3.webp";
+import flex4 from "@/assets/flex-4.webp";
+import flex5 from "@/assets/flex-5.webp";
 
 const META_TITLE = "Box Flex na Zona Norte de SP | Box Articulado - Fast Vidro";
 const META_DESC =

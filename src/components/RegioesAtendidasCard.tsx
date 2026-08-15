@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { MapPin, ArrowRight, X, Building2 } from "lucide-react";
 import { ZONAS, toSlug } from "@/lib/bairros";
-import heroImg from "@/assets/regioes-sp-hero.jpg";
+import heroImg from "@/assets/regioes-sp-hero.webp";
 
 export function RegioesAtendidasCard() {
   const [open, setOpen] = useState(false);

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-tucuruvi-cover.png";
+import cover from "@/assets/blog-box-tucuruvi-cover.webp";
 
 const TITLE =
   "Box de Banheiro no Tucuruvi: Modelos Ideais, Preços e Segurança Máxima para Seu Imóvel | Vidraçaria Zona Norte";

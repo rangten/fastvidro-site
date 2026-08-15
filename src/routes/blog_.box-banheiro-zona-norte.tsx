@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, ArrowLeft, Calendar } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { waLink } from "@/lib/site";
-import cover from "@/assets/blog-box-zona-norte-cover.png";
+import cover from "@/assets/blog-box-zona-norte-cover.webp";
 
 const TITLE =
   "Onde Encontrar Box de Banheiro na Zona Norte de SP? Guia Completo de Modelos, Preços e Segurança | Vidraçaria Zona Norte";

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PortaSeoPage } from "@/components/PortaSeoPage";
-import img from "@/assets/porta-certa.png";
+import img from "@/assets/porta-certa.webp";
 
 const TITLE = "Porta Certa em SP | Abertura Total em 180° - Fast Vidro";
 const DESC = "Otimize espaço com a Porta Certa na Zona Norte de SP. O único sistema de giro que abre 180 graus para os dois lados, ideal para passagens compactas. Peça já seu orçamento!";

@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ZonaBoxPage, faqJsonLd } from "@/components/ZonaBoxPage";
-import hero from "@/assets/box-banheiro-hero-real.png";
-import flexCover from "@/assets/flex-cover.png";
-import pisoTetoCover from "@/assets/piso-teto-cover.png";
-import tradCover from "@/assets/tradicional-cover.png";
-import eleganceCover from "@/assets/elegance-cover.png";
+import hero from "@/assets/box-banheiro-hero-real.webp";
+import flexCover from "@/assets/flex-cover.webp";
+import pisoTetoCover from "@/assets/piso-teto-cover.webp";
+import tradCover from "@/assets/tradicional-cover.webp";
+import eleganceCover from "@/assets/elegance-cover.webp";
 
 const FAQ = [
   { q: "Vocês instalam box de vidro em toda a Zona Norte?", a: "Sim. Atendemos Santana, Tucuruvi, Mandaqui, Tremembé, Jaçanã, Vila Maria, Vila Guilherme, Imirim, Casa Verde, Cachoeirinha e bairros vizinhos com equipe própria." },

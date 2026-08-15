@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ZonaBoxPage, faqJsonLd } from "@/components/ZonaBoxPage";
-import hero from "@/assets/box-banheiro-hero-real.png";
-import eleganceCover from "@/assets/elegance-cover.png";
-import elegance1 from "@/assets/elegance-1.png";
-import pisoTetoCover from "@/assets/piso-teto-cover.png";
-import nobreCover from "@/assets/nobre-cover.png";
+import hero from "@/assets/box-banheiro-hero-real.webp";
+import eleganceCover from "@/assets/elegance-cover.webp";
+import elegance1 from "@/assets/elegance-1.webp";
+import pisoTetoCover from "@/assets/piso-teto-cover.webp";
+import nobreCover from "@/assets/nobre-cover.webp";
 
 const FAQ = [
   { q: "Vocês atendem apartamentos na Zona Sul?", a: "Sim. Boa parte dos nossos projetos na Zona Sul é em apartamentos, com fechamento de vãos sob medida e ferragens de acabamento premium." },

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectSeoPage } from "@/components/ProjectSeoPage";
-import hero from "@/assets/projeto-coberturas.png";
+import hero from "@/assets/projeto-coberturas.webp";
 
 const TITLE = "Cobertura de Vidro em SP | Vidro Laminado Estrutural - Fast Vidro";
 const DESC = "Projetos de coberturas de vidro laminado na Zona Norte de SP. Iluminação natural com segurança e proteção térmica para garagens, corredores e áreas gourmet. Peça orçamento!";
