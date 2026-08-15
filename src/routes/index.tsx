@@ -15,6 +15,9 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { RegioesAtendidasCard } from "@/components/RegioesAtendidasCard";
 import { waLink } from "@/lib/site";
+import heroBoxMobile from "@/assets/hero-box-mobile.webp";
+import heroBoxDesktop from "@/assets/hero-box-desktop.webp";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
