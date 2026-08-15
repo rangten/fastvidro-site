@@ -91,7 +91,8 @@ function SecureBoxPage() {
                   src={secureBoxLogo}
                   alt="Secure Box — Película de Segurança para Box de Vidro Temperado"
                   className="max-h-80 w-auto object-contain"
-                />
+loading="lazy" decoding="async"
+/>
               </div>
             </div>
           </div>

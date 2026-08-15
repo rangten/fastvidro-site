@@ -82,7 +82,8 @@ function Post() {
               src={cover}
               alt="Box de banheiro na Zona Norte de SP com película Secure Box — Fast Vidro"
               className="w-full h-auto object-cover"
-            />
+loading="eager" fetchPriority="high" decoding="async"
+/>
           </figure>
 
           <div className="prose-fast mt-10 space-y-5 text-base leading-relaxed text-foreground/90">
