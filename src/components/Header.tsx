@@ -30,7 +30,7 @@ export function Header() {
             src={logoAsset}
             alt="Fast Vidro"
             className="h-20 sm:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(250,204,21,0.15)]"
-loading="lazy" decoding="async"
+loading="eager" fetchPriority="high" decoding="async"
 />
         </Link>
 
