@@ -52,7 +52,7 @@ function Post() {
               <ArrowLeft className="h-3.5 w-3.5" /> Voltar para o Blog
             </Link>
             <div className="mt-6 overflow-hidden rounded-xl">
-              <img
+              <img width={1200} height={800}
                 src={cover}
                 alt="Guia de cores de box de vidro: incolor, fumê, verde e bronze — Fast Vidro"
                 className="block w-full h-auto"

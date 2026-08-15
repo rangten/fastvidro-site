@@ -63,7 +63,7 @@ export function ProductPage({
           <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
             <div className="absolute -inset-4 rounded-2xl bg-gradient-yellow rotate-2" />
             <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-card p-3 shadow-ink sm:p-4">
-              <img
+              <img width={1200} height={800}
                 src={heroImage}
                 alt={heroImageAlt ?? title}
                 className="h-full w-full object-contain"
@@ -92,7 +92,7 @@ export function ProductPage({
                   {/* Foto de destaque do modelo (substitua `m.image` pelas suas fotos reais). */}
                   <div className="aspect-[4/3] overflow-hidden bg-black">
                     {m.image ? (
-                      <img
+                      <img width={1200} height={800}
                         src={m.image}
                         alt={m.imageAlt ?? `Modelo ${m.name}`}
                         loading="lazy"

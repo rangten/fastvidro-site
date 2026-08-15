@@ -72,7 +72,7 @@ export function ModelDetailPage({
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-yellow rounded-2xl rotate-2" />
-            <img
+            <img width={1200} height={800}
               src={model.image}
               alt={`${category.eyebrow} ${model.name}`}
               className="relative rounded-xl shadow-ink w-full h-auto"
@@ -104,7 +104,7 @@ export function ModelDetailPage({
                 key={i}
                 className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[3/4] flex items-center justify-center"
               >
-                <img
+                <img width={1200} height={800}
                   src={src}
                   alt={`${model.name} — foto ${i + 1}`}
                   loading="lazy"

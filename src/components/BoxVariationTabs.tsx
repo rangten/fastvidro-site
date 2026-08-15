@@ -158,7 +158,7 @@ export function BoxVariationTabs({ bairro }: Props) {
                       key={i}
                       className="aspect-[3/4] overflow-hidden rounded-lg bg-muted flex items-center justify-center"
                     >
-                      <img
+                      <img width={1200} height={800}
                         src={src}
                         alt={`${t.label} Incolor instalado em ${bairro} — projeto Fast Vidro ${i + 1}`}
                         loading="lazy"
@@ -188,7 +188,7 @@ export function BoxVariationTabs({ bairro }: Props) {
                       key={i}
                       className="aspect-[3/4] overflow-hidden rounded-lg bg-ink flex items-center justify-center"
                     >
-                      <img
+                      <img width={1200} height={800}
                         src={src}
                         alt={`${t.label} Fumê instalado em ${bairro} — projeto Fast Vidro ${i + 1}`}
                         loading="lazy"

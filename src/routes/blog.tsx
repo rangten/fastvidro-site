@@ -307,11 +307,11 @@ function Blog() {
             <article key={p.title} className="group rounded-xl overflow-hidden border border-border bg-card hover:border-primary transition flex flex-col">
               {p.to ? (
                 <Link to={p.to} className="block aspect-[16/10] overflow-hidden bg-muted" aria-label={p.title}>
-                  <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <img width={1200} height={800} src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 </Link>
               ) : (
                 <div className="aspect-[16/10] overflow-hidden bg-muted">
-                  <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <img width={1200} height={800} src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 </div>
               )}
               <div className="p-6 flex flex-col flex-1">

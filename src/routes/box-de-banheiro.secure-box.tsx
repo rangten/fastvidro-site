@@ -87,7 +87,7 @@ function SecureBoxPage() {
 
             <div className="relative">
               <div className="rounded-xl overflow-hidden bg-black flex items-center justify-center p-8 ring-1 ring-white/10">
-                <img
+                <img width={1200} height={800}
                   src={secureBoxLogo}
                   alt="Secure Box — Película de Segurança para Box de Vidro Temperado"
                   className="max-h-80 w-auto object-contain"
@@ -124,7 +124,7 @@ loading="lazy" decoding="async"
           </p>
 
           <figure className="mt-10 overflow-hidden rounded-xl shadow-ink ring-1 ring-border">
-            <img
+            <img width={1200} height={800}
               src={secureBoxPelicula}
               alt="Demonstração da película de segurança Secure Box — vidro estilhaçado mas íntegro"
               className="w-full h-auto object-cover"

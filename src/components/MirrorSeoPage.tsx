@@ -67,7 +67,7 @@ export function MirrorSeoPage({
 
             <div className="relative">
               <div className="rounded-xl overflow-hidden bg-black ring-1 ring-white/10">
-                <img
+                <img width={1200} height={800}
                   src={heroImage}
                   alt={heroImageAlt}
                   className="w-full h-auto object-cover"

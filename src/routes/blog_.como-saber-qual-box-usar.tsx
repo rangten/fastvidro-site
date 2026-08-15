@@ -58,7 +58,7 @@ function ComoSaberQualBoxUsar() {
       />
 
       <article className="mx-auto max-w-4xl px-4 lg:px-8 py-16">
-        <img
+        <img width={1200} height={800}
           src={coverImg}
           alt="Como Saber Qual Box Usar - Guia Definitivo Fast Vidro"
           className="w-full rounded-xl mb-10"

@@ -80,7 +80,7 @@ function BoxTransferPage() {
               key={i}
               className="overflow-hidden rounded-xl border border-border bg-black/5 flex items-center justify-center aspect-[4/3]"
             >
-              <img
+              <img width={1200} height={800}
                 src={src}
                 alt={`Box Transfer 3 Portas — foto ${i + 1}`}
                 loading="lazy"

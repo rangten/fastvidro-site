@@ -67,7 +67,7 @@ export function ProjectSeoPage({
 
             <div className="relative">
               <div className="rounded-xl overflow-hidden bg-black ring-1 ring-white/10">
-                <img src={heroImage} alt={heroImageAlt} className="w-full h-auto object-cover"
+                <img width={1200} height={800} src={heroImage} alt={heroImageAlt} className="w-full h-auto object-cover"
 loading="eager" fetchPriority="high" decoding="async"
 />
               </div>

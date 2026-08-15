@@ -113,7 +113,7 @@ function BoxTradicionalPage() {
                 className="overflow-hidden rounded-xl border border-border bg-card"
               >
                 <div className="aspect-[3/4] bg-black/5 flex items-center justify-center overflow-hidden">
-                  <img
+                  <img width={1200} height={800}
                     src={v.img}
                     alt={v.title}
                     loading="lazy"

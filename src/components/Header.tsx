@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-ink text-ink-foreground border-b-2 border-primary/30">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 lg:px-8 lg:py-6">
         <Link to="/" className="flex items-center gap-2 py-1 pr-2" onClick={() => setOpen(false)}>
-          <img
+          <img width={1200} height={492}
             src={logoAsset}
             alt="Fast Vidro"
             className="h-20 sm:h-24 lg:h-28 w-auto object-contain drop-shadow-[0_2px_8px_rgba(250,204,21,0.15)]"
@@ -44,7 +44,7 @@ loading="lazy" decoding="async"
               activeProps={{ className: "text-primary" }}
             >
               {n.image ? (
-                <img
+                <img width={1200} height={492}
                   src={n.image.src}
                   alt={n.image.alt}
                   className="h-16 lg:h-20 w-auto object-contain bg-black rounded-lg px-3 py-1.5 shadow-md ring-1 ring-primary/30"
@@ -105,7 +105,7 @@ loading="lazy" decoding="async"
                 className="flex items-center gap-3 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 border-b border-white/5 last:border-0"
               >
                 {n.image && (
-                  <img
+                  <img width={1200} height={492}
                     src={n.image.src}
                     alt={n.image.alt}
                     className="h-14 w-auto object-contain bg-black rounded-lg px-2.5 py-1 shadow-md ring-1 ring-primary/30"

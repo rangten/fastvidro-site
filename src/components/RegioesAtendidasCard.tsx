@@ -29,7 +29,7 @@ export function RegioesAtendidasCard() {
           onClick={() => setOpen(true)}
           className="group relative overflow-hidden rounded-2xl lg:col-span-8 aspect-[16/9] lg:aspect-auto lg:min-h-[420px] text-left ring-1 ring-border hover:ring-primary transition"
         >
-          <img
+          <img width={1200} height={800}
             src={heroImg}
             alt="Skyline de São Paulo — atendimento Fast Vidro"
             className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
