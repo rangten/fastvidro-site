@@ -28,7 +28,10 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.fastvidro.com.br/" },
+      { rel: "preload", as: "image", href: heroBoxMobile, media: "(max-width: 767px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroBoxDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
     ],
+
     scripts: [
       {
         type: "application/ld+json",
