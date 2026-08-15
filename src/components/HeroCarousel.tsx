@@ -90,27 +90,35 @@ export function HeroCarousel() {
                   aria-label="Falar no WhatsApp"
                 >
                   <picture>
-                    <source media="(min-width: 768px)" srcSet={s.desktopImage} />
+                    <source media="(min-width: 768px)" srcSet={s.desktopImage} width={1200} height={619} />
                     <img
                       src={s.mobileImage}
                       alt="Banner promocional Fast Vidro"
+                      width={960}
+                      height={1200}
                       className="block w-full h-auto max-h-[70vh] object-contain mx-auto"
                       loading={i === 0 ? "eager" : "lazy"}
+                      fetchPriority={i === 0 ? "high" : "auto"}
+                      decoding={i === 0 ? "sync" : "async"}
                     />
                   </picture>
                 </a>
               ) : (
                 <div className="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[600px]">
                   <picture>
-                    <source media="(min-width: 768px)" srcSet={s.desktopImage} />
+                    <source media="(min-width: 768px)" srcSet={s.desktopImage} width={1200} height={675} />
                     <img
                       src={s.mobileImage}
                       alt=""
                       aria-hidden="true"
+                      width={1200}
+                      height={675}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
+                      decoding="async"
                     />
                   </picture>
+
                   <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/40 md:to-ink/20" />
                   <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-20 lg:py-28 h-full flex flex-col justify-center">
                     {s.eyebrow && (
