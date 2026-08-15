@@ -61,7 +61,7 @@ function Post() {
               <ArrowLeft className="h-3.5 w-3.5" /> Voltar para o Blog
             </Link>
             <div className="mt-6 overflow-hidden rounded-xl">
-              <img
+              <img width={1200} height={800}
                 src={cover}
                 alt="Box de Banheiro na Casa Verde e Imirim — Fast Vidro Vidraçaria Zona Norte"
                 className="block w-full h-auto"

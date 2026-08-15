@@ -62,7 +62,7 @@ export const Route = createFileRoute("/box-fume/")({
                   "radial-gradient(120% 80% at 85% 15%, rgba(250,204,21,0.18), transparent 55%), linear-gradient(135deg, #0b0f19 0%, #111726 55%, #0b0f19 100%)",
               }}
             >
-              <img
+              <img width={1200} height={800}
                 src={foto}
                 alt="Box de Vidro Fumê sob medida - Fast Vidro"
                 loading="lazy"

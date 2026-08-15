@@ -132,7 +132,7 @@ function BairroPage() {
                   "radial-gradient(60% 60% at 50% 55%, rgba(250,204,21,0.22), transparent 70%)",
               }}
             />
-            <img
+            <img width={1200} height={800}
               src={projeto.src}
               alt={projetoAlt}
               loading="lazy"

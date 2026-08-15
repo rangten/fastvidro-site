@@ -183,7 +183,7 @@ function BoxPisoTetoPage() {
                 key={i}
                 className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[3/4] flex items-center justify-center"
               >
-                <img
+                <img width={1200} height={800}
                   src={src}
                   alt={`Box Piso Teto instalado — foto ${i + 1}`}
                   loading="lazy"

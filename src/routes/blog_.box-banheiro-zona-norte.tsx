@@ -78,7 +78,7 @@ function Post() {
 
         <div className="mx-auto max-w-4xl px-4 lg:px-8 py-10">
           <figure className="overflow-hidden rounded-xl ring-1 ring-border shadow-ink">
-            <img
+            <img width={1200} height={800}
               src={cover}
               alt="Box de banheiro na Zona Norte de SP com película Secure Box — Fast Vidro"
               className="w-full h-auto object-cover"

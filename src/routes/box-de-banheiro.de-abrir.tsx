@@ -182,7 +182,7 @@ function BoxDeAbrirPage() {
                 key={i}
                 className="group relative overflow-hidden rounded-xl bg-white/[0.03] border border-white/10 aspect-[4/3] flex items-center justify-center p-2"
               >
-                <img
+                <img width={1200} height={800}
                   src={src}
                   alt={`Box de Abrir em vidro temperado instalado na Zona Norte de SP — foto ${i + 1}`}
                   loading="lazy"

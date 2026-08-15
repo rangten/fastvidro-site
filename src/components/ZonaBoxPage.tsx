@@ -122,7 +122,7 @@ export function ZonaBoxPage(props: ZonaBoxPageProps) {
           <h2 className="text-2xl lg:text-3xl font-black">Projetos executados pela Fast Vidro</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {gallery.map((g) => (
-              <img
+              <img width={1200} height={800}
                 key={g.src + g.alt}
                 src={g.src}
                 alt={g.alt}

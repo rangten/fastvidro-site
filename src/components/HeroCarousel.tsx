@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight, MessageCircle, ArrowRight, Shield } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
@@ -59,6 +59,28 @@ export function HeroCarousel() {
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
   const [selected, setSelected] = useState(0);
+  const [ready, setReady] = useState(false);
+
+  // Defer carousel bootstrapping (layout reads + autoplay) until after the
+  // first paint so the LCP banner renders without any JS on the critical path.
+  useEffect(() => {
+    let done = false;
+    const start = () => {
+      if (done) return;
+      done = true;
+      setReady(true);
+    };
+    const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
+    const id = w.requestIdleCallback
+      ? w.requestIdleCallback(start, { timeout: 2000 })
+      : window.setTimeout(start, 1200);
+    const events: Array<keyof WindowEventMap> = ["pointerdown", "keydown", "touchstart"];
+    events.forEach((e) => window.addEventListener(e, start, { once: true, passive: true }));
+    return () => {
+      events.forEach((e) => window.removeEventListener(e, start));
+      if (!w.requestIdleCallback) window.clearTimeout(id);
+    };
+  }, []);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -76,7 +98,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative bg-ink text-ink-foreground">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden" ref={ready ? emblaRef : undefined}>
         <div className="flex">
           {slides.map((s, i) => (
             <div key={i} className="relative flex-[0_0_100%] min-w-0">
@@ -89,6 +111,7 @@ export function HeroCarousel() {
                   className="block bg-ink"
                   aria-label="Falar no WhatsApp"
                 >
+                  {(i === 0 || ready) && (
                   <picture>
                     <source media="(min-width: 768px)" srcSet={s.desktopImage} width={1200} height={619} />
                     <img
@@ -102,6 +125,7 @@ export function HeroCarousel() {
                       decoding={i === 0 ? "sync" : "async"}
                     />
                   </picture>
+                  )}
                 </a>
               ) : (
                 <div className="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[600px]">

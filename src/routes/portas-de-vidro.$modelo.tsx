@@ -211,7 +211,7 @@ function PortaBairroPage({ nome, zona }: { nome: string; zona: ZonaInfo }) {
           {galeria.map((g, i) => (
             <li key={i} className="group overflow-hidden rounded-2xl border border-border bg-card">
               <div className="aspect-[4/5] overflow-hidden bg-black/5">
-                <img
+                <img width={1200} height={800}
                   src={g.src}
                   alt={`${g.modelo} instalada em ${nome} — Fast Vidro`}
                   loading="lazy"

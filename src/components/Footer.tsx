@@ -28,7 +28,7 @@ export function Footer() {
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logoAsset} alt="Fast Vidro" className="h-16 w-auto"
+          <img width={1200} height={492} src={logoAsset} alt="Fast Vidro" className="h-16 w-auto"
 loading="lazy" decoding="async"
 />
           <p className="mt-4 max-w-sm text-sm text-ink-foreground/70">
