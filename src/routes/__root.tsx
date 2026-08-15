@@ -106,14 +106,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const fontHref =
+    "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap";
   return (
     <html lang="pt-BR">
       <head>
         <HeadContent />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18214089234"></script>
+        {/* Fontes carregadas de forma assíncrona (não bloqueiam a renderização) */}
+        <link rel="preload" as="style" href={fontHref} />
+        <link rel="stylesheet" href={fontHref} media="print" data-async-font="" />
+        <noscript>
+          <link rel="stylesheet" href={fontHref} />
+        </noscript>
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18214089234');`,
+            __html: `(function(){var l=document.querySelector('link[data-async-font]');if(l){l.addEventListener('load',function(){l.media='all'});if(l.sheet)l.media='all';}})();`,
+          }}
+        />
+        {/* Google Ads: carregado após a renderização inicial para não bloquear o LCP */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18214089234');
+var load=function(){if(window.__gtagLoaded)return;window.__gtagLoaded=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18214089234';document.head.appendChild(s);};
+if(document.readyState==='complete'){setTimeout(load,1500);}else{window.addEventListener('load',function(){setTimeout(load,1500)});}
+['pointerdown','keydown','touchstart'].forEach(function(e){window.addEventListener(e,load,{once:true,passive:true})});`,
           }}
         />
       </head>
@@ -123,6 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </body>
     </html>
   );
+
 }
 
 function RootComponent() {
