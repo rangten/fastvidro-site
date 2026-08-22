@@ -53,6 +53,7 @@ const BLOG_POSTS = [
   "box-banheiro-vidro-santana",
   "box-banheiro-vila-guilherme",
   "box-banheiro-zona-norte",
+  "box-nobre-ideia-glass",
   "box-convencional-vs-ate-o-teto",
   "box-de-canto",
   "box-elegance-roldanas-aparentes",
