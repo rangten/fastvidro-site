@@ -6,7 +6,8 @@ import cover from "@/assets/blog-box-flex-inox-cover.webp";
 import interna1 from "@/assets/box-flex-inox-banheiro.webp";
 import interna2 from "@/assets/box-flex-inox-instalado.webp";
 import interna3 from "@/assets/box-flex-inox-ferragens.webp";
-import videoFlex from "@/assets/video-flex-inox.mp4";
+import videoFlexMp4 from "@/assets/video-flex-inox.mp4";
+import videoFlexWebm from "@/assets/video-flex-inox.webm";
 
 const TITLE =
   "Box Flex Cor Aço Inox Ideia Glass: Luxo Exclusivo com 90% de Abertura para Banheiros em SP";
@@ -227,7 +228,6 @@ function Post() {
             <figure className="pt-2">
               <div className="mx-auto max-w-md overflow-hidden rounded-xl border border-border bg-black">
                 <video
-                  src={videoFlex}
                   poster={cover}
                   controls
                   playsInline
@@ -236,7 +236,10 @@ function Post() {
                   height={854}
                   className="block w-full h-auto"
                   aria-label="Vídeo demonstrativo do Box Flex Cor Aço Inox Ideia Glass"
-                />
+                >
+                  <source src={videoFlexMp4} type="video/mp4" />
+                  <source src={videoFlexWebm} type="video/webm" />
+                </video>
               </div>
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Assista ao vídeo: o sistema articulado do Box Flex Cor Aço Inox
