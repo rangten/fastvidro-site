@@ -68,6 +68,7 @@ import { Route as BlogComoMedirBoxBanheiroRouteImport } from './routes/blog_.com
 import { Route as BlogComoLimparBoxBanheiroRouteImport } from './routes/blog_.como-limpar-box-banheiro'
 import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
 import { Route as BlogBoxNobreIdeiaGlassRouteImport } from './routes/blog_.box-nobre-ideia-glass'
+import { Route as BlogBoxFlexCorAcoInoxRouteImport } from './routes/blog_.box-flex-cor-aco-inox'
 import { Route as BlogBoxEleganceRoldanasAparentesRouteImport } from './routes/blog_.box-elegance-roldanas-aparentes'
 import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
 import { Route as BlogBoxConvencionalVsAteOTetoRouteImport } from './routes/blog_.box-convencional-vs-ate-o-teto'
@@ -387,6 +388,11 @@ const BlogBoxNobreIdeiaGlassRoute = BlogBoxNobreIdeiaGlassRouteImport.update({
   path: '/blog/box-nobre-ideia-glass',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogBoxFlexCorAcoInoxRoute = BlogBoxFlexCorAcoInoxRouteImport.update({
+  id: '/blog_/box-flex-cor-aco-inox',
+  path: '/blog/box-flex-cor-aco-inox',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogBoxEleganceRoldanasAparentesRoute =
   BlogBoxEleganceRoldanasAparentesRouteImport.update({
     id: '/blog_/box-elegance-roldanas-aparentes',
@@ -484,6 +490,7 @@ export interface FileRoutesByFullPath {
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
+  '/blog/box-flex-cor-aco-inox': typeof BlogBoxFlexCorAcoInoxRoute
   '/blog/box-nobre-ideia-glass': typeof BlogBoxNobreIdeiaGlassRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
@@ -558,6 +565,7 @@ export interface FileRoutesByTo {
   '/blog/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
+  '/blog/box-flex-cor-aco-inox': typeof BlogBoxFlexCorAcoInoxRoute
   '/blog/box-nobre-ideia-glass': typeof BlogBoxNobreIdeiaGlassRoute
   '/blog/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
@@ -633,6 +641,7 @@ export interface FileRoutesById {
   '/blog_/box-convencional-vs-ate-o-teto': typeof BlogBoxConvencionalVsAteOTetoRoute
   '/blog_/box-de-canto': typeof BlogBoxDeCantoRoute
   '/blog_/box-elegance-roldanas-aparentes': typeof BlogBoxEleganceRoldanasAparentesRoute
+  '/blog_/box-flex-cor-aco-inox': typeof BlogBoxFlexCorAcoInoxRoute
   '/blog_/box-nobre-ideia-glass': typeof BlogBoxNobreIdeiaGlassRoute
   '/blog_/box-tradicional-vs-flex': typeof BlogBoxTradicionalVsFlexRoute
   '/blog_/como-limpar-box-banheiro': typeof BlogComoLimparBoxBanheiroRoute
@@ -709,6 +718,7 @@ export interface FileRouteTypes {
     | '/blog/box-convencional-vs-ate-o-teto'
     | '/blog/box-de-canto'
     | '/blog/box-elegance-roldanas-aparentes'
+    | '/blog/box-flex-cor-aco-inox'
     | '/blog/box-nobre-ideia-glass'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/como-limpar-box-banheiro'
@@ -783,6 +793,7 @@ export interface FileRouteTypes {
     | '/blog/box-convencional-vs-ate-o-teto'
     | '/blog/box-de-canto'
     | '/blog/box-elegance-roldanas-aparentes'
+    | '/blog/box-flex-cor-aco-inox'
     | '/blog/box-nobre-ideia-glass'
     | '/blog/box-tradicional-vs-flex'
     | '/blog/como-limpar-box-banheiro'
@@ -857,6 +868,7 @@ export interface FileRouteTypes {
     | '/blog_/box-convencional-vs-ate-o-teto'
     | '/blog_/box-de-canto'
     | '/blog_/box-elegance-roldanas-aparentes'
+    | '/blog_/box-flex-cor-aco-inox'
     | '/blog_/box-nobre-ideia-glass'
     | '/blog_/box-tradicional-vs-flex'
     | '/blog_/como-limpar-box-banheiro'
@@ -932,6 +944,7 @@ export interface RootRouteChildren {
   BlogBoxConvencionalVsAteOTetoRoute: typeof BlogBoxConvencionalVsAteOTetoRoute
   BlogBoxDeCantoRoute: typeof BlogBoxDeCantoRoute
   BlogBoxEleganceRoldanasAparentesRoute: typeof BlogBoxEleganceRoldanasAparentesRoute
+  BlogBoxFlexCorAcoInoxRoute: typeof BlogBoxFlexCorAcoInoxRoute
   BlogBoxNobreIdeiaGlassRoute: typeof BlogBoxNobreIdeiaGlassRoute
   BlogBoxTradicionalVsFlexRoute: typeof BlogBoxTradicionalVsFlexRoute
   BlogComoLimparBoxBanheiroRoute: typeof BlogComoLimparBoxBanheiroRoute
@@ -1400,6 +1413,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogBoxNobreIdeiaGlassRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/box-flex-cor-aco-inox': {
+      id: '/blog_/box-flex-cor-aco-inox'
+      path: '/blog/box-flex-cor-aco-inox'
+      fullPath: '/blog/box-flex-cor-aco-inox'
+      preLoaderRoute: typeof BlogBoxFlexCorAcoInoxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/box-elegance-roldanas-aparentes': {
       id: '/blog_/box-elegance-roldanas-aparentes'
       path: '/blog/box-elegance-roldanas-aparentes'
@@ -1516,6 +1536,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBoxConvencionalVsAteOTetoRoute: BlogBoxConvencionalVsAteOTetoRoute,
   BlogBoxDeCantoRoute: BlogBoxDeCantoRoute,
   BlogBoxEleganceRoldanasAparentesRoute: BlogBoxEleganceRoldanasAparentesRoute,
+  BlogBoxFlexCorAcoInoxRoute: BlogBoxFlexCorAcoInoxRoute,
   BlogBoxNobreIdeiaGlassRoute: BlogBoxNobreIdeiaGlassRoute,
   BlogBoxTradicionalVsFlexRoute: BlogBoxTradicionalVsFlexRoute,
   BlogComoLimparBoxBanheiroRoute: BlogComoLimparBoxBanheiroRoute,
