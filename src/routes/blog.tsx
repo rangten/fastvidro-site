@@ -25,6 +25,7 @@ import boxVilaGuilhermeImg from "@/assets/blog-box-vila-guilherme-cover.webp";
 import corBoxImg from "@/assets/blog-cor-box-cover.webp";
 import qualBoxImg from "@/assets/blog-qual-box-usar-cover.webp";
 import faqBoxImg from "@/assets/blog-faq-box-banheiro-cover.webp";
+import boxNobreImg from "@/assets/blog-box-nobre-ideia-glass-cover.webp";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -48,6 +49,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Alto Padrão",
+    date: "22 de Agosto de 2026",
+    img: boxNobreImg,
+    title:
+      "Box Nobre Ideia Glass: Conheça os Diferenciais que Definem o Novo Padrão de Luxo e Segurança no Banheiro",
+    excerpt:
+      "Amortecimento duplo, Puxador Asa Linear, trava anti-descarrilamento e vidro temperado ou laminado. Veja vídeo exclusivo e saiba por que o Box Nobre é o novo padrão premium.",
+    to: "/blog/box-nobre-ideia-glass",
+  },
   {
     tag: "FAQ • Dúvidas Frequentes",
     date: "7 de Julho de 2026",
