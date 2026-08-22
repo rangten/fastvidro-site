@@ -50,6 +50,16 @@ const posts: Array<{
   to?: string;
 }> = [
   {
+    tag: "Box de Banheiro • Alto Padrão",
+    date: "22 de Agosto de 2026",
+    img: boxNobreImg,
+    title:
+      "Box Nobre Ideia Glass: Conheça os Diferenciais que Definem o Novo Padrão de Luxo e Segurança no Banheiro",
+    excerpt:
+      "Amortecimento duplo, Puxador Asa Linear, trava anti-descarrilamento e vidro temperado ou laminado. Veja vídeo exclusivo e saiba por que o Box Nobre é o novo padrão premium.",
+    to: "/blog/box-nobre-ideia-glass",
+  },
+  {
     tag: "FAQ • Dúvidas Frequentes",
     date: "7 de Julho de 2026",
     img: faqBoxImg,
