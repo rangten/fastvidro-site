@@ -53,6 +53,16 @@ const posts: Array<{
   {
     tag: "Box de Banheiro • Alto Padrão",
     date: "22 de Agosto de 2026",
+    img: boxFlexInoxImg,
+    title:
+      "Box Flex Cor Aço Inox Ideia Glass: Luxo Exclusivo com 90% de Abertura para Banheiros em SP",
+    excerpt:
+      "Sistema articulado camarão com até 90% de abertura útil, ferragens em latão e alumínio na cor Aço Inox e piso livre de trilhos. Veja vídeo e cobertura de atendimento em SP.",
+    to: "/blog/box-flex-cor-aco-inox",
+  },
+  {
+    tag: "Box de Banheiro • Alto Padrão",
+    date: "22 de Agosto de 2026",
     img: boxNobreImg,
     title:
       "Box Nobre Ideia Glass: Conheça os Diferenciais que Definem o Novo Padrão de Luxo e Segurança no Banheiro",
