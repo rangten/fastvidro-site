@@ -228,7 +228,6 @@ function Post() {
             <figure className="pt-2">
               <div className="mx-auto max-w-md overflow-hidden rounded-xl border border-border bg-black">
                 <video
-                  src={videoFlex}
                   poster={cover}
                   controls
                   playsInline
@@ -237,7 +236,10 @@ function Post() {
                   height={854}
                   className="block w-full h-auto"
                   aria-label="Vídeo demonstrativo do Box Flex Cor Aço Inox Ideia Glass"
-                />
+                >
+                  <source src={videoFlexMp4} type="video/mp4" />
+                  <source src={videoFlexWebm} type="video/webm" />
+                </video>
               </div>
               <figcaption className="mt-3 text-sm text-muted-foreground text-center">
                 Assista ao vídeo: o sistema articulado do Box Flex Cor Aço Inox
