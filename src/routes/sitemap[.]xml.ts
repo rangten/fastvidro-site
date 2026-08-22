@@ -54,6 +54,7 @@ const BLOG_POSTS = [
   "box-banheiro-vila-guilherme",
   "box-banheiro-zona-norte",
   "box-nobre-ideia-glass",
+  "box-flex-cor-aco-inox",
   "box-convencional-vs-ate-o-teto",
   "box-de-canto",
   "box-elegance-roldanas-aparentes",

@@ -26,6 +26,7 @@ import corBoxImg from "@/assets/blog-cor-box-cover.webp";
 import qualBoxImg from "@/assets/blog-qual-box-usar-cover.webp";
 import faqBoxImg from "@/assets/blog-faq-box-banheiro-cover.webp";
 import boxNobreImg from "@/assets/blog-box-nobre-ideia-glass-cover.webp";
+import boxFlexInoxImg from "@/assets/blog-box-flex-inox-cover.webp";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
@@ -49,6 +50,16 @@ const posts: Array<{
   excerpt: string;
   to?: string;
 }> = [
+  {
+    tag: "Box de Banheiro • Alto Padrão",
+    date: "22 de Agosto de 2026",
+    img: boxFlexInoxImg,
+    title:
+      "Box Flex Cor Aço Inox Ideia Glass: Luxo Exclusivo com 90% de Abertura para Banheiros em SP",
+    excerpt:
+      "Sistema articulado camarão com até 90% de abertura útil, ferragens em latão e alumínio na cor Aço Inox e piso livre de trilhos. Veja vídeo e cobertura de atendimento em SP.",
+    to: "/blog/box-flex-cor-aco-inox",
+  },
   {
     tag: "Box de Banheiro • Alto Padrão",
     date: "22 de Agosto de 2026",
