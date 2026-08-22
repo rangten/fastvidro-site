@@ -6,7 +6,8 @@ import cover from "@/assets/blog-box-flex-inox-cover.webp";
 import interna1 from "@/assets/box-flex-inox-banheiro.webp";
 import interna2 from "@/assets/box-flex-inox-instalado.webp";
 import interna3 from "@/assets/box-flex-inox-ferragens.webp";
-import videoFlex from "@/assets/video-flex-inox.mp4";
+import videoFlexMp4 from "@/assets/video-flex-inox.mp4";
+import videoFlexWebm from "@/assets/video-flex-inox.webm";
 
 const TITLE =
   "Box Flex Cor Aço Inox Ideia Glass: Luxo Exclusivo com 90% de Abertura para Banheiros em SP";

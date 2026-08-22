@@ -26,7 +26,7 @@ import corBoxImg from "@/assets/blog-cor-box-cover.webp";
 import qualBoxImg from "@/assets/blog-qual-box-usar-cover.webp";
 import faqBoxImg from "@/assets/blog-faq-box-banheiro-cover.webp";
 import boxNobreImg from "@/assets/blog-box-nobre-ideia-glass-cover.webp";
-import boxFlexInoxImg from "@/assets/blog-box-flex-inox-cover.webp";
+import boxFlexInoxImg from "@/assets/blog-box-flex-inox-card.webp";
 import { ArrowRight, Calendar } from "lucide-react";
 import { waLink } from "@/lib/site";
 
