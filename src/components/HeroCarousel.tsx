@@ -6,6 +6,8 @@ import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
 import heroDefault from "@/assets/hero-box.webp";
+import articuladoDesktop from "@/assets/hero-box-articulado-desktop.webp";
+import articuladoMobile from "@/assets/hero-box-articulado-mobile.webp";
 import versatikDesktop from "@/assets/hero-versatik-desktop.webp";
 import versatikMobile from "@/assets/hero-versatik-mobile.webp";
 import flexDesktop from "@/assets/hero-flex-desktop.webp";
@@ -30,6 +32,16 @@ type Slide = {
 };
 
 const slides: Slide[] = [
+  {
+    kind: "image",
+    desktopImage: articuladoDesktop,
+    mobileImage: articuladoMobile,
+    href: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
+    alt: "Lançamento Box Articulado Fast Vidro sob medida, a partir de 12 vezes de R$ 150",
+    whatsappHref: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
+    desktopSize: { width: 1024, height: 373 },
+    mobileSize: { width: 572, height: 1024 },
+  },
   {
     kind: "image",
     desktopImage: versatikDesktop,
@@ -116,7 +128,7 @@ export function HeroCarousel() {
 
   return (
     <section id="hero-carrossel" aria-label="Lançamentos FastVidro" className="relative bg-ink text-ink-foreground">
-      <div className="overflow-hidden md:aspect-[1024/372]" ref={ready ? emblaRef : undefined}>
+      <div className="overflow-hidden md:aspect-[1024/373]" ref={ready ? emblaRef : undefined}>
         <div className="flex md:h-full">
           {slides.map((s, i) => (
             <div key={i} className="relative min-w-0 flex-[0_0_100%] md:h-full">
@@ -127,8 +139,8 @@ export function HeroCarousel() {
                   href={s.href}
                   target={s.href?.startsWith("http") ? "_blank" : undefined}
                   rel={s.href?.startsWith("http") ? "noopener" : undefined}
-                  className="block md:h-full"
-                  aria-label={i === 0 ? "Conhecer a Porta de Vidro 3 Folhas Linha Versatik" : "Falar no WhatsApp"}
+                  className="block transition-transform duration-200 active:scale-[0.995] md:h-full"
+                  aria-label={i === 0 ? "Solicitar orçamento do Box Articulado pelo WhatsApp" : "Falar no WhatsApp"}
                 >
                   {(i === 0 || ready) && (
                   <picture>
@@ -156,11 +168,11 @@ export function HeroCarousel() {
                     href={s.whatsappHref}
                     target="_blank"
                     rel="noopener"
-                    aria-label="Pedir orçamento da Porta de Vidro 3 Folhas pelo WhatsApp"
+                    aria-label={i === 0 ? "Solicitar orçamento do Box Articulado pelo WhatsApp" : "Pedir orçamento pelo WhatsApp"}
                     className="absolute bottom-4 left-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-yellow transition hover:scale-105 sm:bottom-6 sm:left-6 sm:h-auto sm:w-auto sm:gap-2 sm:rounded-md sm:px-5 sm:py-3 sm:text-sm sm:font-bold sm:uppercase"
                   >
                     <MessageCircle className="h-6 w-6 shrink-0" />
-                    <span className="hidden sm:inline">Pedir orçamento</span>
+                    <span className="hidden sm:inline">Solicitar orçamento no WhatsApp</span>
                   </a>
                 )}
                 </div>
@@ -256,8 +268,8 @@ export function HeroCarousel() {
       </div>
 
       <p className="sr-only">
-        Porta de Vidro 3 Folhas da Linha Versatik, produzida em Vidro Temperado 8mm ou 10mm e feita Sob Medida,
-        com instalação na região metropolitana de São Paulo.
+        Box Articulado Fast Vidro sob medida, com abertura articulada, vidro temperado 8mm ou 10mm e instalação
+        em São Paulo. Porta de Vidro 3 Folhas da Linha Versatik, produzida em vidro temperado e feita sob medida.
       </p>
 
       {/* Floating WhatsApp CTA for promotional slides (discreet, bottom) */}

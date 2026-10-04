@@ -15,8 +15,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { RegioesAtendidasCard } from "@/components/RegioesAtendidasCard";
 import { waLink } from "@/lib/site";
-import heroVersatikMobile from "@/assets/hero-versatik-mobile.webp";
-import heroVersatikDesktop from "@/assets/hero-versatik-desktop.webp";
+import heroArticuladoMobile from "@/assets/hero-box-articulado-mobile.webp";
+import heroArticuladoDesktop from "@/assets/hero-box-articulado-desktop.webp";
 
 
 export const Route = createFileRoute("/")({
@@ -31,8 +31,8 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.fastvidro.com.br/" },
-      { rel: "preload", as: "image", href: heroVersatikMobile, media: "(max-width: 767px)", fetchPriority: "high" },
-      { rel: "preload", as: "image", href: heroVersatikDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroArticuladoMobile, media: "(max-width: 767px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroArticuladoDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
     ],
 
     scripts: [
