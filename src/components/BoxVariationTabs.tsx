@@ -3,13 +3,19 @@ import { Link } from "@tanstack/react-router";
 import { MessageCircle, Check } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/site";
 import { FOTOS_MODELO, FOTOS_FUME } from "@/lib/fotos";
+import articulado1 from "@/assets/box-articulado-galeria-1.webp";
+import articulado2 from "@/assets/box-articulado-galeria-2.webp";
+import articulado3 from "@/assets/box-articulado-galeria-3.webp";
+import tresFolhas1 from "@/assets/box-3-folhas-galeria-1.webp";
+import tresFolhas2 from "@/assets/box-3-folhas-galeria-2.webp";
+import tresFolhas3 from "@/assets/box-3-folhas-galeria-3.webp";
 
-type ModeloId = "tradicional" | "flex" | "piso-teto" | "elegance";
+type ModeloId = "tradicional" | "articulado" | "3-folhas" | "flex" | "piso-teto" | "elegance";
 
 interface VarTab {
   id: ModeloId;
   label: string;
-  to: "/box-de-banheiro/tradicional" | "/box-de-banheiro/flex" | "/box-de-banheiro/piso-teto" | "/box-de-banheiro/elegance";
+  to: "/box-de-banheiro/tradicional" | "/box-de-banheiro/articulado" | "/box-de-banheiro/3-folhas" | "/box-de-banheiro/flex" | "/box-de-banheiro/piso-teto" | "/box-de-banheiro/elegance";
   h3: (b: string) => string;
   paragrafoIncolor: (b: string) => string;
   paragrafoFume: (b: string) => string;
@@ -17,6 +23,28 @@ interface VarTab {
 }
 
 const TABS: VarTab[] = [
+  {
+    id: "articulado",
+    label: "Box Articulado",
+    to: "/box-de-banheiro/articulado",
+    h3: (b) => `Box Articulado em ${b}: mais passagem em banheiros pequenos`,
+    paragrafoIncolor: (b) =>
+      `O Box Articulado Incolor em ${b} recolhe as folhas para ampliar a passagem e aproveitar melhor o espaço. Fabricado sob medida em vidro temperado, é indicado para banheiros compactos que exigem circulação confortável.`,
+    paragrafoFume: (b) =>
+      `Na versão Fumê, o Box Articulado em ${b} combina a abertura inteligente com maior privacidade visual e um acabamento contemporâneo.`,
+    fotosIncolor: [articulado1, articulado2, articulado3],
+  },
+  {
+    id: "3-folhas",
+    label: "Box 3 Folhas",
+    to: "/box-de-banheiro/3-folhas",
+    h3: (b) => `Box 3 Folhas em ${b}: duas folhas móveis e vão ampliado`,
+    paragrafoIncolor: (b) =>
+      `O Box 3 Folhas Incolor em ${b} usa duas folhas móveis e uma fixa para oferecer uma abertura maior do que o modelo tradicional, com vidro temperado e deslize suave.`,
+    paragrafoFume: (b) =>
+      `O Box 3 Folhas Fumê em ${b} reúne passagem ampliada, privacidade e acabamento moderno para banheiros com espaço intermediário.`,
+    fotosIncolor: [tresFolhas1, tresFolhas2, tresFolhas3],
+  },
   {
     id: "tradicional",
     label: "Box Tradicional",
