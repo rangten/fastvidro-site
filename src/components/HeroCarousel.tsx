@@ -6,6 +6,8 @@ import { Link } from "@tanstack/react-router";
 import { waLink } from "@/lib/site";
 
 import heroDefault from "@/assets/hero-box.webp";
+import versatikDesktop from "@/assets/hero-versatik-desktop.webp";
+import versatikMobile from "@/assets/hero-versatik-mobile.webp";
 import flexDesktop from "@/assets/hero-flex-desktop.webp";
 import flexMobile from "@/assets/hero-flex-mobile.webp";
 import boxDesktop from "@/assets/hero-box-desktop.webp";
@@ -19,11 +21,27 @@ type Slide = {
   desktopImage: string;
   mobileImage: string;
   href?: string;
+  alt?: string;
+  whatsappHref?: string;
+  desktopSize?: { width: number; height: number };
+  mobileSize?: { width: number; height: number };
   primary?: { label: string; href: string; icon?: React.ReactNode };
   secondary?: { label: string; to: string };
 };
 
 const slides: Slide[] = [
+  {
+    kind: "image",
+    desktopImage: versatikDesktop,
+    mobileImage: versatikMobile,
+    href: "/portas-de-vidro/versatik",
+    alt: "Porta de vidro temperado 3 folhas Linha Versatik FastVidro a partir de 12x de R$ 140,00 medida 0,80 x 2,10",
+    whatsappHref: waLink(
+      "Olá! Gostaria de solicitar um orçamento para a Porta de Vidro 3 Folhas (Medida 0,80 x 2,10).",
+    ),
+    desktopSize: { width: 1024, height: 372 },
+    mobileSize: { width: 572, height: 1024 },
+  },
   {
     kind: "image",
     desktopImage: boxDesktop,
@@ -97,29 +115,35 @@ export function HeroCarousel() {
   const next = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative bg-ink text-ink-foreground">
-      <div className="overflow-hidden" ref={ready ? emblaRef : undefined}>
-        <div className="flex">
+    <section id="hero-carrossel" aria-label="Lançamentos FastVidro" className="relative bg-ink text-ink-foreground">
+      <div className="overflow-hidden md:aspect-[1024/372]" ref={ready ? emblaRef : undefined}>
+        <div className="flex md:h-full">
           {slides.map((s, i) => (
-            <div key={i} className="relative flex-[0_0_100%] min-w-0">
+            <div key={i} className="relative min-w-0 flex-[0_0_100%] md:h-full">
               {s.kind === "image" ? (
                 // Promotional slides: entire banner is clickable, image shown intact (no crop)
+                <div className="relative bg-ink md:h-full">
                 <a
                   href={s.href}
-                  target="_blank"
-                  rel="noopener"
-                  className="block bg-ink"
-                  aria-label="Falar no WhatsApp"
+                  target={s.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={s.href?.startsWith("http") ? "noopener" : undefined}
+                  className="block md:h-full"
+                  aria-label={i === 0 ? "Conhecer a Porta de Vidro 3 Folhas Linha Versatik" : "Falar no WhatsApp"}
                 >
                   {(i === 0 || ready) && (
                   <picture>
-                    <source media="(min-width: 768px)" srcSet={s.desktopImage} width={1200} height={619} />
+                    <source
+                      media="(min-width: 768px)"
+                      srcSet={s.desktopImage}
+                      width={s.desktopSize?.width ?? 1200}
+                      height={s.desktopSize?.height ?? 619}
+                    />
                     <img
                       src={s.mobileImage}
-                      alt="Banner promocional Fast Vidro"
-                      width={960}
-                      height={1200}
-                      className="block w-full h-auto max-h-[70vh] object-contain mx-auto"
+                      alt={s.alt ?? "Banner promocional Fast Vidro"}
+                      width={s.mobileSize?.width ?? 960}
+                      height={s.mobileSize?.height ?? 1200}
+                      className="block h-auto w-full object-contain md:h-full"
                       loading={i === 0 ? "eager" : "lazy"}
                       fetchPriority={i === 0 ? "high" : "auto"}
                       decoding={i === 0 ? "sync" : "async"}
@@ -127,6 +151,19 @@ export function HeroCarousel() {
                   </picture>
                   )}
                 </a>
+                {s.whatsappHref && (
+                  <a
+                    href={s.whatsappHref}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Pedir orçamento da Porta de Vidro 3 Folhas pelo WhatsApp"
+                    className="absolute bottom-4 right-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-ink transition hover:scale-105 sm:bottom-6 sm:right-6 sm:h-auto sm:w-auto sm:gap-2 sm:rounded-md sm:px-5 sm:py-3 sm:text-sm sm:font-bold sm:uppercase"
+                  >
+                    <MessageCircle className="h-6 w-6 shrink-0" />
+                    <span className="hidden sm:inline">Pedir orçamento</span>
+                  </a>
+                )}
+                </div>
               ) : (
                 <div className="relative min-h-[480px] sm:min-h-[540px] lg:min-h-[600px]">
                   <picture>
@@ -217,6 +254,11 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+
+      <p className="sr-only">
+        Porta de Vidro 3 Folhas da Linha Versatik, produzida em Vidro Temperado 8mm ou 10mm e feita Sob Medida,
+        com instalação na região metropolitana de São Paulo.
+      </p>
 
       {/* Floating WhatsApp CTA for promotional slides (discreet, bottom) */}
       <noscript />

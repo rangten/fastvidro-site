@@ -15,8 +15,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { RegioesAtendidasCard } from "@/components/RegioesAtendidasCard";
 import { waLink } from "@/lib/site";
-import heroBoxMobile from "@/assets/hero-box-mobile.webp";
-import heroBoxDesktop from "@/assets/hero-box-desktop.webp";
+import heroVersatikMobile from "@/assets/hero-versatik-mobile.webp";
+import heroVersatikDesktop from "@/assets/hero-versatik-desktop.webp";
 
 
 export const Route = createFileRoute("/")({
@@ -31,8 +31,8 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.fastvidro.com.br/" },
-      { rel: "preload", as: "image", href: heroBoxMobile, media: "(max-width: 767px)", fetchPriority: "high" },
-      { rel: "preload", as: "image", href: heroBoxDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroVersatikMobile, media: "(max-width: 767px)", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: heroVersatikDesktop, media: "(min-width: 768px)", fetchPriority: "high" },
     ],
 
     scripts: [
@@ -60,6 +60,26 @@ export const Route = createFileRoute("/")({
             "https://tiktok.com/@fastvidro",
             "https://g.page/fastvidro",
           ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Porta de Vidro 3 Folhas (Linha Versatik Premium)",
+          brand: { "@type": "Brand", name: "FastVidro" },
+          description:
+            "Porta de Vidro 3 Folhas Linha Versatik em vidro temperado 8mm ou 10mm, sob medida, com instalação na região metropolitana de São Paulo.",
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "BRL",
+            price: "140.00",
+            availability: "https://schema.org/InStock",
+            url: "https://www.fastvidro.com.br/portas-de-vidro/versatik",
+            description: "12 parcelas de R$ 140,00 para a medida 0,80 x 2,10.",
+          },
+          areaServed: { "@type": "AdministrativeArea", name: "Região Metropolitana de São Paulo" },
         }),
       },
     ],
