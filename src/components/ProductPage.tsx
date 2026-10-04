@@ -1,7 +1,21 @@
 
 import { PageHero } from "./PageHero";
 import { waLink } from "@/lib/site";
-import { Check, ArrowRight } from "lucide-react";
+import fastVidroLogo from "@/assets/fast-vidro-logo.webp";
+import { Check, ArrowRight, DoorOpen, ShieldCheck, Sparkles } from "lucide-react";
+
+interface ProductModel {
+  slug?: string;
+  name: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  whatsappMessage?: string;
+  actionLabel?: string;
+  visualTitle?: string;
+  benefits?: [string, string, string];
+  badge?: string;
+}
 
 export interface ProductPageProps {
   eyebrow: string;
@@ -15,7 +29,7 @@ export interface ProductPageProps {
   modelLinkBase?: string;
   // Cada modelo aceita uma imagem opcional. Para usar suas fotos reais,
   // basta preencher `image` com a URL/import da foto do projeto instalado.
-  models: { slug?: string; name: string; description: string; image?: string; imageAlt?: string }[];
+  models: ProductModel[];
   features: string[];
   ctaLabel?: string;
   seoHighlights?: { title: string; text: string }[];
@@ -86,11 +100,16 @@ export function ProductPage({
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {models.map((m) => {
-              const href = modelLinkBase && m.slug ? `${modelLinkBase}/${m.slug}` : undefined;
+              const href = m.whatsappMessage
+                ? waLink(m.whatsappMessage)
+                : modelLinkBase && m.slug
+                  ? `${modelLinkBase}/${m.slug}`
+                  : undefined;
+              const isWhatsapp = Boolean(m.whatsappMessage);
               const cardBody = (
                 <>
                   {/* Foto de destaque do modelo (substitua `m.image` pelas suas fotos reais). */}
-                  <div className="aspect-[4/3] overflow-hidden bg-black">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-black">
                     {m.image ? (
                       <img width={1200} height={800}
                         src={m.image}
@@ -103,13 +122,48 @@ export function ProductPage({
                         Foto em breve
                       </div>
                     )}
+                    {m.benefits && (
+                      <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-r from-black/90 via-black/60 to-transparent p-4 sm:p-5">
+                        <div className="flex items-start justify-between gap-3">
+                          <img
+                            src={fastVidroLogo}
+                            alt="Fast Vidro"
+                            width={150}
+                            height={60}
+                            loading="lazy"
+                            className="h-auto w-24 object-contain sm:w-28"
+                          />
+                          {m.badge && (
+                            <span className="rounded-sm bg-primary px-2 py-1 text-[9px] font-black uppercase text-primary-foreground">
+                              {m.badge}
+                            </span>
+                          )}
+                        </div>
+                        <div className="max-w-[82%]">
+                          <strong className="block text-xl font-black uppercase leading-tight text-white sm:text-2xl">
+                            {m.visualTitle ?? m.name}
+                          </strong>
+                          <ul className="mt-3 space-y-1.5">
+                            {m.benefits.map((benefit, index) => {
+                              const BenefitIcon = [DoorOpen, ShieldCheck, Sparkles][index] ?? Check;
+                              return (
+                                <li key={benefit} className="flex items-start gap-2 text-[10px] font-semibold leading-snug text-white sm:text-xs">
+                                  <BenefitIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" aria-hidden="true" />
+                                  <span>{benefit}</span>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="font-sans text-xl font-semibold text-primary tracking-wide">{m.name}</h3>
                     <p className="mt-3 text-sm text-ink-foreground/70">{m.description}</p>
                     {href && (
                       <span className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-primary">
-                        Ver modelo <ArrowRight className="h-3 w-3" />
+                        {m.actionLabel ?? "Ver modelo"} <ArrowRight className="h-3 w-3" />
                       </span>
                     )}
                   </div>
@@ -120,7 +174,14 @@ export function ProductPage({
                 "group block overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] transition hover:border-primary hover:bg-white/[0.06]";
 
               return href ? (
-                <a key={m.name} href={href} className={cardClass}>
+                <a
+                  key={m.name}
+                  href={href}
+                  className={cardClass}
+                  target={isWhatsapp ? "_blank" : undefined}
+                  rel={isWhatsapp ? "noopener noreferrer" : undefined}
+                  aria-label={isWhatsapp ? `${m.actionLabel ?? "Solicitar orçamento"}: ${m.name}` : undefined}
+                >
                   {cardBody}
                 </a>
               ) : (
