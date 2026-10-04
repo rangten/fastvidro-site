@@ -25,6 +25,7 @@ type Slide = {
   href?: string;
   alt?: string;
   whatsappHref?: string;
+  whatsappLabel?: string;
   desktopSize?: { width: number; height: number };
   mobileSize?: { width: number; height: number };
   primary?: { label: string; href: string; icon?: React.ReactNode };
@@ -39,6 +40,7 @@ const slides: Slide[] = [
     href: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
     alt: "Lançamento Box Articulado Fast Vidro sob medida, a partir de 12 vezes de R$ 150",
     whatsappHref: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
+    whatsappLabel: "Solicitar orçamento no WhatsApp",
     desktopSize: { width: 1024, height: 373 },
     mobileSize: { width: 572, height: 1024 },
   },
@@ -172,7 +174,7 @@ export function HeroCarousel() {
                     className="absolute bottom-4 left-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-yellow transition hover:scale-105 sm:bottom-6 sm:left-6 sm:h-auto sm:w-auto sm:gap-2 sm:rounded-md sm:px-5 sm:py-3 sm:text-sm sm:font-bold sm:uppercase"
                   >
                     <MessageCircle className="h-6 w-6 shrink-0" />
-                    <span className="hidden sm:inline">Solicitar orçamento no WhatsApp</span>
+                    <span className="hidden sm:inline">{s.whatsappLabel ?? "Pedir orçamento"}</span>
                   </a>
                 )}
                 </div>
