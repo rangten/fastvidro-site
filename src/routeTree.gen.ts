@@ -9,110 +9,85 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as BoxDeVidroZonaLesteRouteImport } from './routes/box-de-vidro-zona-leste'
-import { Route as BoxDeVidroZonaNorteRouteImport } from './routes/box-de-vidro-zona-norte'
-import { Route as BoxDeVidroZonaOesteRouteImport } from './routes/box-de-vidro-zona-oeste'
-import { Route as BoxDeVidroZonaSulRouteImport } from './routes/box-de-vidro-zona-sul'
-import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as BlogAlertaSegurancaBoxTravandoRouteImport } from './routes/blog_.alerta-seguranca-box-travando'
-import { Route as BlogBox3FolhasSistemaVersatikRouteImport } from './routes/blog_.box-3-folhas-sistema-versatik'
-import { Route as BlogBoxAbrirVsCorrerRouteImport } from './routes/blog_.box-abrir-vs-correr'
-import { Route as BlogBoxBanheiroCasaVerdeImirimRouteImport } from './routes/blog_.box-banheiro-casa-verde-imirim'
-import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog_.box-banheiro-jardim-sao-paulo'
-import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
-import { Route as BlogBoxBanheiroTucuruviRouteImport } from './routes/blog_.box-banheiro-tucuruvi'
-import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
-import { Route as BlogBoxBanheiroVilaGuilhermeRouteImport } from './routes/blog_.box-banheiro-vila-guilherme'
-import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
-import { Route as BlogBoxConvencionalVsAteOTetoRouteImport } from './routes/blog_.box-convencional-vs-ate-o-teto'
-import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
-import { Route as BlogBoxEleganceRoldanasAparentesRouteImport } from './routes/blog_.box-elegance-roldanas-aparentes'
-import { Route as BlogBoxFlexCorAcoInoxRouteImport } from './routes/blog_.box-flex-cor-aco-inox'
-import { Route as BlogBoxNobreIdeiaGlassRouteImport } from './routes/blog_.box-nobre-ideia-glass'
-import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
-import { Route as BlogComoLimparBoxBanheiroRouteImport } from './routes/blog_.como-limpar-box-banheiro'
-import { Route as BlogComoMedirBoxBanheiroRouteImport } from './routes/blog_.como-medir-box-banheiro'
-import { Route as BlogComoSaberQualBoxUsarRouteImport } from './routes/blog_.como-saber-qual-box-usar'
-import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
-import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
-import { Route as BlogFaqBoxBanheiroRouteImport } from './routes/blog_.faq-box-banheiro'
-import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
-import { Route as BlogManutencaoBoxBanheiroRouteImport } from './routes/blog_.manutencao-box-banheiro'
-import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
-import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
-import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
-import { Route as BoxDeBanheiro3FolhasRouteImport } from './routes/box-de-banheiro.3-folhas'
-import { Route as BoxDeBanheiroArticuladoRouteImport } from './routes/box-de-banheiro.articulado'
-import { Route as BoxDeBanheiroDeAbrirRouteImport } from './routes/box-de-banheiro.de-abrir'
-import { Route as BoxDeBanheiroEleganceRouteImport } from './routes/box-de-banheiro.elegance'
-import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
-import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro.nobre'
-import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
-import { Route as BoxDeBanheiroSecureBoxRouteImport } from './routes/box-de-banheiro.secure-box'
-import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
-import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
-import { Route as BoxFumeIndexRouteImport } from './routes/box-fume.index'
-import { Route as BoxFumeBairroRouteImport } from './routes/box-fume.$bairro'
-import { Route as BoxIncolorIndexRouteImport } from './routes/box-incolor.index'
-import { Route as BoxIncolorBairroRouteImport } from './routes/box-incolor.$bairro'
-import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
-import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
-import { Route as EspelhosBanheiroRouteImport } from './routes/espelhos.banheiro'
-import { Route as EspelhosBisoteRouteImport } from './routes/espelhos.bisote'
-import { Route as EspelhosLapidadoRouteImport } from './routes/espelhos.lapidado'
-import { Route as EspelhosOrganicoRouteImport } from './routes/espelhos.organico'
-import { Route as EspelhosPainelRouteImport } from './routes/espelhos.painel'
-import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro.index'
-import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
-import { Route as PortasDeVidroAbrirRouteImport } from './routes/portas-de-vidro.abrir'
-import { Route as PortasDeVidroCertaRouteImport } from './routes/portas-de-vidro.certa'
-import { Route as PortasDeVidroCorrerRouteImport } from './routes/portas-de-vidro.correr'
-import { Route as PortasDeVidroFlexRouteImport } from './routes/portas-de-vidro.flex'
-import { Route as PortasDeVidroNobreRouteImport } from './routes/portas-de-vidro.nobre'
-import { Route as PortasDeVidroVersatikRouteImport } from './routes/portas-de-vidro.versatik'
-import { Route as PortasDeVidroVisionRouteImport } from './routes/portas-de-vidro.vision'
+import { Route as EspelhosLedRouteImport } from './routes/espelhos-led'
+import { Route as BoxDeVidroZonaSulRouteImport } from './routes/box-de-vidro-zona-sul'
+import { Route as BoxDeVidroZonaOesteRouteImport } from './routes/box-de-vidro-zona-oeste'
+import { Route as BoxDeVidroZonaNorteRouteImport } from './routes/box-de-vidro-zona-norte'
+import { Route as BoxDeVidroZonaLesteRouteImport } from './routes/box-de-vidro-zona-leste'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjetosIndexRouteImport } from './routes/projetos.index'
-import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
-import { Route as ProjetosCoberturasRouteImport } from './routes/projetos.coberturas'
-import { Route as ProjetosComercialRouteImport } from './routes/projetos.comercial'
-import { Route as ProjetosEscritoriosRouteImport } from './routes/projetos.escritorios'
-import { Route as ProjetosFechamentoSacadaRouteImport } from './routes/projetos.fechamento-sacada'
-import { Route as ProjetosGuardaCorpoRouteImport } from './routes/projetos.guarda-corpo'
-import { Route as ProjetosResidencialRouteImport } from './routes/projetos.residencial'
-import { Route as SecureBoxBairroRouteImport } from './routes/secure-box.$bairro'
+import { Route as PortasDeVidroIndexRouteImport } from './routes/portas-de-vidro.index'
+import { Route as EspelhosIndexRouteImport } from './routes/espelhos.index'
+import { Route as BoxIncolorIndexRouteImport } from './routes/box-incolor.index'
+import { Route as BoxFumeIndexRouteImport } from './routes/box-fume.index'
+import { Route as BoxDeBanheiroIndexRouteImport } from './routes/box-de-banheiro.index'
 import { Route as ServicosBairroRouteImport } from './routes/servicos.$bairro'
+import { Route as SecureBoxBairroRouteImport } from './routes/secure-box.$bairro'
+import { Route as ProjetosResidencialRouteImport } from './routes/projetos.residencial'
+import { Route as ProjetosGuardaCorpoRouteImport } from './routes/projetos.guarda-corpo'
+import { Route as ProjetosFechamentoSacadaRouteImport } from './routes/projetos.fechamento-sacada'
+import { Route as ProjetosEscritoriosRouteImport } from './routes/projetos.escritorios'
+import { Route as ProjetosComercialRouteImport } from './routes/projetos.comercial'
+import { Route as ProjetosCoberturasRouteImport } from './routes/projetos.coberturas'
+import { Route as ProjetosModeloRouteImport } from './routes/projetos.$modelo'
+import { Route as PortasDeVidroVisionRouteImport } from './routes/portas-de-vidro.vision'
+import { Route as PortasDeVidroVersatikRouteImport } from './routes/portas-de-vidro.versatik'
+import { Route as PortasDeVidroNobreRouteImport } from './routes/portas-de-vidro.nobre'
+import { Route as PortasDeVidroFlexRouteImport } from './routes/portas-de-vidro.flex'
+import { Route as PortasDeVidroCorrerRouteImport } from './routes/portas-de-vidro.correr'
+import { Route as PortasDeVidroCertaRouteImport } from './routes/portas-de-vidro.certa'
+import { Route as PortasDeVidroAbrirRouteImport } from './routes/portas-de-vidro.abrir'
+import { Route as PortasDeVidroModeloRouteImport } from './routes/portas-de-vidro.$modelo'
+import { Route as EspelhosPainelRouteImport } from './routes/espelhos.painel'
+import { Route as EspelhosOrganicoRouteImport } from './routes/espelhos.organico'
+import { Route as EspelhosLapidadoRouteImport } from './routes/espelhos.lapidado'
+import { Route as EspelhosBisoteRouteImport } from './routes/espelhos.bisote'
+import { Route as EspelhosBanheiroRouteImport } from './routes/espelhos.banheiro'
+import { Route as EspelhosModeloRouteImport } from './routes/espelhos.$modelo'
+import { Route as BoxIncolorBairroRouteImport } from './routes/box-incolor.$bairro'
+import { Route as BoxFumeBairroRouteImport } from './routes/box-fume.$bairro'
+import { Route as BoxDeBanheiroTransferRouteImport } from './routes/box-de-banheiro.transfer'
+import { Route as BoxDeBanheiroTradicionalRouteImport } from './routes/box-de-banheiro.tradicional'
+import { Route as BoxDeBanheiroSecureBoxRouteImport } from './routes/box-de-banheiro.secure-box'
+import { Route as BoxDeBanheiroPisoTetoRouteImport } from './routes/box-de-banheiro.piso-teto'
+import { Route as BoxDeBanheiroNobreRouteImport } from './routes/box-de-banheiro.nobre'
+import { Route as BoxDeBanheiroFlexRouteImport } from './routes/box-de-banheiro.flex'
+import { Route as BoxDeBanheiroEleganceRouteImport } from './routes/box-de-banheiro.elegance'
+import { Route as BoxDeBanheiroDeAbrirRouteImport } from './routes/box-de-banheiro.de-abrir'
+import { Route as BoxDeBanheiroArticuladoRouteImport } from './routes/box-de-banheiro.articulado'
+import { Route as BoxDeBanheiro3FolhasRouteImport } from './routes/box-de-banheiro.3-folhas'
+import { Route as BoxDeBanheiroModeloRouteImport } from './routes/box-de-banheiro.$modelo'
+import { Route as BlogSecureBoxPeliculaProtecaoRouteImport } from './routes/blog_.secure-box-pelicula-protecao'
+import { Route as BlogManutencaoBoxBanheiroRouteImport } from './routes/blog_.manutencao-box-banheiro'
+import { Route as BlogFastVidroHistoriaRouteImport } from './routes/blog_.fast-vidro-historia'
+import { Route as BlogFaqBoxBanheiroRouteImport } from './routes/blog_.faq-box-banheiro'
+import { Route as BlogEspelhosLedSobMedidaRouteImport } from './routes/blog_.espelhos-led-sob-medida'
+import { Route as BlogCorBoxIncolorFumeVerdeBronzeRouteImport } from './routes/blog_.cor-box-incolor-fume-verde-bronze'
+import { Route as BlogComoSaberQualBoxUsarRouteImport } from './routes/blog_.como-saber-qual-box-usar'
+import { Route as BlogComoMedirBoxBanheiroRouteImport } from './routes/blog_.como-medir-box-banheiro'
+import { Route as BlogComoLimparBoxBanheiroRouteImport } from './routes/blog_.como-limpar-box-banheiro'
+import { Route as BlogBoxTradicionalVsFlexRouteImport } from './routes/blog_.box-tradicional-vs-flex'
+import { Route as BlogBoxNobreIdeiaGlassRouteImport } from './routes/blog_.box-nobre-ideia-glass'
+import { Route as BlogBoxFlexCorAcoInoxRouteImport } from './routes/blog_.box-flex-cor-aco-inox'
+import { Route as BlogBoxEleganceRoldanasAparentesRouteImport } from './routes/blog_.box-elegance-roldanas-aparentes'
+import { Route as BlogBoxDeCantoRouteImport } from './routes/blog_.box-de-canto'
+import { Route as BlogBoxConvencionalVsAteOTetoRouteImport } from './routes/blog_.box-convencional-vs-ate-o-teto'
+import { Route as BlogBoxBanheiroZonaNorteRouteImport } from './routes/blog_.box-banheiro-zona-norte'
+import { Route as BlogBoxBanheiroVilaGuilhermeRouteImport } from './routes/blog_.box-banheiro-vila-guilherme'
+import { Route as BlogBoxBanheiroVidroSantanaRouteImport } from './routes/blog_.box-banheiro-vidro-santana'
+import { Route as BlogBoxBanheiroTucuruviRouteImport } from './routes/blog_.box-banheiro-tucuruvi'
+import { Route as BlogBoxBanheiroMandaquiRouteImport } from './routes/blog_.box-banheiro-mandaqui'
+import { Route as BlogBoxBanheiroJardimSaoPauloRouteImport } from './routes/blog_.box-banheiro-jardim-sao-paulo'
+import { Route as BlogBoxBanheiroCasaVerdeImirimRouteImport } from './routes/blog_.box-banheiro-casa-verde-imirim'
+import { Route as BlogBoxAbrirVsCorrerRouteImport } from './routes/blog_.box-abrir-vs-correr'
+import { Route as BlogBox3FolhasSistemaVersatikRouteImport } from './routes/blog_.box-3-folhas-sistema-versatik'
+import { Route as BlogAlertaSegurancaBoxTravandoRouteImport } from './routes/blog_.alerta-seguranca-box-travando'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeVidroZonaLesteRoute = BoxDeVidroZonaLesteRouteImport.update({
-  id: '/box-de-vidro-zona-leste',
-  path: '/box-de-vidro-zona-leste',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeVidroZonaNorteRoute = BoxDeVidroZonaNorteRouteImport.update({
-  id: '/box-de-vidro-zona-norte',
-  path: '/box-de-vidro-zona-norte',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeVidroZonaOesteRoute = BoxDeVidroZonaOesteRouteImport.update({
-  id: '/box-de-vidro-zona-oeste',
-  path: '/box-de-vidro-zona-oeste',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeVidroZonaSulRoute = BoxDeVidroZonaSulRouteImport.update({
-  id: '/box-de-vidro-zona-sul',
-  path: '/box-de-vidro-zona-sul',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EspelhosLedRoute = EspelhosLedRouteImport.update({
@@ -120,312 +95,34 @@ const EspelhosLedRoute = EspelhosLedRouteImport.update({
   path: '/espelhos-led',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const BoxDeVidroZonaSulRoute = BoxDeVidroZonaSulRouteImport.update({
+  id: '/box-de-vidro-zona-sul',
+  path: '/box-de-vidro-zona-sul',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogAlertaSegurancaBoxTravandoRoute =
-  BlogAlertaSegurancaBoxTravandoRouteImport.update({
-    id: '/blog_/alerta-seguranca-box-travando',
-    path: '/blog/alerta-seguranca-box-travando',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBox3FolhasSistemaVersatikRoute =
-  BlogBox3FolhasSistemaVersatikRouteImport.update({
-    id: '/blog_/box-3-folhas-sistema-versatik',
-    path: '/blog/box-3-folhas-sistema-versatik',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxAbrirVsCorrerRoute = BlogBoxAbrirVsCorrerRouteImport.update({
-  id: '/blog_/box-abrir-vs-correr',
-  path: '/blog/box-abrir-vs-correr',
+const BoxDeVidroZonaOesteRoute = BoxDeVidroZonaOesteRouteImport.update({
+  id: '/box-de-vidro-zona-oeste',
+  path: '/box-de-vidro-zona-oeste',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogBoxBanheiroCasaVerdeImirimRoute =
-  BlogBoxBanheiroCasaVerdeImirimRouteImport.update({
-    id: '/blog_/box-banheiro-casa-verde-imirim',
-    path: '/blog/box-banheiro-casa-verde-imirim',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxBanheiroJardimSaoPauloRoute =
-  BlogBoxBanheiroJardimSaoPauloRouteImport.update({
-    id: '/blog_/box-banheiro-jardim-sao-paulo',
-    path: '/blog/box-banheiro-jardim-sao-paulo',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxBanheiroMandaquiRoute = BlogBoxBanheiroMandaquiRouteImport.update({
-  id: '/blog_/box-banheiro-mandaqui',
-  path: '/blog/box-banheiro-mandaqui',
+const BoxDeVidroZonaNorteRoute = BoxDeVidroZonaNorteRouteImport.update({
+  id: '/box-de-vidro-zona-norte',
+  path: '/box-de-vidro-zona-norte',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogBoxBanheiroTucuruviRoute = BlogBoxBanheiroTucuruviRouteImport.update({
-  id: '/blog_/box-banheiro-tucuruvi',
-  path: '/blog/box-banheiro-tucuruvi',
+const BoxDeVidroZonaLesteRoute = BoxDeVidroZonaLesteRouteImport.update({
+  id: '/box-de-vidro-zona-leste',
+  path: '/box-de-vidro-zona-leste',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogBoxBanheiroVidroSantanaRoute =
-  BlogBoxBanheiroVidroSantanaRouteImport.update({
-    id: '/blog_/box-banheiro-vidro-santana',
-    path: '/blog/box-banheiro-vidro-santana',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxBanheiroVilaGuilhermeRoute =
-  BlogBoxBanheiroVilaGuilhermeRouteImport.update({
-    id: '/blog_/box-banheiro-vila-guilherme',
-    path: '/blog/box-banheiro-vila-guilherme',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxBanheiroZonaNorteRoute =
-  BlogBoxBanheiroZonaNorteRouteImport.update({
-    id: '/blog_/box-banheiro-zona-norte',
-    path: '/blog/box-banheiro-zona-norte',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxConvencionalVsAteOTetoRoute =
-  BlogBoxConvencionalVsAteOTetoRouteImport.update({
-    id: '/blog_/box-convencional-vs-ate-o-teto',
-    path: '/blog/box-convencional-vs-ate-o-teto',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxDeCantoRoute = BlogBoxDeCantoRouteImport.update({
-  id: '/blog_/box-de-canto',
-  path: '/blog/box-de-canto',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogBoxEleganceRoldanasAparentesRoute =
-  BlogBoxEleganceRoldanasAparentesRouteImport.update({
-    id: '/blog_/box-elegance-roldanas-aparentes',
-    path: '/blog/box-elegance-roldanas-aparentes',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogBoxFlexCorAcoInoxRoute = BlogBoxFlexCorAcoInoxRouteImport.update({
-  id: '/blog_/box-flex-cor-aco-inox',
-  path: '/blog/box-flex-cor-aco-inox',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogBoxNobreIdeiaGlassRoute = BlogBoxNobreIdeiaGlassRouteImport.update({
-  id: '/blog_/box-nobre-ideia-glass',
-  path: '/blog/box-nobre-ideia-glass',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogBoxTradicionalVsFlexRoute =
-  BlogBoxTradicionalVsFlexRouteImport.update({
-    id: '/blog_/box-tradicional-vs-flex',
-    path: '/blog/box-tradicional-vs-flex',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogComoLimparBoxBanheiroRoute =
-  BlogComoLimparBoxBanheiroRouteImport.update({
-    id: '/blog_/como-limpar-box-banheiro',
-    path: '/blog/como-limpar-box-banheiro',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogComoMedirBoxBanheiroRoute =
-  BlogComoMedirBoxBanheiroRouteImport.update({
-    id: '/blog_/como-medir-box-banheiro',
-    path: '/blog/como-medir-box-banheiro',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogComoSaberQualBoxUsarRoute =
-  BlogComoSaberQualBoxUsarRouteImport.update({
-    id: '/blog_/como-saber-qual-box-usar',
-    path: '/blog/como-saber-qual-box-usar',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogCorBoxIncolorFumeVerdeBronzeRoute =
-  BlogCorBoxIncolorFumeVerdeBronzeRouteImport.update({
-    id: '/blog_/cor-box-incolor-fume-verde-bronze',
-    path: '/blog/cor-box-incolor-fume-verde-bronze',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogEspelhosLedSobMedidaRoute =
-  BlogEspelhosLedSobMedidaRouteImport.update({
-    id: '/blog_/espelhos-led-sob-medida',
-    path: '/blog/espelhos-led-sob-medida',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogFaqBoxBanheiroRoute = BlogFaqBoxBanheiroRouteImport.update({
-  id: '/blog_/faq-box-banheiro',
-  path: '/blog/faq-box-banheiro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogFastVidroHistoriaRoute = BlogFastVidroHistoriaRouteImport.update({
-  id: '/blog_/fast-vidro-historia',
-  path: '/blog/fast-vidro-historia',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogManutencaoBoxBanheiroRoute =
-  BlogManutencaoBoxBanheiroRouteImport.update({
-    id: '/blog_/manutencao-box-banheiro',
-    path: '/blog/manutencao-box-banheiro',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BlogSecureBoxPeliculaProtecaoRoute =
-  BlogSecureBoxPeliculaProtecaoRouteImport.update({
-    id: '/blog_/secure-box-pelicula-protecao',
-    path: '/blog/secure-box-pelicula-protecao',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
-  id: '/box-de-banheiro/',
-  path: '/box-de-banheiro/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
-  id: '/box-de-banheiro/$modelo',
-  path: '/box-de-banheiro/$modelo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiro3FolhasRoute = BoxDeBanheiro3FolhasRouteImport.update({
-  id: '/box-de-banheiro/3-folhas',
-  path: '/box-de-banheiro/3-folhas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroArticuladoRoute = BoxDeBanheiroArticuladoRouteImport.update({
-  id: '/box-de-banheiro/articulado',
-  path: '/box-de-banheiro/articulado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroDeAbrirRoute = BoxDeBanheiroDeAbrirRouteImport.update({
-  id: '/box-de-banheiro/de-abrir',
-  path: '/box-de-banheiro/de-abrir',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroEleganceRoute = BoxDeBanheiroEleganceRouteImport.update({
-  id: '/box-de-banheiro/elegance',
-  path: '/box-de-banheiro/elegance',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
-  id: '/box-de-banheiro/flex',
-  path: '/box-de-banheiro/flex',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroNobreRoute = BoxDeBanheiroNobreRouteImport.update({
-  id: '/box-de-banheiro/nobre',
-  path: '/box-de-banheiro/nobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
-  id: '/box-de-banheiro/piso-teto',
-  path: '/box-de-banheiro/piso-teto',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroSecureBoxRoute = BoxDeBanheiroSecureBoxRouteImport.update({
-  id: '/box-de-banheiro/secure-box',
-  path: '/box-de-banheiro/secure-box',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxDeBanheiroTradicionalRoute =
-  BoxDeBanheiroTradicionalRouteImport.update({
-    id: '/box-de-banheiro/tradicional',
-    path: '/box-de-banheiro/tradicional',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BoxDeBanheiroTransferRoute = BoxDeBanheiroTransferRouteImport.update({
-  id: '/box-de-banheiro/transfer',
-  path: '/box-de-banheiro/transfer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxFumeIndexRoute = BoxFumeIndexRouteImport.update({
-  id: '/box-fume/',
-  path: '/box-fume/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxFumeBairroRoute = BoxFumeBairroRouteImport.update({
-  id: '/box-fume/$bairro',
-  path: '/box-fume/$bairro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxIncolorIndexRoute = BoxIncolorIndexRouteImport.update({
-  id: '/box-incolor/',
-  path: '/box-incolor/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoxIncolorBairroRoute = BoxIncolorBairroRouteImport.update({
-  id: '/box-incolor/$bairro',
-  path: '/box-incolor/$bairro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosIndexRoute = EspelhosIndexRouteImport.update({
-  id: '/espelhos/',
-  path: '/espelhos/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
-  id: '/espelhos/$modelo',
-  path: '/espelhos/$modelo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosBanheiroRoute = EspelhosBanheiroRouteImport.update({
-  id: '/espelhos/banheiro',
-  path: '/espelhos/banheiro',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosBisoteRoute = EspelhosBisoteRouteImport.update({
-  id: '/espelhos/bisote',
-  path: '/espelhos/bisote',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosLapidadoRoute = EspelhosLapidadoRouteImport.update({
-  id: '/espelhos/lapidado',
-  path: '/espelhos/lapidado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosOrganicoRoute = EspelhosOrganicoRouteImport.update({
-  id: '/espelhos/organico',
-  path: '/espelhos/organico',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EspelhosPainelRoute = EspelhosPainelRouteImport.update({
-  id: '/espelhos/painel',
-  path: '/espelhos/painel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroIndexRoute = PortasDeVidroIndexRouteImport.update({
-  id: '/portas-de-vidro/',
-  path: '/portas-de-vidro/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
-  id: '/portas-de-vidro/$modelo',
-  path: '/portas-de-vidro/$modelo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroAbrirRoute = PortasDeVidroAbrirRouteImport.update({
-  id: '/portas-de-vidro/abrir',
-  path: '/portas-de-vidro/abrir',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroCertaRoute = PortasDeVidroCertaRouteImport.update({
-  id: '/portas-de-vidro/certa',
-  path: '/portas-de-vidro/certa',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroCorrerRoute = PortasDeVidroCorrerRouteImport.update({
-  id: '/portas-de-vidro/correr',
-  path: '/portas-de-vidro/correr',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroFlexRoute = PortasDeVidroFlexRouteImport.update({
-  id: '/portas-de-vidro/flex',
-  path: '/portas-de-vidro/flex',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroNobreRoute = PortasDeVidroNobreRouteImport.update({
-  id: '/portas-de-vidro/nobre',
-  path: '/portas-de-vidro/nobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroVersatikRoute = PortasDeVidroVersatikRouteImport.update({
-  id: '/portas-de-vidro/versatik',
-  path: '/portas-de-vidro/versatik',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortasDeVidroVisionRoute = PortasDeVidroVisionRouteImport.update({
-  id: '/portas-de-vidro/vision',
-  path: '/portas-de-vidro/vision',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosIndexRoute = ProjetosIndexRouteImport.update({
@@ -433,24 +130,49 @@ const ProjetosIndexRoute = ProjetosIndexRouteImport.update({
   path: '/projetos/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
-  id: '/projetos/$modelo',
-  path: '/projetos/$modelo',
+const PortasDeVidroIndexRoute = PortasDeVidroIndexRouteImport.update({
+  id: '/portas-de-vidro/',
+  path: '/portas-de-vidro/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosCoberturasRoute = ProjetosCoberturasRouteImport.update({
-  id: '/projetos/coberturas',
-  path: '/projetos/coberturas',
+const EspelhosIndexRoute = EspelhosIndexRouteImport.update({
+  id: '/espelhos/',
+  path: '/espelhos/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosComercialRoute = ProjetosComercialRouteImport.update({
-  id: '/projetos/comercial',
-  path: '/projetos/comercial',
+const BoxIncolorIndexRoute = BoxIncolorIndexRouteImport.update({
+  id: '/box-incolor/',
+  path: '/box-incolor/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosEscritoriosRoute = ProjetosEscritoriosRouteImport.update({
-  id: '/projetos/escritorios',
-  path: '/projetos/escritorios',
+const BoxFumeIndexRoute = BoxFumeIndexRouteImport.update({
+  id: '/box-fume/',
+  path: '/box-fume/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroIndexRoute = BoxDeBanheiroIndexRouteImport.update({
+  id: '/box-de-banheiro/',
+  path: '/box-de-banheiro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosBairroRoute = ServicosBairroRouteImport.update({
+  id: '/servicos/$bairro',
+  path: '/servicos/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecureBoxBairroRoute = SecureBoxBairroRouteImport.update({
+  id: '/secure-box/$bairro',
+  path: '/secure-box/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosResidencialRoute = ProjetosResidencialRouteImport.update({
+  id: '/projetos/residencial',
+  path: '/projetos/residencial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjetosGuardaCorpoRoute = ProjetosGuardaCorpoRouteImport.update({
+  id: '/projetos/guarda-corpo',
+  path: '/projetos/guarda-corpo',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjetosFechamentoSacadaRoute =
@@ -459,26 +181,304 @@ const ProjetosFechamentoSacadaRoute =
     path: '/projetos/fechamento-sacada',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ProjetosGuardaCorpoRoute = ProjetosGuardaCorpoRouteImport.update({
-  id: '/projetos/guarda-corpo',
-  path: '/projetos/guarda-corpo',
+const ProjetosEscritoriosRoute = ProjetosEscritoriosRouteImport.update({
+  id: '/projetos/escritorios',
+  path: '/projetos/escritorios',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjetosResidencialRoute = ProjetosResidencialRouteImport.update({
-  id: '/projetos/residencial',
-  path: '/projetos/residencial',
+const ProjetosComercialRoute = ProjetosComercialRouteImport.update({
+  id: '/projetos/comercial',
+  path: '/projetos/comercial',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SecureBoxBairroRoute = SecureBoxBairroRouteImport.update({
-  id: '/secure-box/$bairro',
-  path: '/secure-box/$bairro',
+const ProjetosCoberturasRoute = ProjetosCoberturasRouteImport.update({
+  id: '/projetos/coberturas',
+  path: '/projetos/coberturas',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicosBairroRoute = ServicosBairroRouteImport.update({
-  id: '/servicos/$bairro',
-  path: '/servicos/$bairro',
+const ProjetosModeloRoute = ProjetosModeloRouteImport.update({
+  id: '/projetos/$modelo',
+  path: '/projetos/$modelo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortasDeVidroVisionRoute = PortasDeVidroVisionRouteImport.update({
+  id: '/portas-de-vidro/vision',
+  path: '/portas-de-vidro/vision',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroVersatikRoute = PortasDeVidroVersatikRouteImport.update({
+  id: '/portas-de-vidro/versatik',
+  path: '/portas-de-vidro/versatik',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroNobreRoute = PortasDeVidroNobreRouteImport.update({
+  id: '/portas-de-vidro/nobre',
+  path: '/portas-de-vidro/nobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroFlexRoute = PortasDeVidroFlexRouteImport.update({
+  id: '/portas-de-vidro/flex',
+  path: '/portas-de-vidro/flex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroCorrerRoute = PortasDeVidroCorrerRouteImport.update({
+  id: '/portas-de-vidro/correr',
+  path: '/portas-de-vidro/correr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroCertaRoute = PortasDeVidroCertaRouteImport.update({
+  id: '/portas-de-vidro/certa',
+  path: '/portas-de-vidro/certa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroAbrirRoute = PortasDeVidroAbrirRouteImport.update({
+  id: '/portas-de-vidro/abrir',
+  path: '/portas-de-vidro/abrir',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortasDeVidroModeloRoute = PortasDeVidroModeloRouteImport.update({
+  id: '/portas-de-vidro/$modelo',
+  path: '/portas-de-vidro/$modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosPainelRoute = EspelhosPainelRouteImport.update({
+  id: '/espelhos/painel',
+  path: '/espelhos/painel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosOrganicoRoute = EspelhosOrganicoRouteImport.update({
+  id: '/espelhos/organico',
+  path: '/espelhos/organico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosLapidadoRoute = EspelhosLapidadoRouteImport.update({
+  id: '/espelhos/lapidado',
+  path: '/espelhos/lapidado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosBisoteRoute = EspelhosBisoteRouteImport.update({
+  id: '/espelhos/bisote',
+  path: '/espelhos/bisote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosBanheiroRoute = EspelhosBanheiroRouteImport.update({
+  id: '/espelhos/banheiro',
+  path: '/espelhos/banheiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspelhosModeloRoute = EspelhosModeloRouteImport.update({
+  id: '/espelhos/$modelo',
+  path: '/espelhos/$modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxIncolorBairroRoute = BoxIncolorBairroRouteImport.update({
+  id: '/box-incolor/$bairro',
+  path: '/box-incolor/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxFumeBairroRoute = BoxFumeBairroRouteImport.update({
+  id: '/box-fume/$bairro',
+  path: '/box-fume/$bairro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroTransferRoute = BoxDeBanheiroTransferRouteImport.update({
+  id: '/box-de-banheiro/transfer',
+  path: '/box-de-banheiro/transfer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroTradicionalRoute =
+  BoxDeBanheiroTradicionalRouteImport.update({
+    id: '/box-de-banheiro/tradicional',
+    path: '/box-de-banheiro/tradicional',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BoxDeBanheiroSecureBoxRoute = BoxDeBanheiroSecureBoxRouteImport.update({
+  id: '/box-de-banheiro/secure-box',
+  path: '/box-de-banheiro/secure-box',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroPisoTetoRoute = BoxDeBanheiroPisoTetoRouteImport.update({
+  id: '/box-de-banheiro/piso-teto',
+  path: '/box-de-banheiro/piso-teto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroNobreRoute = BoxDeBanheiroNobreRouteImport.update({
+  id: '/box-de-banheiro/nobre',
+  path: '/box-de-banheiro/nobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroFlexRoute = BoxDeBanheiroFlexRouteImport.update({
+  id: '/box-de-banheiro/flex',
+  path: '/box-de-banheiro/flex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroEleganceRoute = BoxDeBanheiroEleganceRouteImport.update({
+  id: '/box-de-banheiro/elegance',
+  path: '/box-de-banheiro/elegance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroDeAbrirRoute = BoxDeBanheiroDeAbrirRouteImport.update({
+  id: '/box-de-banheiro/de-abrir',
+  path: '/box-de-banheiro/de-abrir',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroArticuladoRoute = BoxDeBanheiroArticuladoRouteImport.update({
+  id: '/box-de-banheiro/articulado',
+  path: '/box-de-banheiro/articulado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiro3FolhasRoute = BoxDeBanheiro3FolhasRouteImport.update({
+  id: '/box-de-banheiro/3-folhas',
+  path: '/box-de-banheiro/3-folhas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoxDeBanheiroModeloRoute = BoxDeBanheiroModeloRouteImport.update({
+  id: '/box-de-banheiro/$modelo',
+  path: '/box-de-banheiro/$modelo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSecureBoxPeliculaProtecaoRoute =
+  BlogSecureBoxPeliculaProtecaoRouteImport.update({
+    id: '/blog_/secure-box-pelicula-protecao',
+    path: '/blog/secure-box-pelicula-protecao',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogManutencaoBoxBanheiroRoute =
+  BlogManutencaoBoxBanheiroRouteImport.update({
+    id: '/blog_/manutencao-box-banheiro',
+    path: '/blog/manutencao-box-banheiro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogFastVidroHistoriaRoute = BlogFastVidroHistoriaRouteImport.update({
+  id: '/blog_/fast-vidro-historia',
+  path: '/blog/fast-vidro-historia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogFaqBoxBanheiroRoute = BlogFaqBoxBanheiroRouteImport.update({
+  id: '/blog_/faq-box-banheiro',
+  path: '/blog/faq-box-banheiro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogEspelhosLedSobMedidaRoute =
+  BlogEspelhosLedSobMedidaRouteImport.update({
+    id: '/blog_/espelhos-led-sob-medida',
+    path: '/blog/espelhos-led-sob-medida',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogCorBoxIncolorFumeVerdeBronzeRoute =
+  BlogCorBoxIncolorFumeVerdeBronzeRouteImport.update({
+    id: '/blog_/cor-box-incolor-fume-verde-bronze',
+    path: '/blog/cor-box-incolor-fume-verde-bronze',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogComoSaberQualBoxUsarRoute =
+  BlogComoSaberQualBoxUsarRouteImport.update({
+    id: '/blog_/como-saber-qual-box-usar',
+    path: '/blog/como-saber-qual-box-usar',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogComoMedirBoxBanheiroRoute =
+  BlogComoMedirBoxBanheiroRouteImport.update({
+    id: '/blog_/como-medir-box-banheiro',
+    path: '/blog/como-medir-box-banheiro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogComoLimparBoxBanheiroRoute =
+  BlogComoLimparBoxBanheiroRouteImport.update({
+    id: '/blog_/como-limpar-box-banheiro',
+    path: '/blog/como-limpar-box-banheiro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxTradicionalVsFlexRoute =
+  BlogBoxTradicionalVsFlexRouteImport.update({
+    id: '/blog_/box-tradicional-vs-flex',
+    path: '/blog/box-tradicional-vs-flex',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxNobreIdeiaGlassRoute = BlogBoxNobreIdeiaGlassRouteImport.update({
+  id: '/blog_/box-nobre-ideia-glass',
+  path: '/blog/box-nobre-ideia-glass',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBoxFlexCorAcoInoxRoute = BlogBoxFlexCorAcoInoxRouteImport.update({
+  id: '/blog_/box-flex-cor-aco-inox',
+  path: '/blog/box-flex-cor-aco-inox',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBoxEleganceRoldanasAparentesRoute =
+  BlogBoxEleganceRoldanasAparentesRouteImport.update({
+    id: '/blog_/box-elegance-roldanas-aparentes',
+    path: '/blog/box-elegance-roldanas-aparentes',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxDeCantoRoute = BlogBoxDeCantoRouteImport.update({
+  id: '/blog_/box-de-canto',
+  path: '/blog/box-de-canto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBoxConvencionalVsAteOTetoRoute =
+  BlogBoxConvencionalVsAteOTetoRouteImport.update({
+    id: '/blog_/box-convencional-vs-ate-o-teto',
+    path: '/blog/box-convencional-vs-ate-o-teto',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxBanheiroZonaNorteRoute =
+  BlogBoxBanheiroZonaNorteRouteImport.update({
+    id: '/blog_/box-banheiro-zona-norte',
+    path: '/blog/box-banheiro-zona-norte',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxBanheiroVilaGuilhermeRoute =
+  BlogBoxBanheiroVilaGuilhermeRouteImport.update({
+    id: '/blog_/box-banheiro-vila-guilherme',
+    path: '/blog/box-banheiro-vila-guilherme',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxBanheiroVidroSantanaRoute =
+  BlogBoxBanheiroVidroSantanaRouteImport.update({
+    id: '/blog_/box-banheiro-vidro-santana',
+    path: '/blog/box-banheiro-vidro-santana',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxBanheiroTucuruviRoute = BlogBoxBanheiroTucuruviRouteImport.update({
+  id: '/blog_/box-banheiro-tucuruvi',
+  path: '/blog/box-banheiro-tucuruvi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBoxBanheiroMandaquiRoute = BlogBoxBanheiroMandaquiRouteImport.update({
+  id: '/blog_/box-banheiro-mandaqui',
+  path: '/blog/box-banheiro-mandaqui',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBoxBanheiroJardimSaoPauloRoute =
+  BlogBoxBanheiroJardimSaoPauloRouteImport.update({
+    id: '/blog_/box-banheiro-jardim-sao-paulo',
+    path: '/blog/box-banheiro-jardim-sao-paulo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxBanheiroCasaVerdeImirimRoute =
+  BlogBoxBanheiroCasaVerdeImirimRouteImport.update({
+    id: '/blog_/box-banheiro-casa-verde-imirim',
+    path: '/blog/box-banheiro-casa-verde-imirim',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogBoxAbrirVsCorrerRoute = BlogBoxAbrirVsCorrerRouteImport.update({
+  id: '/blog_/box-abrir-vs-correr',
+  path: '/blog/box-abrir-vs-correr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogBox3FolhasSistemaVersatikRoute =
+  BlogBox3FolhasSistemaVersatikRouteImport.update({
+    id: '/blog_/box-3-folhas-sistema-versatik',
+    path: '/blog/box-3-folhas-sistema-versatik',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogAlertaSegurancaBoxTravandoRoute =
+  BlogAlertaSegurancaBoxTravandoRouteImport.update({
+    id: '/blog_/alerta-seguranca-box-travando',
+    path: '/blog/alerta-seguranca-box-travando',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -1026,46 +1026,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-vidro-zona-leste': {
-      id: '/box-de-vidro-zona-leste'
-      path: '/box-de-vidro-zona-leste'
-      fullPath: '/box-de-vidro-zona-leste'
-      preLoaderRoute: typeof BoxDeVidroZonaLesteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-vidro-zona-norte': {
-      id: '/box-de-vidro-zona-norte'
-      path: '/box-de-vidro-zona-norte'
-      fullPath: '/box-de-vidro-zona-norte'
-      preLoaderRoute: typeof BoxDeVidroZonaNorteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-vidro-zona-oeste': {
-      id: '/box-de-vidro-zona-oeste'
-      path: '/box-de-vidro-zona-oeste'
-      fullPath: '/box-de-vidro-zona-oeste'
-      preLoaderRoute: typeof BoxDeVidroZonaOesteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-vidro-zona-sul': {
-      id: '/box-de-vidro-zona-sul'
-      path: '/box-de-vidro-zona-sul'
-      fullPath: '/box-de-vidro-zona-sul'
-      preLoaderRoute: typeof BoxDeVidroZonaSulRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/espelhos-led': {
@@ -1075,410 +1040,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EspelhosLedRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/box-de-vidro-zona-sul': {
+      id: '/box-de-vidro-zona-sul'
+      path: '/box-de-vidro-zona-sul'
+      fullPath: '/box-de-vidro-zona-sul'
+      preLoaderRoute: typeof BoxDeVidroZonaSulRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/alerta-seguranca-box-travando': {
-      id: '/blog_/alerta-seguranca-box-travando'
-      path: '/blog/alerta-seguranca-box-travando'
-      fullPath: '/blog/alerta-seguranca-box-travando'
-      preLoaderRoute: typeof BlogAlertaSegurancaBoxTravandoRouteImport
+    '/box-de-vidro-zona-oeste': {
+      id: '/box-de-vidro-zona-oeste'
+      path: '/box-de-vidro-zona-oeste'
+      fullPath: '/box-de-vidro-zona-oeste'
+      preLoaderRoute: typeof BoxDeVidroZonaOesteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/box-3-folhas-sistema-versatik': {
-      id: '/blog_/box-3-folhas-sistema-versatik'
-      path: '/blog/box-3-folhas-sistema-versatik'
-      fullPath: '/blog/box-3-folhas-sistema-versatik'
-      preLoaderRoute: typeof BlogBox3FolhasSistemaVersatikRouteImport
+    '/box-de-vidro-zona-norte': {
+      id: '/box-de-vidro-zona-norte'
+      path: '/box-de-vidro-zona-norte'
+      fullPath: '/box-de-vidro-zona-norte'
+      preLoaderRoute: typeof BoxDeVidroZonaNorteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/box-abrir-vs-correr': {
-      id: '/blog_/box-abrir-vs-correr'
-      path: '/blog/box-abrir-vs-correr'
-      fullPath: '/blog/box-abrir-vs-correr'
-      preLoaderRoute: typeof BlogBoxAbrirVsCorrerRouteImport
+    '/box-de-vidro-zona-leste': {
+      id: '/box-de-vidro-zona-leste'
+      path: '/box-de-vidro-zona-leste'
+      fullPath: '/box-de-vidro-zona-leste'
+      preLoaderRoute: typeof BoxDeVidroZonaLesteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/box-banheiro-casa-verde-imirim': {
-      id: '/blog_/box-banheiro-casa-verde-imirim'
-      path: '/blog/box-banheiro-casa-verde-imirim'
-      fullPath: '/blog/box-banheiro-casa-verde-imirim'
-      preLoaderRoute: typeof BlogBoxBanheiroCasaVerdeImirimRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/box-banheiro-jardim-sao-paulo': {
-      id: '/blog_/box-banheiro-jardim-sao-paulo'
-      path: '/blog/box-banheiro-jardim-sao-paulo'
-      fullPath: '/blog/box-banheiro-jardim-sao-paulo'
-      preLoaderRoute: typeof BlogBoxBanheiroJardimSaoPauloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-banheiro-mandaqui': {
-      id: '/blog_/box-banheiro-mandaqui'
-      path: '/blog/box-banheiro-mandaqui'
-      fullPath: '/blog/box-banheiro-mandaqui'
-      preLoaderRoute: typeof BlogBoxBanheiroMandaquiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-banheiro-tucuruvi': {
-      id: '/blog_/box-banheiro-tucuruvi'
-      path: '/blog/box-banheiro-tucuruvi'
-      fullPath: '/blog/box-banheiro-tucuruvi'
-      preLoaderRoute: typeof BlogBoxBanheiroTucuruviRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-banheiro-vidro-santana': {
-      id: '/blog_/box-banheiro-vidro-santana'
-      path: '/blog/box-banheiro-vidro-santana'
-      fullPath: '/blog/box-banheiro-vidro-santana'
-      preLoaderRoute: typeof BlogBoxBanheiroVidroSantanaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-banheiro-vila-guilherme': {
-      id: '/blog_/box-banheiro-vila-guilherme'
-      path: '/blog/box-banheiro-vila-guilherme'
-      fullPath: '/blog/box-banheiro-vila-guilherme'
-      preLoaderRoute: typeof BlogBoxBanheiroVilaGuilhermeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-banheiro-zona-norte': {
-      id: '/blog_/box-banheiro-zona-norte'
-      path: '/blog/box-banheiro-zona-norte'
-      fullPath: '/blog/box-banheiro-zona-norte'
-      preLoaderRoute: typeof BlogBoxBanheiroZonaNorteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-convencional-vs-ate-o-teto': {
-      id: '/blog_/box-convencional-vs-ate-o-teto'
-      path: '/blog/box-convencional-vs-ate-o-teto'
-      fullPath: '/blog/box-convencional-vs-ate-o-teto'
-      preLoaderRoute: typeof BlogBoxConvencionalVsAteOTetoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-de-canto': {
-      id: '/blog_/box-de-canto'
-      path: '/blog/box-de-canto'
-      fullPath: '/blog/box-de-canto'
-      preLoaderRoute: typeof BlogBoxDeCantoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-elegance-roldanas-aparentes': {
-      id: '/blog_/box-elegance-roldanas-aparentes'
-      path: '/blog/box-elegance-roldanas-aparentes'
-      fullPath: '/blog/box-elegance-roldanas-aparentes'
-      preLoaderRoute: typeof BlogBoxEleganceRoldanasAparentesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-flex-cor-aco-inox': {
-      id: '/blog_/box-flex-cor-aco-inox'
-      path: '/blog/box-flex-cor-aco-inox'
-      fullPath: '/blog/box-flex-cor-aco-inox'
-      preLoaderRoute: typeof BlogBoxFlexCorAcoInoxRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-nobre-ideia-glass': {
-      id: '/blog_/box-nobre-ideia-glass'
-      path: '/blog/box-nobre-ideia-glass'
-      fullPath: '/blog/box-nobre-ideia-glass'
-      preLoaderRoute: typeof BlogBoxNobreIdeiaGlassRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/box-tradicional-vs-flex': {
-      id: '/blog_/box-tradicional-vs-flex'
-      path: '/blog/box-tradicional-vs-flex'
-      fullPath: '/blog/box-tradicional-vs-flex'
-      preLoaderRoute: typeof BlogBoxTradicionalVsFlexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/como-limpar-box-banheiro': {
-      id: '/blog_/como-limpar-box-banheiro'
-      path: '/blog/como-limpar-box-banheiro'
-      fullPath: '/blog/como-limpar-box-banheiro'
-      preLoaderRoute: typeof BlogComoLimparBoxBanheiroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/como-medir-box-banheiro': {
-      id: '/blog_/como-medir-box-banheiro'
-      path: '/blog/como-medir-box-banheiro'
-      fullPath: '/blog/como-medir-box-banheiro'
-      preLoaderRoute: typeof BlogComoMedirBoxBanheiroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/como-saber-qual-box-usar': {
-      id: '/blog_/como-saber-qual-box-usar'
-      path: '/blog/como-saber-qual-box-usar'
-      fullPath: '/blog/como-saber-qual-box-usar'
-      preLoaderRoute: typeof BlogComoSaberQualBoxUsarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/cor-box-incolor-fume-verde-bronze': {
-      id: '/blog_/cor-box-incolor-fume-verde-bronze'
-      path: '/blog/cor-box-incolor-fume-verde-bronze'
-      fullPath: '/blog/cor-box-incolor-fume-verde-bronze'
-      preLoaderRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/espelhos-led-sob-medida': {
-      id: '/blog_/espelhos-led-sob-medida'
-      path: '/blog/espelhos-led-sob-medida'
-      fullPath: '/blog/espelhos-led-sob-medida'
-      preLoaderRoute: typeof BlogEspelhosLedSobMedidaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/faq-box-banheiro': {
-      id: '/blog_/faq-box-banheiro'
-      path: '/blog/faq-box-banheiro'
-      fullPath: '/blog/faq-box-banheiro'
-      preLoaderRoute: typeof BlogFaqBoxBanheiroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/fast-vidro-historia': {
-      id: '/blog_/fast-vidro-historia'
-      path: '/blog/fast-vidro-historia'
-      fullPath: '/blog/fast-vidro-historia'
-      preLoaderRoute: typeof BlogFastVidroHistoriaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/manutencao-box-banheiro': {
-      id: '/blog_/manutencao-box-banheiro'
-      path: '/blog/manutencao-box-banheiro'
-      fullPath: '/blog/manutencao-box-banheiro'
-      preLoaderRoute: typeof BlogManutencaoBoxBanheiroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog_/secure-box-pelicula-protecao': {
-      id: '/blog_/secure-box-pelicula-protecao'
-      path: '/blog/secure-box-pelicula-protecao'
-      fullPath: '/blog/secure-box-pelicula-protecao'
-      preLoaderRoute: typeof BlogSecureBoxPeliculaProtecaoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/': {
-      id: '/box-de-banheiro/'
-      path: '/box-de-banheiro'
-      fullPath: '/box-de-banheiro/'
-      preLoaderRoute: typeof BoxDeBanheiroIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/$modelo': {
-      id: '/box-de-banheiro/$modelo'
-      path: '/box-de-banheiro/$modelo'
-      fullPath: '/box-de-banheiro/$modelo'
-      preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/3-folhas': {
-      id: '/box-de-banheiro/3-folhas'
-      path: '/box-de-banheiro/3-folhas'
-      fullPath: '/box-de-banheiro/3-folhas'
-      preLoaderRoute: typeof BoxDeBanheiro3FolhasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/articulado': {
-      id: '/box-de-banheiro/articulado'
-      path: '/box-de-banheiro/articulado'
-      fullPath: '/box-de-banheiro/articulado'
-      preLoaderRoute: typeof BoxDeBanheiroArticuladoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/de-abrir': {
-      id: '/box-de-banheiro/de-abrir'
-      path: '/box-de-banheiro/de-abrir'
-      fullPath: '/box-de-banheiro/de-abrir'
-      preLoaderRoute: typeof BoxDeBanheiroDeAbrirRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/elegance': {
-      id: '/box-de-banheiro/elegance'
-      path: '/box-de-banheiro/elegance'
-      fullPath: '/box-de-banheiro/elegance'
-      preLoaderRoute: typeof BoxDeBanheiroEleganceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/flex': {
-      id: '/box-de-banheiro/flex'
-      path: '/box-de-banheiro/flex'
-      fullPath: '/box-de-banheiro/flex'
-      preLoaderRoute: typeof BoxDeBanheiroFlexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/nobre': {
-      id: '/box-de-banheiro/nobre'
-      path: '/box-de-banheiro/nobre'
-      fullPath: '/box-de-banheiro/nobre'
-      preLoaderRoute: typeof BoxDeBanheiroNobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/piso-teto': {
-      id: '/box-de-banheiro/piso-teto'
-      path: '/box-de-banheiro/piso-teto'
-      fullPath: '/box-de-banheiro/piso-teto'
-      preLoaderRoute: typeof BoxDeBanheiroPisoTetoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/secure-box': {
-      id: '/box-de-banheiro/secure-box'
-      path: '/box-de-banheiro/secure-box'
-      fullPath: '/box-de-banheiro/secure-box'
-      preLoaderRoute: typeof BoxDeBanheiroSecureBoxRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/tradicional': {
-      id: '/box-de-banheiro/tradicional'
-      path: '/box-de-banheiro/tradicional'
-      fullPath: '/box-de-banheiro/tradicional'
-      preLoaderRoute: typeof BoxDeBanheiroTradicionalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-de-banheiro/transfer': {
-      id: '/box-de-banheiro/transfer'
-      path: '/box-de-banheiro/transfer'
-      fullPath: '/box-de-banheiro/transfer'
-      preLoaderRoute: typeof BoxDeBanheiroTransferRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-fume/': {
-      id: '/box-fume/'
-      path: '/box-fume'
-      fullPath: '/box-fume/'
-      preLoaderRoute: typeof BoxFumeIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-fume/$bairro': {
-      id: '/box-fume/$bairro'
-      path: '/box-fume/$bairro'
-      fullPath: '/box-fume/$bairro'
-      preLoaderRoute: typeof BoxFumeBairroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-incolor/': {
-      id: '/box-incolor/'
-      path: '/box-incolor'
-      fullPath: '/box-incolor/'
-      preLoaderRoute: typeof BoxIncolorIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/box-incolor/$bairro': {
-      id: '/box-incolor/$bairro'
-      path: '/box-incolor/$bairro'
-      fullPath: '/box-incolor/$bairro'
-      preLoaderRoute: typeof BoxIncolorBairroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/': {
-      id: '/espelhos/'
-      path: '/espelhos'
-      fullPath: '/espelhos/'
-      preLoaderRoute: typeof EspelhosIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/$modelo': {
-      id: '/espelhos/$modelo'
-      path: '/espelhos/$modelo'
-      fullPath: '/espelhos/$modelo'
-      preLoaderRoute: typeof EspelhosModeloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/banheiro': {
-      id: '/espelhos/banheiro'
-      path: '/espelhos/banheiro'
-      fullPath: '/espelhos/banheiro'
-      preLoaderRoute: typeof EspelhosBanheiroRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/bisote': {
-      id: '/espelhos/bisote'
-      path: '/espelhos/bisote'
-      fullPath: '/espelhos/bisote'
-      preLoaderRoute: typeof EspelhosBisoteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/lapidado': {
-      id: '/espelhos/lapidado'
-      path: '/espelhos/lapidado'
-      fullPath: '/espelhos/lapidado'
-      preLoaderRoute: typeof EspelhosLapidadoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/organico': {
-      id: '/espelhos/organico'
-      path: '/espelhos/organico'
-      fullPath: '/espelhos/organico'
-      preLoaderRoute: typeof EspelhosOrganicoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/espelhos/painel': {
-      id: '/espelhos/painel'
-      path: '/espelhos/painel'
-      fullPath: '/espelhos/painel'
-      preLoaderRoute: typeof EspelhosPainelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/': {
-      id: '/portas-de-vidro/'
-      path: '/portas-de-vidro'
-      fullPath: '/portas-de-vidro/'
-      preLoaderRoute: typeof PortasDeVidroIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/$modelo': {
-      id: '/portas-de-vidro/$modelo'
-      path: '/portas-de-vidro/$modelo'
-      fullPath: '/portas-de-vidro/$modelo'
-      preLoaderRoute: typeof PortasDeVidroModeloRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/abrir': {
-      id: '/portas-de-vidro/abrir'
-      path: '/portas-de-vidro/abrir'
-      fullPath: '/portas-de-vidro/abrir'
-      preLoaderRoute: typeof PortasDeVidroAbrirRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/certa': {
-      id: '/portas-de-vidro/certa'
-      path: '/portas-de-vidro/certa'
-      fullPath: '/portas-de-vidro/certa'
-      preLoaderRoute: typeof PortasDeVidroCertaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/correr': {
-      id: '/portas-de-vidro/correr'
-      path: '/portas-de-vidro/correr'
-      fullPath: '/portas-de-vidro/correr'
-      preLoaderRoute: typeof PortasDeVidroCorrerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/flex': {
-      id: '/portas-de-vidro/flex'
-      path: '/portas-de-vidro/flex'
-      fullPath: '/portas-de-vidro/flex'
-      preLoaderRoute: typeof PortasDeVidroFlexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/nobre': {
-      id: '/portas-de-vidro/nobre'
-      path: '/portas-de-vidro/nobre'
-      fullPath: '/portas-de-vidro/nobre'
-      preLoaderRoute: typeof PortasDeVidroNobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/versatik': {
-      id: '/portas-de-vidro/versatik'
-      path: '/portas-de-vidro/versatik'
-      fullPath: '/portas-de-vidro/versatik'
-      preLoaderRoute: typeof PortasDeVidroVersatikRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portas-de-vidro/vision': {
-      id: '/portas-de-vidro/vision'
-      path: '/portas-de-vidro/vision'
-      fullPath: '/portas-de-vidro/vision'
-      preLoaderRoute: typeof PortasDeVidroVisionRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projetos/': {
@@ -1488,53 +1089,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjetosIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/$modelo': {
-      id: '/projetos/$modelo'
-      path: '/projetos/$modelo'
-      fullPath: '/projetos/$modelo'
-      preLoaderRoute: typeof ProjetosModeloRouteImport
+    '/portas-de-vidro/': {
+      id: '/portas-de-vidro/'
+      path: '/portas-de-vidro'
+      fullPath: '/portas-de-vidro/'
+      preLoaderRoute: typeof PortasDeVidroIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/coberturas': {
-      id: '/projetos/coberturas'
-      path: '/projetos/coberturas'
-      fullPath: '/projetos/coberturas'
-      preLoaderRoute: typeof ProjetosCoberturasRouteImport
+    '/espelhos/': {
+      id: '/espelhos/'
+      path: '/espelhos'
+      fullPath: '/espelhos/'
+      preLoaderRoute: typeof EspelhosIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/comercial': {
-      id: '/projetos/comercial'
-      path: '/projetos/comercial'
-      fullPath: '/projetos/comercial'
-      preLoaderRoute: typeof ProjetosComercialRouteImport
+    '/box-incolor/': {
+      id: '/box-incolor/'
+      path: '/box-incolor'
+      fullPath: '/box-incolor/'
+      preLoaderRoute: typeof BoxIncolorIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/escritorios': {
-      id: '/projetos/escritorios'
-      path: '/projetos/escritorios'
-      fullPath: '/projetos/escritorios'
-      preLoaderRoute: typeof ProjetosEscritoriosRouteImport
+    '/box-fume/': {
+      id: '/box-fume/'
+      path: '/box-fume'
+      fullPath: '/box-fume/'
+      preLoaderRoute: typeof BoxFumeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/fechamento-sacada': {
-      id: '/projetos/fechamento-sacada'
-      path: '/projetos/fechamento-sacada'
-      fullPath: '/projetos/fechamento-sacada'
-      preLoaderRoute: typeof ProjetosFechamentoSacadaRouteImport
+    '/box-de-banheiro/': {
+      id: '/box-de-banheiro/'
+      path: '/box-de-banheiro'
+      fullPath: '/box-de-banheiro/'
+      preLoaderRoute: typeof BoxDeBanheiroIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projetos/guarda-corpo': {
-      id: '/projetos/guarda-corpo'
-      path: '/projetos/guarda-corpo'
-      fullPath: '/projetos/guarda-corpo'
-      preLoaderRoute: typeof ProjetosGuardaCorpoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projetos/residencial': {
-      id: '/projetos/residencial'
-      path: '/projetos/residencial'
-      fullPath: '/projetos/residencial'
-      preLoaderRoute: typeof ProjetosResidencialRouteImport
+    '/servicos/$bairro': {
+      id: '/servicos/$bairro'
+      path: '/servicos/$bairro'
+      fullPath: '/servicos/$bairro'
+      preLoaderRoute: typeof ServicosBairroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/secure-box/$bairro': {
@@ -1544,11 +1138,417 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SecureBoxBairroRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/servicos/$bairro': {
-      id: '/servicos/$bairro'
-      path: '/servicos/$bairro'
-      fullPath: '/servicos/$bairro'
-      preLoaderRoute: typeof ServicosBairroRouteImport
+    '/projetos/residencial': {
+      id: '/projetos/residencial'
+      path: '/projetos/residencial'
+      fullPath: '/projetos/residencial'
+      preLoaderRoute: typeof ProjetosResidencialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/guarda-corpo': {
+      id: '/projetos/guarda-corpo'
+      path: '/projetos/guarda-corpo'
+      fullPath: '/projetos/guarda-corpo'
+      preLoaderRoute: typeof ProjetosGuardaCorpoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/fechamento-sacada': {
+      id: '/projetos/fechamento-sacada'
+      path: '/projetos/fechamento-sacada'
+      fullPath: '/projetos/fechamento-sacada'
+      preLoaderRoute: typeof ProjetosFechamentoSacadaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/escritorios': {
+      id: '/projetos/escritorios'
+      path: '/projetos/escritorios'
+      fullPath: '/projetos/escritorios'
+      preLoaderRoute: typeof ProjetosEscritoriosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/comercial': {
+      id: '/projetos/comercial'
+      path: '/projetos/comercial'
+      fullPath: '/projetos/comercial'
+      preLoaderRoute: typeof ProjetosComercialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/coberturas': {
+      id: '/projetos/coberturas'
+      path: '/projetos/coberturas'
+      fullPath: '/projetos/coberturas'
+      preLoaderRoute: typeof ProjetosCoberturasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projetos/$modelo': {
+      id: '/projetos/$modelo'
+      path: '/projetos/$modelo'
+      fullPath: '/projetos/$modelo'
+      preLoaderRoute: typeof ProjetosModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/vision': {
+      id: '/portas-de-vidro/vision'
+      path: '/portas-de-vidro/vision'
+      fullPath: '/portas-de-vidro/vision'
+      preLoaderRoute: typeof PortasDeVidroVisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/versatik': {
+      id: '/portas-de-vidro/versatik'
+      path: '/portas-de-vidro/versatik'
+      fullPath: '/portas-de-vidro/versatik'
+      preLoaderRoute: typeof PortasDeVidroVersatikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/nobre': {
+      id: '/portas-de-vidro/nobre'
+      path: '/portas-de-vidro/nobre'
+      fullPath: '/portas-de-vidro/nobre'
+      preLoaderRoute: typeof PortasDeVidroNobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/flex': {
+      id: '/portas-de-vidro/flex'
+      path: '/portas-de-vidro/flex'
+      fullPath: '/portas-de-vidro/flex'
+      preLoaderRoute: typeof PortasDeVidroFlexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/correr': {
+      id: '/portas-de-vidro/correr'
+      path: '/portas-de-vidro/correr'
+      fullPath: '/portas-de-vidro/correr'
+      preLoaderRoute: typeof PortasDeVidroCorrerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/certa': {
+      id: '/portas-de-vidro/certa'
+      path: '/portas-de-vidro/certa'
+      fullPath: '/portas-de-vidro/certa'
+      preLoaderRoute: typeof PortasDeVidroCertaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/abrir': {
+      id: '/portas-de-vidro/abrir'
+      path: '/portas-de-vidro/abrir'
+      fullPath: '/portas-de-vidro/abrir'
+      preLoaderRoute: typeof PortasDeVidroAbrirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portas-de-vidro/$modelo': {
+      id: '/portas-de-vidro/$modelo'
+      path: '/portas-de-vidro/$modelo'
+      fullPath: '/portas-de-vidro/$modelo'
+      preLoaderRoute: typeof PortasDeVidroModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/painel': {
+      id: '/espelhos/painel'
+      path: '/espelhos/painel'
+      fullPath: '/espelhos/painel'
+      preLoaderRoute: typeof EspelhosPainelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/organico': {
+      id: '/espelhos/organico'
+      path: '/espelhos/organico'
+      fullPath: '/espelhos/organico'
+      preLoaderRoute: typeof EspelhosOrganicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/lapidado': {
+      id: '/espelhos/lapidado'
+      path: '/espelhos/lapidado'
+      fullPath: '/espelhos/lapidado'
+      preLoaderRoute: typeof EspelhosLapidadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/bisote': {
+      id: '/espelhos/bisote'
+      path: '/espelhos/bisote'
+      fullPath: '/espelhos/bisote'
+      preLoaderRoute: typeof EspelhosBisoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/banheiro': {
+      id: '/espelhos/banheiro'
+      path: '/espelhos/banheiro'
+      fullPath: '/espelhos/banheiro'
+      preLoaderRoute: typeof EspelhosBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espelhos/$modelo': {
+      id: '/espelhos/$modelo'
+      path: '/espelhos/$modelo'
+      fullPath: '/espelhos/$modelo'
+      preLoaderRoute: typeof EspelhosModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-incolor/$bairro': {
+      id: '/box-incolor/$bairro'
+      path: '/box-incolor/$bairro'
+      fullPath: '/box-incolor/$bairro'
+      preLoaderRoute: typeof BoxIncolorBairroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-fume/$bairro': {
+      id: '/box-fume/$bairro'
+      path: '/box-fume/$bairro'
+      fullPath: '/box-fume/$bairro'
+      preLoaderRoute: typeof BoxFumeBairroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/transfer': {
+      id: '/box-de-banheiro/transfer'
+      path: '/box-de-banheiro/transfer'
+      fullPath: '/box-de-banheiro/transfer'
+      preLoaderRoute: typeof BoxDeBanheiroTransferRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/tradicional': {
+      id: '/box-de-banheiro/tradicional'
+      path: '/box-de-banheiro/tradicional'
+      fullPath: '/box-de-banheiro/tradicional'
+      preLoaderRoute: typeof BoxDeBanheiroTradicionalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/secure-box': {
+      id: '/box-de-banheiro/secure-box'
+      path: '/box-de-banheiro/secure-box'
+      fullPath: '/box-de-banheiro/secure-box'
+      preLoaderRoute: typeof BoxDeBanheiroSecureBoxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/piso-teto': {
+      id: '/box-de-banheiro/piso-teto'
+      path: '/box-de-banheiro/piso-teto'
+      fullPath: '/box-de-banheiro/piso-teto'
+      preLoaderRoute: typeof BoxDeBanheiroPisoTetoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/nobre': {
+      id: '/box-de-banheiro/nobre'
+      path: '/box-de-banheiro/nobre'
+      fullPath: '/box-de-banheiro/nobre'
+      preLoaderRoute: typeof BoxDeBanheiroNobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/flex': {
+      id: '/box-de-banheiro/flex'
+      path: '/box-de-banheiro/flex'
+      fullPath: '/box-de-banheiro/flex'
+      preLoaderRoute: typeof BoxDeBanheiroFlexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/elegance': {
+      id: '/box-de-banheiro/elegance'
+      path: '/box-de-banheiro/elegance'
+      fullPath: '/box-de-banheiro/elegance'
+      preLoaderRoute: typeof BoxDeBanheiroEleganceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/de-abrir': {
+      id: '/box-de-banheiro/de-abrir'
+      path: '/box-de-banheiro/de-abrir'
+      fullPath: '/box-de-banheiro/de-abrir'
+      preLoaderRoute: typeof BoxDeBanheiroDeAbrirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/articulado': {
+      id: '/box-de-banheiro/articulado'
+      path: '/box-de-banheiro/articulado'
+      fullPath: '/box-de-banheiro/articulado'
+      preLoaderRoute: typeof BoxDeBanheiroArticuladoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/3-folhas': {
+      id: '/box-de-banheiro/3-folhas'
+      path: '/box-de-banheiro/3-folhas'
+      fullPath: '/box-de-banheiro/3-folhas'
+      preLoaderRoute: typeof BoxDeBanheiro3FolhasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/box-de-banheiro/$modelo': {
+      id: '/box-de-banheiro/$modelo'
+      path: '/box-de-banheiro/$modelo'
+      fullPath: '/box-de-banheiro/$modelo'
+      preLoaderRoute: typeof BoxDeBanheiroModeloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/secure-box-pelicula-protecao': {
+      id: '/blog_/secure-box-pelicula-protecao'
+      path: '/blog/secure-box-pelicula-protecao'
+      fullPath: '/blog/secure-box-pelicula-protecao'
+      preLoaderRoute: typeof BlogSecureBoxPeliculaProtecaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/manutencao-box-banheiro': {
+      id: '/blog_/manutencao-box-banheiro'
+      path: '/blog/manutencao-box-banheiro'
+      fullPath: '/blog/manutencao-box-banheiro'
+      preLoaderRoute: typeof BlogManutencaoBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/fast-vidro-historia': {
+      id: '/blog_/fast-vidro-historia'
+      path: '/blog/fast-vidro-historia'
+      fullPath: '/blog/fast-vidro-historia'
+      preLoaderRoute: typeof BlogFastVidroHistoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/faq-box-banheiro': {
+      id: '/blog_/faq-box-banheiro'
+      path: '/blog/faq-box-banheiro'
+      fullPath: '/blog/faq-box-banheiro'
+      preLoaderRoute: typeof BlogFaqBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/espelhos-led-sob-medida': {
+      id: '/blog_/espelhos-led-sob-medida'
+      path: '/blog/espelhos-led-sob-medida'
+      fullPath: '/blog/espelhos-led-sob-medida'
+      preLoaderRoute: typeof BlogEspelhosLedSobMedidaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/cor-box-incolor-fume-verde-bronze': {
+      id: '/blog_/cor-box-incolor-fume-verde-bronze'
+      path: '/blog/cor-box-incolor-fume-verde-bronze'
+      fullPath: '/blog/cor-box-incolor-fume-verde-bronze'
+      preLoaderRoute: typeof BlogCorBoxIncolorFumeVerdeBronzeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/como-saber-qual-box-usar': {
+      id: '/blog_/como-saber-qual-box-usar'
+      path: '/blog/como-saber-qual-box-usar'
+      fullPath: '/blog/como-saber-qual-box-usar'
+      preLoaderRoute: typeof BlogComoSaberQualBoxUsarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/como-medir-box-banheiro': {
+      id: '/blog_/como-medir-box-banheiro'
+      path: '/blog/como-medir-box-banheiro'
+      fullPath: '/blog/como-medir-box-banheiro'
+      preLoaderRoute: typeof BlogComoMedirBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/como-limpar-box-banheiro': {
+      id: '/blog_/como-limpar-box-banheiro'
+      path: '/blog/como-limpar-box-banheiro'
+      fullPath: '/blog/como-limpar-box-banheiro'
+      preLoaderRoute: typeof BlogComoLimparBoxBanheiroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-tradicional-vs-flex': {
+      id: '/blog_/box-tradicional-vs-flex'
+      path: '/blog/box-tradicional-vs-flex'
+      fullPath: '/blog/box-tradicional-vs-flex'
+      preLoaderRoute: typeof BlogBoxTradicionalVsFlexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-nobre-ideia-glass': {
+      id: '/blog_/box-nobre-ideia-glass'
+      path: '/blog/box-nobre-ideia-glass'
+      fullPath: '/blog/box-nobre-ideia-glass'
+      preLoaderRoute: typeof BlogBoxNobreIdeiaGlassRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-flex-cor-aco-inox': {
+      id: '/blog_/box-flex-cor-aco-inox'
+      path: '/blog/box-flex-cor-aco-inox'
+      fullPath: '/blog/box-flex-cor-aco-inox'
+      preLoaderRoute: typeof BlogBoxFlexCorAcoInoxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-elegance-roldanas-aparentes': {
+      id: '/blog_/box-elegance-roldanas-aparentes'
+      path: '/blog/box-elegance-roldanas-aparentes'
+      fullPath: '/blog/box-elegance-roldanas-aparentes'
+      preLoaderRoute: typeof BlogBoxEleganceRoldanasAparentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-de-canto': {
+      id: '/blog_/box-de-canto'
+      path: '/blog/box-de-canto'
+      fullPath: '/blog/box-de-canto'
+      preLoaderRoute: typeof BlogBoxDeCantoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-convencional-vs-ate-o-teto': {
+      id: '/blog_/box-convencional-vs-ate-o-teto'
+      path: '/blog/box-convencional-vs-ate-o-teto'
+      fullPath: '/blog/box-convencional-vs-ate-o-teto'
+      preLoaderRoute: typeof BlogBoxConvencionalVsAteOTetoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-zona-norte': {
+      id: '/blog_/box-banheiro-zona-norte'
+      path: '/blog/box-banheiro-zona-norte'
+      fullPath: '/blog/box-banheiro-zona-norte'
+      preLoaderRoute: typeof BlogBoxBanheiroZonaNorteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-vila-guilherme': {
+      id: '/blog_/box-banheiro-vila-guilherme'
+      path: '/blog/box-banheiro-vila-guilherme'
+      fullPath: '/blog/box-banheiro-vila-guilherme'
+      preLoaderRoute: typeof BlogBoxBanheiroVilaGuilhermeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-vidro-santana': {
+      id: '/blog_/box-banheiro-vidro-santana'
+      path: '/blog/box-banheiro-vidro-santana'
+      fullPath: '/blog/box-banheiro-vidro-santana'
+      preLoaderRoute: typeof BlogBoxBanheiroVidroSantanaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-tucuruvi': {
+      id: '/blog_/box-banheiro-tucuruvi'
+      path: '/blog/box-banheiro-tucuruvi'
+      fullPath: '/blog/box-banheiro-tucuruvi'
+      preLoaderRoute: typeof BlogBoxBanheiroTucuruviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-mandaqui': {
+      id: '/blog_/box-banheiro-mandaqui'
+      path: '/blog/box-banheiro-mandaqui'
+      fullPath: '/blog/box-banheiro-mandaqui'
+      preLoaderRoute: typeof BlogBoxBanheiroMandaquiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-jardim-sao-paulo': {
+      id: '/blog_/box-banheiro-jardim-sao-paulo'
+      path: '/blog/box-banheiro-jardim-sao-paulo'
+      fullPath: '/blog/box-banheiro-jardim-sao-paulo'
+      preLoaderRoute: typeof BlogBoxBanheiroJardimSaoPauloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-banheiro-casa-verde-imirim': {
+      id: '/blog_/box-banheiro-casa-verde-imirim'
+      path: '/blog/box-banheiro-casa-verde-imirim'
+      fullPath: '/blog/box-banheiro-casa-verde-imirim'
+      preLoaderRoute: typeof BlogBoxBanheiroCasaVerdeImirimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-abrir-vs-correr': {
+      id: '/blog_/box-abrir-vs-correr'
+      path: '/blog/box-abrir-vs-correr'
+      fullPath: '/blog/box-abrir-vs-correr'
+      preLoaderRoute: typeof BlogBoxAbrirVsCorrerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/box-3-folhas-sistema-versatik': {
+      id: '/blog_/box-3-folhas-sistema-versatik'
+      path: '/blog/box-3-folhas-sistema-versatik'
+      fullPath: '/blog/box-3-folhas-sistema-versatik'
+      preLoaderRoute: typeof BlogBox3FolhasSistemaVersatikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/alerta-seguranca-box-travando': {
+      id: '/blog_/alerta-seguranca-box-travando'
+      path: '/blog/alerta-seguranca-box-travando'
+      fullPath: '/blog/alerta-seguranca-box-travando'
+      preLoaderRoute: typeof BlogAlertaSegurancaBoxTravandoRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
