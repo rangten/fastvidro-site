@@ -157,7 +157,7 @@ export function HeroCarousel() {
                     target="_blank"
                     rel="noopener"
                     aria-label="Pedir orçamento da Porta de Vidro 3 Folhas pelo WhatsApp"
-                    className="absolute bottom-4 right-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-ink transition hover:scale-105 sm:bottom-6 sm:right-6 sm:h-auto sm:w-auto sm:gap-2 sm:rounded-md sm:px-5 sm:py-3 sm:text-sm sm:font-bold sm:uppercase"
+                    className="absolute bottom-4 left-4 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-yellow transition hover:scale-105 sm:bottom-6 sm:left-6 sm:h-auto sm:w-auto sm:gap-2 sm:rounded-md sm:px-5 sm:py-3 sm:text-sm sm:font-bold sm:uppercase"
                   >
                     <MessageCircle className="h-6 w-6 shrink-0" />
                     <span className="hidden sm:inline">Pedir orçamento</span>
