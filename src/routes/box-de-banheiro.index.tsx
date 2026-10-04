@@ -10,6 +10,8 @@ import tradicionalCover from "@/assets/tradicional-cover.webp";
 import eleganceCover from "@/assets/elegance-cover.webp";
 import secureBoxLogo from "@/assets/secure-box-logo.webp";
 import boxAbrirImg from "@/assets/tradicional-abrir.webp";
+import boxArticuladoCard from "@/assets/box-articulado-card.webp";
+import box3PortasCard from "@/assets/box-3-portas-card.webp";
 
 const CANONICAL = "https://www.fastvidro.com.br/box-de-banheiro";
 const META_TITLE = "Box de Banheiro em SP: Elegance, Flex e Secure Box | Fast Vidros";
@@ -20,6 +22,36 @@ const H1_TITLE = "Box de Banheiro na Zona Norte e Toda SP | Mediação e Instala
 
 // Curadoria dos cards "Escolha o Seu" — cada um aponta para sua página individual.
 const MODELOS = [
+  {
+    name: "ARTICULADO",
+    description: "Ideal para vãos pequenos, oferece o maior ganho de passagem e aproveitamento de espaço no seu banheiro.",
+    image: boxArticuladoCard,
+    imageAlt: "Box Articulado em vidro temperado com perfil preto instalado sob medida em banheiro em São Paulo",
+    visualTitle: "BOX ARTICULADO",
+    benefits: [
+      "Abertura articulada que otimiza o espaço",
+      "Vidro temperado de alta resistência",
+      "Instalação especializada e sob medida",
+    ] as [string, string, string],
+    badge: "Mais segurança",
+    whatsappMessage: "Olá! Gostaria de mais informações e orçamento para o Box Articulado.",
+    actionLabel: "Solicitar orçamento no WhatsApp",
+  },
+  {
+    name: "3 PORTAS",
+    description: "Maior abertura de passagem para banheiros com espaço intermediário, combinando praticidade e elegância.",
+    image: box3PortasCard,
+    imageAlt: "Box 3 Portas com duas folhas móveis e uma fixa instalado sob medida em banheiro em São Paulo",
+    visualTitle: "BOX 3 PORTAS",
+    benefits: [
+      "2 folhas móveis e 1 fixa (vão de abertura ampliado)",
+      "Vidro temperado de alta resistência",
+      "Deslize suave e acabamento moderno",
+    ] as [string, string, string],
+    badge: "Mais segurança",
+    whatsappMessage: "Olá! Gostaria de mais informações e orçamento para o Box 3 Portas.",
+    actionLabel: "Solicitar orçamento no WhatsApp",
+  },
   {
     slug: "flex",
     name: "Flex",
@@ -73,6 +105,7 @@ export const Route = createFileRoute("/box-de-banheiro/")({
       { property: "og:description", content: META_DESC },
       { property: "og:type", content: "website" },
       { property: "og:url", content: CANONICAL },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: CANONICAL }],
     scripts: [
@@ -95,6 +128,21 @@ export const Route = createFileRoute("/box-de-banheiro/")({
             name: "São Paulo, SP",
           },
           serviceType: "Instalação de Box de Banheiro",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Modelos de box de banheiro sob medida em São Paulo",
+            itemListElement: MODELOS.map((modelo, index) => ({
+              "@type": "Offer",
+              position: index + 1,
+              itemOffered: {
+                "@type": "Product",
+                name: `Box ${modelo.name}`,
+                description: modelo.description,
+                brand: { "@type": "Brand", name: "Fast Vidro" },
+              },
+              areaServed: "São Paulo, SP",
+            })),
+          },
         }),
       },
     ],
