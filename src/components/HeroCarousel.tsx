@@ -116,18 +116,18 @@ export function HeroCarousel() {
 
   return (
     <section id="hero-carrossel" aria-label="Lançamentos FastVidro" className="relative bg-ink text-ink-foreground">
-      <div className="overflow-hidden" ref={ready ? emblaRef : undefined}>
-        <div className="flex">
+      <div className="overflow-hidden md:aspect-[1024/372]" ref={ready ? emblaRef : undefined}>
+        <div className="flex md:h-full">
           {slides.map((s, i) => (
-            <div key={i} className="relative flex-[0_0_100%] min-w-0">
+            <div key={i} className="relative min-w-0 flex-[0_0_100%] md:h-full">
               {s.kind === "image" ? (
                 // Promotional slides: entire banner is clickable, image shown intact (no crop)
-                <div className="relative bg-ink">
+                <div className="relative bg-ink md:h-full">
                 <a
                   href={s.href}
                   target={s.href?.startsWith("http") ? "_blank" : undefined}
                   rel={s.href?.startsWith("http") ? "noopener" : undefined}
-                  className="block"
+                  className="block md:h-full"
                   aria-label={i === 0 ? "Conhecer a Porta de Vidro 3 Folhas Linha Versatik" : "Falar no WhatsApp"}
                 >
                   {(i === 0 || ready) && (
@@ -143,7 +143,7 @@ export function HeroCarousel() {
                       alt={s.alt ?? "Banner promocional Fast Vidro"}
                       width={s.mobileSize?.width ?? 960}
                       height={s.mobileSize?.height ?? 1200}
-                      className="block h-auto w-full object-contain"
+                      className="block h-auto w-full object-contain md:h-full"
                       loading={i === 0 ? "eager" : "lazy"}
                       fetchPriority={i === 0 ? "high" : "auto"}
                       decoding={i === 0 ? "sync" : "async"}
