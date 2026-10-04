@@ -23,6 +23,7 @@ const H1_TITLE = "Box de Banheiro na Zona Norte e Toda SP | Mediação e Instala
 // Curadoria dos cards "Escolha o Seu" — cada um aponta para sua página individual.
 const MODELOS = [
   {
+    slug: "articulado",
     name: "ARTICULADO",
     description: "Ideal para vãos pequenos, oferece o maior ganho de passagem e aproveitamento de espaço no seu banheiro.",
     image: boxArticuladoCard,
@@ -34,10 +35,9 @@ const MODELOS = [
       "Instalação especializada e sob medida",
     ] as [string, string, string],
     badge: "Mais segurança",
-    whatsappMessage: "Olá! Gostaria de mais informações e orçamento para o Box Articulado.",
-    actionLabel: "Solicitar orçamento no WhatsApp",
   },
   {
+    slug: "3-folhas",
     name: "3 PORTAS",
     description: "Maior abertura de passagem para banheiros com espaço intermediário, combinando praticidade e elegância.",
     image: box3PortasCard,
@@ -49,8 +49,6 @@ const MODELOS = [
       "Deslize suave e acabamento moderno",
     ] as [string, string, string],
     badge: "Mais segurança",
-    whatsappMessage: "Olá! Gostaria de mais informações e orçamento para o Box 3 Portas.",
-    actionLabel: "Solicitar orçamento no WhatsApp",
   },
   {
     slug: "flex",

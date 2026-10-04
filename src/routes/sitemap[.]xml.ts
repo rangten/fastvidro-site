@@ -10,6 +10,8 @@ const BASE_URL = "https://www.fastvidro.com.br";
 // ============================================================
 const MODEL_SLUGS: Record<string, string[]> = {
   "box-de-banheiro": [
+    "articulado",
+    "3-folhas",
     "flex",
     "piso-teto",
     "tradicional",

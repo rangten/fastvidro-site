@@ -115,7 +115,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         {/* Fontes carregadas de forma assíncrona (não bloqueiam a renderização) */}
         <link rel="preload" as="style" href={fontHref} />
-        <link rel="stylesheet" href={fontHref} media="print" data-async-font="" />
+        <link rel="stylesheet" href={fontHref} media="print" data-async-font="" suppressHydrationWarning />
         <noscript>
           <link rel="stylesheet" href={fontHref} />
         </noscript>
