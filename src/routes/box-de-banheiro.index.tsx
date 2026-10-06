@@ -27,14 +27,7 @@ const MODELOS = [
     name: "ARTICULADO",
     description: "Ideal para vãos pequenos, oferece o maior ganho de passagem e aproveitamento de espaço no seu banheiro.",
     image: boxArticuladoCard,
-    imageAlt: "Box Articulado em vidro temperado com perfil preto instalado sob medida em banheiro em São Paulo",
-    visualTitle: "BOX ARTICULADO",
-    benefits: [
-      "Abertura articulada que otimiza o espaço",
-      "Vidro temperado de alta resistência",
-      "Instalação especializada e sob medida",
-    ] as [string, string, string],
-    badge: "Mais segurança",
+    imageAlt: "Box Articulado Sanfonado/Camarão da Fast Vidros, ideal para banheiros e vãos compactos de até 1,20 metro em São Paulo",
   },
   {
     slug: "3-folhas",
