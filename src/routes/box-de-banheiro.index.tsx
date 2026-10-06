@@ -34,14 +34,8 @@ const MODELOS = [
     name: "3 PORTAS",
     description: "Maior abertura de passagem para banheiros com espaço intermediário, combinando praticidade e elegância.",
     image: box3PortasCard,
-    imageAlt: "Box 3 Portas com duas folhas móveis e uma fixa instalado sob medida em banheiro em São Paulo",
-    visualTitle: "BOX 3 PORTAS",
-    benefits: [
-      "2 folhas móveis e 1 fixa (vão de abertura ampliado)",
-      "Vidro temperado de alta resistência",
-      "Deslize suave e acabamento moderno",
-    ] as [string, string, string],
-    badge: "Mais segurança",
+    imageAlt:
+      "Porta de Vidro 3 Folhas Fast Vidros com duas folhas móveis e uma fixa, ideal para banheiros e vãos compactos de até 1,20 metro em São Paulo",
   },
   {
     slug: "flex",
