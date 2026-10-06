@@ -61,6 +61,9 @@ const slides: Slide[] = [
     desktopImage: boxDesktop,
     mobileImage: boxMobile,
     href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
+    alt: "Promoção especial Box de Vidro Incolor 8mm Temperado Kit Preto, a partir de 12x de R$ 89,99 colocado",
+    desktopSize: { width: 1024, height: 373 },
+    mobileSize: { width: 572, height: 1024 },
   },
   {
     kind: "image",
