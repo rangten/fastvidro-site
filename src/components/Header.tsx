@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown, Lightbulb } from "lucide-react";
 import logoAsset from "@/assets/fast-vidro-logo.webp";
 import secureBoxLogo from "@/assets/secure-box-logo.webp";
 import { waLink } from "@/lib/site";
@@ -37,6 +37,14 @@ loading="eager" fetchPriority="high" decoding="async"
 
         <nav className="hidden lg:flex items-center gap-7">
           {nav.map((n) => (
+            n.to === "/espelhos" ? (
+              <div key={n.to} className="group relative">
+                <Link to="/espelhos" className="flex items-center gap-1 py-3 text-sm font-semibold uppercase tracking-wide text-ink-foreground/80 transition hover:text-primary" activeProps={{ className: "text-primary" }}>Espelhos <ChevronDown className="h-3 w-3" /></Link>
+                <div className="pointer-events-none absolute left-0 top-full z-50 w-60 rounded-lg border border-primary/30 bg-ink p-2 opacity-0 shadow-ink transition-opacity group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                  <Link to="/espelhos-led" className="flex items-center gap-3 rounded-md px-3 py-4 text-sm font-semibold text-ink-foreground hover:bg-primary/10 hover:text-primary"><Lightbulb className="h-5 w-5 text-primary" />Espelhos LED Sob Medida</Link>
+                </div>
+              </div>
+            ) : (
             <Link
               key={`${n.to}-${n.label}`}
               to={n.to}
@@ -54,6 +62,7 @@ loading="lazy" decoding="async"
                 n.label
               )}
             </Link>
+            )
           ))}
         </nav>
 
@@ -97,7 +106,7 @@ loading="lazy" decoding="async"
               <MessageCircle className="h-4 w-4" /> (11) 99023-8648
             </a>
             {nav.map((n) => (
-
+              <div key={`${n.to}-${n.label}`}>
               <Link
                 key={`${n.to}-${n.label}`}
                 to={n.to}
@@ -114,6 +123,8 @@ loading="lazy" decoding="async"
                 )}
                 <span>{n.label}</span>
               </Link>
+              {n.to === "/espelhos" && <Link to="/espelhos-led" onClick={() => setOpen(false)} className="flex items-center gap-3 border-b border-ink-foreground/10 py-3 pl-4 text-sm font-semibold text-primary"><Lightbulb className="h-4 w-4" />Espelhos LED Sob Medida</Link>}
+              </div>
             ))}
             <a
               href={waLink()}
