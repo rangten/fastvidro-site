@@ -15,8 +15,8 @@ import flexDesktop from "@/assets/hero-flex-desktop.webp";
 import flexMobile from "@/assets/hero-flex-mobile.webp";
 import boxDesktop from "@/assets/hero-box-desktop.webp";
 import boxMobile from "@/assets/hero-box-mobile.webp";
-import ledDesktop from "@/assets/hero-espelho-led-desktop.webp.asset.json";
-import ledMobile from "@/assets/hero-espelho-led-mobile.webp.asset.json";
+import ledDesktop from "@/assets/hero-espelho-led-desktop.webp";
+import ledMobile from "@/assets/hero-espelho-led-mobile.webp";
 
 type Slide = {
   kind: "text" | "image";
@@ -65,8 +65,8 @@ const slides: Slide[] = [
   },
   {
     kind: "image",
-    desktopImage: ledDesktop.url,
-    mobileImage: ledMobile.url,
+    desktopImage: ledDesktop,
+    mobileImage: ledMobile,
     page: "/espelhos-led",
     linkLabel: "Ver Espelho LED Sob Medida",
     alt: "Espelho LED sob medida Fast Vidro: sofisticação, iluminação e modernidade para lavabos, quartos, salas e banheiros",
