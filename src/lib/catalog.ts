@@ -15,7 +15,7 @@ import portaCerta from "@/assets/porta-certa.webp";
 import portaFlex from "@/assets/porta-flex.webp";
 import portaDeGiro from "@/assets/porta-de-giro.webp";
 import portaCorrer from "@/assets/porta-correr.webp";
-import portaVersatik from "@/assets/porta-versatik.webp";
+import portaTresFolhasCard from "@/assets/porta-3-folhas-card.webp";
 import espelhoOrganico from "@/assets/espelho-organico.webp";
 import espelhoBanheiro from "@/assets/espelho-banheiro.webp";
 import painelEspelho from "@/assets/painel-espelho.webp";
@@ -82,7 +82,7 @@ export const CATEGORIES: Record<string, Category> = {
       { slug: "flex", name: "Flex", description: "Adaptável a múltiplas configurações.", longDescription: "A Porta Flex se adapta a múltiplas configurações: abre, corre ou pivota conforme o projeto. Versatilidade total para arquitetos e designers.", image: portaFlex, gallery: placeholderGallery(portaFlex) },
       { slug: "abrir", name: "De Abrir", description: "Porta tradicional pivotante com molas.", longDescription: "A Porta De Abrir é o clássico pivotante com molas hidráulicas. Robusta, durável e elegante — solução tradicional reinventada com vidro temperado.", image: portaDeGiro, gallery: placeholderGallery(portaDeGiro) },
       { slug: "correr", name: "De Correr", description: "Aproveitamento total do espaço.", longDescription: "A Porta De Correr libera 100% do espaço útil. Trilho superior reforçado e roldanas silenciosas para uso intenso no dia a dia.", image: portaCorrer, gallery: placeholderGallery(portaCorrer) },
-      { slug: "versatik", name: "Versatik", description: "Sistema deslizante silencioso e suave.", longDescription: "A Porta Versatik usa sistema deslizante com amortecedor, garantindo fechamento suave e silencioso. Perfeita para integrar ambientes pequenos sem perder área útil.", image: portaVersatik, gallery: placeholderGallery(portaVersatik) },
+      { slug: "versatik", name: "Porta 3 Folhas", description: "Duas folhas móveis e uma fixa para ampliar a passagem.", longDescription: "A Porta 3 Folhas combina duas folhas móveis e uma fixa em vidro temperado de alta resistência, com deslizamento suave e acabamento moderno. Produzida sob medida para integrar ambientes e aproveitar melhor o espaço.", image: portaTresFolhasCard, gallery: placeholderGallery(portaTresFolhasCard) },
     ],
   },
   "espelhos": {
