@@ -35,7 +35,7 @@ const MODELOS = [
     description: "Maior abertura de passagem para banheiros com espaço intermediário, combinando praticidade e elegância.",
     image: box3PortasCard,
     imageAlt:
-      "Porta de Vidro 3 Folhas Fast Vidros com duas folhas móveis e uma fixa, ideal para banheiros e vãos compactos de até 1,20 metro em São Paulo",
+      "Box de Vidro 3 Portas Fast Vidros com duas folhas móveis e uma fixa, ideal para banheiros e vãos compactos de até 1,20 metro em São Paulo",
   },
   {
     slug: "flex",
