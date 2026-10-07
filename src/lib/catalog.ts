@@ -76,13 +76,13 @@ export const CATEGORIES: Record<string, Category> = {
     eyebrow: "Portas de Vidro",
     title: "Portas de vidro sob medida",
     models: [
+      { slug: "versatik", name: "Porta 3 Folhas", description: "Duas folhas móveis e uma fixa para ampliar a passagem.", longDescription: "A Porta 3 Folhas combina duas folhas móveis e uma fixa em vidro temperado de alta resistência, com deslizamento suave e acabamento moderno. Produzida sob medida para integrar ambientes e aproveitar melhor o espaço.", image: portaTresFolhasCard, gallery: placeholderGallery(portaTresFolhasCard) },
       { slug: "vision", name: "Vision", description: "Linhas finas, ideal para escritórios modernos.", longDescription: "A Porta Vision tem perfil ultrafino em alumínio, ideal para escritórios, salas de reunião e lofts modernos. Vidro temperado de alta segurança e visual minimalista.", image: portaVision, gallery: placeholderGallery(portaVision) },
       { slug: "nobre", name: "Nobre", description: "Acabamento premium para alto padrão.", longDescription: "A Porta Nobre é a escolha para projetos de alto padrão: ferragens importadas, vidro 10mm e acabamento premium em alumínio anodizado.", image: portaNobre, gallery: placeholderGallery(portaNobre) },
       { slug: "certa", name: "Certa", description: "Solução robusta para grandes vãos.", longDescription: "A Porta Certo foi pensada para grandes vãos comerciais e residenciais, com estrutura reforçada e ferragens de alta resistência.", image: portaCerta, gallery: placeholderGallery(portaCerta) },
       { slug: "flex", name: "Flex", description: "Adaptável a múltiplas configurações.", longDescription: "A Porta Flex se adapta a múltiplas configurações: abre, corre ou pivota conforme o projeto. Versatilidade total para arquitetos e designers.", image: portaFlex, gallery: placeholderGallery(portaFlex) },
       { slug: "abrir", name: "De Abrir", description: "Porta tradicional pivotante com molas.", longDescription: "A Porta De Abrir é o clássico pivotante com molas hidráulicas. Robusta, durável e elegante — solução tradicional reinventada com vidro temperado.", image: portaDeGiro, gallery: placeholderGallery(portaDeGiro) },
       { slug: "correr", name: "De Correr", description: "Aproveitamento total do espaço.", longDescription: "A Porta De Correr libera 100% do espaço útil. Trilho superior reforçado e roldanas silenciosas para uso intenso no dia a dia.", image: portaCorrer, gallery: placeholderGallery(portaCorrer) },
-      { slug: "versatik", name: "Porta 3 Folhas", description: "Duas folhas móveis e uma fixa para ampliar a passagem.", longDescription: "A Porta 3 Folhas combina duas folhas móveis e uma fixa em vidro temperado de alta resistência, com deslizamento suave e acabamento moderno. Produzida sob medida para integrar ambientes e aproveitar melhor o espaço.", image: portaTresFolhasCard, gallery: placeholderGallery(portaTresFolhasCard) },
     ],
   },
   "espelhos": {
