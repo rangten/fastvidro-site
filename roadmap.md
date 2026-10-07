@@ -7,3 +7,5 @@
 - [x] Trocar a arte do card Box Articulado pela nova e apontar o clique para a página do modelo.
 - [x] Trocar a arte do card Box 3 Portas pela nova, completa e sem cortes.
 - [x] Renomear a Porta Versatik para Porta 3 Folhas, substituir a capa e incluir as quatro fotos enviadas na página existente.
+- [x] Renovar a página Espelhos LED com banner, ambientes, benefícios e três fotos enviadas.
+- [x] Adicionar Espelhos LED ao menu Espelhos e conferir página, WhatsApp e navegação.
