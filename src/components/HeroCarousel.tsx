@@ -14,7 +14,7 @@ import versatikMobile from "@/assets/hero-versatik-mobile.webp";
 import flexDesktop from "@/assets/hero-flex-desktop.webp";
 import flexMobile from "@/assets/hero-flex-mobile.webp";
 import boxDesktop from "@/assets/hero-box-desktop.webp";
-import boxMobile from "@/assets/hero-box-mobile.webp";
+import boxMobile from "@/assets/hero-box-promo-mobile.webp";
 import ledDesktop from "@/assets/hero-espelho-led-desktop.webp";
 import ledMobile from "@/assets/hero-espelho-led-mobile.webp";
 
@@ -81,7 +81,7 @@ const slides: Slide[] = [
     linkLabel: "Ver Box de Banheiro",
     alt: "Promoção especial Box de Vidro Incolor 8mm Temperado Kit Preto, a partir de 12x de R$ 89,99 colocado",
     desktopSize: { width: 1024, height: 373 },
-    mobileSize: { width: 572, height: 1024 },
+    mobileSize: { width: 940, height: 1672 },
   },
   {
     kind: "image",
