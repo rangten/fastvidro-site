@@ -15,6 +15,8 @@ import flexDesktop from "@/assets/hero-flex-desktop.webp";
 import flexMobile from "@/assets/hero-flex-mobile.webp";
 import boxDesktop from "@/assets/hero-box-desktop.webp";
 import boxMobile from "@/assets/hero-box-mobile.webp";
+import ledDesktop from "@/assets/hero-espelho-led-desktop.webp.asset.json";
+import ledMobile from "@/assets/hero-espelho-led-mobile.webp.asset.json";
 
 type Slide = {
   kind: "text" | "image";
@@ -24,7 +26,7 @@ type Slide = {
   desktopImage: string;
   mobileImage: string;
   href?: string;
-  page?: "/box-de-banheiro/articulado" | "/portas-de-vidro/versatik" | "/box-de-banheiro";
+  page?: "/box-de-banheiro/articulado" | "/portas-de-vidro/versatik" | "/box-de-banheiro" | "/espelhos-led";
   linkLabel?: string;
   alt?: string;
   whatsappHref?: string;
@@ -60,6 +62,16 @@ const slides: Slide[] = [
     ),
     desktopSize: { width: 1024, height: 372 },
     mobileSize: { width: 572, height: 1024 },
+  },
+  {
+    kind: "image",
+    desktopImage: ledDesktop.url,
+    mobileImage: ledMobile.url,
+    page: "/espelhos-led",
+    linkLabel: "Ver Espelho LED Sob Medida",
+    alt: "Espelho LED sob medida Fast Vidro: sofisticação, iluminação e modernidade para lavabos, quartos, salas e banheiros",
+    desktopSize: { width: 1920, height: 698 },
+    mobileSize: { width: 940, height: 1672 },
   },
   {
     kind: "image",

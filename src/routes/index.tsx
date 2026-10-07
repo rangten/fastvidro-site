@@ -27,6 +27,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Box de Banheiro na Zona Norte e SP com Instalação Rápida | Fast Vidros" },
       { property: "og:description", content: "Vidraçaria na Zona Norte e São Paulo. Box de banheiro sob medida, Secure Box com película de proteção, espelhos e portas. Medição e orçamento no mesmo dia!" },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://www.fastvidro.com.br/" },
     ],
     links: [
