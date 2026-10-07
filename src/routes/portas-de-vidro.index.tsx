@@ -11,9 +11,11 @@ export const Route = createFileRoute("/portas-de-vidro/")({
   head: () => ({
     meta: [
       { title: "Portas de Vidro — Fast Vidro" },
-      { name: "description", content: "Portas de vidro temperado: Vision, Nobre, Flex, de Correr, Versatik. Integração de ambientes com luz e elegância." },
+      { name: "description", content: "Portas de vidro temperado: Vision, Nobre, Flex, de Correr e Porta 3 Folhas. Integração de ambientes com luz e elegância." },
       { property: "og:title", content: "Portas de Vidro — Fast Vidro" },
       { property: "og:description", content: "Portas de vidro sob medida com acabamentos premium." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: () => (
@@ -35,7 +37,7 @@ export const Route = createFileRoute("/portas-de-vidro/")({
         models={category.models}
         ctaLabel="Solicitar visita técnica"
         seoHighlights={[
-          { title: "Porta de Vidro Versatik para otimização de espaço", text: "O sistema Versatik é deslizante, silencioso e libera 100% da passagem — perfeito para integrar ambientes pequenos em apartamentos de São Paulo sem perder área útil." },
+          { title: "Porta 3 Folhas para otimização de espaço", text: "Duas folhas móveis e uma fixa ampliam a passagem em até 2/3 do vão, com deslizamento suave para integrar ambientes em apartamentos de São Paulo." },
           { title: "Portas de correr Vision", text: "As portas de correr Vision combinam perfil ultrafino com vidro temperado de alta segurança, ideais para escritórios, lofts e salas de reunião com visual minimalista." },
           { title: "Instalação em toda a Capital e Grande SP", text: "Fabricação sob medida com ferragens importadas e instalação por equipe própria em Santana, Tucuruvi, Pinheiros, Moema, Morumbi, Tatuapé e Alphaville." },
         ]}

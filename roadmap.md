@@ -6,3 +6,4 @@
 - [x] Incluir as páginas no sitemap e validar em computador e celular.
 - [x] Trocar a arte do card Box Articulado pela nova e apontar o clique para a página do modelo.
 - [x] Trocar a arte do card Box 3 Portas pela nova, completa e sem cortes.
+- [x] Renomear a Porta Versatik para Porta 3 Folhas, substituir a capa e incluir as quatro fotos enviadas na página existente.

@@ -11,6 +11,7 @@ export interface PortaSeoPageProps {
   benefits: string[];
   paragraphs: React.ReactNode[];
   waMessage: string;
+  gallery?: { src: string; alt: string; width: number; height: number }[];
 }
 
 export function PortaSeoPage({
@@ -22,6 +23,7 @@ export function PortaSeoPage({
   benefits,
   paragraphs,
   waMessage,
+  gallery,
 }: PortaSeoPageProps) {
   const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
 
@@ -78,6 +80,19 @@ loading="eager" fetchPriority="high" decoding="async"
           </div>
         </div>
       </section>
+
+      {gallery && (
+        <section className="mx-auto max-w-7xl px-4 pt-16 lg:px-8" aria-label="Galeria de projetos">
+          <h2 className="text-2xl font-black">{eyebrow}: fotos de projetos</h2>
+          <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {gallery.map((photo) => (
+              <li key={photo.src} className="overflow-hidden rounded-lg bg-muted">
+                <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" className="block h-auto w-full" />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="mx-auto max-w-4xl px-4 py-16 lg:px-8 lg:py-20">
         <article>
