@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import type { ReactNode } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, MessageCircle, ArrowRight } from "lucide-react";
@@ -23,6 +24,8 @@ type Slide = {
   desktopImage: string;
   mobileImage: string;
   href?: string;
+  page?: "/box-de-banheiro/articulado" | "/portas-de-vidro/versatik" | "/box-de-banheiro";
+  linkLabel?: string;
   alt?: string;
   whatsappHref?: string;
   whatsappLabel?: string;
@@ -37,7 +40,8 @@ const slides: Slide[] = [
     kind: "image",
     desktopImage: articuladoDesktop,
     mobileImage: articuladoMobile,
-    href: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
+    page: "/box-de-banheiro/articulado",
+    linkLabel: "Ver Box Articulado",
     alt: "Lançamento Box Articulado Fast Vidro sob medida, a partir de 12 vezes de R$ 150",
     whatsappHref: waLink("Olá! Vim pelo site e gostaria de um orçamento do Box Articulado."),
     whatsappLabel: "Solicitar orçamento no WhatsApp",
@@ -48,7 +52,8 @@ const slides: Slide[] = [
     kind: "image",
     desktopImage: versatikDesktop,
     mobileImage: versatikMobile,
-    href: "/portas-de-vidro/versatik",
+    page: "/portas-de-vidro/versatik",
+    linkLabel: "Ver Porta de Vidro 3 Folhas Versatik",
     alt: "Porta de vidro temperado 3 folhas Linha Versatik FastVidro a partir de 12x de R$ 140,00 medida 0,80 x 2,10",
     whatsappHref: waLink(
       "Olá! Gostaria de solicitar um orçamento para a Porta de Vidro 3 Folhas (Medida 0,80 x 2,10).",
@@ -60,7 +65,8 @@ const slides: Slide[] = [
     kind: "image",
     desktopImage: boxDesktop,
     mobileImage: boxMobile,
-    href: waLink("Olá! Quero a Promoção Especial do Box da Fast Vidro."),
+    page: "/box-de-banheiro",
+    linkLabel: "Ver Box de Banheiro",
     alt: "Promoção especial Box de Vidro Incolor 8mm Temperado Kit Preto, a partir de 12x de R$ 89,99 colocado",
     desktopSize: { width: 1024, height: 373 },
     mobileSize: { width: 572, height: 1024 },
@@ -88,6 +94,18 @@ const slides: Slide[] = [
     secondary: { label: "Ver box", to: "/box-de-banheiro" },
   },
 ];
+
+function BannerLink({ slide, children }: { slide: Slide; children: ReactNode }) {
+  const className = "block transition-transform duration-200 active:scale-[0.995] md:h-full";
+  if (slide.page) {
+    return <Link to={slide.page} className={className} aria-label={slide.linkLabel}>{children}</Link>;
+  }
+  return (
+    <a href={slide.href} target="_blank" rel="noopener" className={className} aria-label="Falar no WhatsApp">
+      {children}
+    </a>
+  );
+}
 
 export function HeroCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -140,13 +158,7 @@ export function HeroCarousel() {
               {s.kind === "image" ? (
                 // Promotional slides: entire banner is clickable, image shown intact (no crop)
                 <div className="relative bg-ink md:h-full">
-                <a
-                  href={s.href}
-                  target={s.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={s.href?.startsWith("http") ? "noopener" : undefined}
-                  className="block transition-transform duration-200 active:scale-[0.995] md:h-full"
-                  aria-label={i === 0 ? "Solicitar orçamento do Box Articulado pelo WhatsApp" : "Falar no WhatsApp"}
-                >
+                <BannerLink slide={s}>
                   {(i === 0 || ready) && (
                   <picture>
                     <source
@@ -167,7 +179,7 @@ export function HeroCarousel() {
                     />
                   </picture>
                   )}
-                </a>
+                </BannerLink>
                 {s.whatsappHref && (
                   <a
                     href={s.whatsappHref}
